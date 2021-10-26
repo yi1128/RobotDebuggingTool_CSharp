@@ -17,6 +17,7 @@ namespace DebuggingToolGUI
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new DebuggingToolSW());
+            
         }
     }
 }

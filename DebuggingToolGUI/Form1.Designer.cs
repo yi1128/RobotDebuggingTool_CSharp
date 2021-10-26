@@ -34,31 +34,31 @@ namespace DebuggingToolGUI
             this.MainTapControl = new System.Windows.Forms.TabControl();
             this.Default = new System.Windows.Forms.TabPage();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
-            this.button6 = new System.Windows.Forms.Button();
-            this.textBox67 = new System.Windows.Forms.TextBox();
-            this.textBox70 = new System.Windows.Forms.TextBox();
-            this.textBox72 = new System.Windows.Forms.TextBox();
-            this.textBox76 = new System.Windows.Forms.TextBox();
-            this.textBox80 = new System.Windows.Forms.TextBox();
-            this.textBox84 = new System.Windows.Forms.TextBox();
-            this.textBox88 = new System.Windows.Forms.TextBox();
-            this.textBox92 = new System.Windows.Forms.TextBox();
-            this.textBox99 = new System.Windows.Forms.TextBox();
-            this.textBox100 = new System.Windows.Forms.TextBox();
-            this.textBox101 = new System.Windows.Forms.TextBox();
-            this.textBox102 = new System.Windows.Forms.TextBox();
-            this.textBox103 = new System.Windows.Forms.TextBox();
-            this.textBox104 = new System.Windows.Forms.TextBox();
-            this.textBox105 = new System.Windows.Forms.TextBox();
-            this.textBox106 = new System.Windows.Forms.TextBox();
-            this.textBox107 = new System.Windows.Forms.TextBox();
-            this.textBox108 = new System.Windows.Forms.TextBox();
-            this.textBox109 = new System.Windows.Forms.TextBox();
-            this.textBox110 = new System.Windows.Forms.TextBox();
-            this.textBox111 = new System.Windows.Forms.TextBox();
-            this.textBox112 = new System.Windows.Forms.TextBox();
-            this.textBox113 = new System.Windows.Forms.TextBox();
-            this.textBox114 = new System.Windows.Forms.TextBox();
+            this.SetJointToqPIDGainbutton = new System.Windows.Forms.Button();
+            this.jtDgainJoint8textBox = new System.Windows.Forms.TextBox();
+            this.jtIgainJoint8textBox = new System.Windows.Forms.TextBox();
+            this.jtPgainJoint8textBox = new System.Windows.Forms.TextBox();
+            this.jtDgainJoint7textBox = new System.Windows.Forms.TextBox();
+            this.jtDgainJoint6textBox = new System.Windows.Forms.TextBox();
+            this.jtIgainJoint7textBox = new System.Windows.Forms.TextBox();
+            this.jtIgainJoint6textBox = new System.Windows.Forms.TextBox();
+            this.jtDgainJoint5textBox = new System.Windows.Forms.TextBox();
+            this.jtPgainJoint7textBox = new System.Windows.Forms.TextBox();
+            this.jtIgainJoint5textBox = new System.Windows.Forms.TextBox();
+            this.jtDgainJoint4textBox = new System.Windows.Forms.TextBox();
+            this.jtPgainJoint6textBox = new System.Windows.Forms.TextBox();
+            this.jtIgainJoint4textBox = new System.Windows.Forms.TextBox();
+            this.jtDgainJoint3textBox = new System.Windows.Forms.TextBox();
+            this.jtPgainJoint5textBox = new System.Windows.Forms.TextBox();
+            this.jtIgainJoint3textBox = new System.Windows.Forms.TextBox();
+            this.jtDgainJoint2textBox = new System.Windows.Forms.TextBox();
+            this.jtPgainJoint4textBox = new System.Windows.Forms.TextBox();
+            this.jtIgainJoint2textBox = new System.Windows.Forms.TextBox();
+            this.jtDgainJoint1textBox = new System.Windows.Forms.TextBox();
+            this.jtPgainJoint3textBox = new System.Windows.Forms.TextBox();
+            this.jtIgainJoint1textBox = new System.Windows.Forms.TextBox();
+            this.jtPgainJoint2textBox = new System.Windows.Forms.TextBox();
+            this.jtPgainJoint1textBox = new System.Windows.Forms.TextBox();
             this.label48 = new System.Windows.Forms.Label();
             this.label52 = new System.Windows.Forms.Label();
             this.label53 = new System.Windows.Forms.Label();
@@ -71,31 +71,31 @@ namespace DebuggingToolGUI
             this.label60 = new System.Windows.Forms.Label();
             this.label61 = new System.Windows.Forms.Label();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.button5 = new System.Windows.Forms.Button();
-            this.textBox68 = new System.Windows.Forms.TextBox();
-            this.textBox69 = new System.Windows.Forms.TextBox();
-            this.textBox71 = new System.Windows.Forms.TextBox();
-            this.textBox73 = new System.Windows.Forms.TextBox();
-            this.textBox74 = new System.Windows.Forms.TextBox();
-            this.textBox75 = new System.Windows.Forms.TextBox();
-            this.textBox77 = new System.Windows.Forms.TextBox();
-            this.textBox78 = new System.Windows.Forms.TextBox();
-            this.textBox79 = new System.Windows.Forms.TextBox();
-            this.textBox81 = new System.Windows.Forms.TextBox();
-            this.textBox82 = new System.Windows.Forms.TextBox();
-            this.textBox83 = new System.Windows.Forms.TextBox();
-            this.textBox85 = new System.Windows.Forms.TextBox();
-            this.textBox86 = new System.Windows.Forms.TextBox();
-            this.textBox87 = new System.Windows.Forms.TextBox();
-            this.textBox89 = new System.Windows.Forms.TextBox();
-            this.textBox90 = new System.Windows.Forms.TextBox();
-            this.textBox91 = new System.Windows.Forms.TextBox();
-            this.textBox93 = new System.Windows.Forms.TextBox();
-            this.textBox94 = new System.Windows.Forms.TextBox();
-            this.textBox95 = new System.Windows.Forms.TextBox();
-            this.textBox96 = new System.Windows.Forms.TextBox();
-            this.textBox97 = new System.Windows.Forms.TextBox();
-            this.textBox98 = new System.Windows.Forms.TextBox();
+            this.SetJointPosPIDGainbutton = new System.Windows.Forms.Button();
+            this.jpDgainJoint8textBox = new System.Windows.Forms.TextBox();
+            this.jpIgainJoint8textBox = new System.Windows.Forms.TextBox();
+            this.jpPgainJoint8textBox = new System.Windows.Forms.TextBox();
+            this.jpDgainJoint7textBox = new System.Windows.Forms.TextBox();
+            this.jpDgainJoint6textBox = new System.Windows.Forms.TextBox();
+            this.jpIgainJoint7textBox = new System.Windows.Forms.TextBox();
+            this.jpIgainJoint6textBox = new System.Windows.Forms.TextBox();
+            this.jpDgainJoint5textBox = new System.Windows.Forms.TextBox();
+            this.jpPgainJoint7textBox = new System.Windows.Forms.TextBox();
+            this.jpIgainJoint5textBox = new System.Windows.Forms.TextBox();
+            this.jpDgainJoint4textBox = new System.Windows.Forms.TextBox();
+            this.jpPgainJoint6textBox = new System.Windows.Forms.TextBox();
+            this.jpIgainJoint4textBox = new System.Windows.Forms.TextBox();
+            this.jpDgainJoint3textBox = new System.Windows.Forms.TextBox();
+            this.jpPgainJoint5textBox = new System.Windows.Forms.TextBox();
+            this.jpIgainJoint3textBox = new System.Windows.Forms.TextBox();
+            this.jpDgainJoint2textBox = new System.Windows.Forms.TextBox();
+            this.jpPgainJoint4textBox = new System.Windows.Forms.TextBox();
+            this.jpIgainJoint2textBox = new System.Windows.Forms.TextBox();
+            this.jpDgainJoint1textBox = new System.Windows.Forms.TextBox();
+            this.jpPgainJoint3textBox = new System.Windows.Forms.TextBox();
+            this.jpIgainJoint1textBox = new System.Windows.Forms.TextBox();
+            this.jpPgainJoint2textBox = new System.Windows.Forms.TextBox();
+            this.jpPgainJoint1textBox = new System.Windows.Forms.TextBox();
             this.label40 = new System.Windows.Forms.Label();
             this.label41 = new System.Windows.Forms.Label();
             this.label42 = new System.Windows.Forms.Label();
@@ -109,31 +109,31 @@ namespace DebuggingToolGUI
             this.label51 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
-            this.button8 = new System.Windows.Forms.Button();
-            this.textBox139 = new System.Windows.Forms.TextBox();
-            this.textBox140 = new System.Windows.Forms.TextBox();
-            this.textBox141 = new System.Windows.Forms.TextBox();
-            this.textBox142 = new System.Windows.Forms.TextBox();
-            this.textBox143 = new System.Windows.Forms.TextBox();
-            this.textBox144 = new System.Windows.Forms.TextBox();
-            this.textBox145 = new System.Windows.Forms.TextBox();
-            this.textBox146 = new System.Windows.Forms.TextBox();
-            this.textBox147 = new System.Windows.Forms.TextBox();
-            this.textBox148 = new System.Windows.Forms.TextBox();
-            this.textBox149 = new System.Windows.Forms.TextBox();
-            this.textBox150 = new System.Windows.Forms.TextBox();
-            this.textBox151 = new System.Windows.Forms.TextBox();
-            this.textBox152 = new System.Windows.Forms.TextBox();
-            this.textBox153 = new System.Windows.Forms.TextBox();
-            this.textBox154 = new System.Windows.Forms.TextBox();
-            this.textBox155 = new System.Windows.Forms.TextBox();
-            this.textBox156 = new System.Windows.Forms.TextBox();
-            this.textBox157 = new System.Windows.Forms.TextBox();
-            this.textBox158 = new System.Windows.Forms.TextBox();
-            this.textBox159 = new System.Windows.Forms.TextBox();
-            this.textBox160 = new System.Windows.Forms.TextBox();
-            this.textBox161 = new System.Windows.Forms.TextBox();
-            this.textBox162 = new System.Windows.Forms.TextBox();
+            this.GCnFricParamSetbutton = new System.Windows.Forms.Button();
+            this.FricGainJoint8textBox = new System.Windows.Forms.TextBox();
+            this.CurGainJoint8textBox = new System.Windows.Forms.TextBox();
+            this.GCGainJoint8textBox = new System.Windows.Forms.TextBox();
+            this.FricGainJoint7textBox = new System.Windows.Forms.TextBox();
+            this.FricGainJoint6textBox = new System.Windows.Forms.TextBox();
+            this.CurGainJoint7textBox = new System.Windows.Forms.TextBox();
+            this.CurGainJoint6textBox = new System.Windows.Forms.TextBox();
+            this.FricGainJoint5textBox = new System.Windows.Forms.TextBox();
+            this.GCGainJoint7textBox = new System.Windows.Forms.TextBox();
+            this.CurGainJoint5textBox = new System.Windows.Forms.TextBox();
+            this.FricGainJoint4textBox = new System.Windows.Forms.TextBox();
+            this.GCGainJoint6textBox = new System.Windows.Forms.TextBox();
+            this.CurGainJoint4textBox = new System.Windows.Forms.TextBox();
+            this.FricGainJoint3textBox = new System.Windows.Forms.TextBox();
+            this.GCGainJoint5textBox = new System.Windows.Forms.TextBox();
+            this.CurGainJoint3textBox = new System.Windows.Forms.TextBox();
+            this.FricGainJoint2textBox = new System.Windows.Forms.TextBox();
+            this.GCGainJoint4textBox = new System.Windows.Forms.TextBox();
+            this.CurGainJoint2textBox = new System.Windows.Forms.TextBox();
+            this.FricGainJoint1textBox = new System.Windows.Forms.TextBox();
+            this.GCGainJoint3textBox = new System.Windows.Forms.TextBox();
+            this.CurGainJoint1textBox = new System.Windows.Forms.TextBox();
+            this.GCGainJoint2textBox = new System.Windows.Forms.TextBox();
+            this.GCGainJoint1textBox = new System.Windows.Forms.TextBox();
             this.label73 = new System.Windows.Forms.Label();
             this.label74 = new System.Windows.Forms.Label();
             this.label75 = new System.Windows.Forms.Label();
@@ -146,31 +146,31 @@ namespace DebuggingToolGUI
             this.label82 = new System.Windows.Forms.Label();
             this.label83 = new System.Windows.Forms.Label();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
-            this.button7 = new System.Windows.Forms.Button();
-            this.textBox115 = new System.Windows.Forms.TextBox();
-            this.textBox116 = new System.Windows.Forms.TextBox();
-            this.textBox117 = new System.Windows.Forms.TextBox();
-            this.textBox118 = new System.Windows.Forms.TextBox();
-            this.textBox119 = new System.Windows.Forms.TextBox();
-            this.textBox120 = new System.Windows.Forms.TextBox();
-            this.textBox121 = new System.Windows.Forms.TextBox();
-            this.textBox122 = new System.Windows.Forms.TextBox();
-            this.textBox123 = new System.Windows.Forms.TextBox();
-            this.textBox124 = new System.Windows.Forms.TextBox();
-            this.textBox125 = new System.Windows.Forms.TextBox();
-            this.textBox126 = new System.Windows.Forms.TextBox();
-            this.textBox127 = new System.Windows.Forms.TextBox();
-            this.textBox128 = new System.Windows.Forms.TextBox();
-            this.textBox129 = new System.Windows.Forms.TextBox();
-            this.textBox130 = new System.Windows.Forms.TextBox();
-            this.textBox131 = new System.Windows.Forms.TextBox();
-            this.textBox132 = new System.Windows.Forms.TextBox();
-            this.textBox133 = new System.Windows.Forms.TextBox();
-            this.textBox134 = new System.Windows.Forms.TextBox();
-            this.textBox135 = new System.Windows.Forms.TextBox();
-            this.textBox136 = new System.Windows.Forms.TextBox();
-            this.textBox137 = new System.Windows.Forms.TextBox();
-            this.textBox138 = new System.Windows.Forms.TextBox();
+            this.JointConstantParamSetbutton = new System.Windows.Forms.Button();
+            this.jcSpringJoint8textBox = new System.Windows.Forms.TextBox();
+            this.jcTorqueConstJoint8textBox = new System.Windows.Forms.TextBox();
+            this.jcEfficiencyJoint8textBox = new System.Windows.Forms.TextBox();
+            this.jcSpringJoint7textBox = new System.Windows.Forms.TextBox();
+            this.jcSpringJoint6textBox = new System.Windows.Forms.TextBox();
+            this.jcTorqueConstJoint7textBox = new System.Windows.Forms.TextBox();
+            this.jcTorqueConstJoint6textBox = new System.Windows.Forms.TextBox();
+            this.jcSpringJoint5textBox = new System.Windows.Forms.TextBox();
+            this.jcEfficiencyJoint7textBox = new System.Windows.Forms.TextBox();
+            this.jcTorqueConstJoint5textBox = new System.Windows.Forms.TextBox();
+            this.jcSpringJoint4textBox = new System.Windows.Forms.TextBox();
+            this.jcEfficiencyJoint6textBox = new System.Windows.Forms.TextBox();
+            this.jcTorqueConstJoint4textBox = new System.Windows.Forms.TextBox();
+            this.jcSpringJoint3textBox = new System.Windows.Forms.TextBox();
+            this.jcEfficiencyJoint5textBox = new System.Windows.Forms.TextBox();
+            this.jcTorqueConstJoint3textBox = new System.Windows.Forms.TextBox();
+            this.jcSpringJoint2textBox = new System.Windows.Forms.TextBox();
+            this.jcEfficiencyJoint4textBox = new System.Windows.Forms.TextBox();
+            this.jcTorqueConstJoint2textBox = new System.Windows.Forms.TextBox();
+            this.jcSpringJoint1textBox = new System.Windows.Forms.TextBox();
+            this.jcEfficiencyJoint3textBox = new System.Windows.Forms.TextBox();
+            this.jcTorqueConstJoint1textBox = new System.Windows.Forms.TextBox();
+            this.jcEfficiencyJoint2textBox = new System.Windows.Forms.TextBox();
+            this.jcEfficiencyJoint1textBox = new System.Windows.Forms.TextBox();
             this.label62 = new System.Windows.Forms.Label();
             this.label63 = new System.Windows.Forms.Label();
             this.label64 = new System.Windows.Forms.Label();
@@ -183,31 +183,160 @@ namespace DebuggingToolGUI
             this.label71 = new System.Windows.Forms.Label();
             this.label72 = new System.Windows.Forms.Label();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.JointPositionSetgroupBox = new System.Windows.Forms.GroupBox();
+            this.JointReachedpictureBox = new System.Windows.Forms.PictureBox();
+            this.JointMovingpictureBox = new System.Windows.Forms.PictureBox();
+            this.label139 = new System.Windows.Forms.Label();
+            this.label140 = new System.Windows.Forms.Label();
+            this.JointPositionSetbutton = new System.Windows.Forms.Button();
+            this.PositionJoint8textBox = new System.Windows.Forms.TextBox();
+            this.PositionJoint7textBox = new System.Windows.Forms.TextBox();
+            this.PositionJoint6textBox = new System.Windows.Forms.TextBox();
+            this.PositionJoint5textBox = new System.Windows.Forms.TextBox();
+            this.PositionJoint4textBox = new System.Windows.Forms.TextBox();
+            this.PositionJoint3textBox = new System.Windows.Forms.TextBox();
+            this.PositionJoint2textBox = new System.Windows.Forms.TextBox();
+            this.PositionJoint1textBox = new System.Windows.Forms.TextBox();
+            this.label116 = new System.Windows.Forms.Label();
+            this.label117 = new System.Windows.Forms.Label();
+            this.label118 = new System.Windows.Forms.Label();
+            this.label119 = new System.Windows.Forms.Label();
+            this.label120 = new System.Windows.Forms.Label();
+            this.label121 = new System.Windows.Forms.Label();
+            this.label122 = new System.Windows.Forms.Label();
+            this.label123 = new System.Windows.Forms.Label();
+            this.label125 = new System.Windows.Forms.Label();
+            this.groupBox10 = new System.Windows.Forms.GroupBox();
+            this.JointTrajetorySetbutton = new System.Windows.Forms.Button();
+            this.TrajAccJoint8textBox = new System.Windows.Forms.TextBox();
+            this.TrajTimeJoint8textBox = new System.Windows.Forms.TextBox();
+            this.TrajAccJoint7textBox = new System.Windows.Forms.TextBox();
+            this.TrajAccJoint6textBox = new System.Windows.Forms.TextBox();
+            this.TrajTimeJoint7textBox = new System.Windows.Forms.TextBox();
+            this.TrajAccJoint5textBox = new System.Windows.Forms.TextBox();
+            this.TrajTimeJoint6textBox = new System.Windows.Forms.TextBox();
+            this.TrajAccJoint4textBox = new System.Windows.Forms.TextBox();
+            this.TrajTimeJoint5textBox = new System.Windows.Forms.TextBox();
+            this.TrajAccJoint3textBox = new System.Windows.Forms.TextBox();
+            this.TrajTimeJoint4textBox = new System.Windows.Forms.TextBox();
+            this.TrajAccJoint2textBox = new System.Windows.Forms.TextBox();
+            this.TrajTimeJoint3textBox = new System.Windows.Forms.TextBox();
+            this.TrajAccJoint1textBox = new System.Windows.Forms.TextBox();
+            this.TrajTimeJoint2textBox = new System.Windows.Forms.TextBox();
+            this.TrajTimeJoint1textBox = new System.Windows.Forms.TextBox();
+            this.label88 = new System.Windows.Forms.Label();
+            this.label89 = new System.Windows.Forms.Label();
+            this.label90 = new System.Windows.Forms.Label();
+            this.label91 = new System.Windows.Forms.Label();
+            this.label92 = new System.Windows.Forms.Label();
+            this.label93 = new System.Windows.Forms.Label();
+            this.label94 = new System.Windows.Forms.Label();
+            this.label95 = new System.Windows.Forms.Label();
+            this.label97 = new System.Windows.Forms.Label();
+            this.label98 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.CartesianPositionSetgroupBox = new System.Windows.Forms.GroupBox();
+            this.CartesianReachedpictureBox = new System.Windows.Forms.PictureBox();
+            this.CartesianMovingpictureBox = new System.Windows.Forms.PictureBox();
+            this.CartesianPositionSetbutton = new System.Windows.Forms.Button();
+            this.label136 = new System.Windows.Forms.Label();
+            this.label138 = new System.Windows.Forms.Label();
+            this.label137 = new System.Windows.Forms.Label();
+            this.label130 = new System.Windows.Forms.Label();
+            this.label135 = new System.Windows.Forms.Label();
+            this.label129 = new System.Windows.Forms.Label();
+            this.label134 = new System.Windows.Forms.Label();
+            this.label124 = new System.Windows.Forms.Label();
+            this.label133 = new System.Windows.Forms.Label();
+            this.label128 = new System.Windows.Forms.Label();
+            this.label132 = new System.Windows.Forms.Label();
+            this.label126 = new System.Windows.Forms.Label();
+            this.label131 = new System.Windows.Forms.Label();
+            this.label127 = new System.Windows.Forms.Label();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.groupBox12 = new System.Windows.Forms.GroupBox();
+            this.CartesianTrajSetbutton = new System.Windows.Forms.Button();
+            this.TrajAccCartesianYawtextBox = new System.Windows.Forms.TextBox();
+            this.TrajAccCartesianPitchtextBox = new System.Windows.Forms.TextBox();
+            this.TrajTimeCartesianYawtextBox = new System.Windows.Forms.TextBox();
+            this.TrajAccCartesianRolltextBox = new System.Windows.Forms.TextBox();
+            this.TrajTimeCartesianPitchtextBox = new System.Windows.Forms.TextBox();
+            this.TrajAccCartesianZtextBox = new System.Windows.Forms.TextBox();
+            this.TrajTimeCartesianRolltextBox = new System.Windows.Forms.TextBox();
+            this.TrajAccCartesianYtextBox = new System.Windows.Forms.TextBox();
+            this.TrajTimeCartesianZtextBox = new System.Windows.Forms.TextBox();
+            this.TrajAccCartesianXtextBox = new System.Windows.Forms.TextBox();
+            this.TrajTimeCartesianYtextBox = new System.Windows.Forms.TextBox();
+            this.TrajTimeCartesianXtextBox = new System.Windows.Forms.TextBox();
+            this.label96 = new System.Windows.Forms.Label();
+            this.label99 = new System.Windows.Forms.Label();
+            this.label108 = new System.Windows.Forms.Label();
+            this.label109 = new System.Windows.Forms.Label();
+            this.label110 = new System.Windows.Forms.Label();
+            this.label111 = new System.Windows.Forms.Label();
+            this.label112 = new System.Windows.Forms.Label();
+            this.label113 = new System.Windows.Forms.Label();
+            this.groupBox11 = new System.Windows.Forms.GroupBox();
+            this.CartesianPIDSetbutton = new System.Windows.Forms.Button();
+            this.cpDgainCartesianYawtextBox = new System.Windows.Forms.TextBox();
+            this.cpIgainCartesianYawtextBox = new System.Windows.Forms.TextBox();
+            this.cpDgainCartesianPitchtextBox = new System.Windows.Forms.TextBox();
+            this.cpIgainCartesianPitchtextBox = new System.Windows.Forms.TextBox();
+            this.cpDgainCartesianRolltextBox = new System.Windows.Forms.TextBox();
+            this.cpPgainCartesianYawtextBox = new System.Windows.Forms.TextBox();
+            this.cpIgainCartesianRolltextBox = new System.Windows.Forms.TextBox();
+            this.cpDgainCartesianZtextBox = new System.Windows.Forms.TextBox();
+            this.cpPgainCartesianPitchtextBox = new System.Windows.Forms.TextBox();
+            this.cpIgainCartesianZtextBox = new System.Windows.Forms.TextBox();
+            this.cpDgainCartesianYtextBox = new System.Windows.Forms.TextBox();
+            this.cpPgainCartesianRolltextBox = new System.Windows.Forms.TextBox();
+            this.cpIgainCartesianYtextBox = new System.Windows.Forms.TextBox();
+            this.cpDgainCartesianXtextBox = new System.Windows.Forms.TextBox();
+            this.cpPgainCartesianZtextBox = new System.Windows.Forms.TextBox();
+            this.cpIgainCartesianXtextBox = new System.Windows.Forms.TextBox();
+            this.cpPgainCartesianYtextBox = new System.Windows.Forms.TextBox();
+            this.cpPgainCartesianXtextBox = new System.Windows.Forms.TextBox();
+            this.label100 = new System.Windows.Forms.Label();
+            this.label101 = new System.Windows.Forms.Label();
+            this.label102 = new System.Windows.Forms.Label();
+            this.label103 = new System.Windows.Forms.Label();
+            this.label104 = new System.Windows.Forms.Label();
+            this.label114 = new System.Windows.Forms.Label();
+            this.label105 = new System.Windows.Forms.Label();
+            this.label106 = new System.Windows.Forms.Label();
+            this.label107 = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.Connect = new System.Windows.Forms.Button();
+            this.Connectbutton = new System.Windows.Forms.Button();
             this.IpAddressLabel = new System.Windows.Forms.Label();
             this.IpAddressTextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.PortTextBox = new System.Windows.Forms.TextBox();
             this.LoginGroupBox = new System.Windows.Forms.GroupBox();
             this.label39 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.CommunicationComboBox = new System.Windows.Forms.ComboBox();
             this.StateGroupBox = new System.Windows.Forms.GroupBox();
             this.label35 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.NumJointcomboBox = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox10 = new System.Windows.Forms.PictureBox();
-            this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pbConnect = new System.Windows.Forms.PictureBox();
+            this.Joint4pictureBox = new System.Windows.Forms.PictureBox();
+            this.Joint3pictureBox = new System.Windows.Forms.PictureBox();
+            this.Joint2pictureBox = new System.Windows.Forms.PictureBox();
+            this.Joint8pictureBox = new System.Windows.Forms.PictureBox();
+            this.Joint7pictureBox = new System.Windows.Forms.PictureBox();
+            this.Joint6pictureBox = new System.Windows.Forms.PictureBox();
+            this.Joint5pictureBox = new System.Windows.Forms.PictureBox();
+            this.Joint1pictureBox = new System.Windows.Forms.PictureBox();
+            this.MainPowerpictureBox = new System.Windows.Forms.PictureBox();
+            this.AuxPowerpictureBox = new System.Windows.Forms.PictureBox();
+            this.TorqueModepictureBox = new System.Windows.Forms.PictureBox();
+            this.PositionModepictureBox = new System.Windows.Forms.PictureBox();
+            this.GCpictureBox = new System.Windows.Forms.PictureBox();
+            this.ConnectpictureBox = new System.Windows.Forms.PictureBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -217,46 +346,53 @@ namespace DebuggingToolGUI
             this.label4 = new System.Windows.Forms.Label();
             this.label38 = new System.Windows.Forms.Label();
             this.label37 = new System.Windows.Forms.Label();
+            this.label86 = new System.Windows.Forms.Label();
+            this.label85 = new System.Windows.Forms.Label();
+            this.label84 = new System.Windows.Forms.Label();
             this.label36 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.ErrorCodetextBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
+            this.CartesianModebutton = new System.Windows.Forms.Button();
+            this.JointModebutton = new System.Windows.Forms.Button();
+            this.GCbutton = new System.Windows.Forms.Button();
+            this.Homingbutton = new System.Windows.Forms.Button();
+            this.Readybutton = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.ServoOnButton = new System.Windows.Forms.Button();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.textBox35 = new System.Windows.Forms.TextBox();
-            this.textBox36 = new System.Windows.Forms.TextBox();
-            this.textBox37 = new System.Windows.Forms.TextBox();
-            this.textBox38 = new System.Windows.Forms.TextBox();
-            this.textBox39 = new System.Windows.Forms.TextBox();
-            this.textBox40 = new System.Windows.Forms.TextBox();
-            this.textBox41 = new System.Windows.Forms.TextBox();
-            this.textBox42 = new System.Windows.Forms.TextBox();
-            this.textBox43 = new System.Windows.Forms.TextBox();
-            this.textBox44 = new System.Windows.Forms.TextBox();
-            this.textBox45 = new System.Windows.Forms.TextBox();
-            this.textBox46 = new System.Windows.Forms.TextBox();
-            this.textBox47 = new System.Windows.Forms.TextBox();
-            this.textBox48 = new System.Windows.Forms.TextBox();
-            this.textBox49 = new System.Windows.Forms.TextBox();
-            this.textBox50 = new System.Windows.Forms.TextBox();
-            this.textBox51 = new System.Windows.Forms.TextBox();
-            this.textBox52 = new System.Windows.Forms.TextBox();
-            this.textBox53 = new System.Windows.Forms.TextBox();
-            this.textBox54 = new System.Windows.Forms.TextBox();
-            this.textBox55 = new System.Windows.Forms.TextBox();
-            this.textBox56 = new System.Windows.Forms.TextBox();
-            this.textBox57 = new System.Windows.Forms.TextBox();
-            this.textBox58 = new System.Windows.Forms.TextBox();
-            this.textBox59 = new System.Windows.Forms.TextBox();
-            this.textBox60 = new System.Windows.Forms.TextBox();
-            this.textBox61 = new System.Windows.Forms.TextBox();
-            this.textBox62 = new System.Windows.Forms.TextBox();
-            this.textBox63 = new System.Windows.Forms.TextBox();
-            this.textBox64 = new System.Windows.Forms.TextBox();
-            this.textBox65 = new System.Windows.Forms.TextBox();
-            this.textBox66 = new System.Windows.Forms.TextBox();
+            this.IncrementalEncodergroupBox = new System.Windows.Forms.GroupBox();
+            this.IncCurrentJoint8textBox = new System.Windows.Forms.TextBox();
+            this.IncVelocityJoint8textBox = new System.Windows.Forms.TextBox();
+            this.IncPositionJoint8textBox = new System.Windows.Forms.TextBox();
+            this.IncCurrentJoint7textBox = new System.Windows.Forms.TextBox();
+            this.INCPosJoint8textBox = new System.Windows.Forms.TextBox();
+            this.IncCurrentJoint6textBox = new System.Windows.Forms.TextBox();
+            this.IncVelocityJoint7textBox = new System.Windows.Forms.TextBox();
+            this.IncVelocityJoint6textBox = new System.Windows.Forms.TextBox();
+            this.IncPositionJoint7textBox = new System.Windows.Forms.TextBox();
+            this.IncCurrentJoint5textBox = new System.Windows.Forms.TextBox();
+            this.IncPositionJoint6textBox = new System.Windows.Forms.TextBox();
+            this.IncVelocityJoint5textBox = new System.Windows.Forms.TextBox();
+            this.INCPosJoint7textBox = new System.Windows.Forms.TextBox();
+            this.IncCurrentJoint4textBox = new System.Windows.Forms.TextBox();
+            this.IncPositionJoint5textBox = new System.Windows.Forms.TextBox();
+            this.IncVelocityJoint4textBox = new System.Windows.Forms.TextBox();
+            this.INCPosJoint6textBox = new System.Windows.Forms.TextBox();
+            this.IncCurrentJoint3textBox = new System.Windows.Forms.TextBox();
+            this.IncPositionJoint4textBox = new System.Windows.Forms.TextBox();
+            this.IncVelocityJoint3textBox = new System.Windows.Forms.TextBox();
+            this.INCPosJoint5textBox = new System.Windows.Forms.TextBox();
+            this.IncCurrentJoint2textBox = new System.Windows.Forms.TextBox();
+            this.IncPositionJoint3textBox = new System.Windows.Forms.TextBox();
+            this.IncVelocityJoint2textBox = new System.Windows.Forms.TextBox();
+            this.IncPosJoint4textBox = new System.Windows.Forms.TextBox();
+            this.IncCurrentJoint1textBox = new System.Windows.Forms.TextBox();
+            this.IncPositionJoint2textBox = new System.Windows.Forms.TextBox();
+            this.IncVelocityJoint1textBox = new System.Windows.Forms.TextBox();
+            this.IncPosJoint3textBox = new System.Windows.Forms.TextBox();
+            this.IncPositionJoint1textBox = new System.Windows.Forms.TextBox();
+            this.IncPosJoint2textBox = new System.Windows.Forms.TextBox();
+            this.IncPosJoint1textBox = new System.Windows.Forms.TextBox();
             this.label23 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
@@ -269,39 +405,39 @@ namespace DebuggingToolGUI
             this.label32 = new System.Windows.Forms.Label();
             this.label33 = new System.Windows.Forms.Label();
             this.label34 = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.textBox34 = new System.Windows.Forms.TextBox();
-            this.textBox26 = new System.Windows.Forms.TextBox();
-            this.textBox18 = new System.Windows.Forms.TextBox();
-            this.textBox33 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.textBox32 = new System.Windows.Forms.TextBox();
-            this.textBox25 = new System.Windows.Forms.TextBox();
-            this.textBox24 = new System.Windows.Forms.TextBox();
-            this.textBox17 = new System.Windows.Forms.TextBox();
-            this.textBox31 = new System.Windows.Forms.TextBox();
-            this.textBox16 = new System.Windows.Forms.TextBox();
-            this.textBox23 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox30 = new System.Windows.Forms.TextBox();
-            this.textBox15 = new System.Windows.Forms.TextBox();
-            this.textBox22 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox29 = new System.Windows.Forms.TextBox();
-            this.textBox14 = new System.Windows.Forms.TextBox();
-            this.textBox21 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox28 = new System.Windows.Forms.TextBox();
-            this.textBox13 = new System.Windows.Forms.TextBox();
-            this.textBox20 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox27 = new System.Windows.Forms.TextBox();
-            this.textBox12 = new System.Windows.Forms.TextBox();
-            this.textBox19 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.AbsoluteEnocdergroupBox = new System.Windows.Forms.GroupBox();
+            this.AbCurrentJoint8textBox = new System.Windows.Forms.TextBox();
+            this.AbVelocityJoint8textBox = new System.Windows.Forms.TextBox();
+            this.AbPositionJoint8textBox = new System.Windows.Forms.TextBox();
+            this.AbCurrentJoint7textBox = new System.Windows.Forms.TextBox();
+            this.AbsPosJoint8textBox = new System.Windows.Forms.TextBox();
+            this.AbCurrentJoint6textBox = new System.Windows.Forms.TextBox();
+            this.AbVelocityJoint7textBox = new System.Windows.Forms.TextBox();
+            this.AbVelocityJoint6textBox = new System.Windows.Forms.TextBox();
+            this.AbPositionJoint7textBox = new System.Windows.Forms.TextBox();
+            this.AbCurrentJoint5textBox = new System.Windows.Forms.TextBox();
+            this.AbPositionJoint6textBox = new System.Windows.Forms.TextBox();
+            this.AbVelocityJoint5textBox = new System.Windows.Forms.TextBox();
+            this.AbsPosJoint7textBox = new System.Windows.Forms.TextBox();
+            this.AbCurrentJoint4textBox = new System.Windows.Forms.TextBox();
+            this.AbPositionJoint5textBox = new System.Windows.Forms.TextBox();
+            this.AbVelocityJoint4textBox = new System.Windows.Forms.TextBox();
+            this.AbsPosJoint6textBox = new System.Windows.Forms.TextBox();
+            this.AbCurrentJoint3textBox = new System.Windows.Forms.TextBox();
+            this.AbPositionJoint4textBox = new System.Windows.Forms.TextBox();
+            this.AbVelocityJoint3textBox = new System.Windows.Forms.TextBox();
+            this.AbsPosJoint5textBox = new System.Windows.Forms.TextBox();
+            this.AbCurrentJoint2textBox = new System.Windows.Forms.TextBox();
+            this.AbPositionJoint3textBox = new System.Windows.Forms.TextBox();
+            this.AbVelocityJoint2textBox = new System.Windows.Forms.TextBox();
+            this.AbsPosJoint4textBox = new System.Windows.Forms.TextBox();
+            this.AbCurrentJoint1textBox = new System.Windows.Forms.TextBox();
+            this.AbPositionJoint2textBox = new System.Windows.Forms.TextBox();
+            this.AbVelocityJoint1textBox = new System.Windows.Forms.TextBox();
+            this.AbsPosJoint3textBox = new System.Windows.Forms.TextBox();
+            this.AbPositionJoint1textBox = new System.Windows.Forms.TextBox();
+            this.AbsPosJoint2textBox = new System.Windows.Forms.TextBox();
+            this.AbsPosJoint1textBox = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
@@ -314,97 +450,20 @@ namespace DebuggingToolGUI
             this.label19 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.button4 = new System.Windows.Forms.Button();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.label84 = new System.Windows.Forms.Label();
-            this.pictureBox11 = new System.Windows.Forms.PictureBox();
-            this.label85 = new System.Windows.Forms.Label();
-            this.pictureBox12 = new System.Windows.Forms.PictureBox();
-            this.label86 = new System.Windows.Forms.Label();
-            this.pictureBox13 = new System.Windows.Forms.PictureBox();
-            this.pictureBox14 = new System.Windows.Forms.PictureBox();
+            this.LoggingStartbutton = new System.Windows.Forms.Button();
+            this.LoggingSystemgroupBox = new System.Windows.Forms.GroupBox();
+            this.LoggingpictureBox = new System.Windows.Forms.PictureBox();
             this.label87 = new System.Windows.Forms.Label();
-            this.groupBox10 = new System.Windows.Forms.GroupBox();
-            this.button9 = new System.Windows.Forms.Button();
-            this.textBox164 = new System.Windows.Forms.TextBox();
-            this.textBox165 = new System.Windows.Forms.TextBox();
-            this.textBox168 = new System.Windows.Forms.TextBox();
-            this.textBox169 = new System.Windows.Forms.TextBox();
-            this.textBox171 = new System.Windows.Forms.TextBox();
-            this.textBox172 = new System.Windows.Forms.TextBox();
-            this.textBox174 = new System.Windows.Forms.TextBox();
-            this.textBox175 = new System.Windows.Forms.TextBox();
-            this.textBox177 = new System.Windows.Forms.TextBox();
-            this.textBox178 = new System.Windows.Forms.TextBox();
-            this.textBox180 = new System.Windows.Forms.TextBox();
-            this.textBox181 = new System.Windows.Forms.TextBox();
-            this.textBox183 = new System.Windows.Forms.TextBox();
-            this.textBox184 = new System.Windows.Forms.TextBox();
-            this.textBox185 = new System.Windows.Forms.TextBox();
-            this.textBox186 = new System.Windows.Forms.TextBox();
-            this.label88 = new System.Windows.Forms.Label();
-            this.label89 = new System.Windows.Forms.Label();
-            this.label90 = new System.Windows.Forms.Label();
-            this.label91 = new System.Windows.Forms.Label();
-            this.label92 = new System.Windows.Forms.Label();
-            this.label93 = new System.Windows.Forms.Label();
-            this.label94 = new System.Windows.Forms.Label();
-            this.label95 = new System.Windows.Forms.Label();
-            this.label97 = new System.Windows.Forms.Label();
-            this.label98 = new System.Windows.Forms.Label();
-            this.groupBox11 = new System.Windows.Forms.GroupBox();
-            this.button10 = new System.Windows.Forms.Button();
-            this.textBox170 = new System.Windows.Forms.TextBox();
-            this.textBox176 = new System.Windows.Forms.TextBox();
-            this.textBox179 = new System.Windows.Forms.TextBox();
-            this.textBox182 = new System.Windows.Forms.TextBox();
-            this.textBox187 = new System.Windows.Forms.TextBox();
-            this.textBox188 = new System.Windows.Forms.TextBox();
-            this.textBox189 = new System.Windows.Forms.TextBox();
-            this.textBox190 = new System.Windows.Forms.TextBox();
-            this.textBox191 = new System.Windows.Forms.TextBox();
-            this.textBox192 = new System.Windows.Forms.TextBox();
-            this.textBox193 = new System.Windows.Forms.TextBox();
-            this.textBox194 = new System.Windows.Forms.TextBox();
-            this.label100 = new System.Windows.Forms.Label();
-            this.label101 = new System.Windows.Forms.Label();
-            this.label102 = new System.Windows.Forms.Label();
-            this.label103 = new System.Windows.Forms.Label();
-            this.label104 = new System.Windows.Forms.Label();
-            this.label105 = new System.Windows.Forms.Label();
-            this.label106 = new System.Windows.Forms.Label();
-            this.label107 = new System.Windows.Forms.Label();
-            this.groupBox12 = new System.Windows.Forms.GroupBox();
-            this.button11 = new System.Windows.Forms.Button();
-            this.textBox163 = new System.Windows.Forms.TextBox();
-            this.textBox166 = new System.Windows.Forms.TextBox();
-            this.textBox167 = new System.Windows.Forms.TextBox();
-            this.textBox173 = new System.Windows.Forms.TextBox();
-            this.textBox195 = new System.Windows.Forms.TextBox();
-            this.textBox196 = new System.Windows.Forms.TextBox();
-            this.textBox197 = new System.Windows.Forms.TextBox();
-            this.textBox198 = new System.Windows.Forms.TextBox();
-            this.textBox199 = new System.Windows.Forms.TextBox();
-            this.textBox200 = new System.Windows.Forms.TextBox();
-            this.textBox201 = new System.Windows.Forms.TextBox();
-            this.textBox202 = new System.Windows.Forms.TextBox();
-            this.label96 = new System.Windows.Forms.Label();
-            this.label99 = new System.Windows.Forms.Label();
-            this.label108 = new System.Windows.Forms.Label();
-            this.label109 = new System.Windows.Forms.Label();
-            this.label110 = new System.Windows.Forms.Label();
-            this.label111 = new System.Windows.Forms.Label();
-            this.label112 = new System.Windows.Forms.Label();
-            this.label113 = new System.Windows.Forms.Label();
-            this.label114 = new System.Windows.Forms.Label();
-            this.textBox203 = new System.Windows.Forms.TextBox();
-            this.textBox204 = new System.Windows.Forms.TextBox();
-            this.textBox205 = new System.Windows.Forms.TextBox();
-            this.textBox206 = new System.Windows.Forms.TextBox();
-            this.textBox207 = new System.Windows.Forms.TextBox();
-            this.textBox208 = new System.Windows.Forms.TextBox();
+            this.LoggingStopbutton = new System.Windows.Forms.Button();
+            this.ParameterSetgroupBox = new System.Windows.Forms.GroupBox();
+            this.ParametersSavepictureBox = new System.Windows.Forms.PictureBox();
+            this.ParametersReadpictureBox = new System.Windows.Forms.PictureBox();
+            this.ParametersSavebutton = new System.Windows.Forms.Button();
+            this.label141 = new System.Windows.Forms.Label();
+            this.label115 = new System.Windows.Forms.Label();
+            this.ParametersReadbutton = new System.Windows.Forms.Button();
+            this.ConnectCompletepictureBox = new System.Windows.Forms.PictureBox();
+            this.ConnectComplete = new System.Windows.Forms.Label();
             this.MainTapControl.SuspendLayout();
             this.Default.SuspendLayout();
             this.groupBox7.SuspendLayout();
@@ -413,32 +472,46 @@ namespace DebuggingToolGUI
             this.groupBox9.SuspendLayout();
             this.groupBox8.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            this.JointPositionSetgroupBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.JointReachedpictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.JointMovingpictureBox)).BeginInit();
+            this.groupBox10.SuspendLayout();
             this.tabPage3.SuspendLayout();
+            this.CartesianPositionSetgroupBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.CartesianReachedpictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CartesianMovingpictureBox)).BeginInit();
+            this.groupBox12.SuspendLayout();
+            this.groupBox11.SuspendLayout();
             this.LoginGroupBox.SuspendLayout();
             this.StateGroupBox.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbConnect)).BeginInit();
-            this.groupBox3.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            this.groupBox4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
-            this.groupBox10.SuspendLayout();
-            this.groupBox11.SuspendLayout();
-            this.groupBox12.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Joint4pictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Joint3pictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Joint2pictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Joint8pictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Joint7pictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Joint6pictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Joint5pictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Joint1pictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MainPowerpictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AuxPowerpictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TorqueModepictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PositionModepictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GCpictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ConnectpictureBox)).BeginInit();
+            this.IncrementalEncodergroupBox.SuspendLayout();
+            this.AbsoluteEnocdergroupBox.SuspendLayout();
+            this.LoggingSystemgroupBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.LoggingpictureBox)).BeginInit();
+            this.ParameterSetgroupBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ParametersSavepictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ParametersReadpictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ConnectCompletepictureBox)).BeginInit();
             this.SuspendLayout();
+            // 
+            // MainTimer
+            // 
+            this.MainTimer.Tick += new System.EventHandler(this.MainTimer_Tick);
             // 
             // MainTapControl
             // 
@@ -457,6 +530,7 @@ namespace DebuggingToolGUI
             // 
             // Default
             // 
+            this.Default.BackColor = System.Drawing.SystemColors.Control;
             this.Default.Controls.Add(this.groupBox7);
             this.Default.Controls.Add(this.groupBox6);
             this.Default.Font = new System.Drawing.Font("KoPub돋움체 Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
@@ -466,36 +540,35 @@ namespace DebuggingToolGUI
             this.Default.Size = new System.Drawing.Size(1300, 403);
             this.Default.TabIndex = 0;
             this.Default.Text = "Joint PID Setting";
-            this.Default.UseVisualStyleBackColor = true;
             this.Default.Click += new System.EventHandler(this.Default_Click);
             // 
             // groupBox7
             // 
-            this.groupBox7.Controls.Add(this.button6);
-            this.groupBox7.Controls.Add(this.textBox67);
-            this.groupBox7.Controls.Add(this.textBox70);
-            this.groupBox7.Controls.Add(this.textBox72);
-            this.groupBox7.Controls.Add(this.textBox76);
-            this.groupBox7.Controls.Add(this.textBox80);
-            this.groupBox7.Controls.Add(this.textBox84);
-            this.groupBox7.Controls.Add(this.textBox88);
-            this.groupBox7.Controls.Add(this.textBox92);
-            this.groupBox7.Controls.Add(this.textBox99);
-            this.groupBox7.Controls.Add(this.textBox100);
-            this.groupBox7.Controls.Add(this.textBox101);
-            this.groupBox7.Controls.Add(this.textBox102);
-            this.groupBox7.Controls.Add(this.textBox103);
-            this.groupBox7.Controls.Add(this.textBox104);
-            this.groupBox7.Controls.Add(this.textBox105);
-            this.groupBox7.Controls.Add(this.textBox106);
-            this.groupBox7.Controls.Add(this.textBox107);
-            this.groupBox7.Controls.Add(this.textBox108);
-            this.groupBox7.Controls.Add(this.textBox109);
-            this.groupBox7.Controls.Add(this.textBox110);
-            this.groupBox7.Controls.Add(this.textBox111);
-            this.groupBox7.Controls.Add(this.textBox112);
-            this.groupBox7.Controls.Add(this.textBox113);
-            this.groupBox7.Controls.Add(this.textBox114);
+            this.groupBox7.Controls.Add(this.SetJointToqPIDGainbutton);
+            this.groupBox7.Controls.Add(this.jtDgainJoint8textBox);
+            this.groupBox7.Controls.Add(this.jtIgainJoint8textBox);
+            this.groupBox7.Controls.Add(this.jtPgainJoint8textBox);
+            this.groupBox7.Controls.Add(this.jtDgainJoint7textBox);
+            this.groupBox7.Controls.Add(this.jtDgainJoint6textBox);
+            this.groupBox7.Controls.Add(this.jtIgainJoint7textBox);
+            this.groupBox7.Controls.Add(this.jtIgainJoint6textBox);
+            this.groupBox7.Controls.Add(this.jtDgainJoint5textBox);
+            this.groupBox7.Controls.Add(this.jtPgainJoint7textBox);
+            this.groupBox7.Controls.Add(this.jtIgainJoint5textBox);
+            this.groupBox7.Controls.Add(this.jtDgainJoint4textBox);
+            this.groupBox7.Controls.Add(this.jtPgainJoint6textBox);
+            this.groupBox7.Controls.Add(this.jtIgainJoint4textBox);
+            this.groupBox7.Controls.Add(this.jtDgainJoint3textBox);
+            this.groupBox7.Controls.Add(this.jtPgainJoint5textBox);
+            this.groupBox7.Controls.Add(this.jtIgainJoint3textBox);
+            this.groupBox7.Controls.Add(this.jtDgainJoint2textBox);
+            this.groupBox7.Controls.Add(this.jtPgainJoint4textBox);
+            this.groupBox7.Controls.Add(this.jtIgainJoint2textBox);
+            this.groupBox7.Controls.Add(this.jtDgainJoint1textBox);
+            this.groupBox7.Controls.Add(this.jtPgainJoint3textBox);
+            this.groupBox7.Controls.Add(this.jtIgainJoint1textBox);
+            this.groupBox7.Controls.Add(this.jtPgainJoint2textBox);
+            this.groupBox7.Controls.Add(this.jtPgainJoint1textBox);
             this.groupBox7.Controls.Add(this.label48);
             this.groupBox7.Controls.Add(this.label52);
             this.groupBox7.Controls.Add(this.label53);
@@ -515,206 +588,207 @@ namespace DebuggingToolGUI
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Torque PID Gain Param";
             // 
-            // button6
+            // SetJointToqPIDGainbutton
             // 
-            this.button6.Location = new System.Drawing.Point(983, 54);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(282, 110);
-            this.button6.TabIndex = 7;
-            this.button6.Text = "Set PID Gain Set";
-            this.button6.UseVisualStyleBackColor = true;
+            this.SetJointToqPIDGainbutton.Location = new System.Drawing.Point(983, 54);
+            this.SetJointToqPIDGainbutton.Name = "SetJointToqPIDGainbutton";
+            this.SetJointToqPIDGainbutton.Size = new System.Drawing.Size(282, 110);
+            this.SetJointToqPIDGainbutton.TabIndex = 7;
+            this.SetJointToqPIDGainbutton.Text = "Set PID Gain Set";
+            this.SetJointToqPIDGainbutton.UseVisualStyleBackColor = true;
+            this.SetJointToqPIDGainbutton.Click += new System.EventHandler(this.SetJointToqPIDGainbutton_Click);
             // 
-            // textBox67
+            // jtDgainJoint8textBox
             // 
-            this.textBox67.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox67.Location = new System.Drawing.Point(867, 136);
-            this.textBox67.Name = "textBox67";
-            this.textBox67.Size = new System.Drawing.Size(104, 28);
-            this.textBox67.TabIndex = 6;
+            this.jtDgainJoint8textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.jtDgainJoint8textBox.Location = new System.Drawing.Point(867, 136);
+            this.jtDgainJoint8textBox.Name = "jtDgainJoint8textBox";
+            this.jtDgainJoint8textBox.Size = new System.Drawing.Size(104, 28);
+            this.jtDgainJoint8textBox.TabIndex = 6;
             // 
-            // textBox70
+            // jtIgainJoint8textBox
             // 
-            this.textBox70.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox70.Location = new System.Drawing.Point(867, 102);
-            this.textBox70.Name = "textBox70";
-            this.textBox70.Size = new System.Drawing.Size(104, 28);
-            this.textBox70.TabIndex = 6;
+            this.jtIgainJoint8textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.jtIgainJoint8textBox.Location = new System.Drawing.Point(867, 102);
+            this.jtIgainJoint8textBox.Name = "jtIgainJoint8textBox";
+            this.jtIgainJoint8textBox.Size = new System.Drawing.Size(104, 28);
+            this.jtIgainJoint8textBox.TabIndex = 6;
             // 
-            // textBox72
+            // jtPgainJoint8textBox
             // 
-            this.textBox72.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox72.Location = new System.Drawing.Point(867, 68);
-            this.textBox72.Name = "textBox72";
-            this.textBox72.Size = new System.Drawing.Size(104, 28);
-            this.textBox72.TabIndex = 6;
+            this.jtPgainJoint8textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.jtPgainJoint8textBox.Location = new System.Drawing.Point(867, 68);
+            this.jtPgainJoint8textBox.Name = "jtPgainJoint8textBox";
+            this.jtPgainJoint8textBox.Size = new System.Drawing.Size(104, 28);
+            this.jtPgainJoint8textBox.TabIndex = 6;
             // 
-            // textBox76
+            // jtDgainJoint7textBox
             // 
-            this.textBox76.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox76.Location = new System.Drawing.Point(757, 136);
-            this.textBox76.Name = "textBox76";
-            this.textBox76.Size = new System.Drawing.Size(104, 28);
-            this.textBox76.TabIndex = 6;
+            this.jtDgainJoint7textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.jtDgainJoint7textBox.Location = new System.Drawing.Point(757, 136);
+            this.jtDgainJoint7textBox.Name = "jtDgainJoint7textBox";
+            this.jtDgainJoint7textBox.Size = new System.Drawing.Size(104, 28);
+            this.jtDgainJoint7textBox.TabIndex = 6;
             // 
-            // textBox80
+            // jtDgainJoint6textBox
             // 
-            this.textBox80.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox80.Location = new System.Drawing.Point(647, 136);
-            this.textBox80.Name = "textBox80";
-            this.textBox80.Size = new System.Drawing.Size(104, 28);
-            this.textBox80.TabIndex = 6;
+            this.jtDgainJoint6textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.jtDgainJoint6textBox.Location = new System.Drawing.Point(647, 136);
+            this.jtDgainJoint6textBox.Name = "jtDgainJoint6textBox";
+            this.jtDgainJoint6textBox.Size = new System.Drawing.Size(104, 28);
+            this.jtDgainJoint6textBox.TabIndex = 6;
             // 
-            // textBox84
+            // jtIgainJoint7textBox
             // 
-            this.textBox84.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox84.Location = new System.Drawing.Point(757, 102);
-            this.textBox84.Name = "textBox84";
-            this.textBox84.Size = new System.Drawing.Size(104, 28);
-            this.textBox84.TabIndex = 6;
+            this.jtIgainJoint7textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.jtIgainJoint7textBox.Location = new System.Drawing.Point(757, 102);
+            this.jtIgainJoint7textBox.Name = "jtIgainJoint7textBox";
+            this.jtIgainJoint7textBox.Size = new System.Drawing.Size(104, 28);
+            this.jtIgainJoint7textBox.TabIndex = 6;
             // 
-            // textBox88
+            // jtIgainJoint6textBox
             // 
-            this.textBox88.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox88.Location = new System.Drawing.Point(647, 102);
-            this.textBox88.Name = "textBox88";
-            this.textBox88.Size = new System.Drawing.Size(104, 28);
-            this.textBox88.TabIndex = 6;
+            this.jtIgainJoint6textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.jtIgainJoint6textBox.Location = new System.Drawing.Point(647, 102);
+            this.jtIgainJoint6textBox.Name = "jtIgainJoint6textBox";
+            this.jtIgainJoint6textBox.Size = new System.Drawing.Size(104, 28);
+            this.jtIgainJoint6textBox.TabIndex = 6;
             // 
-            // textBox92
+            // jtDgainJoint5textBox
             // 
-            this.textBox92.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox92.Location = new System.Drawing.Point(537, 136);
-            this.textBox92.Name = "textBox92";
-            this.textBox92.Size = new System.Drawing.Size(104, 28);
-            this.textBox92.TabIndex = 6;
+            this.jtDgainJoint5textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.jtDgainJoint5textBox.Location = new System.Drawing.Point(537, 136);
+            this.jtDgainJoint5textBox.Name = "jtDgainJoint5textBox";
+            this.jtDgainJoint5textBox.Size = new System.Drawing.Size(104, 28);
+            this.jtDgainJoint5textBox.TabIndex = 6;
             // 
-            // textBox99
+            // jtPgainJoint7textBox
             // 
-            this.textBox99.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox99.Location = new System.Drawing.Point(757, 68);
-            this.textBox99.Name = "textBox99";
-            this.textBox99.Size = new System.Drawing.Size(104, 28);
-            this.textBox99.TabIndex = 6;
+            this.jtPgainJoint7textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.jtPgainJoint7textBox.Location = new System.Drawing.Point(757, 68);
+            this.jtPgainJoint7textBox.Name = "jtPgainJoint7textBox";
+            this.jtPgainJoint7textBox.Size = new System.Drawing.Size(104, 28);
+            this.jtPgainJoint7textBox.TabIndex = 6;
             // 
-            // textBox100
+            // jtIgainJoint5textBox
             // 
-            this.textBox100.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox100.Location = new System.Drawing.Point(537, 102);
-            this.textBox100.Name = "textBox100";
-            this.textBox100.Size = new System.Drawing.Size(104, 28);
-            this.textBox100.TabIndex = 6;
+            this.jtIgainJoint5textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.jtIgainJoint5textBox.Location = new System.Drawing.Point(537, 102);
+            this.jtIgainJoint5textBox.Name = "jtIgainJoint5textBox";
+            this.jtIgainJoint5textBox.Size = new System.Drawing.Size(104, 28);
+            this.jtIgainJoint5textBox.TabIndex = 6;
             // 
-            // textBox101
+            // jtDgainJoint4textBox
             // 
-            this.textBox101.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox101.Location = new System.Drawing.Point(427, 136);
-            this.textBox101.Name = "textBox101";
-            this.textBox101.Size = new System.Drawing.Size(104, 28);
-            this.textBox101.TabIndex = 6;
+            this.jtDgainJoint4textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.jtDgainJoint4textBox.Location = new System.Drawing.Point(427, 136);
+            this.jtDgainJoint4textBox.Name = "jtDgainJoint4textBox";
+            this.jtDgainJoint4textBox.Size = new System.Drawing.Size(104, 28);
+            this.jtDgainJoint4textBox.TabIndex = 6;
             // 
-            // textBox102
+            // jtPgainJoint6textBox
             // 
-            this.textBox102.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox102.Location = new System.Drawing.Point(647, 68);
-            this.textBox102.Name = "textBox102";
-            this.textBox102.Size = new System.Drawing.Size(104, 28);
-            this.textBox102.TabIndex = 6;
+            this.jtPgainJoint6textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.jtPgainJoint6textBox.Location = new System.Drawing.Point(647, 68);
+            this.jtPgainJoint6textBox.Name = "jtPgainJoint6textBox";
+            this.jtPgainJoint6textBox.Size = new System.Drawing.Size(104, 28);
+            this.jtPgainJoint6textBox.TabIndex = 6;
             // 
-            // textBox103
+            // jtIgainJoint4textBox
             // 
-            this.textBox103.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox103.Location = new System.Drawing.Point(427, 102);
-            this.textBox103.Name = "textBox103";
-            this.textBox103.Size = new System.Drawing.Size(104, 28);
-            this.textBox103.TabIndex = 6;
+            this.jtIgainJoint4textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.jtIgainJoint4textBox.Location = new System.Drawing.Point(427, 102);
+            this.jtIgainJoint4textBox.Name = "jtIgainJoint4textBox";
+            this.jtIgainJoint4textBox.Size = new System.Drawing.Size(104, 28);
+            this.jtIgainJoint4textBox.TabIndex = 6;
             // 
-            // textBox104
+            // jtDgainJoint3textBox
             // 
-            this.textBox104.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox104.Location = new System.Drawing.Point(317, 136);
-            this.textBox104.Name = "textBox104";
-            this.textBox104.Size = new System.Drawing.Size(104, 28);
-            this.textBox104.TabIndex = 6;
+            this.jtDgainJoint3textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.jtDgainJoint3textBox.Location = new System.Drawing.Point(317, 136);
+            this.jtDgainJoint3textBox.Name = "jtDgainJoint3textBox";
+            this.jtDgainJoint3textBox.Size = new System.Drawing.Size(104, 28);
+            this.jtDgainJoint3textBox.TabIndex = 6;
             // 
-            // textBox105
+            // jtPgainJoint5textBox
             // 
-            this.textBox105.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox105.Location = new System.Drawing.Point(537, 68);
-            this.textBox105.Name = "textBox105";
-            this.textBox105.Size = new System.Drawing.Size(104, 28);
-            this.textBox105.TabIndex = 6;
+            this.jtPgainJoint5textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.jtPgainJoint5textBox.Location = new System.Drawing.Point(537, 68);
+            this.jtPgainJoint5textBox.Name = "jtPgainJoint5textBox";
+            this.jtPgainJoint5textBox.Size = new System.Drawing.Size(104, 28);
+            this.jtPgainJoint5textBox.TabIndex = 6;
             // 
-            // textBox106
+            // jtIgainJoint3textBox
             // 
-            this.textBox106.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox106.Location = new System.Drawing.Point(317, 102);
-            this.textBox106.Name = "textBox106";
-            this.textBox106.Size = new System.Drawing.Size(104, 28);
-            this.textBox106.TabIndex = 6;
+            this.jtIgainJoint3textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.jtIgainJoint3textBox.Location = new System.Drawing.Point(317, 102);
+            this.jtIgainJoint3textBox.Name = "jtIgainJoint3textBox";
+            this.jtIgainJoint3textBox.Size = new System.Drawing.Size(104, 28);
+            this.jtIgainJoint3textBox.TabIndex = 6;
             // 
-            // textBox107
+            // jtDgainJoint2textBox
             // 
-            this.textBox107.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox107.Location = new System.Drawing.Point(207, 136);
-            this.textBox107.Name = "textBox107";
-            this.textBox107.Size = new System.Drawing.Size(104, 28);
-            this.textBox107.TabIndex = 6;
+            this.jtDgainJoint2textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.jtDgainJoint2textBox.Location = new System.Drawing.Point(207, 136);
+            this.jtDgainJoint2textBox.Name = "jtDgainJoint2textBox";
+            this.jtDgainJoint2textBox.Size = new System.Drawing.Size(104, 28);
+            this.jtDgainJoint2textBox.TabIndex = 6;
             // 
-            // textBox108
+            // jtPgainJoint4textBox
             // 
-            this.textBox108.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox108.Location = new System.Drawing.Point(427, 68);
-            this.textBox108.Name = "textBox108";
-            this.textBox108.Size = new System.Drawing.Size(104, 28);
-            this.textBox108.TabIndex = 6;
+            this.jtPgainJoint4textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.jtPgainJoint4textBox.Location = new System.Drawing.Point(427, 68);
+            this.jtPgainJoint4textBox.Name = "jtPgainJoint4textBox";
+            this.jtPgainJoint4textBox.Size = new System.Drawing.Size(104, 28);
+            this.jtPgainJoint4textBox.TabIndex = 6;
             // 
-            // textBox109
+            // jtIgainJoint2textBox
             // 
-            this.textBox109.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox109.Location = new System.Drawing.Point(207, 102);
-            this.textBox109.Name = "textBox109";
-            this.textBox109.Size = new System.Drawing.Size(104, 28);
-            this.textBox109.TabIndex = 6;
+            this.jtIgainJoint2textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.jtIgainJoint2textBox.Location = new System.Drawing.Point(207, 102);
+            this.jtIgainJoint2textBox.Name = "jtIgainJoint2textBox";
+            this.jtIgainJoint2textBox.Size = new System.Drawing.Size(104, 28);
+            this.jtIgainJoint2textBox.TabIndex = 6;
             // 
-            // textBox110
+            // jtDgainJoint1textBox
             // 
-            this.textBox110.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox110.Location = new System.Drawing.Point(97, 136);
-            this.textBox110.Name = "textBox110";
-            this.textBox110.Size = new System.Drawing.Size(104, 28);
-            this.textBox110.TabIndex = 6;
+            this.jtDgainJoint1textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.jtDgainJoint1textBox.Location = new System.Drawing.Point(97, 136);
+            this.jtDgainJoint1textBox.Name = "jtDgainJoint1textBox";
+            this.jtDgainJoint1textBox.Size = new System.Drawing.Size(104, 28);
+            this.jtDgainJoint1textBox.TabIndex = 6;
             // 
-            // textBox111
+            // jtPgainJoint3textBox
             // 
-            this.textBox111.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox111.Location = new System.Drawing.Point(317, 68);
-            this.textBox111.Name = "textBox111";
-            this.textBox111.Size = new System.Drawing.Size(104, 28);
-            this.textBox111.TabIndex = 6;
+            this.jtPgainJoint3textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.jtPgainJoint3textBox.Location = new System.Drawing.Point(317, 68);
+            this.jtPgainJoint3textBox.Name = "jtPgainJoint3textBox";
+            this.jtPgainJoint3textBox.Size = new System.Drawing.Size(104, 28);
+            this.jtPgainJoint3textBox.TabIndex = 6;
             // 
-            // textBox112
+            // jtIgainJoint1textBox
             // 
-            this.textBox112.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox112.Location = new System.Drawing.Point(97, 102);
-            this.textBox112.Name = "textBox112";
-            this.textBox112.Size = new System.Drawing.Size(104, 28);
-            this.textBox112.TabIndex = 6;
+            this.jtIgainJoint1textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.jtIgainJoint1textBox.Location = new System.Drawing.Point(97, 102);
+            this.jtIgainJoint1textBox.Name = "jtIgainJoint1textBox";
+            this.jtIgainJoint1textBox.Size = new System.Drawing.Size(104, 28);
+            this.jtIgainJoint1textBox.TabIndex = 6;
             // 
-            // textBox113
+            // jtPgainJoint2textBox
             // 
-            this.textBox113.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox113.Location = new System.Drawing.Point(207, 68);
-            this.textBox113.Name = "textBox113";
-            this.textBox113.Size = new System.Drawing.Size(104, 28);
-            this.textBox113.TabIndex = 6;
+            this.jtPgainJoint2textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.jtPgainJoint2textBox.Location = new System.Drawing.Point(207, 68);
+            this.jtPgainJoint2textBox.Name = "jtPgainJoint2textBox";
+            this.jtPgainJoint2textBox.Size = new System.Drawing.Size(104, 28);
+            this.jtPgainJoint2textBox.TabIndex = 6;
             // 
-            // textBox114
+            // jtPgainJoint1textBox
             // 
-            this.textBox114.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox114.Location = new System.Drawing.Point(97, 68);
-            this.textBox114.Name = "textBox114";
-            this.textBox114.Size = new System.Drawing.Size(104, 28);
-            this.textBox114.TabIndex = 6;
+            this.jtPgainJoint1textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.jtPgainJoint1textBox.Location = new System.Drawing.Point(97, 68);
+            this.jtPgainJoint1textBox.Name = "jtPgainJoint1textBox";
+            this.jtPgainJoint1textBox.Size = new System.Drawing.Size(104, 28);
+            this.jtPgainJoint1textBox.TabIndex = 6;
             // 
             // label48
             // 
@@ -828,31 +902,31 @@ namespace DebuggingToolGUI
             // 
             // groupBox6
             // 
-            this.groupBox6.Controls.Add(this.button5);
-            this.groupBox6.Controls.Add(this.textBox68);
-            this.groupBox6.Controls.Add(this.textBox69);
-            this.groupBox6.Controls.Add(this.textBox71);
-            this.groupBox6.Controls.Add(this.textBox73);
-            this.groupBox6.Controls.Add(this.textBox74);
-            this.groupBox6.Controls.Add(this.textBox75);
-            this.groupBox6.Controls.Add(this.textBox77);
-            this.groupBox6.Controls.Add(this.textBox78);
-            this.groupBox6.Controls.Add(this.textBox79);
-            this.groupBox6.Controls.Add(this.textBox81);
-            this.groupBox6.Controls.Add(this.textBox82);
-            this.groupBox6.Controls.Add(this.textBox83);
-            this.groupBox6.Controls.Add(this.textBox85);
-            this.groupBox6.Controls.Add(this.textBox86);
-            this.groupBox6.Controls.Add(this.textBox87);
-            this.groupBox6.Controls.Add(this.textBox89);
-            this.groupBox6.Controls.Add(this.textBox90);
-            this.groupBox6.Controls.Add(this.textBox91);
-            this.groupBox6.Controls.Add(this.textBox93);
-            this.groupBox6.Controls.Add(this.textBox94);
-            this.groupBox6.Controls.Add(this.textBox95);
-            this.groupBox6.Controls.Add(this.textBox96);
-            this.groupBox6.Controls.Add(this.textBox97);
-            this.groupBox6.Controls.Add(this.textBox98);
+            this.groupBox6.Controls.Add(this.SetJointPosPIDGainbutton);
+            this.groupBox6.Controls.Add(this.jpDgainJoint8textBox);
+            this.groupBox6.Controls.Add(this.jpIgainJoint8textBox);
+            this.groupBox6.Controls.Add(this.jpPgainJoint8textBox);
+            this.groupBox6.Controls.Add(this.jpDgainJoint7textBox);
+            this.groupBox6.Controls.Add(this.jpDgainJoint6textBox);
+            this.groupBox6.Controls.Add(this.jpIgainJoint7textBox);
+            this.groupBox6.Controls.Add(this.jpIgainJoint6textBox);
+            this.groupBox6.Controls.Add(this.jpDgainJoint5textBox);
+            this.groupBox6.Controls.Add(this.jpPgainJoint7textBox);
+            this.groupBox6.Controls.Add(this.jpIgainJoint5textBox);
+            this.groupBox6.Controls.Add(this.jpDgainJoint4textBox);
+            this.groupBox6.Controls.Add(this.jpPgainJoint6textBox);
+            this.groupBox6.Controls.Add(this.jpIgainJoint4textBox);
+            this.groupBox6.Controls.Add(this.jpDgainJoint3textBox);
+            this.groupBox6.Controls.Add(this.jpPgainJoint5textBox);
+            this.groupBox6.Controls.Add(this.jpIgainJoint3textBox);
+            this.groupBox6.Controls.Add(this.jpDgainJoint2textBox);
+            this.groupBox6.Controls.Add(this.jpPgainJoint4textBox);
+            this.groupBox6.Controls.Add(this.jpIgainJoint2textBox);
+            this.groupBox6.Controls.Add(this.jpDgainJoint1textBox);
+            this.groupBox6.Controls.Add(this.jpPgainJoint3textBox);
+            this.groupBox6.Controls.Add(this.jpIgainJoint1textBox);
+            this.groupBox6.Controls.Add(this.jpPgainJoint2textBox);
+            this.groupBox6.Controls.Add(this.jpPgainJoint1textBox);
             this.groupBox6.Controls.Add(this.label40);
             this.groupBox6.Controls.Add(this.label41);
             this.groupBox6.Controls.Add(this.label42);
@@ -872,206 +946,207 @@ namespace DebuggingToolGUI
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Joint Position PID Gain Param";
             // 
-            // button5
+            // SetJointPosPIDGainbutton
             // 
-            this.button5.Location = new System.Drawing.Point(983, 54);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(282, 110);
-            this.button5.TabIndex = 7;
-            this.button5.Text = "Set PID Gain Set";
-            this.button5.UseVisualStyleBackColor = true;
+            this.SetJointPosPIDGainbutton.Location = new System.Drawing.Point(983, 54);
+            this.SetJointPosPIDGainbutton.Name = "SetJointPosPIDGainbutton";
+            this.SetJointPosPIDGainbutton.Size = new System.Drawing.Size(282, 110);
+            this.SetJointPosPIDGainbutton.TabIndex = 7;
+            this.SetJointPosPIDGainbutton.Text = "Set PID Gain Set";
+            this.SetJointPosPIDGainbutton.UseVisualStyleBackColor = true;
+            this.SetJointPosPIDGainbutton.Click += new System.EventHandler(this.SetJointPosPIDGainbutton_Click);
             // 
-            // textBox68
+            // jpDgainJoint8textBox
             // 
-            this.textBox68.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox68.Location = new System.Drawing.Point(867, 136);
-            this.textBox68.Name = "textBox68";
-            this.textBox68.Size = new System.Drawing.Size(104, 28);
-            this.textBox68.TabIndex = 6;
+            this.jpDgainJoint8textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.jpDgainJoint8textBox.Location = new System.Drawing.Point(867, 136);
+            this.jpDgainJoint8textBox.Name = "jpDgainJoint8textBox";
+            this.jpDgainJoint8textBox.Size = new System.Drawing.Size(104, 28);
+            this.jpDgainJoint8textBox.TabIndex = 6;
             // 
-            // textBox69
+            // jpIgainJoint8textBox
             // 
-            this.textBox69.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox69.Location = new System.Drawing.Point(867, 102);
-            this.textBox69.Name = "textBox69";
-            this.textBox69.Size = new System.Drawing.Size(104, 28);
-            this.textBox69.TabIndex = 6;
+            this.jpIgainJoint8textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.jpIgainJoint8textBox.Location = new System.Drawing.Point(867, 102);
+            this.jpIgainJoint8textBox.Name = "jpIgainJoint8textBox";
+            this.jpIgainJoint8textBox.Size = new System.Drawing.Size(104, 28);
+            this.jpIgainJoint8textBox.TabIndex = 6;
             // 
-            // textBox71
+            // jpPgainJoint8textBox
             // 
-            this.textBox71.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox71.Location = new System.Drawing.Point(867, 68);
-            this.textBox71.Name = "textBox71";
-            this.textBox71.Size = new System.Drawing.Size(104, 28);
-            this.textBox71.TabIndex = 6;
+            this.jpPgainJoint8textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.jpPgainJoint8textBox.Location = new System.Drawing.Point(867, 68);
+            this.jpPgainJoint8textBox.Name = "jpPgainJoint8textBox";
+            this.jpPgainJoint8textBox.Size = new System.Drawing.Size(104, 28);
+            this.jpPgainJoint8textBox.TabIndex = 6;
             // 
-            // textBox73
+            // jpDgainJoint7textBox
             // 
-            this.textBox73.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox73.Location = new System.Drawing.Point(757, 136);
-            this.textBox73.Name = "textBox73";
-            this.textBox73.Size = new System.Drawing.Size(104, 28);
-            this.textBox73.TabIndex = 6;
+            this.jpDgainJoint7textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.jpDgainJoint7textBox.Location = new System.Drawing.Point(757, 136);
+            this.jpDgainJoint7textBox.Name = "jpDgainJoint7textBox";
+            this.jpDgainJoint7textBox.Size = new System.Drawing.Size(104, 28);
+            this.jpDgainJoint7textBox.TabIndex = 6;
             // 
-            // textBox74
+            // jpDgainJoint6textBox
             // 
-            this.textBox74.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox74.Location = new System.Drawing.Point(647, 136);
-            this.textBox74.Name = "textBox74";
-            this.textBox74.Size = new System.Drawing.Size(104, 28);
-            this.textBox74.TabIndex = 6;
+            this.jpDgainJoint6textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.jpDgainJoint6textBox.Location = new System.Drawing.Point(647, 136);
+            this.jpDgainJoint6textBox.Name = "jpDgainJoint6textBox";
+            this.jpDgainJoint6textBox.Size = new System.Drawing.Size(104, 28);
+            this.jpDgainJoint6textBox.TabIndex = 6;
             // 
-            // textBox75
+            // jpIgainJoint7textBox
             // 
-            this.textBox75.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox75.Location = new System.Drawing.Point(757, 102);
-            this.textBox75.Name = "textBox75";
-            this.textBox75.Size = new System.Drawing.Size(104, 28);
-            this.textBox75.TabIndex = 6;
+            this.jpIgainJoint7textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.jpIgainJoint7textBox.Location = new System.Drawing.Point(757, 102);
+            this.jpIgainJoint7textBox.Name = "jpIgainJoint7textBox";
+            this.jpIgainJoint7textBox.Size = new System.Drawing.Size(104, 28);
+            this.jpIgainJoint7textBox.TabIndex = 6;
             // 
-            // textBox77
+            // jpIgainJoint6textBox
             // 
-            this.textBox77.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox77.Location = new System.Drawing.Point(647, 102);
-            this.textBox77.Name = "textBox77";
-            this.textBox77.Size = new System.Drawing.Size(104, 28);
-            this.textBox77.TabIndex = 6;
+            this.jpIgainJoint6textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.jpIgainJoint6textBox.Location = new System.Drawing.Point(647, 102);
+            this.jpIgainJoint6textBox.Name = "jpIgainJoint6textBox";
+            this.jpIgainJoint6textBox.Size = new System.Drawing.Size(104, 28);
+            this.jpIgainJoint6textBox.TabIndex = 6;
             // 
-            // textBox78
+            // jpDgainJoint5textBox
             // 
-            this.textBox78.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox78.Location = new System.Drawing.Point(537, 136);
-            this.textBox78.Name = "textBox78";
-            this.textBox78.Size = new System.Drawing.Size(104, 28);
-            this.textBox78.TabIndex = 6;
+            this.jpDgainJoint5textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.jpDgainJoint5textBox.Location = new System.Drawing.Point(537, 136);
+            this.jpDgainJoint5textBox.Name = "jpDgainJoint5textBox";
+            this.jpDgainJoint5textBox.Size = new System.Drawing.Size(104, 28);
+            this.jpDgainJoint5textBox.TabIndex = 6;
             // 
-            // textBox79
+            // jpPgainJoint7textBox
             // 
-            this.textBox79.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox79.Location = new System.Drawing.Point(757, 68);
-            this.textBox79.Name = "textBox79";
-            this.textBox79.Size = new System.Drawing.Size(104, 28);
-            this.textBox79.TabIndex = 6;
+            this.jpPgainJoint7textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.jpPgainJoint7textBox.Location = new System.Drawing.Point(757, 68);
+            this.jpPgainJoint7textBox.Name = "jpPgainJoint7textBox";
+            this.jpPgainJoint7textBox.Size = new System.Drawing.Size(104, 28);
+            this.jpPgainJoint7textBox.TabIndex = 6;
             // 
-            // textBox81
+            // jpIgainJoint5textBox
             // 
-            this.textBox81.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox81.Location = new System.Drawing.Point(537, 102);
-            this.textBox81.Name = "textBox81";
-            this.textBox81.Size = new System.Drawing.Size(104, 28);
-            this.textBox81.TabIndex = 6;
+            this.jpIgainJoint5textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.jpIgainJoint5textBox.Location = new System.Drawing.Point(537, 102);
+            this.jpIgainJoint5textBox.Name = "jpIgainJoint5textBox";
+            this.jpIgainJoint5textBox.Size = new System.Drawing.Size(104, 28);
+            this.jpIgainJoint5textBox.TabIndex = 6;
             // 
-            // textBox82
+            // jpDgainJoint4textBox
             // 
-            this.textBox82.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox82.Location = new System.Drawing.Point(427, 136);
-            this.textBox82.Name = "textBox82";
-            this.textBox82.Size = new System.Drawing.Size(104, 28);
-            this.textBox82.TabIndex = 6;
+            this.jpDgainJoint4textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.jpDgainJoint4textBox.Location = new System.Drawing.Point(427, 136);
+            this.jpDgainJoint4textBox.Name = "jpDgainJoint4textBox";
+            this.jpDgainJoint4textBox.Size = new System.Drawing.Size(104, 28);
+            this.jpDgainJoint4textBox.TabIndex = 6;
             // 
-            // textBox83
+            // jpPgainJoint6textBox
             // 
-            this.textBox83.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox83.Location = new System.Drawing.Point(647, 68);
-            this.textBox83.Name = "textBox83";
-            this.textBox83.Size = new System.Drawing.Size(104, 28);
-            this.textBox83.TabIndex = 6;
+            this.jpPgainJoint6textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.jpPgainJoint6textBox.Location = new System.Drawing.Point(647, 68);
+            this.jpPgainJoint6textBox.Name = "jpPgainJoint6textBox";
+            this.jpPgainJoint6textBox.Size = new System.Drawing.Size(104, 28);
+            this.jpPgainJoint6textBox.TabIndex = 6;
             // 
-            // textBox85
+            // jpIgainJoint4textBox
             // 
-            this.textBox85.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox85.Location = new System.Drawing.Point(427, 102);
-            this.textBox85.Name = "textBox85";
-            this.textBox85.Size = new System.Drawing.Size(104, 28);
-            this.textBox85.TabIndex = 6;
+            this.jpIgainJoint4textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.jpIgainJoint4textBox.Location = new System.Drawing.Point(427, 102);
+            this.jpIgainJoint4textBox.Name = "jpIgainJoint4textBox";
+            this.jpIgainJoint4textBox.Size = new System.Drawing.Size(104, 28);
+            this.jpIgainJoint4textBox.TabIndex = 6;
             // 
-            // textBox86
+            // jpDgainJoint3textBox
             // 
-            this.textBox86.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox86.Location = new System.Drawing.Point(317, 136);
-            this.textBox86.Name = "textBox86";
-            this.textBox86.Size = new System.Drawing.Size(104, 28);
-            this.textBox86.TabIndex = 6;
+            this.jpDgainJoint3textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.jpDgainJoint3textBox.Location = new System.Drawing.Point(317, 136);
+            this.jpDgainJoint3textBox.Name = "jpDgainJoint3textBox";
+            this.jpDgainJoint3textBox.Size = new System.Drawing.Size(104, 28);
+            this.jpDgainJoint3textBox.TabIndex = 6;
             // 
-            // textBox87
+            // jpPgainJoint5textBox
             // 
-            this.textBox87.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox87.Location = new System.Drawing.Point(537, 68);
-            this.textBox87.Name = "textBox87";
-            this.textBox87.Size = new System.Drawing.Size(104, 28);
-            this.textBox87.TabIndex = 6;
+            this.jpPgainJoint5textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.jpPgainJoint5textBox.Location = new System.Drawing.Point(537, 68);
+            this.jpPgainJoint5textBox.Name = "jpPgainJoint5textBox";
+            this.jpPgainJoint5textBox.Size = new System.Drawing.Size(104, 28);
+            this.jpPgainJoint5textBox.TabIndex = 6;
             // 
-            // textBox89
+            // jpIgainJoint3textBox
             // 
-            this.textBox89.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox89.Location = new System.Drawing.Point(317, 102);
-            this.textBox89.Name = "textBox89";
-            this.textBox89.Size = new System.Drawing.Size(104, 28);
-            this.textBox89.TabIndex = 6;
+            this.jpIgainJoint3textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.jpIgainJoint3textBox.Location = new System.Drawing.Point(317, 102);
+            this.jpIgainJoint3textBox.Name = "jpIgainJoint3textBox";
+            this.jpIgainJoint3textBox.Size = new System.Drawing.Size(104, 28);
+            this.jpIgainJoint3textBox.TabIndex = 6;
             // 
-            // textBox90
+            // jpDgainJoint2textBox
             // 
-            this.textBox90.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox90.Location = new System.Drawing.Point(207, 136);
-            this.textBox90.Name = "textBox90";
-            this.textBox90.Size = new System.Drawing.Size(104, 28);
-            this.textBox90.TabIndex = 6;
+            this.jpDgainJoint2textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.jpDgainJoint2textBox.Location = new System.Drawing.Point(207, 136);
+            this.jpDgainJoint2textBox.Name = "jpDgainJoint2textBox";
+            this.jpDgainJoint2textBox.Size = new System.Drawing.Size(104, 28);
+            this.jpDgainJoint2textBox.TabIndex = 6;
             // 
-            // textBox91
+            // jpPgainJoint4textBox
             // 
-            this.textBox91.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox91.Location = new System.Drawing.Point(427, 68);
-            this.textBox91.Name = "textBox91";
-            this.textBox91.Size = new System.Drawing.Size(104, 28);
-            this.textBox91.TabIndex = 6;
+            this.jpPgainJoint4textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.jpPgainJoint4textBox.Location = new System.Drawing.Point(427, 68);
+            this.jpPgainJoint4textBox.Name = "jpPgainJoint4textBox";
+            this.jpPgainJoint4textBox.Size = new System.Drawing.Size(104, 28);
+            this.jpPgainJoint4textBox.TabIndex = 6;
             // 
-            // textBox93
+            // jpIgainJoint2textBox
             // 
-            this.textBox93.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox93.Location = new System.Drawing.Point(207, 102);
-            this.textBox93.Name = "textBox93";
-            this.textBox93.Size = new System.Drawing.Size(104, 28);
-            this.textBox93.TabIndex = 6;
+            this.jpIgainJoint2textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.jpIgainJoint2textBox.Location = new System.Drawing.Point(207, 102);
+            this.jpIgainJoint2textBox.Name = "jpIgainJoint2textBox";
+            this.jpIgainJoint2textBox.Size = new System.Drawing.Size(104, 28);
+            this.jpIgainJoint2textBox.TabIndex = 6;
             // 
-            // textBox94
+            // jpDgainJoint1textBox
             // 
-            this.textBox94.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox94.Location = new System.Drawing.Point(97, 136);
-            this.textBox94.Name = "textBox94";
-            this.textBox94.Size = new System.Drawing.Size(104, 28);
-            this.textBox94.TabIndex = 6;
+            this.jpDgainJoint1textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.jpDgainJoint1textBox.Location = new System.Drawing.Point(97, 136);
+            this.jpDgainJoint1textBox.Name = "jpDgainJoint1textBox";
+            this.jpDgainJoint1textBox.Size = new System.Drawing.Size(104, 28);
+            this.jpDgainJoint1textBox.TabIndex = 6;
             // 
-            // textBox95
+            // jpPgainJoint3textBox
             // 
-            this.textBox95.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox95.Location = new System.Drawing.Point(317, 68);
-            this.textBox95.Name = "textBox95";
-            this.textBox95.Size = new System.Drawing.Size(104, 28);
-            this.textBox95.TabIndex = 6;
+            this.jpPgainJoint3textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.jpPgainJoint3textBox.Location = new System.Drawing.Point(317, 68);
+            this.jpPgainJoint3textBox.Name = "jpPgainJoint3textBox";
+            this.jpPgainJoint3textBox.Size = new System.Drawing.Size(104, 28);
+            this.jpPgainJoint3textBox.TabIndex = 6;
             // 
-            // textBox96
+            // jpIgainJoint1textBox
             // 
-            this.textBox96.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox96.Location = new System.Drawing.Point(97, 102);
-            this.textBox96.Name = "textBox96";
-            this.textBox96.Size = new System.Drawing.Size(104, 28);
-            this.textBox96.TabIndex = 6;
+            this.jpIgainJoint1textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.jpIgainJoint1textBox.Location = new System.Drawing.Point(97, 102);
+            this.jpIgainJoint1textBox.Name = "jpIgainJoint1textBox";
+            this.jpIgainJoint1textBox.Size = new System.Drawing.Size(104, 28);
+            this.jpIgainJoint1textBox.TabIndex = 6;
             // 
-            // textBox97
+            // jpPgainJoint2textBox
             // 
-            this.textBox97.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox97.Location = new System.Drawing.Point(207, 68);
-            this.textBox97.Name = "textBox97";
-            this.textBox97.Size = new System.Drawing.Size(104, 28);
-            this.textBox97.TabIndex = 6;
+            this.jpPgainJoint2textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.jpPgainJoint2textBox.Location = new System.Drawing.Point(207, 68);
+            this.jpPgainJoint2textBox.Name = "jpPgainJoint2textBox";
+            this.jpPgainJoint2textBox.Size = new System.Drawing.Size(104, 28);
+            this.jpPgainJoint2textBox.TabIndex = 6;
             // 
-            // textBox98
+            // jpPgainJoint1textBox
             // 
-            this.textBox98.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox98.Location = new System.Drawing.Point(97, 68);
-            this.textBox98.Name = "textBox98";
-            this.textBox98.Size = new System.Drawing.Size(104, 28);
-            this.textBox98.TabIndex = 6;
+            this.jpPgainJoint1textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.jpPgainJoint1textBox.Location = new System.Drawing.Point(97, 68);
+            this.jpPgainJoint1textBox.Name = "jpPgainJoint1textBox";
+            this.jpPgainJoint1textBox.Size = new System.Drawing.Size(104, 28);
+            this.jpPgainJoint1textBox.TabIndex = 6;
             // 
             // label40
             // 
@@ -1185,6 +1260,7 @@ namespace DebuggingToolGUI
             // 
             // tabPage2
             // 
+            this.tabPage2.BackColor = System.Drawing.SystemColors.Control;
             this.tabPage2.Controls.Add(this.groupBox9);
             this.tabPage2.Controls.Add(this.groupBox8);
             this.tabPage2.Location = new System.Drawing.Point(4, 30);
@@ -1193,35 +1269,34 @@ namespace DebuggingToolGUI
             this.tabPage2.Size = new System.Drawing.Size(1300, 403);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Joint Constant Setting";
-            this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // groupBox9
             // 
-            this.groupBox9.Controls.Add(this.button8);
-            this.groupBox9.Controls.Add(this.textBox139);
-            this.groupBox9.Controls.Add(this.textBox140);
-            this.groupBox9.Controls.Add(this.textBox141);
-            this.groupBox9.Controls.Add(this.textBox142);
-            this.groupBox9.Controls.Add(this.textBox143);
-            this.groupBox9.Controls.Add(this.textBox144);
-            this.groupBox9.Controls.Add(this.textBox145);
-            this.groupBox9.Controls.Add(this.textBox146);
-            this.groupBox9.Controls.Add(this.textBox147);
-            this.groupBox9.Controls.Add(this.textBox148);
-            this.groupBox9.Controls.Add(this.textBox149);
-            this.groupBox9.Controls.Add(this.textBox150);
-            this.groupBox9.Controls.Add(this.textBox151);
-            this.groupBox9.Controls.Add(this.textBox152);
-            this.groupBox9.Controls.Add(this.textBox153);
-            this.groupBox9.Controls.Add(this.textBox154);
-            this.groupBox9.Controls.Add(this.textBox155);
-            this.groupBox9.Controls.Add(this.textBox156);
-            this.groupBox9.Controls.Add(this.textBox157);
-            this.groupBox9.Controls.Add(this.textBox158);
-            this.groupBox9.Controls.Add(this.textBox159);
-            this.groupBox9.Controls.Add(this.textBox160);
-            this.groupBox9.Controls.Add(this.textBox161);
-            this.groupBox9.Controls.Add(this.textBox162);
+            this.groupBox9.Controls.Add(this.GCnFricParamSetbutton);
+            this.groupBox9.Controls.Add(this.FricGainJoint8textBox);
+            this.groupBox9.Controls.Add(this.CurGainJoint8textBox);
+            this.groupBox9.Controls.Add(this.GCGainJoint8textBox);
+            this.groupBox9.Controls.Add(this.FricGainJoint7textBox);
+            this.groupBox9.Controls.Add(this.FricGainJoint6textBox);
+            this.groupBox9.Controls.Add(this.CurGainJoint7textBox);
+            this.groupBox9.Controls.Add(this.CurGainJoint6textBox);
+            this.groupBox9.Controls.Add(this.FricGainJoint5textBox);
+            this.groupBox9.Controls.Add(this.GCGainJoint7textBox);
+            this.groupBox9.Controls.Add(this.CurGainJoint5textBox);
+            this.groupBox9.Controls.Add(this.FricGainJoint4textBox);
+            this.groupBox9.Controls.Add(this.GCGainJoint6textBox);
+            this.groupBox9.Controls.Add(this.CurGainJoint4textBox);
+            this.groupBox9.Controls.Add(this.FricGainJoint3textBox);
+            this.groupBox9.Controls.Add(this.GCGainJoint5textBox);
+            this.groupBox9.Controls.Add(this.CurGainJoint3textBox);
+            this.groupBox9.Controls.Add(this.FricGainJoint2textBox);
+            this.groupBox9.Controls.Add(this.GCGainJoint4textBox);
+            this.groupBox9.Controls.Add(this.CurGainJoint2textBox);
+            this.groupBox9.Controls.Add(this.FricGainJoint1textBox);
+            this.groupBox9.Controls.Add(this.GCGainJoint3textBox);
+            this.groupBox9.Controls.Add(this.CurGainJoint1textBox);
+            this.groupBox9.Controls.Add(this.GCGainJoint2textBox);
+            this.groupBox9.Controls.Add(this.GCGainJoint1textBox);
             this.groupBox9.Controls.Add(this.label73);
             this.groupBox9.Controls.Add(this.label74);
             this.groupBox9.Controls.Add(this.label75);
@@ -1241,206 +1316,207 @@ namespace DebuggingToolGUI
             this.groupBox9.TabStop = false;
             this.groupBox9.Text = "Joint Gravity n Friction Param";
             // 
-            // button8
+            // GCnFricParamSetbutton
             // 
-            this.button8.Location = new System.Drawing.Point(983, 54);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(282, 110);
-            this.button8.TabIndex = 7;
-            this.button8.Text = "Set G.C. n Fric. Param Set";
-            this.button8.UseVisualStyleBackColor = true;
+            this.GCnFricParamSetbutton.Location = new System.Drawing.Point(983, 54);
+            this.GCnFricParamSetbutton.Name = "GCnFricParamSetbutton";
+            this.GCnFricParamSetbutton.Size = new System.Drawing.Size(282, 110);
+            this.GCnFricParamSetbutton.TabIndex = 7;
+            this.GCnFricParamSetbutton.Text = "Set G.C. n Fric. Param Set";
+            this.GCnFricParamSetbutton.UseVisualStyleBackColor = true;
+            this.GCnFricParamSetbutton.Click += new System.EventHandler(this.GCnFricParamSetbutton_Click);
             // 
-            // textBox139
+            // FricGainJoint8textBox
             // 
-            this.textBox139.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox139.Location = new System.Drawing.Point(867, 136);
-            this.textBox139.Name = "textBox139";
-            this.textBox139.Size = new System.Drawing.Size(104, 28);
-            this.textBox139.TabIndex = 6;
+            this.FricGainJoint8textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.FricGainJoint8textBox.Location = new System.Drawing.Point(867, 136);
+            this.FricGainJoint8textBox.Name = "FricGainJoint8textBox";
+            this.FricGainJoint8textBox.Size = new System.Drawing.Size(104, 28);
+            this.FricGainJoint8textBox.TabIndex = 6;
             // 
-            // textBox140
+            // CurGainJoint8textBox
             // 
-            this.textBox140.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox140.Location = new System.Drawing.Point(867, 102);
-            this.textBox140.Name = "textBox140";
-            this.textBox140.Size = new System.Drawing.Size(104, 28);
-            this.textBox140.TabIndex = 6;
+            this.CurGainJoint8textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.CurGainJoint8textBox.Location = new System.Drawing.Point(867, 102);
+            this.CurGainJoint8textBox.Name = "CurGainJoint8textBox";
+            this.CurGainJoint8textBox.Size = new System.Drawing.Size(104, 28);
+            this.CurGainJoint8textBox.TabIndex = 6;
             // 
-            // textBox141
+            // GCGainJoint8textBox
             // 
-            this.textBox141.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox141.Location = new System.Drawing.Point(867, 68);
-            this.textBox141.Name = "textBox141";
-            this.textBox141.Size = new System.Drawing.Size(104, 28);
-            this.textBox141.TabIndex = 6;
+            this.GCGainJoint8textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.GCGainJoint8textBox.Location = new System.Drawing.Point(867, 68);
+            this.GCGainJoint8textBox.Name = "GCGainJoint8textBox";
+            this.GCGainJoint8textBox.Size = new System.Drawing.Size(104, 28);
+            this.GCGainJoint8textBox.TabIndex = 6;
             // 
-            // textBox142
+            // FricGainJoint7textBox
             // 
-            this.textBox142.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox142.Location = new System.Drawing.Point(757, 136);
-            this.textBox142.Name = "textBox142";
-            this.textBox142.Size = new System.Drawing.Size(104, 28);
-            this.textBox142.TabIndex = 6;
+            this.FricGainJoint7textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.FricGainJoint7textBox.Location = new System.Drawing.Point(757, 136);
+            this.FricGainJoint7textBox.Name = "FricGainJoint7textBox";
+            this.FricGainJoint7textBox.Size = new System.Drawing.Size(104, 28);
+            this.FricGainJoint7textBox.TabIndex = 6;
             // 
-            // textBox143
+            // FricGainJoint6textBox
             // 
-            this.textBox143.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox143.Location = new System.Drawing.Point(647, 136);
-            this.textBox143.Name = "textBox143";
-            this.textBox143.Size = new System.Drawing.Size(104, 28);
-            this.textBox143.TabIndex = 6;
+            this.FricGainJoint6textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.FricGainJoint6textBox.Location = new System.Drawing.Point(647, 136);
+            this.FricGainJoint6textBox.Name = "FricGainJoint6textBox";
+            this.FricGainJoint6textBox.Size = new System.Drawing.Size(104, 28);
+            this.FricGainJoint6textBox.TabIndex = 6;
             // 
-            // textBox144
+            // CurGainJoint7textBox
             // 
-            this.textBox144.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox144.Location = new System.Drawing.Point(757, 102);
-            this.textBox144.Name = "textBox144";
-            this.textBox144.Size = new System.Drawing.Size(104, 28);
-            this.textBox144.TabIndex = 6;
+            this.CurGainJoint7textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.CurGainJoint7textBox.Location = new System.Drawing.Point(757, 102);
+            this.CurGainJoint7textBox.Name = "CurGainJoint7textBox";
+            this.CurGainJoint7textBox.Size = new System.Drawing.Size(104, 28);
+            this.CurGainJoint7textBox.TabIndex = 6;
             // 
-            // textBox145
+            // CurGainJoint6textBox
             // 
-            this.textBox145.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox145.Location = new System.Drawing.Point(647, 102);
-            this.textBox145.Name = "textBox145";
-            this.textBox145.Size = new System.Drawing.Size(104, 28);
-            this.textBox145.TabIndex = 6;
+            this.CurGainJoint6textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.CurGainJoint6textBox.Location = new System.Drawing.Point(647, 102);
+            this.CurGainJoint6textBox.Name = "CurGainJoint6textBox";
+            this.CurGainJoint6textBox.Size = new System.Drawing.Size(104, 28);
+            this.CurGainJoint6textBox.TabIndex = 6;
             // 
-            // textBox146
+            // FricGainJoint5textBox
             // 
-            this.textBox146.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox146.Location = new System.Drawing.Point(537, 136);
-            this.textBox146.Name = "textBox146";
-            this.textBox146.Size = new System.Drawing.Size(104, 28);
-            this.textBox146.TabIndex = 6;
+            this.FricGainJoint5textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.FricGainJoint5textBox.Location = new System.Drawing.Point(537, 136);
+            this.FricGainJoint5textBox.Name = "FricGainJoint5textBox";
+            this.FricGainJoint5textBox.Size = new System.Drawing.Size(104, 28);
+            this.FricGainJoint5textBox.TabIndex = 6;
             // 
-            // textBox147
+            // GCGainJoint7textBox
             // 
-            this.textBox147.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox147.Location = new System.Drawing.Point(757, 68);
-            this.textBox147.Name = "textBox147";
-            this.textBox147.Size = new System.Drawing.Size(104, 28);
-            this.textBox147.TabIndex = 6;
+            this.GCGainJoint7textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.GCGainJoint7textBox.Location = new System.Drawing.Point(757, 68);
+            this.GCGainJoint7textBox.Name = "GCGainJoint7textBox";
+            this.GCGainJoint7textBox.Size = new System.Drawing.Size(104, 28);
+            this.GCGainJoint7textBox.TabIndex = 6;
             // 
-            // textBox148
+            // CurGainJoint5textBox
             // 
-            this.textBox148.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox148.Location = new System.Drawing.Point(537, 102);
-            this.textBox148.Name = "textBox148";
-            this.textBox148.Size = new System.Drawing.Size(104, 28);
-            this.textBox148.TabIndex = 6;
+            this.CurGainJoint5textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.CurGainJoint5textBox.Location = new System.Drawing.Point(537, 102);
+            this.CurGainJoint5textBox.Name = "CurGainJoint5textBox";
+            this.CurGainJoint5textBox.Size = new System.Drawing.Size(104, 28);
+            this.CurGainJoint5textBox.TabIndex = 6;
             // 
-            // textBox149
+            // FricGainJoint4textBox
             // 
-            this.textBox149.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox149.Location = new System.Drawing.Point(427, 136);
-            this.textBox149.Name = "textBox149";
-            this.textBox149.Size = new System.Drawing.Size(104, 28);
-            this.textBox149.TabIndex = 6;
+            this.FricGainJoint4textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.FricGainJoint4textBox.Location = new System.Drawing.Point(427, 136);
+            this.FricGainJoint4textBox.Name = "FricGainJoint4textBox";
+            this.FricGainJoint4textBox.Size = new System.Drawing.Size(104, 28);
+            this.FricGainJoint4textBox.TabIndex = 6;
             // 
-            // textBox150
+            // GCGainJoint6textBox
             // 
-            this.textBox150.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox150.Location = new System.Drawing.Point(647, 68);
-            this.textBox150.Name = "textBox150";
-            this.textBox150.Size = new System.Drawing.Size(104, 28);
-            this.textBox150.TabIndex = 6;
+            this.GCGainJoint6textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.GCGainJoint6textBox.Location = new System.Drawing.Point(647, 68);
+            this.GCGainJoint6textBox.Name = "GCGainJoint6textBox";
+            this.GCGainJoint6textBox.Size = new System.Drawing.Size(104, 28);
+            this.GCGainJoint6textBox.TabIndex = 6;
             // 
-            // textBox151
+            // CurGainJoint4textBox
             // 
-            this.textBox151.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox151.Location = new System.Drawing.Point(427, 102);
-            this.textBox151.Name = "textBox151";
-            this.textBox151.Size = new System.Drawing.Size(104, 28);
-            this.textBox151.TabIndex = 6;
+            this.CurGainJoint4textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.CurGainJoint4textBox.Location = new System.Drawing.Point(427, 102);
+            this.CurGainJoint4textBox.Name = "CurGainJoint4textBox";
+            this.CurGainJoint4textBox.Size = new System.Drawing.Size(104, 28);
+            this.CurGainJoint4textBox.TabIndex = 6;
             // 
-            // textBox152
+            // FricGainJoint3textBox
             // 
-            this.textBox152.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox152.Location = new System.Drawing.Point(317, 136);
-            this.textBox152.Name = "textBox152";
-            this.textBox152.Size = new System.Drawing.Size(104, 28);
-            this.textBox152.TabIndex = 6;
+            this.FricGainJoint3textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.FricGainJoint3textBox.Location = new System.Drawing.Point(317, 136);
+            this.FricGainJoint3textBox.Name = "FricGainJoint3textBox";
+            this.FricGainJoint3textBox.Size = new System.Drawing.Size(104, 28);
+            this.FricGainJoint3textBox.TabIndex = 6;
             // 
-            // textBox153
+            // GCGainJoint5textBox
             // 
-            this.textBox153.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox153.Location = new System.Drawing.Point(537, 68);
-            this.textBox153.Name = "textBox153";
-            this.textBox153.Size = new System.Drawing.Size(104, 28);
-            this.textBox153.TabIndex = 6;
+            this.GCGainJoint5textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.GCGainJoint5textBox.Location = new System.Drawing.Point(537, 68);
+            this.GCGainJoint5textBox.Name = "GCGainJoint5textBox";
+            this.GCGainJoint5textBox.Size = new System.Drawing.Size(104, 28);
+            this.GCGainJoint5textBox.TabIndex = 6;
             // 
-            // textBox154
+            // CurGainJoint3textBox
             // 
-            this.textBox154.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox154.Location = new System.Drawing.Point(317, 102);
-            this.textBox154.Name = "textBox154";
-            this.textBox154.Size = new System.Drawing.Size(104, 28);
-            this.textBox154.TabIndex = 6;
+            this.CurGainJoint3textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.CurGainJoint3textBox.Location = new System.Drawing.Point(317, 102);
+            this.CurGainJoint3textBox.Name = "CurGainJoint3textBox";
+            this.CurGainJoint3textBox.Size = new System.Drawing.Size(104, 28);
+            this.CurGainJoint3textBox.TabIndex = 6;
             // 
-            // textBox155
+            // FricGainJoint2textBox
             // 
-            this.textBox155.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox155.Location = new System.Drawing.Point(207, 136);
-            this.textBox155.Name = "textBox155";
-            this.textBox155.Size = new System.Drawing.Size(104, 28);
-            this.textBox155.TabIndex = 6;
+            this.FricGainJoint2textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.FricGainJoint2textBox.Location = new System.Drawing.Point(207, 136);
+            this.FricGainJoint2textBox.Name = "FricGainJoint2textBox";
+            this.FricGainJoint2textBox.Size = new System.Drawing.Size(104, 28);
+            this.FricGainJoint2textBox.TabIndex = 6;
             // 
-            // textBox156
+            // GCGainJoint4textBox
             // 
-            this.textBox156.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox156.Location = new System.Drawing.Point(427, 68);
-            this.textBox156.Name = "textBox156";
-            this.textBox156.Size = new System.Drawing.Size(104, 28);
-            this.textBox156.TabIndex = 6;
+            this.GCGainJoint4textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.GCGainJoint4textBox.Location = new System.Drawing.Point(427, 68);
+            this.GCGainJoint4textBox.Name = "GCGainJoint4textBox";
+            this.GCGainJoint4textBox.Size = new System.Drawing.Size(104, 28);
+            this.GCGainJoint4textBox.TabIndex = 6;
             // 
-            // textBox157
+            // CurGainJoint2textBox
             // 
-            this.textBox157.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox157.Location = new System.Drawing.Point(207, 102);
-            this.textBox157.Name = "textBox157";
-            this.textBox157.Size = new System.Drawing.Size(104, 28);
-            this.textBox157.TabIndex = 6;
+            this.CurGainJoint2textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.CurGainJoint2textBox.Location = new System.Drawing.Point(207, 102);
+            this.CurGainJoint2textBox.Name = "CurGainJoint2textBox";
+            this.CurGainJoint2textBox.Size = new System.Drawing.Size(104, 28);
+            this.CurGainJoint2textBox.TabIndex = 6;
             // 
-            // textBox158
+            // FricGainJoint1textBox
             // 
-            this.textBox158.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox158.Location = new System.Drawing.Point(97, 136);
-            this.textBox158.Name = "textBox158";
-            this.textBox158.Size = new System.Drawing.Size(104, 28);
-            this.textBox158.TabIndex = 6;
+            this.FricGainJoint1textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.FricGainJoint1textBox.Location = new System.Drawing.Point(97, 136);
+            this.FricGainJoint1textBox.Name = "FricGainJoint1textBox";
+            this.FricGainJoint1textBox.Size = new System.Drawing.Size(104, 28);
+            this.FricGainJoint1textBox.TabIndex = 6;
             // 
-            // textBox159
+            // GCGainJoint3textBox
             // 
-            this.textBox159.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox159.Location = new System.Drawing.Point(317, 68);
-            this.textBox159.Name = "textBox159";
-            this.textBox159.Size = new System.Drawing.Size(104, 28);
-            this.textBox159.TabIndex = 6;
+            this.GCGainJoint3textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.GCGainJoint3textBox.Location = new System.Drawing.Point(317, 68);
+            this.GCGainJoint3textBox.Name = "GCGainJoint3textBox";
+            this.GCGainJoint3textBox.Size = new System.Drawing.Size(104, 28);
+            this.GCGainJoint3textBox.TabIndex = 6;
             // 
-            // textBox160
+            // CurGainJoint1textBox
             // 
-            this.textBox160.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox160.Location = new System.Drawing.Point(97, 102);
-            this.textBox160.Name = "textBox160";
-            this.textBox160.Size = new System.Drawing.Size(104, 28);
-            this.textBox160.TabIndex = 6;
+            this.CurGainJoint1textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.CurGainJoint1textBox.Location = new System.Drawing.Point(97, 102);
+            this.CurGainJoint1textBox.Name = "CurGainJoint1textBox";
+            this.CurGainJoint1textBox.Size = new System.Drawing.Size(104, 28);
+            this.CurGainJoint1textBox.TabIndex = 6;
             // 
-            // textBox161
+            // GCGainJoint2textBox
             // 
-            this.textBox161.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox161.Location = new System.Drawing.Point(207, 68);
-            this.textBox161.Name = "textBox161";
-            this.textBox161.Size = new System.Drawing.Size(104, 28);
-            this.textBox161.TabIndex = 6;
+            this.GCGainJoint2textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.GCGainJoint2textBox.Location = new System.Drawing.Point(207, 68);
+            this.GCGainJoint2textBox.Name = "GCGainJoint2textBox";
+            this.GCGainJoint2textBox.Size = new System.Drawing.Size(104, 28);
+            this.GCGainJoint2textBox.TabIndex = 6;
             // 
-            // textBox162
+            // GCGainJoint1textBox
             // 
-            this.textBox162.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox162.Location = new System.Drawing.Point(97, 68);
-            this.textBox162.Name = "textBox162";
-            this.textBox162.Size = new System.Drawing.Size(104, 28);
-            this.textBox162.TabIndex = 6;
+            this.GCGainJoint1textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.GCGainJoint1textBox.Location = new System.Drawing.Point(97, 68);
+            this.GCGainJoint1textBox.Name = "GCGainJoint1textBox";
+            this.GCGainJoint1textBox.Size = new System.Drawing.Size(104, 28);
+            this.GCGainJoint1textBox.TabIndex = 6;
             // 
             // label73
             // 
@@ -1554,31 +1630,31 @@ namespace DebuggingToolGUI
             // 
             // groupBox8
             // 
-            this.groupBox8.Controls.Add(this.button7);
-            this.groupBox8.Controls.Add(this.textBox115);
-            this.groupBox8.Controls.Add(this.textBox116);
-            this.groupBox8.Controls.Add(this.textBox117);
-            this.groupBox8.Controls.Add(this.textBox118);
-            this.groupBox8.Controls.Add(this.textBox119);
-            this.groupBox8.Controls.Add(this.textBox120);
-            this.groupBox8.Controls.Add(this.textBox121);
-            this.groupBox8.Controls.Add(this.textBox122);
-            this.groupBox8.Controls.Add(this.textBox123);
-            this.groupBox8.Controls.Add(this.textBox124);
-            this.groupBox8.Controls.Add(this.textBox125);
-            this.groupBox8.Controls.Add(this.textBox126);
-            this.groupBox8.Controls.Add(this.textBox127);
-            this.groupBox8.Controls.Add(this.textBox128);
-            this.groupBox8.Controls.Add(this.textBox129);
-            this.groupBox8.Controls.Add(this.textBox130);
-            this.groupBox8.Controls.Add(this.textBox131);
-            this.groupBox8.Controls.Add(this.textBox132);
-            this.groupBox8.Controls.Add(this.textBox133);
-            this.groupBox8.Controls.Add(this.textBox134);
-            this.groupBox8.Controls.Add(this.textBox135);
-            this.groupBox8.Controls.Add(this.textBox136);
-            this.groupBox8.Controls.Add(this.textBox137);
-            this.groupBox8.Controls.Add(this.textBox138);
+            this.groupBox8.Controls.Add(this.JointConstantParamSetbutton);
+            this.groupBox8.Controls.Add(this.jcSpringJoint8textBox);
+            this.groupBox8.Controls.Add(this.jcTorqueConstJoint8textBox);
+            this.groupBox8.Controls.Add(this.jcEfficiencyJoint8textBox);
+            this.groupBox8.Controls.Add(this.jcSpringJoint7textBox);
+            this.groupBox8.Controls.Add(this.jcSpringJoint6textBox);
+            this.groupBox8.Controls.Add(this.jcTorqueConstJoint7textBox);
+            this.groupBox8.Controls.Add(this.jcTorqueConstJoint6textBox);
+            this.groupBox8.Controls.Add(this.jcSpringJoint5textBox);
+            this.groupBox8.Controls.Add(this.jcEfficiencyJoint7textBox);
+            this.groupBox8.Controls.Add(this.jcTorqueConstJoint5textBox);
+            this.groupBox8.Controls.Add(this.jcSpringJoint4textBox);
+            this.groupBox8.Controls.Add(this.jcEfficiencyJoint6textBox);
+            this.groupBox8.Controls.Add(this.jcTorqueConstJoint4textBox);
+            this.groupBox8.Controls.Add(this.jcSpringJoint3textBox);
+            this.groupBox8.Controls.Add(this.jcEfficiencyJoint5textBox);
+            this.groupBox8.Controls.Add(this.jcTorqueConstJoint3textBox);
+            this.groupBox8.Controls.Add(this.jcSpringJoint2textBox);
+            this.groupBox8.Controls.Add(this.jcEfficiencyJoint4textBox);
+            this.groupBox8.Controls.Add(this.jcTorqueConstJoint2textBox);
+            this.groupBox8.Controls.Add(this.jcSpringJoint1textBox);
+            this.groupBox8.Controls.Add(this.jcEfficiencyJoint3textBox);
+            this.groupBox8.Controls.Add(this.jcTorqueConstJoint1textBox);
+            this.groupBox8.Controls.Add(this.jcEfficiencyJoint2textBox);
+            this.groupBox8.Controls.Add(this.jcEfficiencyJoint1textBox);
             this.groupBox8.Controls.Add(this.label62);
             this.groupBox8.Controls.Add(this.label63);
             this.groupBox8.Controls.Add(this.label64);
@@ -1598,206 +1674,208 @@ namespace DebuggingToolGUI
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "Joint Constant Param";
             // 
-            // button7
+            // JointConstantParamSetbutton
             // 
-            this.button7.Location = new System.Drawing.Point(983, 54);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(282, 110);
-            this.button7.TabIndex = 7;
-            this.button7.Text = "Set Constant Param Set";
-            this.button7.UseVisualStyleBackColor = true;
+            this.JointConstantParamSetbutton.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.JointConstantParamSetbutton.Location = new System.Drawing.Point(983, 54);
+            this.JointConstantParamSetbutton.Name = "JointConstantParamSetbutton";
+            this.JointConstantParamSetbutton.Size = new System.Drawing.Size(282, 110);
+            this.JointConstantParamSetbutton.TabIndex = 7;
+            this.JointConstantParamSetbutton.Text = "Set Constant Param Set";
+            this.JointConstantParamSetbutton.UseVisualStyleBackColor = false;
+            this.JointConstantParamSetbutton.Click += new System.EventHandler(this.JointConstantParamSetbutton_Click);
             // 
-            // textBox115
+            // jcSpringJoint8textBox
             // 
-            this.textBox115.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox115.Location = new System.Drawing.Point(867, 136);
-            this.textBox115.Name = "textBox115";
-            this.textBox115.Size = new System.Drawing.Size(104, 28);
-            this.textBox115.TabIndex = 6;
+            this.jcSpringJoint8textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.jcSpringJoint8textBox.Location = new System.Drawing.Point(867, 136);
+            this.jcSpringJoint8textBox.Name = "jcSpringJoint8textBox";
+            this.jcSpringJoint8textBox.Size = new System.Drawing.Size(104, 28);
+            this.jcSpringJoint8textBox.TabIndex = 6;
             // 
-            // textBox116
+            // jcTorqueConstJoint8textBox
             // 
-            this.textBox116.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox116.Location = new System.Drawing.Point(867, 102);
-            this.textBox116.Name = "textBox116";
-            this.textBox116.Size = new System.Drawing.Size(104, 28);
-            this.textBox116.TabIndex = 6;
+            this.jcTorqueConstJoint8textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.jcTorqueConstJoint8textBox.Location = new System.Drawing.Point(867, 102);
+            this.jcTorqueConstJoint8textBox.Name = "jcTorqueConstJoint8textBox";
+            this.jcTorqueConstJoint8textBox.Size = new System.Drawing.Size(104, 28);
+            this.jcTorqueConstJoint8textBox.TabIndex = 6;
             // 
-            // textBox117
+            // jcEfficiencyJoint8textBox
             // 
-            this.textBox117.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox117.Location = new System.Drawing.Point(867, 68);
-            this.textBox117.Name = "textBox117";
-            this.textBox117.Size = new System.Drawing.Size(104, 28);
-            this.textBox117.TabIndex = 6;
+            this.jcEfficiencyJoint8textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.jcEfficiencyJoint8textBox.Location = new System.Drawing.Point(867, 68);
+            this.jcEfficiencyJoint8textBox.Name = "jcEfficiencyJoint8textBox";
+            this.jcEfficiencyJoint8textBox.Size = new System.Drawing.Size(104, 28);
+            this.jcEfficiencyJoint8textBox.TabIndex = 6;
             // 
-            // textBox118
+            // jcSpringJoint7textBox
             // 
-            this.textBox118.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox118.Location = new System.Drawing.Point(757, 136);
-            this.textBox118.Name = "textBox118";
-            this.textBox118.Size = new System.Drawing.Size(104, 28);
-            this.textBox118.TabIndex = 6;
+            this.jcSpringJoint7textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.jcSpringJoint7textBox.Location = new System.Drawing.Point(757, 136);
+            this.jcSpringJoint7textBox.Name = "jcSpringJoint7textBox";
+            this.jcSpringJoint7textBox.Size = new System.Drawing.Size(104, 28);
+            this.jcSpringJoint7textBox.TabIndex = 6;
             // 
-            // textBox119
+            // jcSpringJoint6textBox
             // 
-            this.textBox119.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox119.Location = new System.Drawing.Point(647, 136);
-            this.textBox119.Name = "textBox119";
-            this.textBox119.Size = new System.Drawing.Size(104, 28);
-            this.textBox119.TabIndex = 6;
+            this.jcSpringJoint6textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.jcSpringJoint6textBox.Location = new System.Drawing.Point(647, 136);
+            this.jcSpringJoint6textBox.Name = "jcSpringJoint6textBox";
+            this.jcSpringJoint6textBox.Size = new System.Drawing.Size(104, 28);
+            this.jcSpringJoint6textBox.TabIndex = 6;
             // 
-            // textBox120
+            // jcTorqueConstJoint7textBox
             // 
-            this.textBox120.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox120.Location = new System.Drawing.Point(757, 102);
-            this.textBox120.Name = "textBox120";
-            this.textBox120.Size = new System.Drawing.Size(104, 28);
-            this.textBox120.TabIndex = 6;
+            this.jcTorqueConstJoint7textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.jcTorqueConstJoint7textBox.Location = new System.Drawing.Point(757, 102);
+            this.jcTorqueConstJoint7textBox.Name = "jcTorqueConstJoint7textBox";
+            this.jcTorqueConstJoint7textBox.Size = new System.Drawing.Size(104, 28);
+            this.jcTorqueConstJoint7textBox.TabIndex = 6;
             // 
-            // textBox121
+            // jcTorqueConstJoint6textBox
             // 
-            this.textBox121.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox121.Location = new System.Drawing.Point(647, 102);
-            this.textBox121.Name = "textBox121";
-            this.textBox121.Size = new System.Drawing.Size(104, 28);
-            this.textBox121.TabIndex = 6;
+            this.jcTorqueConstJoint6textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.jcTorqueConstJoint6textBox.Location = new System.Drawing.Point(647, 102);
+            this.jcTorqueConstJoint6textBox.Name = "jcTorqueConstJoint6textBox";
+            this.jcTorqueConstJoint6textBox.Size = new System.Drawing.Size(104, 28);
+            this.jcTorqueConstJoint6textBox.TabIndex = 6;
             // 
-            // textBox122
+            // jcSpringJoint5textBox
             // 
-            this.textBox122.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox122.Location = new System.Drawing.Point(537, 136);
-            this.textBox122.Name = "textBox122";
-            this.textBox122.Size = new System.Drawing.Size(104, 28);
-            this.textBox122.TabIndex = 6;
+            this.jcSpringJoint5textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.jcSpringJoint5textBox.Location = new System.Drawing.Point(537, 136);
+            this.jcSpringJoint5textBox.Name = "jcSpringJoint5textBox";
+            this.jcSpringJoint5textBox.Size = new System.Drawing.Size(104, 28);
+            this.jcSpringJoint5textBox.TabIndex = 6;
             // 
-            // textBox123
+            // jcEfficiencyJoint7textBox
             // 
-            this.textBox123.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox123.Location = new System.Drawing.Point(757, 68);
-            this.textBox123.Name = "textBox123";
-            this.textBox123.Size = new System.Drawing.Size(104, 28);
-            this.textBox123.TabIndex = 6;
+            this.jcEfficiencyJoint7textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.jcEfficiencyJoint7textBox.Location = new System.Drawing.Point(757, 68);
+            this.jcEfficiencyJoint7textBox.Name = "jcEfficiencyJoint7textBox";
+            this.jcEfficiencyJoint7textBox.Size = new System.Drawing.Size(104, 28);
+            this.jcEfficiencyJoint7textBox.TabIndex = 6;
             // 
-            // textBox124
+            // jcTorqueConstJoint5textBox
             // 
-            this.textBox124.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox124.Location = new System.Drawing.Point(537, 102);
-            this.textBox124.Name = "textBox124";
-            this.textBox124.Size = new System.Drawing.Size(104, 28);
-            this.textBox124.TabIndex = 6;
+            this.jcTorqueConstJoint5textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.jcTorqueConstJoint5textBox.Location = new System.Drawing.Point(537, 102);
+            this.jcTorqueConstJoint5textBox.Name = "jcTorqueConstJoint5textBox";
+            this.jcTorqueConstJoint5textBox.Size = new System.Drawing.Size(104, 28);
+            this.jcTorqueConstJoint5textBox.TabIndex = 6;
             // 
-            // textBox125
+            // jcSpringJoint4textBox
             // 
-            this.textBox125.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox125.Location = new System.Drawing.Point(427, 136);
-            this.textBox125.Name = "textBox125";
-            this.textBox125.Size = new System.Drawing.Size(104, 28);
-            this.textBox125.TabIndex = 6;
+            this.jcSpringJoint4textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.jcSpringJoint4textBox.Location = new System.Drawing.Point(427, 136);
+            this.jcSpringJoint4textBox.Name = "jcSpringJoint4textBox";
+            this.jcSpringJoint4textBox.Size = new System.Drawing.Size(104, 28);
+            this.jcSpringJoint4textBox.TabIndex = 6;
             // 
-            // textBox126
+            // jcEfficiencyJoint6textBox
             // 
-            this.textBox126.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox126.Location = new System.Drawing.Point(647, 68);
-            this.textBox126.Name = "textBox126";
-            this.textBox126.Size = new System.Drawing.Size(104, 28);
-            this.textBox126.TabIndex = 6;
+            this.jcEfficiencyJoint6textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.jcEfficiencyJoint6textBox.Location = new System.Drawing.Point(647, 68);
+            this.jcEfficiencyJoint6textBox.Name = "jcEfficiencyJoint6textBox";
+            this.jcEfficiencyJoint6textBox.Size = new System.Drawing.Size(104, 28);
+            this.jcEfficiencyJoint6textBox.TabIndex = 6;
             // 
-            // textBox127
+            // jcTorqueConstJoint4textBox
             // 
-            this.textBox127.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox127.Location = new System.Drawing.Point(427, 102);
-            this.textBox127.Name = "textBox127";
-            this.textBox127.Size = new System.Drawing.Size(104, 28);
-            this.textBox127.TabIndex = 6;
+            this.jcTorqueConstJoint4textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.jcTorqueConstJoint4textBox.Location = new System.Drawing.Point(427, 102);
+            this.jcTorqueConstJoint4textBox.Name = "jcTorqueConstJoint4textBox";
+            this.jcTorqueConstJoint4textBox.Size = new System.Drawing.Size(104, 28);
+            this.jcTorqueConstJoint4textBox.TabIndex = 6;
             // 
-            // textBox128
+            // jcSpringJoint3textBox
             // 
-            this.textBox128.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox128.Location = new System.Drawing.Point(317, 136);
-            this.textBox128.Name = "textBox128";
-            this.textBox128.Size = new System.Drawing.Size(104, 28);
-            this.textBox128.TabIndex = 6;
+            this.jcSpringJoint3textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.jcSpringJoint3textBox.Location = new System.Drawing.Point(317, 136);
+            this.jcSpringJoint3textBox.Name = "jcSpringJoint3textBox";
+            this.jcSpringJoint3textBox.Size = new System.Drawing.Size(104, 28);
+            this.jcSpringJoint3textBox.TabIndex = 6;
             // 
-            // textBox129
+            // jcEfficiencyJoint5textBox
             // 
-            this.textBox129.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox129.Location = new System.Drawing.Point(537, 68);
-            this.textBox129.Name = "textBox129";
-            this.textBox129.Size = new System.Drawing.Size(104, 28);
-            this.textBox129.TabIndex = 6;
+            this.jcEfficiencyJoint5textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.jcEfficiencyJoint5textBox.Location = new System.Drawing.Point(537, 68);
+            this.jcEfficiencyJoint5textBox.Name = "jcEfficiencyJoint5textBox";
+            this.jcEfficiencyJoint5textBox.Size = new System.Drawing.Size(104, 28);
+            this.jcEfficiencyJoint5textBox.TabIndex = 6;
             // 
-            // textBox130
+            // jcTorqueConstJoint3textBox
             // 
-            this.textBox130.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox130.Location = new System.Drawing.Point(317, 102);
-            this.textBox130.Name = "textBox130";
-            this.textBox130.Size = new System.Drawing.Size(104, 28);
-            this.textBox130.TabIndex = 6;
+            this.jcTorqueConstJoint3textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.jcTorqueConstJoint3textBox.Location = new System.Drawing.Point(317, 102);
+            this.jcTorqueConstJoint3textBox.Name = "jcTorqueConstJoint3textBox";
+            this.jcTorqueConstJoint3textBox.Size = new System.Drawing.Size(104, 28);
+            this.jcTorqueConstJoint3textBox.TabIndex = 6;
             // 
-            // textBox131
+            // jcSpringJoint2textBox
             // 
-            this.textBox131.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox131.Location = new System.Drawing.Point(207, 136);
-            this.textBox131.Name = "textBox131";
-            this.textBox131.Size = new System.Drawing.Size(104, 28);
-            this.textBox131.TabIndex = 6;
+            this.jcSpringJoint2textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.jcSpringJoint2textBox.Location = new System.Drawing.Point(207, 136);
+            this.jcSpringJoint2textBox.Name = "jcSpringJoint2textBox";
+            this.jcSpringJoint2textBox.Size = new System.Drawing.Size(104, 28);
+            this.jcSpringJoint2textBox.TabIndex = 6;
             // 
-            // textBox132
+            // jcEfficiencyJoint4textBox
             // 
-            this.textBox132.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox132.Location = new System.Drawing.Point(427, 68);
-            this.textBox132.Name = "textBox132";
-            this.textBox132.Size = new System.Drawing.Size(104, 28);
-            this.textBox132.TabIndex = 6;
+            this.jcEfficiencyJoint4textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.jcEfficiencyJoint4textBox.Location = new System.Drawing.Point(427, 68);
+            this.jcEfficiencyJoint4textBox.Name = "jcEfficiencyJoint4textBox";
+            this.jcEfficiencyJoint4textBox.Size = new System.Drawing.Size(104, 28);
+            this.jcEfficiencyJoint4textBox.TabIndex = 6;
             // 
-            // textBox133
+            // jcTorqueConstJoint2textBox
             // 
-            this.textBox133.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox133.Location = new System.Drawing.Point(207, 102);
-            this.textBox133.Name = "textBox133";
-            this.textBox133.Size = new System.Drawing.Size(104, 28);
-            this.textBox133.TabIndex = 6;
+            this.jcTorqueConstJoint2textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.jcTorqueConstJoint2textBox.Location = new System.Drawing.Point(207, 102);
+            this.jcTorqueConstJoint2textBox.Name = "jcTorqueConstJoint2textBox";
+            this.jcTorqueConstJoint2textBox.Size = new System.Drawing.Size(104, 28);
+            this.jcTorqueConstJoint2textBox.TabIndex = 6;
             // 
-            // textBox134
+            // jcSpringJoint1textBox
             // 
-            this.textBox134.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox134.Location = new System.Drawing.Point(97, 136);
-            this.textBox134.Name = "textBox134";
-            this.textBox134.Size = new System.Drawing.Size(104, 28);
-            this.textBox134.TabIndex = 6;
+            this.jcSpringJoint1textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.jcSpringJoint1textBox.Location = new System.Drawing.Point(97, 136);
+            this.jcSpringJoint1textBox.Name = "jcSpringJoint1textBox";
+            this.jcSpringJoint1textBox.Size = new System.Drawing.Size(104, 28);
+            this.jcSpringJoint1textBox.TabIndex = 6;
             // 
-            // textBox135
+            // jcEfficiencyJoint3textBox
             // 
-            this.textBox135.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox135.Location = new System.Drawing.Point(317, 68);
-            this.textBox135.Name = "textBox135";
-            this.textBox135.Size = new System.Drawing.Size(104, 28);
-            this.textBox135.TabIndex = 6;
+            this.jcEfficiencyJoint3textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.jcEfficiencyJoint3textBox.Location = new System.Drawing.Point(317, 68);
+            this.jcEfficiencyJoint3textBox.Name = "jcEfficiencyJoint3textBox";
+            this.jcEfficiencyJoint3textBox.Size = new System.Drawing.Size(104, 28);
+            this.jcEfficiencyJoint3textBox.TabIndex = 6;
             // 
-            // textBox136
+            // jcTorqueConstJoint1textBox
             // 
-            this.textBox136.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox136.Location = new System.Drawing.Point(97, 102);
-            this.textBox136.Name = "textBox136";
-            this.textBox136.Size = new System.Drawing.Size(104, 28);
-            this.textBox136.TabIndex = 6;
+            this.jcTorqueConstJoint1textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.jcTorqueConstJoint1textBox.Location = new System.Drawing.Point(97, 102);
+            this.jcTorqueConstJoint1textBox.Name = "jcTorqueConstJoint1textBox";
+            this.jcTorqueConstJoint1textBox.Size = new System.Drawing.Size(104, 28);
+            this.jcTorqueConstJoint1textBox.TabIndex = 6;
             // 
-            // textBox137
+            // jcEfficiencyJoint2textBox
             // 
-            this.textBox137.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox137.Location = new System.Drawing.Point(207, 68);
-            this.textBox137.Name = "textBox137";
-            this.textBox137.Size = new System.Drawing.Size(104, 28);
-            this.textBox137.TabIndex = 6;
+            this.jcEfficiencyJoint2textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.jcEfficiencyJoint2textBox.Location = new System.Drawing.Point(207, 68);
+            this.jcEfficiencyJoint2textBox.Name = "jcEfficiencyJoint2textBox";
+            this.jcEfficiencyJoint2textBox.Size = new System.Drawing.Size(104, 28);
+            this.jcEfficiencyJoint2textBox.TabIndex = 6;
             // 
-            // textBox138
+            // jcEfficiencyJoint1textBox
             // 
-            this.textBox138.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox138.Location = new System.Drawing.Point(97, 68);
-            this.textBox138.Name = "textBox138";
-            this.textBox138.Size = new System.Drawing.Size(104, 28);
-            this.textBox138.TabIndex = 6;
+            this.jcEfficiencyJoint1textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.jcEfficiencyJoint1textBox.Location = new System.Drawing.Point(97, 68);
+            this.jcEfficiencyJoint1textBox.Name = "jcEfficiencyJoint1textBox";
+            this.jcEfficiencyJoint1textBox.Size = new System.Drawing.Size(104, 28);
+            this.jcEfficiencyJoint1textBox.TabIndex = 6;
             // 
             // label62
             // 
@@ -1911,16 +1989,525 @@ namespace DebuggingToolGUI
             // 
             // tabPage1
             // 
+            this.tabPage1.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage1.Controls.Add(this.JointPositionSetgroupBox);
             this.tabPage1.Controls.Add(this.groupBox10);
             this.tabPage1.Location = new System.Drawing.Point(4, 30);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Size = new System.Drawing.Size(1300, 403);
             this.tabPage1.TabIndex = 2;
             this.tabPage1.Text = "Joint Control Set";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // JointPositionSetgroupBox
+            // 
+            this.JointPositionSetgroupBox.Controls.Add(this.JointReachedpictureBox);
+            this.JointPositionSetgroupBox.Controls.Add(this.JointMovingpictureBox);
+            this.JointPositionSetgroupBox.Controls.Add(this.label139);
+            this.JointPositionSetgroupBox.Controls.Add(this.label140);
+            this.JointPositionSetgroupBox.Controls.Add(this.JointPositionSetbutton);
+            this.JointPositionSetgroupBox.Controls.Add(this.PositionJoint8textBox);
+            this.JointPositionSetgroupBox.Controls.Add(this.PositionJoint7textBox);
+            this.JointPositionSetgroupBox.Controls.Add(this.PositionJoint6textBox);
+            this.JointPositionSetgroupBox.Controls.Add(this.PositionJoint5textBox);
+            this.JointPositionSetgroupBox.Controls.Add(this.PositionJoint4textBox);
+            this.JointPositionSetgroupBox.Controls.Add(this.PositionJoint3textBox);
+            this.JointPositionSetgroupBox.Controls.Add(this.PositionJoint2textBox);
+            this.JointPositionSetgroupBox.Controls.Add(this.PositionJoint1textBox);
+            this.JointPositionSetgroupBox.Controls.Add(this.label116);
+            this.JointPositionSetgroupBox.Controls.Add(this.label117);
+            this.JointPositionSetgroupBox.Controls.Add(this.label118);
+            this.JointPositionSetgroupBox.Controls.Add(this.label119);
+            this.JointPositionSetgroupBox.Controls.Add(this.label120);
+            this.JointPositionSetgroupBox.Controls.Add(this.label121);
+            this.JointPositionSetgroupBox.Controls.Add(this.label122);
+            this.JointPositionSetgroupBox.Controls.Add(this.label123);
+            this.JointPositionSetgroupBox.Controls.Add(this.label125);
+            this.JointPositionSetgroupBox.Font = new System.Drawing.Font("KoPub돋움체 Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.JointPositionSetgroupBox.Location = new System.Drawing.Point(10, 172);
+            this.JointPositionSetgroupBox.Name = "JointPositionSetgroupBox";
+            this.JointPositionSetgroupBox.Size = new System.Drawing.Size(1282, 170);
+            this.JointPositionSetgroupBox.TabIndex = 8;
+            this.JointPositionSetgroupBox.TabStop = false;
+            this.JointPositionSetgroupBox.Text = "Joint Position Set";
+            // 
+            // JointReachedpictureBox
+            // 
+            this.JointReachedpictureBox.Location = new System.Drawing.Point(211, 132);
+            this.JointReachedpictureBox.Name = "JointReachedpictureBox";
+            this.JointReachedpictureBox.Size = new System.Drawing.Size(33, 28);
+            this.JointReachedpictureBox.TabIndex = 169;
+            this.JointReachedpictureBox.TabStop = false;
+            // 
+            // JointMovingpictureBox
+            // 
+            this.JointMovingpictureBox.Location = new System.Drawing.Point(30, 132);
+            this.JointMovingpictureBox.Name = "JointMovingpictureBox";
+            this.JointMovingpictureBox.Size = new System.Drawing.Size(33, 28);
+            this.JointMovingpictureBox.TabIndex = 170;
+            this.JointMovingpictureBox.TabStop = false;
+            // 
+            // label139
+            // 
+            this.label139.AutoSize = true;
+            this.label139.Font = new System.Drawing.Font("KoPub돋움체 Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label139.Location = new System.Drawing.Point(250, 139);
+            this.label139.Name = "label139";
+            this.label139.Size = new System.Drawing.Size(146, 21);
+            this.label139.TabIndex = 167;
+            this.label139.Text = "Target Reached";
+            // 
+            // label140
+            // 
+            this.label140.AutoSize = true;
+            this.label140.Font = new System.Drawing.Font("KoPub돋움체 Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label140.Location = new System.Drawing.Point(69, 139);
+            this.label140.Name = "label140";
+            this.label140.Size = new System.Drawing.Size(132, 21);
+            this.label140.TabIndex = 168;
+            this.label140.Text = "Target Moving";
+            // 
+            // JointPositionSetbutton
+            // 
+            this.JointPositionSetbutton.Location = new System.Drawing.Point(977, 26);
+            this.JointPositionSetbutton.Name = "JointPositionSetbutton";
+            this.JointPositionSetbutton.Size = new System.Drawing.Size(282, 70);
+            this.JointPositionSetbutton.TabIndex = 7;
+            this.JointPositionSetbutton.Text = "Joint Position Set";
+            this.JointPositionSetbutton.UseVisualStyleBackColor = true;
+            // 
+            // PositionJoint8textBox
+            // 
+            this.PositionJoint8textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.PositionJoint8textBox.Location = new System.Drawing.Point(867, 68);
+            this.PositionJoint8textBox.Name = "PositionJoint8textBox";
+            this.PositionJoint8textBox.Size = new System.Drawing.Size(104, 28);
+            this.PositionJoint8textBox.TabIndex = 6;
+            // 
+            // PositionJoint7textBox
+            // 
+            this.PositionJoint7textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.PositionJoint7textBox.Location = new System.Drawing.Point(757, 68);
+            this.PositionJoint7textBox.Name = "PositionJoint7textBox";
+            this.PositionJoint7textBox.Size = new System.Drawing.Size(104, 28);
+            this.PositionJoint7textBox.TabIndex = 6;
+            // 
+            // PositionJoint6textBox
+            // 
+            this.PositionJoint6textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.PositionJoint6textBox.Location = new System.Drawing.Point(647, 68);
+            this.PositionJoint6textBox.Name = "PositionJoint6textBox";
+            this.PositionJoint6textBox.Size = new System.Drawing.Size(104, 28);
+            this.PositionJoint6textBox.TabIndex = 6;
+            // 
+            // PositionJoint5textBox
+            // 
+            this.PositionJoint5textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.PositionJoint5textBox.Location = new System.Drawing.Point(537, 68);
+            this.PositionJoint5textBox.Name = "PositionJoint5textBox";
+            this.PositionJoint5textBox.Size = new System.Drawing.Size(104, 28);
+            this.PositionJoint5textBox.TabIndex = 6;
+            // 
+            // PositionJoint4textBox
+            // 
+            this.PositionJoint4textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.PositionJoint4textBox.Location = new System.Drawing.Point(427, 68);
+            this.PositionJoint4textBox.Name = "PositionJoint4textBox";
+            this.PositionJoint4textBox.Size = new System.Drawing.Size(104, 28);
+            this.PositionJoint4textBox.TabIndex = 6;
+            // 
+            // PositionJoint3textBox
+            // 
+            this.PositionJoint3textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.PositionJoint3textBox.Location = new System.Drawing.Point(317, 68);
+            this.PositionJoint3textBox.Name = "PositionJoint3textBox";
+            this.PositionJoint3textBox.Size = new System.Drawing.Size(104, 28);
+            this.PositionJoint3textBox.TabIndex = 6;
+            // 
+            // PositionJoint2textBox
+            // 
+            this.PositionJoint2textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.PositionJoint2textBox.Location = new System.Drawing.Point(207, 68);
+            this.PositionJoint2textBox.Name = "PositionJoint2textBox";
+            this.PositionJoint2textBox.Size = new System.Drawing.Size(104, 28);
+            this.PositionJoint2textBox.TabIndex = 6;
+            // 
+            // PositionJoint1textBox
+            // 
+            this.PositionJoint1textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.PositionJoint1textBox.Location = new System.Drawing.Point(97, 68);
+            this.PositionJoint1textBox.Name = "PositionJoint1textBox";
+            this.PositionJoint1textBox.Size = new System.Drawing.Size(104, 28);
+            this.PositionJoint1textBox.TabIndex = 6;
+            // 
+            // label116
+            // 
+            this.label116.AutoSize = true;
+            this.label116.Font = new System.Drawing.Font("KoPub돋움체 Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label116.Location = new System.Drawing.Point(886, 43);
+            this.label116.Name = "label116";
+            this.label116.Size = new System.Drawing.Size(68, 21);
+            this.label116.TabIndex = 5;
+            this.label116.Text = "Joint 8";
+            // 
+            // label117
+            // 
+            this.label117.AutoSize = true;
+            this.label117.Font = new System.Drawing.Font("KoPub돋움체 Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label117.Location = new System.Drawing.Point(773, 43);
+            this.label117.Name = "label117";
+            this.label117.Size = new System.Drawing.Size(68, 21);
+            this.label117.TabIndex = 5;
+            this.label117.Text = "Joint 7";
+            // 
+            // label118
+            // 
+            this.label118.AutoSize = true;
+            this.label118.Font = new System.Drawing.Font("KoPub돋움체 Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label118.Location = new System.Drawing.Point(662, 43);
+            this.label118.Name = "label118";
+            this.label118.Size = new System.Drawing.Size(68, 21);
+            this.label118.TabIndex = 5;
+            this.label118.Text = "Joint 6";
+            // 
+            // label119
+            // 
+            this.label119.AutoSize = true;
+            this.label119.Font = new System.Drawing.Font("KoPub돋움체 Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label119.Location = new System.Drawing.Point(556, 43);
+            this.label119.Name = "label119";
+            this.label119.Size = new System.Drawing.Size(68, 21);
+            this.label119.TabIndex = 5;
+            this.label119.Text = "Joint 5";
+            // 
+            // label120
+            // 
+            this.label120.AutoSize = true;
+            this.label120.Font = new System.Drawing.Font("KoPub돋움체 Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label120.Location = new System.Drawing.Point(444, 43);
+            this.label120.Name = "label120";
+            this.label120.Size = new System.Drawing.Size(68, 21);
+            this.label120.TabIndex = 5;
+            this.label120.Text = "Joint 4";
+            // 
+            // label121
+            // 
+            this.label121.AutoSize = true;
+            this.label121.Font = new System.Drawing.Font("KoPub돋움체 Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label121.Location = new System.Drawing.Point(338, 43);
+            this.label121.Name = "label121";
+            this.label121.Size = new System.Drawing.Size(68, 21);
+            this.label121.TabIndex = 5;
+            this.label121.Text = "Joint 3";
+            // 
+            // label122
+            // 
+            this.label122.AutoSize = true;
+            this.label122.Font = new System.Drawing.Font("KoPub돋움체 Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label122.Location = new System.Drawing.Point(225, 43);
+            this.label122.Name = "label122";
+            this.label122.Size = new System.Drawing.Size(68, 21);
+            this.label122.TabIndex = 5;
+            this.label122.Text = "Joint 2";
+            // 
+            // label123
+            // 
+            this.label123.AutoSize = true;
+            this.label123.Font = new System.Drawing.Font("KoPub돋움체 Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label123.Location = new System.Drawing.Point(121, 43);
+            this.label123.Name = "label123";
+            this.label123.Size = new System.Drawing.Size(68, 21);
+            this.label123.TabIndex = 5;
+            this.label123.Text = "Joint 1";
+            // 
+            // label125
+            // 
+            this.label125.AutoSize = true;
+            this.label125.Font = new System.Drawing.Font("KoPub돋움체 Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label125.Location = new System.Drawing.Point(6, 71);
+            this.label125.Name = "label125";
+            this.label125.Size = new System.Drawing.Size(87, 21);
+            this.label125.TabIndex = 5;
+            this.label125.Text = "Pos (rad)";
+            // 
+            // groupBox10
+            // 
+            this.groupBox10.Controls.Add(this.JointTrajetorySetbutton);
+            this.groupBox10.Controls.Add(this.TrajAccJoint8textBox);
+            this.groupBox10.Controls.Add(this.TrajTimeJoint8textBox);
+            this.groupBox10.Controls.Add(this.TrajAccJoint7textBox);
+            this.groupBox10.Controls.Add(this.TrajAccJoint6textBox);
+            this.groupBox10.Controls.Add(this.TrajTimeJoint7textBox);
+            this.groupBox10.Controls.Add(this.TrajAccJoint5textBox);
+            this.groupBox10.Controls.Add(this.TrajTimeJoint6textBox);
+            this.groupBox10.Controls.Add(this.TrajAccJoint4textBox);
+            this.groupBox10.Controls.Add(this.TrajTimeJoint5textBox);
+            this.groupBox10.Controls.Add(this.TrajAccJoint3textBox);
+            this.groupBox10.Controls.Add(this.TrajTimeJoint4textBox);
+            this.groupBox10.Controls.Add(this.TrajAccJoint2textBox);
+            this.groupBox10.Controls.Add(this.TrajTimeJoint3textBox);
+            this.groupBox10.Controls.Add(this.TrajAccJoint1textBox);
+            this.groupBox10.Controls.Add(this.TrajTimeJoint2textBox);
+            this.groupBox10.Controls.Add(this.TrajTimeJoint1textBox);
+            this.groupBox10.Controls.Add(this.label88);
+            this.groupBox10.Controls.Add(this.label89);
+            this.groupBox10.Controls.Add(this.label90);
+            this.groupBox10.Controls.Add(this.label91);
+            this.groupBox10.Controls.Add(this.label92);
+            this.groupBox10.Controls.Add(this.label93);
+            this.groupBox10.Controls.Add(this.label94);
+            this.groupBox10.Controls.Add(this.label95);
+            this.groupBox10.Controls.Add(this.label97);
+            this.groupBox10.Controls.Add(this.label98);
+            this.groupBox10.Font = new System.Drawing.Font("KoPub돋움체 Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.groupBox10.Location = new System.Drawing.Point(10, 19);
+            this.groupBox10.Name = "groupBox10";
+            this.groupBox10.Size = new System.Drawing.Size(1282, 147);
+            this.groupBox10.TabIndex = 8;
+            this.groupBox10.TabStop = false;
+            this.groupBox10.Text = "Joint Trajectory Param";
+            // 
+            // JointTrajetorySetbutton
+            // 
+            this.JointTrajetorySetbutton.Location = new System.Drawing.Point(977, 60);
+            this.JointTrajetorySetbutton.Name = "JointTrajetorySetbutton";
+            this.JointTrajetorySetbutton.Size = new System.Drawing.Size(282, 70);
+            this.JointTrajetorySetbutton.TabIndex = 7;
+            this.JointTrajetorySetbutton.Text = "Joint Trajectory Set";
+            this.JointTrajetorySetbutton.UseVisualStyleBackColor = true;
+            this.JointTrajetorySetbutton.Click += new System.EventHandler(this.JointTrajetorySetbutton_Click);
+            // 
+            // TrajAccJoint8textBox
+            // 
+            this.TrajAccJoint8textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.TrajAccJoint8textBox.Location = new System.Drawing.Point(867, 102);
+            this.TrajAccJoint8textBox.Name = "TrajAccJoint8textBox";
+            this.TrajAccJoint8textBox.Size = new System.Drawing.Size(104, 28);
+            this.TrajAccJoint8textBox.TabIndex = 6;
+            // 
+            // TrajTimeJoint8textBox
+            // 
+            this.TrajTimeJoint8textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.TrajTimeJoint8textBox.Location = new System.Drawing.Point(867, 68);
+            this.TrajTimeJoint8textBox.Name = "TrajTimeJoint8textBox";
+            this.TrajTimeJoint8textBox.Size = new System.Drawing.Size(104, 28);
+            this.TrajTimeJoint8textBox.TabIndex = 6;
+            // 
+            // TrajAccJoint7textBox
+            // 
+            this.TrajAccJoint7textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.TrajAccJoint7textBox.Location = new System.Drawing.Point(757, 102);
+            this.TrajAccJoint7textBox.Name = "TrajAccJoint7textBox";
+            this.TrajAccJoint7textBox.Size = new System.Drawing.Size(104, 28);
+            this.TrajAccJoint7textBox.TabIndex = 6;
+            // 
+            // TrajAccJoint6textBox
+            // 
+            this.TrajAccJoint6textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.TrajAccJoint6textBox.Location = new System.Drawing.Point(647, 102);
+            this.TrajAccJoint6textBox.Name = "TrajAccJoint6textBox";
+            this.TrajAccJoint6textBox.Size = new System.Drawing.Size(104, 28);
+            this.TrajAccJoint6textBox.TabIndex = 6;
+            // 
+            // TrajTimeJoint7textBox
+            // 
+            this.TrajTimeJoint7textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.TrajTimeJoint7textBox.Location = new System.Drawing.Point(757, 68);
+            this.TrajTimeJoint7textBox.Name = "TrajTimeJoint7textBox";
+            this.TrajTimeJoint7textBox.Size = new System.Drawing.Size(104, 28);
+            this.TrajTimeJoint7textBox.TabIndex = 6;
+            // 
+            // TrajAccJoint5textBox
+            // 
+            this.TrajAccJoint5textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.TrajAccJoint5textBox.Location = new System.Drawing.Point(537, 102);
+            this.TrajAccJoint5textBox.Name = "TrajAccJoint5textBox";
+            this.TrajAccJoint5textBox.Size = new System.Drawing.Size(104, 28);
+            this.TrajAccJoint5textBox.TabIndex = 6;
+            // 
+            // TrajTimeJoint6textBox
+            // 
+            this.TrajTimeJoint6textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.TrajTimeJoint6textBox.Location = new System.Drawing.Point(647, 68);
+            this.TrajTimeJoint6textBox.Name = "TrajTimeJoint6textBox";
+            this.TrajTimeJoint6textBox.Size = new System.Drawing.Size(104, 28);
+            this.TrajTimeJoint6textBox.TabIndex = 6;
+            // 
+            // TrajAccJoint4textBox
+            // 
+            this.TrajAccJoint4textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.TrajAccJoint4textBox.Location = new System.Drawing.Point(427, 102);
+            this.TrajAccJoint4textBox.Name = "TrajAccJoint4textBox";
+            this.TrajAccJoint4textBox.Size = new System.Drawing.Size(104, 28);
+            this.TrajAccJoint4textBox.TabIndex = 6;
+            // 
+            // TrajTimeJoint5textBox
+            // 
+            this.TrajTimeJoint5textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.TrajTimeJoint5textBox.Location = new System.Drawing.Point(537, 68);
+            this.TrajTimeJoint5textBox.Name = "TrajTimeJoint5textBox";
+            this.TrajTimeJoint5textBox.Size = new System.Drawing.Size(104, 28);
+            this.TrajTimeJoint5textBox.TabIndex = 6;
+            // 
+            // TrajAccJoint3textBox
+            // 
+            this.TrajAccJoint3textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.TrajAccJoint3textBox.Location = new System.Drawing.Point(317, 102);
+            this.TrajAccJoint3textBox.Name = "TrajAccJoint3textBox";
+            this.TrajAccJoint3textBox.Size = new System.Drawing.Size(104, 28);
+            this.TrajAccJoint3textBox.TabIndex = 6;
+            // 
+            // TrajTimeJoint4textBox
+            // 
+            this.TrajTimeJoint4textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.TrajTimeJoint4textBox.Location = new System.Drawing.Point(427, 68);
+            this.TrajTimeJoint4textBox.Name = "TrajTimeJoint4textBox";
+            this.TrajTimeJoint4textBox.Size = new System.Drawing.Size(104, 28);
+            this.TrajTimeJoint4textBox.TabIndex = 6;
+            // 
+            // TrajAccJoint2textBox
+            // 
+            this.TrajAccJoint2textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.TrajAccJoint2textBox.Location = new System.Drawing.Point(207, 102);
+            this.TrajAccJoint2textBox.Name = "TrajAccJoint2textBox";
+            this.TrajAccJoint2textBox.Size = new System.Drawing.Size(104, 28);
+            this.TrajAccJoint2textBox.TabIndex = 6;
+            // 
+            // TrajTimeJoint3textBox
+            // 
+            this.TrajTimeJoint3textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.TrajTimeJoint3textBox.Location = new System.Drawing.Point(317, 68);
+            this.TrajTimeJoint3textBox.Name = "TrajTimeJoint3textBox";
+            this.TrajTimeJoint3textBox.Size = new System.Drawing.Size(104, 28);
+            this.TrajTimeJoint3textBox.TabIndex = 6;
+            // 
+            // TrajAccJoint1textBox
+            // 
+            this.TrajAccJoint1textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.TrajAccJoint1textBox.Location = new System.Drawing.Point(97, 102);
+            this.TrajAccJoint1textBox.Name = "TrajAccJoint1textBox";
+            this.TrajAccJoint1textBox.Size = new System.Drawing.Size(104, 28);
+            this.TrajAccJoint1textBox.TabIndex = 6;
+            // 
+            // TrajTimeJoint2textBox
+            // 
+            this.TrajTimeJoint2textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.TrajTimeJoint2textBox.Location = new System.Drawing.Point(207, 68);
+            this.TrajTimeJoint2textBox.Name = "TrajTimeJoint2textBox";
+            this.TrajTimeJoint2textBox.Size = new System.Drawing.Size(104, 28);
+            this.TrajTimeJoint2textBox.TabIndex = 6;
+            // 
+            // TrajTimeJoint1textBox
+            // 
+            this.TrajTimeJoint1textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.TrajTimeJoint1textBox.Location = new System.Drawing.Point(97, 68);
+            this.TrajTimeJoint1textBox.Name = "TrajTimeJoint1textBox";
+            this.TrajTimeJoint1textBox.Size = new System.Drawing.Size(104, 28);
+            this.TrajTimeJoint1textBox.TabIndex = 6;
+            // 
+            // label88
+            // 
+            this.label88.AutoSize = true;
+            this.label88.Font = new System.Drawing.Font("KoPub돋움체 Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label88.Location = new System.Drawing.Point(886, 43);
+            this.label88.Name = "label88";
+            this.label88.Size = new System.Drawing.Size(68, 21);
+            this.label88.TabIndex = 5;
+            this.label88.Text = "Joint 8";
+            // 
+            // label89
+            // 
+            this.label89.AutoSize = true;
+            this.label89.Font = new System.Drawing.Font("KoPub돋움체 Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label89.Location = new System.Drawing.Point(773, 43);
+            this.label89.Name = "label89";
+            this.label89.Size = new System.Drawing.Size(68, 21);
+            this.label89.TabIndex = 5;
+            this.label89.Text = "Joint 7";
+            // 
+            // label90
+            // 
+            this.label90.AutoSize = true;
+            this.label90.Font = new System.Drawing.Font("KoPub돋움체 Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label90.Location = new System.Drawing.Point(662, 43);
+            this.label90.Name = "label90";
+            this.label90.Size = new System.Drawing.Size(68, 21);
+            this.label90.TabIndex = 5;
+            this.label90.Text = "Joint 6";
+            // 
+            // label91
+            // 
+            this.label91.AutoSize = true;
+            this.label91.Font = new System.Drawing.Font("KoPub돋움체 Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label91.Location = new System.Drawing.Point(556, 43);
+            this.label91.Name = "label91";
+            this.label91.Size = new System.Drawing.Size(68, 21);
+            this.label91.TabIndex = 5;
+            this.label91.Text = "Joint 5";
+            // 
+            // label92
+            // 
+            this.label92.AutoSize = true;
+            this.label92.Font = new System.Drawing.Font("KoPub돋움체 Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label92.Location = new System.Drawing.Point(444, 43);
+            this.label92.Name = "label92";
+            this.label92.Size = new System.Drawing.Size(68, 21);
+            this.label92.TabIndex = 5;
+            this.label92.Text = "Joint 4";
+            // 
+            // label93
+            // 
+            this.label93.AutoSize = true;
+            this.label93.Font = new System.Drawing.Font("KoPub돋움체 Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label93.Location = new System.Drawing.Point(338, 43);
+            this.label93.Name = "label93";
+            this.label93.Size = new System.Drawing.Size(68, 21);
+            this.label93.TabIndex = 5;
+            this.label93.Text = "Joint 3";
+            // 
+            // label94
+            // 
+            this.label94.AutoSize = true;
+            this.label94.Font = new System.Drawing.Font("KoPub돋움체 Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label94.Location = new System.Drawing.Point(225, 43);
+            this.label94.Name = "label94";
+            this.label94.Size = new System.Drawing.Size(68, 21);
+            this.label94.TabIndex = 5;
+            this.label94.Text = "Joint 2";
+            // 
+            // label95
+            // 
+            this.label95.AutoSize = true;
+            this.label95.Font = new System.Drawing.Font("KoPub돋움체 Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label95.Location = new System.Drawing.Point(121, 43);
+            this.label95.Name = "label95";
+            this.label95.Size = new System.Drawing.Size(68, 21);
+            this.label95.TabIndex = 5;
+            this.label95.Text = "Joint 1";
+            // 
+            // label97
+            // 
+            this.label97.AutoSize = true;
+            this.label97.Font = new System.Drawing.Font("KoPub돋움체 Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label97.Location = new System.Drawing.Point(5, 105);
+            this.label97.Name = "label97";
+            this.label97.Size = new System.Drawing.Size(86, 21);
+            this.label97.TabIndex = 5;
+            this.label97.Text = "Acc/Dec";
+            // 
+            // label98
+            // 
+            this.label98.AutoSize = true;
+            this.label98.Font = new System.Drawing.Font("KoPub돋움체 Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label98.Location = new System.Drawing.Point(6, 71);
+            this.label98.Name = "label98";
+            this.label98.Size = new System.Drawing.Size(53, 21);
+            this.label98.TabIndex = 5;
+            this.label98.Text = "Time";
             // 
             // tabPage3
             // 
+            this.tabPage3.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage3.Controls.Add(this.CartesianPositionSetgroupBox);
             this.tabPage3.Controls.Add(this.groupBox12);
             this.tabPage3.Controls.Add(this.groupBox11);
             this.tabPage3.Location = new System.Drawing.Point(4, 30);
@@ -1928,7 +2515,751 @@ namespace DebuggingToolGUI
             this.tabPage3.Size = new System.Drawing.Size(1300, 403);
             this.tabPage3.TabIndex = 3;
             this.tabPage3.Text = "Cartesian Control Set";
-            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // CartesianPositionSetgroupBox
+            // 
+            this.CartesianPositionSetgroupBox.Controls.Add(this.CartesianReachedpictureBox);
+            this.CartesianPositionSetgroupBox.Controls.Add(this.CartesianMovingpictureBox);
+            this.CartesianPositionSetgroupBox.Controls.Add(this.CartesianPositionSetbutton);
+            this.CartesianPositionSetgroupBox.Controls.Add(this.label136);
+            this.CartesianPositionSetgroupBox.Controls.Add(this.label138);
+            this.CartesianPositionSetgroupBox.Controls.Add(this.label137);
+            this.CartesianPositionSetgroupBox.Controls.Add(this.label130);
+            this.CartesianPositionSetgroupBox.Controls.Add(this.label135);
+            this.CartesianPositionSetgroupBox.Controls.Add(this.label129);
+            this.CartesianPositionSetgroupBox.Controls.Add(this.label134);
+            this.CartesianPositionSetgroupBox.Controls.Add(this.label124);
+            this.CartesianPositionSetgroupBox.Controls.Add(this.label133);
+            this.CartesianPositionSetgroupBox.Controls.Add(this.label128);
+            this.CartesianPositionSetgroupBox.Controls.Add(this.label132);
+            this.CartesianPositionSetgroupBox.Controls.Add(this.label126);
+            this.CartesianPositionSetgroupBox.Controls.Add(this.label131);
+            this.CartesianPositionSetgroupBox.Controls.Add(this.label127);
+            this.CartesianPositionSetgroupBox.Controls.Add(this.textBox6);
+            this.CartesianPositionSetgroupBox.Controls.Add(this.textBox5);
+            this.CartesianPositionSetgroupBox.Controls.Add(this.textBox1);
+            this.CartesianPositionSetgroupBox.Controls.Add(this.textBox4);
+            this.CartesianPositionSetgroupBox.Controls.Add(this.textBox2);
+            this.CartesianPositionSetgroupBox.Controls.Add(this.textBox3);
+            this.CartesianPositionSetgroupBox.Location = new System.Drawing.Point(903, 19);
+            this.CartesianPositionSetgroupBox.Name = "CartesianPositionSetgroupBox";
+            this.CartesianPositionSetgroupBox.Size = new System.Drawing.Size(388, 365);
+            this.CartesianPositionSetgroupBox.TabIndex = 10;
+            this.CartesianPositionSetgroupBox.TabStop = false;
+            this.CartesianPositionSetgroupBox.Text = "Cartesian Position Set";
+            // 
+            // CartesianReachedpictureBox
+            // 
+            this.CartesianReachedpictureBox.Location = new System.Drawing.Point(37, 321);
+            this.CartesianReachedpictureBox.Name = "CartesianReachedpictureBox";
+            this.CartesianReachedpictureBox.Size = new System.Drawing.Size(33, 28);
+            this.CartesianReachedpictureBox.TabIndex = 166;
+            this.CartesianReachedpictureBox.TabStop = false;
+            // 
+            // CartesianMovingpictureBox
+            // 
+            this.CartesianMovingpictureBox.Location = new System.Drawing.Point(37, 288);
+            this.CartesianMovingpictureBox.Name = "CartesianMovingpictureBox";
+            this.CartesianMovingpictureBox.Size = new System.Drawing.Size(33, 28);
+            this.CartesianMovingpictureBox.TabIndex = 166;
+            this.CartesianMovingpictureBox.TabStop = false;
+            // 
+            // CartesianPositionSetbutton
+            // 
+            this.CartesianPositionSetbutton.Location = new System.Drawing.Point(236, 68);
+            this.CartesianPositionSetbutton.Name = "CartesianPositionSetbutton";
+            this.CartesianPositionSetbutton.Size = new System.Drawing.Size(131, 198);
+            this.CartesianPositionSetbutton.TabIndex = 13;
+            this.CartesianPositionSetbutton.Text = "Position Set";
+            this.CartesianPositionSetbutton.UseVisualStyleBackColor = true;
+            // 
+            // label136
+            // 
+            this.label136.AutoSize = true;
+            this.label136.Font = new System.Drawing.Font("KoPub돋움체 Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label136.Location = new System.Drawing.Point(177, 245);
+            this.label136.Name = "label136";
+            this.label136.Size = new System.Drawing.Size(44, 21);
+            this.label136.TabIndex = 10;
+            this.label136.Text = "mm";
+            // 
+            // label138
+            // 
+            this.label138.AutoSize = true;
+            this.label138.Font = new System.Drawing.Font("KoPub돋움체 Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label138.Location = new System.Drawing.Point(76, 328);
+            this.label138.Name = "label138";
+            this.label138.Size = new System.Drawing.Size(146, 21);
+            this.label138.TabIndex = 165;
+            this.label138.Text = "Target Reached";
+            this.label138.Click += new System.EventHandler(this.label138_Click);
+            // 
+            // label137
+            // 
+            this.label137.AutoSize = true;
+            this.label137.Font = new System.Drawing.Font("KoPub돋움체 Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label137.Location = new System.Drawing.Point(76, 295);
+            this.label137.Name = "label137";
+            this.label137.Size = new System.Drawing.Size(132, 21);
+            this.label137.TabIndex = 165;
+            this.label137.Text = "Target Moving";
+            // 
+            // label130
+            // 
+            this.label130.AutoSize = true;
+            this.label130.Font = new System.Drawing.Font("KoPub돋움체 Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label130.Location = new System.Drawing.Point(18, 241);
+            this.label130.Name = "label130";
+            this.label130.Size = new System.Drawing.Size(32, 21);
+            this.label130.TabIndex = 10;
+            this.label130.Text = "Rz";
+            // 
+            // label135
+            // 
+            this.label135.AutoSize = true;
+            this.label135.Font = new System.Drawing.Font("KoPub돋움체 Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label135.Location = new System.Drawing.Point(177, 211);
+            this.label135.Name = "label135";
+            this.label135.Size = new System.Drawing.Size(44, 21);
+            this.label135.TabIndex = 11;
+            this.label135.Text = "mm";
+            // 
+            // label129
+            // 
+            this.label129.AutoSize = true;
+            this.label129.Font = new System.Drawing.Font("KoPub돋움체 Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label129.Location = new System.Drawing.Point(18, 207);
+            this.label129.Name = "label129";
+            this.label129.Size = new System.Drawing.Size(33, 21);
+            this.label129.TabIndex = 11;
+            this.label129.Text = "Ry";
+            // 
+            // label134
+            // 
+            this.label134.AutoSize = true;
+            this.label134.Font = new System.Drawing.Font("KoPub돋움체 Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label134.Location = new System.Drawing.Point(177, 143);
+            this.label134.Name = "label134";
+            this.label134.Size = new System.Drawing.Size(44, 21);
+            this.label134.TabIndex = 10;
+            this.label134.Text = "mm";
+            // 
+            // label124
+            // 
+            this.label124.AutoSize = true;
+            this.label124.Font = new System.Drawing.Font("KoPub돋움체 Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label124.Location = new System.Drawing.Point(18, 139);
+            this.label124.Name = "label124";
+            this.label124.Size = new System.Drawing.Size(31, 21);
+            this.label124.TabIndex = 10;
+            this.label124.Text = "Pz";
+            // 
+            // label133
+            // 
+            this.label133.AutoSize = true;
+            this.label133.Font = new System.Drawing.Font("KoPub돋움체 Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label133.Location = new System.Drawing.Point(177, 177);
+            this.label133.Name = "label133";
+            this.label133.Size = new System.Drawing.Size(44, 21);
+            this.label133.TabIndex = 12;
+            this.label133.Text = "mm";
+            // 
+            // label128
+            // 
+            this.label128.AutoSize = true;
+            this.label128.Font = new System.Drawing.Font("KoPub돋움체 Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label128.Location = new System.Drawing.Point(18, 173);
+            this.label128.Name = "label128";
+            this.label128.Size = new System.Drawing.Size(33, 21);
+            this.label128.TabIndex = 12;
+            this.label128.Text = "Rx";
+            // 
+            // label132
+            // 
+            this.label132.AutoSize = true;
+            this.label132.Font = new System.Drawing.Font("KoPub돋움체 Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label132.Location = new System.Drawing.Point(177, 109);
+            this.label132.Name = "label132";
+            this.label132.Size = new System.Drawing.Size(44, 21);
+            this.label132.TabIndex = 11;
+            this.label132.Text = "mm";
+            // 
+            // label126
+            // 
+            this.label126.AutoSize = true;
+            this.label126.Font = new System.Drawing.Font("KoPub돋움체 Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label126.Location = new System.Drawing.Point(18, 105);
+            this.label126.Name = "label126";
+            this.label126.Size = new System.Drawing.Size(32, 21);
+            this.label126.TabIndex = 11;
+            this.label126.Text = "Py";
+            // 
+            // label131
+            // 
+            this.label131.AutoSize = true;
+            this.label131.Font = new System.Drawing.Font("KoPub돋움체 Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label131.Location = new System.Drawing.Point(177, 75);
+            this.label131.Name = "label131";
+            this.label131.Size = new System.Drawing.Size(44, 21);
+            this.label131.TabIndex = 12;
+            this.label131.Text = "mm";
+            // 
+            // label127
+            // 
+            this.label127.AutoSize = true;
+            this.label127.Font = new System.Drawing.Font("KoPub돋움체 Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label127.Location = new System.Drawing.Point(18, 71);
+            this.label127.Name = "label127";
+            this.label127.Size = new System.Drawing.Size(32, 21);
+            this.label127.TabIndex = 12;
+            this.label127.Text = "Px";
+            // 
+            // textBox6
+            // 
+            this.textBox6.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textBox6.Location = new System.Drawing.Point(67, 238);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(104, 28);
+            this.textBox6.TabIndex = 7;
+            // 
+            // textBox5
+            // 
+            this.textBox5.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textBox5.Location = new System.Drawing.Point(67, 204);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(104, 28);
+            this.textBox5.TabIndex = 8;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textBox1.Location = new System.Drawing.Point(67, 136);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(104, 28);
+            this.textBox1.TabIndex = 7;
+            // 
+            // textBox4
+            // 
+            this.textBox4.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textBox4.Location = new System.Drawing.Point(67, 170);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(104, 28);
+            this.textBox4.TabIndex = 9;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textBox2.Location = new System.Drawing.Point(67, 102);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(104, 28);
+            this.textBox2.TabIndex = 8;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textBox3.Location = new System.Drawing.Point(67, 68);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(104, 28);
+            this.textBox3.TabIndex = 9;
+            // 
+            // groupBox12
+            // 
+            this.groupBox12.Controls.Add(this.CartesianTrajSetbutton);
+            this.groupBox12.Controls.Add(this.TrajAccCartesianYawtextBox);
+            this.groupBox12.Controls.Add(this.TrajAccCartesianPitchtextBox);
+            this.groupBox12.Controls.Add(this.TrajTimeCartesianYawtextBox);
+            this.groupBox12.Controls.Add(this.TrajAccCartesianRolltextBox);
+            this.groupBox12.Controls.Add(this.TrajTimeCartesianPitchtextBox);
+            this.groupBox12.Controls.Add(this.TrajAccCartesianZtextBox);
+            this.groupBox12.Controls.Add(this.TrajTimeCartesianRolltextBox);
+            this.groupBox12.Controls.Add(this.TrajAccCartesianYtextBox);
+            this.groupBox12.Controls.Add(this.TrajTimeCartesianZtextBox);
+            this.groupBox12.Controls.Add(this.TrajAccCartesianXtextBox);
+            this.groupBox12.Controls.Add(this.TrajTimeCartesianYtextBox);
+            this.groupBox12.Controls.Add(this.TrajTimeCartesianXtextBox);
+            this.groupBox12.Controls.Add(this.label96);
+            this.groupBox12.Controls.Add(this.label99);
+            this.groupBox12.Controls.Add(this.label108);
+            this.groupBox12.Controls.Add(this.label109);
+            this.groupBox12.Controls.Add(this.label110);
+            this.groupBox12.Controls.Add(this.label111);
+            this.groupBox12.Controls.Add(this.label112);
+            this.groupBox12.Controls.Add(this.label113);
+            this.groupBox12.Font = new System.Drawing.Font("KoPub돋움체 Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.groupBox12.Location = new System.Drawing.Point(10, 238);
+            this.groupBox12.Name = "groupBox12";
+            this.groupBox12.Size = new System.Drawing.Size(886, 147);
+            this.groupBox12.TabIndex = 9;
+            this.groupBox12.TabStop = false;
+            this.groupBox12.Text = "Cartesian Trajectory Param";
+            // 
+            // CartesianTrajSetbutton
+            // 
+            this.CartesianTrajSetbutton.Location = new System.Drawing.Point(757, 43);
+            this.CartesianTrajSetbutton.Name = "CartesianTrajSetbutton";
+            this.CartesianTrajSetbutton.Size = new System.Drawing.Size(117, 87);
+            this.CartesianTrajSetbutton.TabIndex = 7;
+            this.CartesianTrajSetbutton.Text = "Cartesian Traj. Setting";
+            this.CartesianTrajSetbutton.UseVisualStyleBackColor = true;
+            this.CartesianTrajSetbutton.Click += new System.EventHandler(this.CartesianTrajSetbutton_Click);
+            // 
+            // TrajAccCartesianYawtextBox
+            // 
+            this.TrajAccCartesianYawtextBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.TrajAccCartesianYawtextBox.Location = new System.Drawing.Point(647, 102);
+            this.TrajAccCartesianYawtextBox.Name = "TrajAccCartesianYawtextBox";
+            this.TrajAccCartesianYawtextBox.Size = new System.Drawing.Size(104, 28);
+            this.TrajAccCartesianYawtextBox.TabIndex = 6;
+            // 
+            // TrajAccCartesianPitchtextBox
+            // 
+            this.TrajAccCartesianPitchtextBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.TrajAccCartesianPitchtextBox.Location = new System.Drawing.Point(537, 102);
+            this.TrajAccCartesianPitchtextBox.Name = "TrajAccCartesianPitchtextBox";
+            this.TrajAccCartesianPitchtextBox.Size = new System.Drawing.Size(104, 28);
+            this.TrajAccCartesianPitchtextBox.TabIndex = 6;
+            // 
+            // TrajTimeCartesianYawtextBox
+            // 
+            this.TrajTimeCartesianYawtextBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.TrajTimeCartesianYawtextBox.Location = new System.Drawing.Point(647, 68);
+            this.TrajTimeCartesianYawtextBox.Name = "TrajTimeCartesianYawtextBox";
+            this.TrajTimeCartesianYawtextBox.Size = new System.Drawing.Size(104, 28);
+            this.TrajTimeCartesianYawtextBox.TabIndex = 6;
+            // 
+            // TrajAccCartesianRolltextBox
+            // 
+            this.TrajAccCartesianRolltextBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.TrajAccCartesianRolltextBox.Location = new System.Drawing.Point(427, 102);
+            this.TrajAccCartesianRolltextBox.Name = "TrajAccCartesianRolltextBox";
+            this.TrajAccCartesianRolltextBox.Size = new System.Drawing.Size(104, 28);
+            this.TrajAccCartesianRolltextBox.TabIndex = 6;
+            // 
+            // TrajTimeCartesianPitchtextBox
+            // 
+            this.TrajTimeCartesianPitchtextBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.TrajTimeCartesianPitchtextBox.Location = new System.Drawing.Point(537, 68);
+            this.TrajTimeCartesianPitchtextBox.Name = "TrajTimeCartesianPitchtextBox";
+            this.TrajTimeCartesianPitchtextBox.Size = new System.Drawing.Size(104, 28);
+            this.TrajTimeCartesianPitchtextBox.TabIndex = 6;
+            // 
+            // TrajAccCartesianZtextBox
+            // 
+            this.TrajAccCartesianZtextBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.TrajAccCartesianZtextBox.Location = new System.Drawing.Point(317, 102);
+            this.TrajAccCartesianZtextBox.Name = "TrajAccCartesianZtextBox";
+            this.TrajAccCartesianZtextBox.Size = new System.Drawing.Size(104, 28);
+            this.TrajAccCartesianZtextBox.TabIndex = 6;
+            // 
+            // TrajTimeCartesianRolltextBox
+            // 
+            this.TrajTimeCartesianRolltextBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.TrajTimeCartesianRolltextBox.Location = new System.Drawing.Point(427, 68);
+            this.TrajTimeCartesianRolltextBox.Name = "TrajTimeCartesianRolltextBox";
+            this.TrajTimeCartesianRolltextBox.Size = new System.Drawing.Size(104, 28);
+            this.TrajTimeCartesianRolltextBox.TabIndex = 6;
+            // 
+            // TrajAccCartesianYtextBox
+            // 
+            this.TrajAccCartesianYtextBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.TrajAccCartesianYtextBox.Location = new System.Drawing.Point(207, 102);
+            this.TrajAccCartesianYtextBox.Name = "TrajAccCartesianYtextBox";
+            this.TrajAccCartesianYtextBox.Size = new System.Drawing.Size(104, 28);
+            this.TrajAccCartesianYtextBox.TabIndex = 6;
+            // 
+            // TrajTimeCartesianZtextBox
+            // 
+            this.TrajTimeCartesianZtextBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.TrajTimeCartesianZtextBox.Location = new System.Drawing.Point(317, 68);
+            this.TrajTimeCartesianZtextBox.Name = "TrajTimeCartesianZtextBox";
+            this.TrajTimeCartesianZtextBox.Size = new System.Drawing.Size(104, 28);
+            this.TrajTimeCartesianZtextBox.TabIndex = 6;
+            // 
+            // TrajAccCartesianXtextBox
+            // 
+            this.TrajAccCartesianXtextBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.TrajAccCartesianXtextBox.Location = new System.Drawing.Point(97, 102);
+            this.TrajAccCartesianXtextBox.Name = "TrajAccCartesianXtextBox";
+            this.TrajAccCartesianXtextBox.Size = new System.Drawing.Size(104, 28);
+            this.TrajAccCartesianXtextBox.TabIndex = 6;
+            // 
+            // TrajTimeCartesianYtextBox
+            // 
+            this.TrajTimeCartesianYtextBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.TrajTimeCartesianYtextBox.Location = new System.Drawing.Point(207, 68);
+            this.TrajTimeCartesianYtextBox.Name = "TrajTimeCartesianYtextBox";
+            this.TrajTimeCartesianYtextBox.Size = new System.Drawing.Size(104, 28);
+            this.TrajTimeCartesianYtextBox.TabIndex = 6;
+            // 
+            // TrajTimeCartesianXtextBox
+            // 
+            this.TrajTimeCartesianXtextBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.TrajTimeCartesianXtextBox.Location = new System.Drawing.Point(97, 68);
+            this.TrajTimeCartesianXtextBox.Name = "TrajTimeCartesianXtextBox";
+            this.TrajTimeCartesianXtextBox.Size = new System.Drawing.Size(104, 28);
+            this.TrajTimeCartesianXtextBox.TabIndex = 6;
+            // 
+            // label96
+            // 
+            this.label96.AutoSize = true;
+            this.label96.Font = new System.Drawing.Font("KoPub돋움체 Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label96.Location = new System.Drawing.Point(678, 43);
+            this.label96.Name = "label96";
+            this.label96.Size = new System.Drawing.Size(46, 21);
+            this.label96.TabIndex = 5;
+            this.label96.Text = "Yaw";
+            // 
+            // label99
+            // 
+            this.label99.AutoSize = true;
+            this.label99.Font = new System.Drawing.Font("KoPub돋움체 Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label99.Location = new System.Drawing.Point(572, 43);
+            this.label99.Name = "label99";
+            this.label99.Size = new System.Drawing.Size(53, 21);
+            this.label99.TabIndex = 5;
+            this.label99.Text = "Pitch";
+            // 
+            // label108
+            // 
+            this.label108.AutoSize = true;
+            this.label108.Font = new System.Drawing.Font("KoPub돋움체 Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label108.Location = new System.Drawing.Point(460, 43);
+            this.label108.Name = "label108";
+            this.label108.Size = new System.Drawing.Size(41, 21);
+            this.label108.TabIndex = 5;
+            this.label108.Text = "Roll";
+            // 
+            // label109
+            // 
+            this.label109.AutoSize = true;
+            this.label109.Font = new System.Drawing.Font("KoPub돋움체 Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label109.Location = new System.Drawing.Point(354, 43);
+            this.label109.Name = "label109";
+            this.label109.Size = new System.Drawing.Size(21, 21);
+            this.label109.TabIndex = 5;
+            this.label109.Text = "Z";
+            // 
+            // label110
+            // 
+            this.label110.AutoSize = true;
+            this.label110.Font = new System.Drawing.Font("KoPub돋움체 Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label110.Location = new System.Drawing.Point(241, 43);
+            this.label110.Name = "label110";
+            this.label110.Size = new System.Drawing.Size(22, 21);
+            this.label110.TabIndex = 5;
+            this.label110.Text = "Y";
+            // 
+            // label111
+            // 
+            this.label111.AutoSize = true;
+            this.label111.Font = new System.Drawing.Font("KoPub돋움체 Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label111.Location = new System.Drawing.Point(137, 43);
+            this.label111.Name = "label111";
+            this.label111.Size = new System.Drawing.Size(22, 21);
+            this.label111.TabIndex = 5;
+            this.label111.Text = "X";
+            // 
+            // label112
+            // 
+            this.label112.AutoSize = true;
+            this.label112.Font = new System.Drawing.Font("KoPub돋움체 Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label112.Location = new System.Drawing.Point(5, 105);
+            this.label112.Name = "label112";
+            this.label112.Size = new System.Drawing.Size(86, 21);
+            this.label112.TabIndex = 5;
+            this.label112.Text = "Acc/Dec";
+            // 
+            // label113
+            // 
+            this.label113.AutoSize = true;
+            this.label113.Font = new System.Drawing.Font("KoPub돋움체 Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label113.Location = new System.Drawing.Point(6, 71);
+            this.label113.Name = "label113";
+            this.label113.Size = new System.Drawing.Size(53, 21);
+            this.label113.TabIndex = 5;
+            this.label113.Text = "Time";
+            // 
+            // groupBox11
+            // 
+            this.groupBox11.Controls.Add(this.CartesianPIDSetbutton);
+            this.groupBox11.Controls.Add(this.cpDgainCartesianYawtextBox);
+            this.groupBox11.Controls.Add(this.cpIgainCartesianYawtextBox);
+            this.groupBox11.Controls.Add(this.cpDgainCartesianPitchtextBox);
+            this.groupBox11.Controls.Add(this.cpIgainCartesianPitchtextBox);
+            this.groupBox11.Controls.Add(this.cpDgainCartesianRolltextBox);
+            this.groupBox11.Controls.Add(this.cpPgainCartesianYawtextBox);
+            this.groupBox11.Controls.Add(this.cpIgainCartesianRolltextBox);
+            this.groupBox11.Controls.Add(this.cpDgainCartesianZtextBox);
+            this.groupBox11.Controls.Add(this.cpPgainCartesianPitchtextBox);
+            this.groupBox11.Controls.Add(this.cpIgainCartesianZtextBox);
+            this.groupBox11.Controls.Add(this.cpDgainCartesianYtextBox);
+            this.groupBox11.Controls.Add(this.cpPgainCartesianRolltextBox);
+            this.groupBox11.Controls.Add(this.cpIgainCartesianYtextBox);
+            this.groupBox11.Controls.Add(this.cpDgainCartesianXtextBox);
+            this.groupBox11.Controls.Add(this.cpPgainCartesianZtextBox);
+            this.groupBox11.Controls.Add(this.cpIgainCartesianXtextBox);
+            this.groupBox11.Controls.Add(this.cpPgainCartesianYtextBox);
+            this.groupBox11.Controls.Add(this.cpPgainCartesianXtextBox);
+            this.groupBox11.Controls.Add(this.label100);
+            this.groupBox11.Controls.Add(this.label101);
+            this.groupBox11.Controls.Add(this.label102);
+            this.groupBox11.Controls.Add(this.label103);
+            this.groupBox11.Controls.Add(this.label104);
+            this.groupBox11.Controls.Add(this.label114);
+            this.groupBox11.Controls.Add(this.label105);
+            this.groupBox11.Controls.Add(this.label106);
+            this.groupBox11.Controls.Add(this.label107);
+            this.groupBox11.Font = new System.Drawing.Font("KoPub돋움체 Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.groupBox11.Location = new System.Drawing.Point(10, 19);
+            this.groupBox11.Name = "groupBox11";
+            this.groupBox11.Size = new System.Drawing.Size(886, 192);
+            this.groupBox11.TabIndex = 9;
+            this.groupBox11.TabStop = false;
+            this.groupBox11.Text = "Cartesian Position PID gain";
+            // 
+            // CartesianPIDSetbutton
+            // 
+            this.CartesianPIDSetbutton.Location = new System.Drawing.Point(757, 60);
+            this.CartesianPIDSetbutton.Name = "CartesianPIDSetbutton";
+            this.CartesianPIDSetbutton.Size = new System.Drawing.Size(117, 104);
+            this.CartesianPIDSetbutton.TabIndex = 7;
+            this.CartesianPIDSetbutton.Text = "Cartesian PID Setting";
+            this.CartesianPIDSetbutton.UseVisualStyleBackColor = true;
+            this.CartesianPIDSetbutton.Click += new System.EventHandler(this.CartesianPIDSetbutton_Click);
+            // 
+            // cpDgainCartesianYawtextBox
+            // 
+            this.cpDgainCartesianYawtextBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.cpDgainCartesianYawtextBox.Location = new System.Drawing.Point(647, 136);
+            this.cpDgainCartesianYawtextBox.Name = "cpDgainCartesianYawtextBox";
+            this.cpDgainCartesianYawtextBox.Size = new System.Drawing.Size(104, 28);
+            this.cpDgainCartesianYawtextBox.TabIndex = 6;
+            // 
+            // cpIgainCartesianYawtextBox
+            // 
+            this.cpIgainCartesianYawtextBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.cpIgainCartesianYawtextBox.Location = new System.Drawing.Point(647, 102);
+            this.cpIgainCartesianYawtextBox.Name = "cpIgainCartesianYawtextBox";
+            this.cpIgainCartesianYawtextBox.Size = new System.Drawing.Size(104, 28);
+            this.cpIgainCartesianYawtextBox.TabIndex = 6;
+            // 
+            // cpDgainCartesianPitchtextBox
+            // 
+            this.cpDgainCartesianPitchtextBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.cpDgainCartesianPitchtextBox.Location = new System.Drawing.Point(537, 136);
+            this.cpDgainCartesianPitchtextBox.Name = "cpDgainCartesianPitchtextBox";
+            this.cpDgainCartesianPitchtextBox.Size = new System.Drawing.Size(104, 28);
+            this.cpDgainCartesianPitchtextBox.TabIndex = 6;
+            // 
+            // cpIgainCartesianPitchtextBox
+            // 
+            this.cpIgainCartesianPitchtextBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.cpIgainCartesianPitchtextBox.Location = new System.Drawing.Point(537, 102);
+            this.cpIgainCartesianPitchtextBox.Name = "cpIgainCartesianPitchtextBox";
+            this.cpIgainCartesianPitchtextBox.Size = new System.Drawing.Size(104, 28);
+            this.cpIgainCartesianPitchtextBox.TabIndex = 6;
+            // 
+            // cpDgainCartesianRolltextBox
+            // 
+            this.cpDgainCartesianRolltextBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.cpDgainCartesianRolltextBox.Location = new System.Drawing.Point(427, 136);
+            this.cpDgainCartesianRolltextBox.Name = "cpDgainCartesianRolltextBox";
+            this.cpDgainCartesianRolltextBox.Size = new System.Drawing.Size(104, 28);
+            this.cpDgainCartesianRolltextBox.TabIndex = 6;
+            // 
+            // cpPgainCartesianYawtextBox
+            // 
+            this.cpPgainCartesianYawtextBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.cpPgainCartesianYawtextBox.Location = new System.Drawing.Point(647, 68);
+            this.cpPgainCartesianYawtextBox.Name = "cpPgainCartesianYawtextBox";
+            this.cpPgainCartesianYawtextBox.Size = new System.Drawing.Size(104, 28);
+            this.cpPgainCartesianYawtextBox.TabIndex = 6;
+            // 
+            // cpIgainCartesianRolltextBox
+            // 
+            this.cpIgainCartesianRolltextBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.cpIgainCartesianRolltextBox.Location = new System.Drawing.Point(427, 102);
+            this.cpIgainCartesianRolltextBox.Name = "cpIgainCartesianRolltextBox";
+            this.cpIgainCartesianRolltextBox.Size = new System.Drawing.Size(104, 28);
+            this.cpIgainCartesianRolltextBox.TabIndex = 6;
+            // 
+            // cpDgainCartesianZtextBox
+            // 
+            this.cpDgainCartesianZtextBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.cpDgainCartesianZtextBox.Location = new System.Drawing.Point(317, 136);
+            this.cpDgainCartesianZtextBox.Name = "cpDgainCartesianZtextBox";
+            this.cpDgainCartesianZtextBox.Size = new System.Drawing.Size(104, 28);
+            this.cpDgainCartesianZtextBox.TabIndex = 6;
+            // 
+            // cpPgainCartesianPitchtextBox
+            // 
+            this.cpPgainCartesianPitchtextBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.cpPgainCartesianPitchtextBox.Location = new System.Drawing.Point(537, 68);
+            this.cpPgainCartesianPitchtextBox.Name = "cpPgainCartesianPitchtextBox";
+            this.cpPgainCartesianPitchtextBox.Size = new System.Drawing.Size(104, 28);
+            this.cpPgainCartesianPitchtextBox.TabIndex = 6;
+            // 
+            // cpIgainCartesianZtextBox
+            // 
+            this.cpIgainCartesianZtextBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.cpIgainCartesianZtextBox.Location = new System.Drawing.Point(317, 102);
+            this.cpIgainCartesianZtextBox.Name = "cpIgainCartesianZtextBox";
+            this.cpIgainCartesianZtextBox.Size = new System.Drawing.Size(104, 28);
+            this.cpIgainCartesianZtextBox.TabIndex = 6;
+            // 
+            // cpDgainCartesianYtextBox
+            // 
+            this.cpDgainCartesianYtextBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.cpDgainCartesianYtextBox.Location = new System.Drawing.Point(207, 136);
+            this.cpDgainCartesianYtextBox.Name = "cpDgainCartesianYtextBox";
+            this.cpDgainCartesianYtextBox.Size = new System.Drawing.Size(104, 28);
+            this.cpDgainCartesianYtextBox.TabIndex = 6;
+            // 
+            // cpPgainCartesianRolltextBox
+            // 
+            this.cpPgainCartesianRolltextBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.cpPgainCartesianRolltextBox.Location = new System.Drawing.Point(427, 68);
+            this.cpPgainCartesianRolltextBox.Name = "cpPgainCartesianRolltextBox";
+            this.cpPgainCartesianRolltextBox.Size = new System.Drawing.Size(104, 28);
+            this.cpPgainCartesianRolltextBox.TabIndex = 6;
+            // 
+            // cpIgainCartesianYtextBox
+            // 
+            this.cpIgainCartesianYtextBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.cpIgainCartesianYtextBox.Location = new System.Drawing.Point(207, 102);
+            this.cpIgainCartesianYtextBox.Name = "cpIgainCartesianYtextBox";
+            this.cpIgainCartesianYtextBox.Size = new System.Drawing.Size(104, 28);
+            this.cpIgainCartesianYtextBox.TabIndex = 6;
+            // 
+            // cpDgainCartesianXtextBox
+            // 
+            this.cpDgainCartesianXtextBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.cpDgainCartesianXtextBox.Location = new System.Drawing.Point(97, 136);
+            this.cpDgainCartesianXtextBox.Name = "cpDgainCartesianXtextBox";
+            this.cpDgainCartesianXtextBox.Size = new System.Drawing.Size(104, 28);
+            this.cpDgainCartesianXtextBox.TabIndex = 6;
+            // 
+            // cpPgainCartesianZtextBox
+            // 
+            this.cpPgainCartesianZtextBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.cpPgainCartesianZtextBox.Location = new System.Drawing.Point(317, 68);
+            this.cpPgainCartesianZtextBox.Name = "cpPgainCartesianZtextBox";
+            this.cpPgainCartesianZtextBox.Size = new System.Drawing.Size(104, 28);
+            this.cpPgainCartesianZtextBox.TabIndex = 6;
+            // 
+            // cpIgainCartesianXtextBox
+            // 
+            this.cpIgainCartesianXtextBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.cpIgainCartesianXtextBox.Location = new System.Drawing.Point(97, 102);
+            this.cpIgainCartesianXtextBox.Name = "cpIgainCartesianXtextBox";
+            this.cpIgainCartesianXtextBox.Size = new System.Drawing.Size(104, 28);
+            this.cpIgainCartesianXtextBox.TabIndex = 6;
+            // 
+            // cpPgainCartesianYtextBox
+            // 
+            this.cpPgainCartesianYtextBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.cpPgainCartesianYtextBox.Location = new System.Drawing.Point(207, 68);
+            this.cpPgainCartesianYtextBox.Name = "cpPgainCartesianYtextBox";
+            this.cpPgainCartesianYtextBox.Size = new System.Drawing.Size(104, 28);
+            this.cpPgainCartesianYtextBox.TabIndex = 6;
+            // 
+            // cpPgainCartesianXtextBox
+            // 
+            this.cpPgainCartesianXtextBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.cpPgainCartesianXtextBox.Location = new System.Drawing.Point(97, 68);
+            this.cpPgainCartesianXtextBox.Name = "cpPgainCartesianXtextBox";
+            this.cpPgainCartesianXtextBox.Size = new System.Drawing.Size(104, 28);
+            this.cpPgainCartesianXtextBox.TabIndex = 6;
+            // 
+            // label100
+            // 
+            this.label100.AutoSize = true;
+            this.label100.Font = new System.Drawing.Font("KoPub돋움체 Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label100.Location = new System.Drawing.Point(678, 43);
+            this.label100.Name = "label100";
+            this.label100.Size = new System.Drawing.Size(46, 21);
+            this.label100.TabIndex = 5;
+            this.label100.Text = "Yaw";
+            // 
+            // label101
+            // 
+            this.label101.AutoSize = true;
+            this.label101.Font = new System.Drawing.Font("KoPub돋움체 Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label101.Location = new System.Drawing.Point(572, 43);
+            this.label101.Name = "label101";
+            this.label101.Size = new System.Drawing.Size(53, 21);
+            this.label101.TabIndex = 5;
+            this.label101.Text = "Pitch";
+            // 
+            // label102
+            // 
+            this.label102.AutoSize = true;
+            this.label102.Font = new System.Drawing.Font("KoPub돋움체 Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label102.Location = new System.Drawing.Point(460, 43);
+            this.label102.Name = "label102";
+            this.label102.Size = new System.Drawing.Size(41, 21);
+            this.label102.TabIndex = 5;
+            this.label102.Text = "Roll";
+            // 
+            // label103
+            // 
+            this.label103.AutoSize = true;
+            this.label103.Font = new System.Drawing.Font("KoPub돋움체 Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label103.Location = new System.Drawing.Point(354, 43);
+            this.label103.Name = "label103";
+            this.label103.Size = new System.Drawing.Size(21, 21);
+            this.label103.TabIndex = 5;
+            this.label103.Text = "Z";
+            // 
+            // label104
+            // 
+            this.label104.AutoSize = true;
+            this.label104.Font = new System.Drawing.Font("KoPub돋움체 Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label104.Location = new System.Drawing.Point(241, 43);
+            this.label104.Name = "label104";
+            this.label104.Size = new System.Drawing.Size(22, 21);
+            this.label104.TabIndex = 5;
+            this.label104.Text = "Y";
+            // 
+            // label114
+            // 
+            this.label114.AutoSize = true;
+            this.label114.Font = new System.Drawing.Font("KoPub돋움체 Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label114.Location = new System.Drawing.Point(5, 139);
+            this.label114.Name = "label114";
+            this.label114.Size = new System.Drawing.Size(69, 21);
+            this.label114.TabIndex = 5;
+            this.label114.Text = "D Gain";
+            // 
+            // label105
+            // 
+            this.label105.AutoSize = true;
+            this.label105.Font = new System.Drawing.Font("KoPub돋움체 Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label105.Location = new System.Drawing.Point(137, 43);
+            this.label105.Name = "label105";
+            this.label105.Size = new System.Drawing.Size(22, 21);
+            this.label105.TabIndex = 5;
+            this.label105.Text = "X";
+            // 
+            // label106
+            // 
+            this.label106.AutoSize = true;
+            this.label106.Font = new System.Drawing.Font("KoPub돋움체 Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label106.Location = new System.Drawing.Point(5, 105);
+            this.label106.Name = "label106";
+            this.label106.Size = new System.Drawing.Size(60, 21);
+            this.label106.TabIndex = 5;
+            this.label106.Text = "I Gain";
+            // 
+            // label107
+            // 
+            this.label107.AutoSize = true;
+            this.label107.Font = new System.Drawing.Font("KoPub돋움체 Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label107.Location = new System.Drawing.Point(6, 71);
+            this.label107.Name = "label107";
+            this.label107.Size = new System.Drawing.Size(67, 21);
+            this.label107.TabIndex = 5;
+            this.label107.Text = "P Gain";
             // 
             // tabPage4
             // 
@@ -1939,14 +3270,16 @@ namespace DebuggingToolGUI
             this.tabPage4.Text = "tabPage4";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
-            // Connect
+            // Connectbutton
             // 
-            this.Connect.Location = new System.Drawing.Point(286, 37);
-            this.Connect.Name = "Connect";
-            this.Connect.Size = new System.Drawing.Size(101, 93);
-            this.Connect.TabIndex = 0;
-            this.Connect.Text = "Connect";
-            this.Connect.UseVisualStyleBackColor = true;
+            this.Connectbutton.BackColor = System.Drawing.Color.White;
+            this.Connectbutton.Location = new System.Drawing.Point(286, 37);
+            this.Connectbutton.Name = "Connectbutton";
+            this.Connectbutton.Size = new System.Drawing.Size(101, 93);
+            this.Connectbutton.TabIndex = 0;
+            this.Connectbutton.Text = "Connect";
+            this.Connectbutton.UseVisualStyleBackColor = false;
+            this.Connectbutton.Click += new System.EventHandler(this.Connectbutton_Click);
             // 
             // IpAddressLabel
             // 
@@ -1977,21 +3310,23 @@ namespace DebuggingToolGUI
             this.label1.TabIndex = 1;
             this.label1.Text = "Port ";
             // 
-            // textBox1
+            // PortTextBox
             // 
-            this.textBox1.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox1.Location = new System.Drawing.Point(136, 103);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(144, 28);
-            this.textBox1.TabIndex = 2;
-            this.textBox1.Text = "7";
+            this.PortTextBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.PortTextBox.Location = new System.Drawing.Point(136, 103);
+            this.PortTextBox.Name = "PortTextBox";
+            this.PortTextBox.Size = new System.Drawing.Size(144, 28);
+            this.PortTextBox.TabIndex = 2;
+            this.PortTextBox.Text = "7";
+            this.PortTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // LoginGroupBox
             // 
+            this.LoginGroupBox.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.LoginGroupBox.Controls.Add(this.label39);
-            this.LoginGroupBox.Controls.Add(this.comboBox2);
-            this.LoginGroupBox.Controls.Add(this.Connect);
-            this.LoginGroupBox.Controls.Add(this.textBox1);
+            this.LoginGroupBox.Controls.Add(this.CommunicationComboBox);
+            this.LoginGroupBox.Controls.Add(this.Connectbutton);
+            this.LoginGroupBox.Controls.Add(this.PortTextBox);
             this.LoginGroupBox.Controls.Add(this.IpAddressLabel);
             this.LoginGroupBox.Controls.Add(this.IpAddressTextBox);
             this.LoginGroupBox.Controls.Add(this.label1);
@@ -2014,24 +3349,28 @@ namespace DebuggingToolGUI
             this.label39.TabIndex = 10;
             this.label39.Text = "Communication";
             // 
-            // comboBox2
+            // CommunicationComboBox
             // 
-            this.comboBox2.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(170, 40);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(110, 29);
-            this.comboBox2.TabIndex = 9;
-            this.comboBox2.Text = "TCP";
+            this.CommunicationComboBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.CommunicationComboBox.FormattingEnabled = true;
+            this.CommunicationComboBox.Location = new System.Drawing.Point(170, 40);
+            this.CommunicationComboBox.Name = "CommunicationComboBox";
+            this.CommunicationComboBox.Size = new System.Drawing.Size(110, 29);
+            this.CommunicationComboBox.TabIndex = 9;
+            this.CommunicationComboBox.Text = "TCP";
             // 
             // StateGroupBox
             // 
             this.StateGroupBox.Controls.Add(this.label35);
-            this.StateGroupBox.Controls.Add(this.comboBox1);
+            this.StateGroupBox.Controls.Add(this.NumJointcomboBox);
             this.StateGroupBox.Controls.Add(this.groupBox1);
-            this.StateGroupBox.Controls.Add(this.textBox2);
+            this.StateGroupBox.Controls.Add(this.ErrorCodetextBox);
             this.StateGroupBox.Controls.Add(this.label2);
-            this.StateGroupBox.Controls.Add(this.button2);
+            this.StateGroupBox.Controls.Add(this.CartesianModebutton);
+            this.StateGroupBox.Controls.Add(this.JointModebutton);
+            this.StateGroupBox.Controls.Add(this.GCbutton);
+            this.StateGroupBox.Controls.Add(this.Homingbutton);
+            this.StateGroupBox.Controls.Add(this.Readybutton);
             this.StateGroupBox.Controls.Add(this.button1);
             this.StateGroupBox.Controls.Add(this.ServoOnButton);
             this.StateGroupBox.Font = new System.Drawing.Font("KoPub돋움체 Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
@@ -2052,32 +3391,32 @@ namespace DebuggingToolGUI
             this.label35.TabIndex = 8;
             this.label35.Text = "Number of Joint";
             // 
-            // comboBox1
+            // NumJointcomboBox
             // 
-            this.comboBox1.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(168, 36);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(217, 29);
-            this.comboBox1.TabIndex = 7;
-            this.comboBox1.Text = "7";
+            this.NumJointcomboBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.NumJointcomboBox.FormattingEnabled = true;
+            this.NumJointcomboBox.Location = new System.Drawing.Point(168, 36);
+            this.NumJointcomboBox.Name = "NumJointcomboBox";
+            this.NumJointcomboBox.Size = new System.Drawing.Size(217, 29);
+            this.NumJointcomboBox.TabIndex = 7;
+            this.NumJointcomboBox.Text = "7";
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.pictureBox4);
-            this.groupBox1.Controls.Add(this.pictureBox3);
-            this.groupBox1.Controls.Add(this.pictureBox2);
-            this.groupBox1.Controls.Add(this.pictureBox10);
-            this.groupBox1.Controls.Add(this.pictureBox9);
-            this.groupBox1.Controls.Add(this.pictureBox8);
-            this.groupBox1.Controls.Add(this.pictureBox7);
-            this.groupBox1.Controls.Add(this.pictureBox1);
-            this.groupBox1.Controls.Add(this.pictureBox6);
-            this.groupBox1.Controls.Add(this.pictureBox5);
-            this.groupBox1.Controls.Add(this.pictureBox13);
-            this.groupBox1.Controls.Add(this.pictureBox12);
-            this.groupBox1.Controls.Add(this.pictureBox11);
-            this.groupBox1.Controls.Add(this.pbConnect);
+            this.groupBox1.Controls.Add(this.Joint4pictureBox);
+            this.groupBox1.Controls.Add(this.Joint3pictureBox);
+            this.groupBox1.Controls.Add(this.Joint2pictureBox);
+            this.groupBox1.Controls.Add(this.Joint8pictureBox);
+            this.groupBox1.Controls.Add(this.Joint7pictureBox);
+            this.groupBox1.Controls.Add(this.Joint6pictureBox);
+            this.groupBox1.Controls.Add(this.Joint5pictureBox);
+            this.groupBox1.Controls.Add(this.Joint1pictureBox);
+            this.groupBox1.Controls.Add(this.MainPowerpictureBox);
+            this.groupBox1.Controls.Add(this.AuxPowerpictureBox);
+            this.groupBox1.Controls.Add(this.TorqueModepictureBox);
+            this.groupBox1.Controls.Add(this.PositionModepictureBox);
+            this.groupBox1.Controls.Add(this.GCpictureBox);
+            this.groupBox1.Controls.Add(this.ConnectpictureBox);
             this.groupBox1.Controls.Add(this.label10);
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.label8);
@@ -2099,93 +3438,117 @@ namespace DebuggingToolGUI
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Status";
             // 
-            // pictureBox4
+            // Joint4pictureBox
             // 
-            this.pictureBox4.Location = new System.Drawing.Point(20, 130);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(33, 28);
-            this.pictureBox4.TabIndex = 164;
-            this.pictureBox4.TabStop = false;
+            this.Joint4pictureBox.Location = new System.Drawing.Point(20, 130);
+            this.Joint4pictureBox.Name = "Joint4pictureBox";
+            this.Joint4pictureBox.Size = new System.Drawing.Size(33, 28);
+            this.Joint4pictureBox.TabIndex = 164;
+            this.Joint4pictureBox.TabStop = false;
             // 
-            // pictureBox3
+            // Joint3pictureBox
             // 
-            this.pictureBox3.Location = new System.Drawing.Point(20, 96);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(33, 28);
-            this.pictureBox3.TabIndex = 164;
-            this.pictureBox3.TabStop = false;
+            this.Joint3pictureBox.Location = new System.Drawing.Point(20, 96);
+            this.Joint3pictureBox.Name = "Joint3pictureBox";
+            this.Joint3pictureBox.Size = new System.Drawing.Size(33, 28);
+            this.Joint3pictureBox.TabIndex = 164;
+            this.Joint3pictureBox.TabStop = false;
             // 
-            // pictureBox2
+            // Joint2pictureBox
             // 
-            this.pictureBox2.Location = new System.Drawing.Point(20, 62);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(33, 28);
-            this.pictureBox2.TabIndex = 164;
-            this.pictureBox2.TabStop = false;
+            this.Joint2pictureBox.Location = new System.Drawing.Point(20, 62);
+            this.Joint2pictureBox.Name = "Joint2pictureBox";
+            this.Joint2pictureBox.Size = new System.Drawing.Size(33, 28);
+            this.Joint2pictureBox.TabIndex = 164;
+            this.Joint2pictureBox.TabStop = false;
             // 
-            // pictureBox10
+            // Joint8pictureBox
             // 
-            this.pictureBox10.Location = new System.Drawing.Point(196, 130);
-            this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(33, 28);
-            this.pictureBox10.TabIndex = 164;
-            this.pictureBox10.TabStop = false;
+            this.Joint8pictureBox.Location = new System.Drawing.Point(196, 130);
+            this.Joint8pictureBox.Name = "Joint8pictureBox";
+            this.Joint8pictureBox.Size = new System.Drawing.Size(33, 28);
+            this.Joint8pictureBox.TabIndex = 164;
+            this.Joint8pictureBox.TabStop = false;
             // 
-            // pictureBox9
+            // Joint7pictureBox
             // 
-            this.pictureBox9.Location = new System.Drawing.Point(196, 96);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(33, 28);
-            this.pictureBox9.TabIndex = 164;
-            this.pictureBox9.TabStop = false;
+            this.Joint7pictureBox.Location = new System.Drawing.Point(196, 96);
+            this.Joint7pictureBox.Name = "Joint7pictureBox";
+            this.Joint7pictureBox.Size = new System.Drawing.Size(33, 28);
+            this.Joint7pictureBox.TabIndex = 164;
+            this.Joint7pictureBox.TabStop = false;
             // 
-            // pictureBox8
+            // Joint6pictureBox
             // 
-            this.pictureBox8.Location = new System.Drawing.Point(196, 62);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(33, 28);
-            this.pictureBox8.TabIndex = 164;
-            this.pictureBox8.TabStop = false;
+            this.Joint6pictureBox.Location = new System.Drawing.Point(196, 62);
+            this.Joint6pictureBox.Name = "Joint6pictureBox";
+            this.Joint6pictureBox.Size = new System.Drawing.Size(33, 28);
+            this.Joint6pictureBox.TabIndex = 164;
+            this.Joint6pictureBox.TabStop = false;
             // 
-            // pictureBox7
+            // Joint5pictureBox
             // 
-            this.pictureBox7.Location = new System.Drawing.Point(196, 28);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(33, 28);
-            this.pictureBox7.TabIndex = 164;
-            this.pictureBox7.TabStop = false;
+            this.Joint5pictureBox.Location = new System.Drawing.Point(196, 28);
+            this.Joint5pictureBox.Name = "Joint5pictureBox";
+            this.Joint5pictureBox.Size = new System.Drawing.Size(33, 28);
+            this.Joint5pictureBox.TabIndex = 164;
+            this.Joint5pictureBox.TabStop = false;
             // 
-            // pictureBox1
+            // Joint1pictureBox
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(20, 28);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(33, 28);
-            this.pictureBox1.TabIndex = 164;
-            this.pictureBox1.TabStop = false;
+            this.Joint1pictureBox.Location = new System.Drawing.Point(20, 28);
+            this.Joint1pictureBox.Name = "Joint1pictureBox";
+            this.Joint1pictureBox.Size = new System.Drawing.Size(33, 28);
+            this.Joint1pictureBox.TabIndex = 164;
+            this.Joint1pictureBox.TabStop = false;
             // 
-            // pictureBox6
+            // MainPowerpictureBox
             // 
-            this.pictureBox6.Location = new System.Drawing.Point(20, 233);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(33, 28);
-            this.pictureBox6.TabIndex = 164;
-            this.pictureBox6.TabStop = false;
+            this.MainPowerpictureBox.Location = new System.Drawing.Point(20, 233);
+            this.MainPowerpictureBox.Name = "MainPowerpictureBox";
+            this.MainPowerpictureBox.Size = new System.Drawing.Size(33, 28);
+            this.MainPowerpictureBox.TabIndex = 164;
+            this.MainPowerpictureBox.TabStop = false;
             // 
-            // pictureBox5
+            // AuxPowerpictureBox
             // 
-            this.pictureBox5.Location = new System.Drawing.Point(20, 199);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(33, 28);
-            this.pictureBox5.TabIndex = 164;
-            this.pictureBox5.TabStop = false;
+            this.AuxPowerpictureBox.Location = new System.Drawing.Point(20, 199);
+            this.AuxPowerpictureBox.Name = "AuxPowerpictureBox";
+            this.AuxPowerpictureBox.Size = new System.Drawing.Size(33, 28);
+            this.AuxPowerpictureBox.TabIndex = 164;
+            this.AuxPowerpictureBox.TabStop = false;
             // 
-            // pbConnect
+            // TorqueModepictureBox
             // 
-            this.pbConnect.Location = new System.Drawing.Point(20, 165);
-            this.pbConnect.Name = "pbConnect";
-            this.pbConnect.Size = new System.Drawing.Size(33, 28);
-            this.pbConnect.TabIndex = 164;
-            this.pbConnect.TabStop = false;
+            this.TorqueModepictureBox.Location = new System.Drawing.Point(196, 233);
+            this.TorqueModepictureBox.Name = "TorqueModepictureBox";
+            this.TorqueModepictureBox.Size = new System.Drawing.Size(33, 28);
+            this.TorqueModepictureBox.TabIndex = 164;
+            this.TorqueModepictureBox.TabStop = false;
+            // 
+            // PositionModepictureBox
+            // 
+            this.PositionModepictureBox.Location = new System.Drawing.Point(196, 199);
+            this.PositionModepictureBox.Name = "PositionModepictureBox";
+            this.PositionModepictureBox.Size = new System.Drawing.Size(33, 28);
+            this.PositionModepictureBox.TabIndex = 164;
+            this.PositionModepictureBox.TabStop = false;
+            // 
+            // GCpictureBox
+            // 
+            this.GCpictureBox.Location = new System.Drawing.Point(196, 165);
+            this.GCpictureBox.Name = "GCpictureBox";
+            this.GCpictureBox.Size = new System.Drawing.Size(33, 28);
+            this.GCpictureBox.TabIndex = 164;
+            this.GCpictureBox.TabStop = false;
+            // 
+            // ConnectpictureBox
+            // 
+            this.ConnectpictureBox.Location = new System.Drawing.Point(20, 165);
+            this.ConnectpictureBox.Name = "ConnectpictureBox";
+            this.ConnectpictureBox.Size = new System.Drawing.Size(33, 28);
+            this.ConnectpictureBox.TabIndex = 164;
+            this.ConnectpictureBox.TabStop = false;
             // 
             // label10
             // 
@@ -2284,6 +3647,36 @@ namespace DebuggingToolGUI
             this.label37.Text = "Aux Power";
             this.label37.Click += new System.EventHandler(this.label37_Click);
             // 
+            // label86
+            // 
+            this.label86.AutoSize = true;
+            this.label86.Font = new System.Drawing.Font("KoPub돋움체 Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label86.Location = new System.Drawing.Point(235, 240);
+            this.label86.Name = "label86";
+            this.label86.Size = new System.Drawing.Size(123, 21);
+            this.label86.TabIndex = 4;
+            this.label86.Text = "Torque Mode";
+            // 
+            // label85
+            // 
+            this.label85.AutoSize = true;
+            this.label85.Font = new System.Drawing.Font("KoPub돋움체 Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label85.Location = new System.Drawing.Point(235, 206);
+            this.label85.Name = "label85";
+            this.label85.Size = new System.Drawing.Size(132, 21);
+            this.label85.TabIndex = 4;
+            this.label85.Text = "Position Mode";
+            // 
+            // label84
+            // 
+            this.label84.AutoSize = true;
+            this.label84.Font = new System.Drawing.Font("KoPub돋움체 Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label84.Location = new System.Drawing.Point(235, 172);
+            this.label84.Name = "label84";
+            this.label84.Size = new System.Drawing.Size(49, 21);
+            this.label84.TabIndex = 4;
+            this.label84.Text = "G.C.";
+            // 
             // label36
             // 
             this.label36.AutoSize = true;
@@ -2304,13 +3697,13 @@ namespace DebuggingToolGUI
             this.label3.TabIndex = 4;
             this.label3.Text = "Joint 1";
             // 
-            // textBox2
+            // ErrorCodetextBox
             // 
-            this.textBox2.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox2.Location = new System.Drawing.Point(123, 71);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(266, 28);
-            this.textBox2.TabIndex = 5;
+            this.ErrorCodetextBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.ErrorCodetextBox.Location = new System.Drawing.Point(123, 71);
+            this.ErrorCodetextBox.Name = "ErrorCodetextBox";
+            this.ErrorCodetextBox.Size = new System.Drawing.Size(266, 28);
+            this.ErrorCodetextBox.TabIndex = 5;
             // 
             // label2
             // 
@@ -2322,342 +3715,385 @@ namespace DebuggingToolGUI
             this.label2.TabIndex = 4;
             this.label2.Text = "Error Code";
             // 
-            // button2
+            // CartesianModebutton
             // 
-            this.button2.Location = new System.Drawing.Point(10, 524);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(379, 59);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "Homing";
-            this.button2.UseVisualStyleBackColor = true;
+            this.CartesianModebutton.Location = new System.Drawing.Point(270, 588);
+            this.CartesianModebutton.Name = "CartesianModebutton";
+            this.CartesianModebutton.Size = new System.Drawing.Size(119, 119);
+            this.CartesianModebutton.TabIndex = 3;
+            this.CartesianModebutton.Text = "Cartesian Mode";
+            this.CartesianModebutton.UseVisualStyleBackColor = true;
+            // 
+            // JointModebutton
+            // 
+            this.JointModebutton.Location = new System.Drawing.Point(143, 588);
+            this.JointModebutton.Name = "JointModebutton";
+            this.JointModebutton.Size = new System.Drawing.Size(121, 119);
+            this.JointModebutton.TabIndex = 3;
+            this.JointModebutton.Text = "Joint Mode";
+            this.JointModebutton.UseVisualStyleBackColor = true;
+            // 
+            // GCbutton
+            // 
+            this.GCbutton.Location = new System.Drawing.Point(10, 589);
+            this.GCbutton.Name = "GCbutton";
+            this.GCbutton.Size = new System.Drawing.Size(127, 119);
+            this.GCbutton.TabIndex = 3;
+            this.GCbutton.Text = "G. C.";
+            this.GCbutton.UseVisualStyleBackColor = true;
+            this.GCbutton.Click += new System.EventHandler(this.GCbutton_Click);
+            // 
+            // Homingbutton
+            // 
+            this.Homingbutton.Location = new System.Drawing.Point(10, 459);
+            this.Homingbutton.Name = "Homingbutton";
+            this.Homingbutton.Size = new System.Drawing.Size(254, 59);
+            this.Homingbutton.TabIndex = 3;
+            this.Homingbutton.Text = "Homing";
+            this.Homingbutton.UseVisualStyleBackColor = true;
+            this.Homingbutton.Click += new System.EventHandler(this.Homingbutton_Click);
+            // 
+            // Readybutton
+            // 
+            this.Readybutton.Location = new System.Drawing.Point(10, 524);
+            this.Readybutton.Name = "Readybutton";
+            this.Readybutton.Size = new System.Drawing.Size(254, 59);
+            this.Readybutton.TabIndex = 2;
+            this.Readybutton.Text = "Ready";
+            this.Readybutton.UseVisualStyleBackColor = true;
+            this.Readybutton.Click += new System.EventHandler(this.Readybutton_Click);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(10, 459);
+            this.button1.BackColor = System.Drawing.Color.Red;
+            this.button1.Font = new System.Drawing.Font("KoPub돋움체 Bold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(270, 394);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(379, 59);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Ready";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Size = new System.Drawing.Size(115, 188);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "STOP";
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // ServoOnButton
             // 
             this.ServoOnButton.Location = new System.Drawing.Point(10, 394);
             this.ServoOnButton.Name = "ServoOnButton";
-            this.ServoOnButton.Size = new System.Drawing.Size(379, 59);
+            this.ServoOnButton.Size = new System.Drawing.Size(254, 59);
             this.ServoOnButton.TabIndex = 1;
             this.ServoOnButton.Text = "Servo On";
             this.ServoOnButton.UseVisualStyleBackColor = true;
+            this.ServoOnButton.Click += new System.EventHandler(this.ServoOnButton_Click);
+            // 
+            // IncrementalEncodergroupBox
+            // 
+            this.IncrementalEncodergroupBox.Controls.Add(this.IncCurrentJoint8textBox);
+            this.IncrementalEncodergroupBox.Controls.Add(this.IncVelocityJoint8textBox);
+            this.IncrementalEncodergroupBox.Controls.Add(this.IncPositionJoint8textBox);
+            this.IncrementalEncodergroupBox.Controls.Add(this.IncCurrentJoint7textBox);
+            this.IncrementalEncodergroupBox.Controls.Add(this.INCPosJoint8textBox);
+            this.IncrementalEncodergroupBox.Controls.Add(this.IncCurrentJoint6textBox);
+            this.IncrementalEncodergroupBox.Controls.Add(this.IncVelocityJoint7textBox);
+            this.IncrementalEncodergroupBox.Controls.Add(this.IncVelocityJoint6textBox);
+            this.IncrementalEncodergroupBox.Controls.Add(this.IncPositionJoint7textBox);
+            this.IncrementalEncodergroupBox.Controls.Add(this.IncCurrentJoint5textBox);
+            this.IncrementalEncodergroupBox.Controls.Add(this.IncPositionJoint6textBox);
+            this.IncrementalEncodergroupBox.Controls.Add(this.IncVelocityJoint5textBox);
+            this.IncrementalEncodergroupBox.Controls.Add(this.INCPosJoint7textBox);
+            this.IncrementalEncodergroupBox.Controls.Add(this.IncCurrentJoint4textBox);
+            this.IncrementalEncodergroupBox.Controls.Add(this.IncPositionJoint5textBox);
+            this.IncrementalEncodergroupBox.Controls.Add(this.IncVelocityJoint4textBox);
+            this.IncrementalEncodergroupBox.Controls.Add(this.INCPosJoint6textBox);
+            this.IncrementalEncodergroupBox.Controls.Add(this.IncCurrentJoint3textBox);
+            this.IncrementalEncodergroupBox.Controls.Add(this.IncPositionJoint4textBox);
+            this.IncrementalEncodergroupBox.Controls.Add(this.IncVelocityJoint3textBox);
+            this.IncrementalEncodergroupBox.Controls.Add(this.INCPosJoint5textBox);
+            this.IncrementalEncodergroupBox.Controls.Add(this.IncCurrentJoint2textBox);
+            this.IncrementalEncodergroupBox.Controls.Add(this.IncPositionJoint3textBox);
+            this.IncrementalEncodergroupBox.Controls.Add(this.IncVelocityJoint2textBox);
+            this.IncrementalEncodergroupBox.Controls.Add(this.IncPosJoint4textBox);
+            this.IncrementalEncodergroupBox.Controls.Add(this.IncCurrentJoint1textBox);
+            this.IncrementalEncodergroupBox.Controls.Add(this.IncPositionJoint2textBox);
+            this.IncrementalEncodergroupBox.Controls.Add(this.IncVelocityJoint1textBox);
+            this.IncrementalEncodergroupBox.Controls.Add(this.IncPosJoint3textBox);
+            this.IncrementalEncodergroupBox.Controls.Add(this.IncPositionJoint1textBox);
+            this.IncrementalEncodergroupBox.Controls.Add(this.IncPosJoint2textBox);
+            this.IncrementalEncodergroupBox.Controls.Add(this.IncPosJoint1textBox);
+            this.IncrementalEncodergroupBox.Controls.Add(this.label23);
+            this.IncrementalEncodergroupBox.Controls.Add(this.label24);
+            this.IncrementalEncodergroupBox.Controls.Add(this.label25);
+            this.IncrementalEncodergroupBox.Controls.Add(this.label26);
+            this.IncrementalEncodergroupBox.Controls.Add(this.label27);
+            this.IncrementalEncodergroupBox.Controls.Add(this.label28);
+            this.IncrementalEncodergroupBox.Controls.Add(this.label29);
+            this.IncrementalEncodergroupBox.Controls.Add(this.label30);
+            this.IncrementalEncodergroupBox.Controls.Add(this.label31);
+            this.IncrementalEncodergroupBox.Controls.Add(this.label32);
+            this.IncrementalEncodergroupBox.Controls.Add(this.label33);
+            this.IncrementalEncodergroupBox.Controls.Add(this.label34);
+            this.IncrementalEncodergroupBox.Font = new System.Drawing.Font("KoPub돋움체 Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.IncrementalEncodergroupBox.Location = new System.Drawing.Point(28, 296);
+            this.IncrementalEncodergroupBox.Name = "IncrementalEncodergroupBox";
+            this.IncrementalEncodergroupBox.Size = new System.Drawing.Size(985, 209);
+            this.IncrementalEncodergroupBox.TabIndex = 5;
+            this.IncrementalEncodergroupBox.TabStop = false;
+            this.IncrementalEncodergroupBox.Text = "Incremental Encoder";
+            // 
+            // IncCurrentJoint8textBox
+            // 
+            this.IncCurrentJoint8textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.IncCurrentJoint8textBox.Location = new System.Drawing.Point(867, 170);
+            this.IncCurrentJoint8textBox.Name = "IncCurrentJoint8textBox";
+            this.IncCurrentJoint8textBox.Size = new System.Drawing.Size(104, 28);
+            this.IncCurrentJoint8textBox.TabIndex = 6;
+            // 
+            // IncVelocityJoint8textBox
+            // 
+            this.IncVelocityJoint8textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.IncVelocityJoint8textBox.Location = new System.Drawing.Point(867, 136);
+            this.IncVelocityJoint8textBox.Name = "IncVelocityJoint8textBox";
+            this.IncVelocityJoint8textBox.Size = new System.Drawing.Size(104, 28);
+            this.IncVelocityJoint8textBox.TabIndex = 6;
+            // 
+            // IncPositionJoint8textBox
+            // 
+            this.IncPositionJoint8textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.IncPositionJoint8textBox.Location = new System.Drawing.Point(867, 102);
+            this.IncPositionJoint8textBox.Name = "IncPositionJoint8textBox";
+            this.IncPositionJoint8textBox.Size = new System.Drawing.Size(104, 28);
+            this.IncPositionJoint8textBox.TabIndex = 6;
+            // 
+            // IncCurrentJoint7textBox
+            // 
+            this.IncCurrentJoint7textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.IncCurrentJoint7textBox.Location = new System.Drawing.Point(757, 170);
+            this.IncCurrentJoint7textBox.Name = "IncCurrentJoint7textBox";
+            this.IncCurrentJoint7textBox.Size = new System.Drawing.Size(104, 28);
+            this.IncCurrentJoint7textBox.TabIndex = 6;
+            // 
+            // INCPosJoint8textBox
+            // 
+            this.INCPosJoint8textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.INCPosJoint8textBox.Location = new System.Drawing.Point(867, 68);
+            this.INCPosJoint8textBox.Name = "INCPosJoint8textBox";
+            this.INCPosJoint8textBox.Size = new System.Drawing.Size(104, 28);
+            this.INCPosJoint8textBox.TabIndex = 6;
+            // 
+            // IncCurrentJoint6textBox
+            // 
+            this.IncCurrentJoint6textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.IncCurrentJoint6textBox.Location = new System.Drawing.Point(647, 170);
+            this.IncCurrentJoint6textBox.Name = "IncCurrentJoint6textBox";
+            this.IncCurrentJoint6textBox.Size = new System.Drawing.Size(104, 28);
+            this.IncCurrentJoint6textBox.TabIndex = 6;
             // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.textBox35);
-            this.groupBox3.Controls.Add(this.textBox36);
-            this.groupBox3.Controls.Add(this.textBox37);
-            this.groupBox3.Controls.Add(this.textBox38);
-            this.groupBox3.Controls.Add(this.textBox39);
-            this.groupBox3.Controls.Add(this.textBox40);
-            this.groupBox3.Controls.Add(this.textBox41);
-            this.groupBox3.Controls.Add(this.textBox42);
-            this.groupBox3.Controls.Add(this.textBox43);
-            this.groupBox3.Controls.Add(this.textBox44);
-            this.groupBox3.Controls.Add(this.textBox45);
-            this.groupBox3.Controls.Add(this.textBox46);
-            this.groupBox3.Controls.Add(this.textBox47);
-            this.groupBox3.Controls.Add(this.textBox48);
-            this.groupBox3.Controls.Add(this.textBox49);
-            this.groupBox3.Controls.Add(this.textBox50);
-            this.groupBox3.Controls.Add(this.textBox51);
-            this.groupBox3.Controls.Add(this.textBox52);
-            this.groupBox3.Controls.Add(this.textBox53);
-            this.groupBox3.Controls.Add(this.textBox54);
-            this.groupBox3.Controls.Add(this.textBox55);
-            this.groupBox3.Controls.Add(this.textBox56);
-            this.groupBox3.Controls.Add(this.textBox57);
-            this.groupBox3.Controls.Add(this.textBox58);
-            this.groupBox3.Controls.Add(this.textBox59);
-            this.groupBox3.Controls.Add(this.textBox60);
-            this.groupBox3.Controls.Add(this.textBox61);
-            this.groupBox3.Controls.Add(this.textBox62);
-            this.groupBox3.Controls.Add(this.textBox63);
-            this.groupBox3.Controls.Add(this.textBox64);
-            this.groupBox3.Controls.Add(this.textBox65);
-            this.groupBox3.Controls.Add(this.textBox66);
-            this.groupBox3.Controls.Add(this.label23);
-            this.groupBox3.Controls.Add(this.label24);
-            this.groupBox3.Controls.Add(this.label25);
-            this.groupBox3.Controls.Add(this.label26);
-            this.groupBox3.Controls.Add(this.label27);
-            this.groupBox3.Controls.Add(this.label28);
-            this.groupBox3.Controls.Add(this.label29);
-            this.groupBox3.Controls.Add(this.label30);
-            this.groupBox3.Controls.Add(this.label31);
-            this.groupBox3.Controls.Add(this.label32);
-            this.groupBox3.Controls.Add(this.label33);
-            this.groupBox3.Controls.Add(this.label34);
-            this.groupBox3.Font = new System.Drawing.Font("KoPub돋움체 Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.groupBox3.Location = new System.Drawing.Point(28, 296);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(985, 209);
-            this.groupBox3.TabIndex = 5;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Incremental Encoder";
-            // 
-            // textBox35
-            // 
-            this.textBox35.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox35.Location = new System.Drawing.Point(867, 170);
-            this.textBox35.Name = "textBox35";
-            this.textBox35.Size = new System.Drawing.Size(104, 28);
-            this.textBox35.TabIndex = 6;
-            // 
-            // textBox36
-            // 
-            this.textBox36.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox36.Location = new System.Drawing.Point(867, 136);
-            this.textBox36.Name = "textBox36";
-            this.textBox36.Size = new System.Drawing.Size(104, 28);
-            this.textBox36.TabIndex = 6;
-            // 
-            // textBox37
-            // 
-            this.textBox37.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox37.Location = new System.Drawing.Point(867, 102);
-            this.textBox37.Name = "textBox37";
-            this.textBox37.Size = new System.Drawing.Size(104, 28);
-            this.textBox37.TabIndex = 6;
-            // 
-            // textBox38
-            // 
-            this.textBox38.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox38.Location = new System.Drawing.Point(757, 170);
-            this.textBox38.Name = "textBox38";
-            this.textBox38.Size = new System.Drawing.Size(104, 28);
-            this.textBox38.TabIndex = 6;
-            // 
-            // textBox39
-            // 
-            this.textBox39.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox39.Location = new System.Drawing.Point(867, 68);
-            this.textBox39.Name = "textBox39";
-            this.textBox39.Size = new System.Drawing.Size(104, 28);
-            this.textBox39.TabIndex = 6;
-            // 
-            // textBox40
-            // 
-            this.textBox40.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox40.Location = new System.Drawing.Point(647, 170);
-            this.textBox40.Name = "textBox40";
-            this.textBox40.Size = new System.Drawing.Size(104, 28);
-            this.textBox40.TabIndex = 6;
+            // IncVelocityJoint7textBox
+            // 
+            this.IncVelocityJoint7textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.IncVelocityJoint7textBox.Location = new System.Drawing.Point(757, 136);
+            this.IncVelocityJoint7textBox.Name = "IncVelocityJoint7textBox";
+            this.IncVelocityJoint7textBox.Size = new System.Drawing.Size(104, 28);
+            this.IncVelocityJoint7textBox.TabIndex = 6;
             // 
-            // textBox41
+            // IncVelocityJoint6textBox
+            // 
+            this.IncVelocityJoint6textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.IncVelocityJoint6textBox.Location = new System.Drawing.Point(647, 136);
+            this.IncVelocityJoint6textBox.Name = "IncVelocityJoint6textBox";
+            this.IncVelocityJoint6textBox.Size = new System.Drawing.Size(104, 28);
+            this.IncVelocityJoint6textBox.TabIndex = 6;
             // 
-            this.textBox41.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox41.Location = new System.Drawing.Point(757, 136);
-            this.textBox41.Name = "textBox41";
-            this.textBox41.Size = new System.Drawing.Size(104, 28);
-            this.textBox41.TabIndex = 6;
+            // IncPositionJoint7textBox
+            // 
+            this.IncPositionJoint7textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.IncPositionJoint7textBox.Location = new System.Drawing.Point(757, 102);
+            this.IncPositionJoint7textBox.Name = "IncPositionJoint7textBox";
+            this.IncPositionJoint7textBox.Size = new System.Drawing.Size(104, 28);
+            this.IncPositionJoint7textBox.TabIndex = 6;
             // 
-            // textBox42
+            // IncCurrentJoint5textBox
+            // 
+            this.IncCurrentJoint5textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.IncCurrentJoint5textBox.Location = new System.Drawing.Point(537, 170);
+            this.IncCurrentJoint5textBox.Name = "IncCurrentJoint5textBox";
+            this.IncCurrentJoint5textBox.Size = new System.Drawing.Size(104, 28);
+            this.IncCurrentJoint5textBox.TabIndex = 6;
             // 
-            this.textBox42.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox42.Location = new System.Drawing.Point(647, 136);
-            this.textBox42.Name = "textBox42";
-            this.textBox42.Size = new System.Drawing.Size(104, 28);
-            this.textBox42.TabIndex = 6;
+            // IncPositionJoint6textBox
+            // 
+            this.IncPositionJoint6textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.IncPositionJoint6textBox.Location = new System.Drawing.Point(647, 102);
+            this.IncPositionJoint6textBox.Name = "IncPositionJoint6textBox";
+            this.IncPositionJoint6textBox.Size = new System.Drawing.Size(104, 28);
+            this.IncPositionJoint6textBox.TabIndex = 6;
             // 
-            // textBox43
+            // IncVelocityJoint5textBox
+            // 
+            this.IncVelocityJoint5textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.IncVelocityJoint5textBox.Location = new System.Drawing.Point(537, 136);
+            this.IncVelocityJoint5textBox.Name = "IncVelocityJoint5textBox";
+            this.IncVelocityJoint5textBox.Size = new System.Drawing.Size(104, 28);
+            this.IncVelocityJoint5textBox.TabIndex = 6;
             // 
-            this.textBox43.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox43.Location = new System.Drawing.Point(757, 102);
-            this.textBox43.Name = "textBox43";
-            this.textBox43.Size = new System.Drawing.Size(104, 28);
-            this.textBox43.TabIndex = 6;
+            // INCPosJoint7textBox
+            // 
+            this.INCPosJoint7textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.INCPosJoint7textBox.Location = new System.Drawing.Point(757, 68);
+            this.INCPosJoint7textBox.Name = "INCPosJoint7textBox";
+            this.INCPosJoint7textBox.Size = new System.Drawing.Size(104, 28);
+            this.INCPosJoint7textBox.TabIndex = 6;
             // 
-            // textBox44
+            // IncCurrentJoint4textBox
+            // 
+            this.IncCurrentJoint4textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.IncCurrentJoint4textBox.Location = new System.Drawing.Point(427, 170);
+            this.IncCurrentJoint4textBox.Name = "IncCurrentJoint4textBox";
+            this.IncCurrentJoint4textBox.Size = new System.Drawing.Size(104, 28);
+            this.IncCurrentJoint4textBox.TabIndex = 6;
             // 
-            this.textBox44.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox44.Location = new System.Drawing.Point(537, 170);
-            this.textBox44.Name = "textBox44";
-            this.textBox44.Size = new System.Drawing.Size(104, 28);
-            this.textBox44.TabIndex = 6;
+            // IncPositionJoint5textBox
+            // 
+            this.IncPositionJoint5textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.IncPositionJoint5textBox.Location = new System.Drawing.Point(537, 102);
+            this.IncPositionJoint5textBox.Name = "IncPositionJoint5textBox";
+            this.IncPositionJoint5textBox.Size = new System.Drawing.Size(104, 28);
+            this.IncPositionJoint5textBox.TabIndex = 6;
             // 
-            // textBox45
+            // IncVelocityJoint4textBox
+            // 
+            this.IncVelocityJoint4textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.IncVelocityJoint4textBox.Location = new System.Drawing.Point(427, 136);
+            this.IncVelocityJoint4textBox.Name = "IncVelocityJoint4textBox";
+            this.IncVelocityJoint4textBox.Size = new System.Drawing.Size(104, 28);
+            this.IncVelocityJoint4textBox.TabIndex = 6;
             // 
-            this.textBox45.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox45.Location = new System.Drawing.Point(647, 102);
-            this.textBox45.Name = "textBox45";
-            this.textBox45.Size = new System.Drawing.Size(104, 28);
-            this.textBox45.TabIndex = 6;
+            // INCPosJoint6textBox
+            // 
+            this.INCPosJoint6textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.INCPosJoint6textBox.Location = new System.Drawing.Point(647, 68);
+            this.INCPosJoint6textBox.Name = "INCPosJoint6textBox";
+            this.INCPosJoint6textBox.Size = new System.Drawing.Size(104, 28);
+            this.INCPosJoint6textBox.TabIndex = 6;
             // 
-            // textBox46
+            // IncCurrentJoint3textBox
+            // 
+            this.IncCurrentJoint3textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.IncCurrentJoint3textBox.Location = new System.Drawing.Point(317, 170);
+            this.IncCurrentJoint3textBox.Name = "IncCurrentJoint3textBox";
+            this.IncCurrentJoint3textBox.Size = new System.Drawing.Size(104, 28);
+            this.IncCurrentJoint3textBox.TabIndex = 6;
             // 
-            this.textBox46.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox46.Location = new System.Drawing.Point(537, 136);
-            this.textBox46.Name = "textBox46";
-            this.textBox46.Size = new System.Drawing.Size(104, 28);
-            this.textBox46.TabIndex = 6;
+            // IncPositionJoint4textBox
+            // 
+            this.IncPositionJoint4textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.IncPositionJoint4textBox.Location = new System.Drawing.Point(427, 102);
+            this.IncPositionJoint4textBox.Name = "IncPositionJoint4textBox";
+            this.IncPositionJoint4textBox.Size = new System.Drawing.Size(104, 28);
+            this.IncPositionJoint4textBox.TabIndex = 6;
             // 
-            // textBox47
-            // 
-            this.textBox47.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox47.Location = new System.Drawing.Point(757, 68);
-            this.textBox47.Name = "textBox47";
-            this.textBox47.Size = new System.Drawing.Size(104, 28);
-            this.textBox47.TabIndex = 6;
-            // 
-            // textBox48
-            // 
-            this.textBox48.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox48.Location = new System.Drawing.Point(427, 170);
-            this.textBox48.Name = "textBox48";
-            this.textBox48.Size = new System.Drawing.Size(104, 28);
-            this.textBox48.TabIndex = 6;
-            // 
-            // textBox49
-            // 
-            this.textBox49.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox49.Location = new System.Drawing.Point(537, 102);
-            this.textBox49.Name = "textBox49";
-            this.textBox49.Size = new System.Drawing.Size(104, 28);
-            this.textBox49.TabIndex = 6;
-            // 
-            // textBox50
-            // 
-            this.textBox50.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox50.Location = new System.Drawing.Point(427, 136);
-            this.textBox50.Name = "textBox50";
-            this.textBox50.Size = new System.Drawing.Size(104, 28);
-            this.textBox50.TabIndex = 6;
-            // 
-            // textBox51
-            // 
-            this.textBox51.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox51.Location = new System.Drawing.Point(647, 68);
-            this.textBox51.Name = "textBox51";
-            this.textBox51.Size = new System.Drawing.Size(104, 28);
-            this.textBox51.TabIndex = 6;
-            // 
-            // textBox52
-            // 
-            this.textBox52.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox52.Location = new System.Drawing.Point(317, 170);
-            this.textBox52.Name = "textBox52";
-            this.textBox52.Size = new System.Drawing.Size(104, 28);
-            this.textBox52.TabIndex = 6;
-            // 
-            // textBox53
-            // 
-            this.textBox53.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox53.Location = new System.Drawing.Point(427, 102);
-            this.textBox53.Name = "textBox53";
-            this.textBox53.Size = new System.Drawing.Size(104, 28);
-            this.textBox53.TabIndex = 6;
-            // 
-            // textBox54
-            // 
-            this.textBox54.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox54.Location = new System.Drawing.Point(317, 136);
-            this.textBox54.Name = "textBox54";
-            this.textBox54.Size = new System.Drawing.Size(104, 28);
-            this.textBox54.TabIndex = 6;
-            // 
-            // textBox55
-            // 
-            this.textBox55.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox55.Location = new System.Drawing.Point(537, 68);
-            this.textBox55.Name = "textBox55";
-            this.textBox55.Size = new System.Drawing.Size(104, 28);
-            this.textBox55.TabIndex = 6;
-            // 
-            // textBox56
-            // 
-            this.textBox56.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox56.Location = new System.Drawing.Point(207, 170);
-            this.textBox56.Name = "textBox56";
-            this.textBox56.Size = new System.Drawing.Size(104, 28);
-            this.textBox56.TabIndex = 6;
-            // 
-            // textBox57
-            // 
-            this.textBox57.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox57.Location = new System.Drawing.Point(317, 102);
-            this.textBox57.Name = "textBox57";
-            this.textBox57.Size = new System.Drawing.Size(104, 28);
-            this.textBox57.TabIndex = 6;
-            // 
-            // textBox58
-            // 
-            this.textBox58.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox58.Location = new System.Drawing.Point(207, 136);
-            this.textBox58.Name = "textBox58";
-            this.textBox58.Size = new System.Drawing.Size(104, 28);
-            this.textBox58.TabIndex = 6;
-            // 
-            // textBox59
-            // 
-            this.textBox59.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox59.Location = new System.Drawing.Point(427, 68);
-            this.textBox59.Name = "textBox59";
-            this.textBox59.Size = new System.Drawing.Size(104, 28);
-            this.textBox59.TabIndex = 6;
-            // 
-            // textBox60
-            // 
-            this.textBox60.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox60.Location = new System.Drawing.Point(97, 170);
-            this.textBox60.Name = "textBox60";
-            this.textBox60.Size = new System.Drawing.Size(104, 28);
-            this.textBox60.TabIndex = 6;
-            // 
-            // textBox61
-            // 
-            this.textBox61.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox61.Location = new System.Drawing.Point(207, 102);
-            this.textBox61.Name = "textBox61";
-            this.textBox61.Size = new System.Drawing.Size(104, 28);
-            this.textBox61.TabIndex = 6;
-            // 
-            // textBox62
-            // 
-            this.textBox62.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox62.Location = new System.Drawing.Point(97, 136);
-            this.textBox62.Name = "textBox62";
-            this.textBox62.Size = new System.Drawing.Size(104, 28);
-            this.textBox62.TabIndex = 6;
-            // 
-            // textBox63
-            // 
-            this.textBox63.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox63.Location = new System.Drawing.Point(317, 68);
-            this.textBox63.Name = "textBox63";
-            this.textBox63.Size = new System.Drawing.Size(104, 28);
-            this.textBox63.TabIndex = 6;
-            // 
-            // textBox64
-            // 
-            this.textBox64.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox64.Location = new System.Drawing.Point(97, 102);
-            this.textBox64.Name = "textBox64";
-            this.textBox64.Size = new System.Drawing.Size(104, 28);
-            this.textBox64.TabIndex = 6;
-            // 
-            // textBox65
-            // 
-            this.textBox65.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox65.Location = new System.Drawing.Point(207, 68);
-            this.textBox65.Name = "textBox65";
-            this.textBox65.Size = new System.Drawing.Size(104, 28);
-            this.textBox65.TabIndex = 6;
-            // 
-            // textBox66
-            // 
-            this.textBox66.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox66.Location = new System.Drawing.Point(97, 68);
-            this.textBox66.Name = "textBox66";
-            this.textBox66.Size = new System.Drawing.Size(104, 28);
-            this.textBox66.TabIndex = 6;
+            // IncVelocityJoint3textBox
+            // 
+            this.IncVelocityJoint3textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.IncVelocityJoint3textBox.Location = new System.Drawing.Point(317, 136);
+            this.IncVelocityJoint3textBox.Name = "IncVelocityJoint3textBox";
+            this.IncVelocityJoint3textBox.Size = new System.Drawing.Size(104, 28);
+            this.IncVelocityJoint3textBox.TabIndex = 6;
+            // 
+            // INCPosJoint5textBox
+            // 
+            this.INCPosJoint5textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.INCPosJoint5textBox.Location = new System.Drawing.Point(537, 68);
+            this.INCPosJoint5textBox.Name = "INCPosJoint5textBox";
+            this.INCPosJoint5textBox.Size = new System.Drawing.Size(104, 28);
+            this.INCPosJoint5textBox.TabIndex = 6;
+            // 
+            // IncCurrentJoint2textBox
+            // 
+            this.IncCurrentJoint2textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.IncCurrentJoint2textBox.Location = new System.Drawing.Point(207, 170);
+            this.IncCurrentJoint2textBox.Name = "IncCurrentJoint2textBox";
+            this.IncCurrentJoint2textBox.Size = new System.Drawing.Size(104, 28);
+            this.IncCurrentJoint2textBox.TabIndex = 6;
+            // 
+            // IncPositionJoint3textBox
+            // 
+            this.IncPositionJoint3textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.IncPositionJoint3textBox.Location = new System.Drawing.Point(317, 102);
+            this.IncPositionJoint3textBox.Name = "IncPositionJoint3textBox";
+            this.IncPositionJoint3textBox.Size = new System.Drawing.Size(104, 28);
+            this.IncPositionJoint3textBox.TabIndex = 6;
+            // 
+            // IncVelocityJoint2textBox
+            // 
+            this.IncVelocityJoint2textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.IncVelocityJoint2textBox.Location = new System.Drawing.Point(207, 136);
+            this.IncVelocityJoint2textBox.Name = "IncVelocityJoint2textBox";
+            this.IncVelocityJoint2textBox.Size = new System.Drawing.Size(104, 28);
+            this.IncVelocityJoint2textBox.TabIndex = 6;
+            // 
+            // IncPosJoint4textBox
+            // 
+            this.IncPosJoint4textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.IncPosJoint4textBox.Location = new System.Drawing.Point(427, 68);
+            this.IncPosJoint4textBox.Name = "IncPosJoint4textBox";
+            this.IncPosJoint4textBox.Size = new System.Drawing.Size(104, 28);
+            this.IncPosJoint4textBox.TabIndex = 6;
+            // 
+            // IncCurrentJoint1textBox
+            // 
+            this.IncCurrentJoint1textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.IncCurrentJoint1textBox.Location = new System.Drawing.Point(97, 170);
+            this.IncCurrentJoint1textBox.Name = "IncCurrentJoint1textBox";
+            this.IncCurrentJoint1textBox.Size = new System.Drawing.Size(104, 28);
+            this.IncCurrentJoint1textBox.TabIndex = 6;
+            // 
+            // IncPositionJoint2textBox
+            // 
+            this.IncPositionJoint2textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.IncPositionJoint2textBox.Location = new System.Drawing.Point(207, 102);
+            this.IncPositionJoint2textBox.Name = "IncPositionJoint2textBox";
+            this.IncPositionJoint2textBox.Size = new System.Drawing.Size(104, 28);
+            this.IncPositionJoint2textBox.TabIndex = 6;
+            // 
+            // IncVelocityJoint1textBox
+            // 
+            this.IncVelocityJoint1textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.IncVelocityJoint1textBox.Location = new System.Drawing.Point(97, 136);
+            this.IncVelocityJoint1textBox.Name = "IncVelocityJoint1textBox";
+            this.IncVelocityJoint1textBox.Size = new System.Drawing.Size(104, 28);
+            this.IncVelocityJoint1textBox.TabIndex = 6;
+            // 
+            // IncPosJoint3textBox
+            // 
+            this.IncPosJoint3textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.IncPosJoint3textBox.Location = new System.Drawing.Point(317, 68);
+            this.IncPosJoint3textBox.Name = "IncPosJoint3textBox";
+            this.IncPosJoint3textBox.Size = new System.Drawing.Size(104, 28);
+            this.IncPosJoint3textBox.TabIndex = 6;
+            // 
+            // IncPositionJoint1textBox
+            // 
+            this.IncPositionJoint1textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.IncPositionJoint1textBox.Location = new System.Drawing.Point(97, 102);
+            this.IncPositionJoint1textBox.Name = "IncPositionJoint1textBox";
+            this.IncPositionJoint1textBox.Size = new System.Drawing.Size(104, 28);
+            this.IncPositionJoint1textBox.TabIndex = 6;
+            // 
+            // IncPosJoint2textBox
+            // 
+            this.IncPosJoint2textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.IncPosJoint2textBox.Location = new System.Drawing.Point(207, 68);
+            this.IncPosJoint2textBox.Name = "IncPosJoint2textBox";
+            this.IncPosJoint2textBox.Size = new System.Drawing.Size(104, 28);
+            this.IncPosJoint2textBox.TabIndex = 6;
+            // 
+            // IncPosJoint1textBox
+            // 
+            this.IncPosJoint1textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.IncPosJoint1textBox.Location = new System.Drawing.Point(97, 68);
+            this.IncPosJoint1textBox.Name = "IncPosJoint1textBox";
+            this.IncPosJoint1textBox.Size = new System.Drawing.Size(104, 28);
+            this.IncPosJoint1textBox.TabIndex = 6;
             // 
             // label23
             // 
@@ -2779,315 +4215,315 @@ namespace DebuggingToolGUI
             this.label34.TabIndex = 5;
             this.label34.Text = "INC Pos";
             // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.textBox34);
-            this.groupBox2.Controls.Add(this.textBox26);
-            this.groupBox2.Controls.Add(this.textBox18);
-            this.groupBox2.Controls.Add(this.textBox33);
-            this.groupBox2.Controls.Add(this.textBox10);
-            this.groupBox2.Controls.Add(this.textBox32);
-            this.groupBox2.Controls.Add(this.textBox25);
-            this.groupBox2.Controls.Add(this.textBox24);
-            this.groupBox2.Controls.Add(this.textBox17);
-            this.groupBox2.Controls.Add(this.textBox31);
-            this.groupBox2.Controls.Add(this.textBox16);
-            this.groupBox2.Controls.Add(this.textBox23);
-            this.groupBox2.Controls.Add(this.textBox9);
-            this.groupBox2.Controls.Add(this.textBox30);
-            this.groupBox2.Controls.Add(this.textBox15);
-            this.groupBox2.Controls.Add(this.textBox22);
-            this.groupBox2.Controls.Add(this.textBox8);
-            this.groupBox2.Controls.Add(this.textBox29);
-            this.groupBox2.Controls.Add(this.textBox14);
-            this.groupBox2.Controls.Add(this.textBox21);
-            this.groupBox2.Controls.Add(this.textBox7);
-            this.groupBox2.Controls.Add(this.textBox28);
-            this.groupBox2.Controls.Add(this.textBox13);
-            this.groupBox2.Controls.Add(this.textBox20);
-            this.groupBox2.Controls.Add(this.textBox6);
-            this.groupBox2.Controls.Add(this.textBox27);
-            this.groupBox2.Controls.Add(this.textBox12);
-            this.groupBox2.Controls.Add(this.textBox19);
-            this.groupBox2.Controls.Add(this.textBox5);
-            this.groupBox2.Controls.Add(this.textBox11);
-            this.groupBox2.Controls.Add(this.textBox4);
-            this.groupBox2.Controls.Add(this.textBox3);
-            this.groupBox2.Controls.Add(this.label22);
-            this.groupBox2.Controls.Add(this.label21);
-            this.groupBox2.Controls.Add(this.label17);
-            this.groupBox2.Controls.Add(this.label16);
-            this.groupBox2.Controls.Add(this.label15);
-            this.groupBox2.Controls.Add(this.label14);
-            this.groupBox2.Controls.Add(this.label13);
-            this.groupBox2.Controls.Add(this.label12);
-            this.groupBox2.Controls.Add(this.label20);
-            this.groupBox2.Controls.Add(this.label19);
-            this.groupBox2.Controls.Add(this.label18);
-            this.groupBox2.Controls.Add(this.label11);
-            this.groupBox2.Font = new System.Drawing.Font("KoPub돋움체 Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.groupBox2.Location = new System.Drawing.Point(28, 71);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(985, 209);
-            this.groupBox2.TabIndex = 6;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Absolute Encoder";
-            // 
-            // textBox34
-            // 
-            this.textBox34.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox34.Location = new System.Drawing.Point(867, 170);
-            this.textBox34.Name = "textBox34";
-            this.textBox34.Size = new System.Drawing.Size(104, 28);
-            this.textBox34.TabIndex = 6;
-            // 
-            // textBox26
-            // 
-            this.textBox26.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox26.Location = new System.Drawing.Point(867, 136);
-            this.textBox26.Name = "textBox26";
-            this.textBox26.Size = new System.Drawing.Size(104, 28);
-            this.textBox26.TabIndex = 6;
-            // 
-            // textBox18
-            // 
-            this.textBox18.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox18.Location = new System.Drawing.Point(867, 102);
-            this.textBox18.Name = "textBox18";
-            this.textBox18.Size = new System.Drawing.Size(104, 28);
-            this.textBox18.TabIndex = 6;
-            // 
-            // textBox33
-            // 
-            this.textBox33.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox33.Location = new System.Drawing.Point(757, 170);
-            this.textBox33.Name = "textBox33";
-            this.textBox33.Size = new System.Drawing.Size(104, 28);
-            this.textBox33.TabIndex = 6;
-            // 
-            // textBox10
-            // 
-            this.textBox10.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox10.Location = new System.Drawing.Point(867, 68);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(104, 28);
-            this.textBox10.TabIndex = 6;
-            // 
-            // textBox32
-            // 
-            this.textBox32.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox32.Location = new System.Drawing.Point(647, 170);
-            this.textBox32.Name = "textBox32";
-            this.textBox32.Size = new System.Drawing.Size(104, 28);
-            this.textBox32.TabIndex = 6;
+            // AbsoluteEnocdergroupBox
+            // 
+            this.AbsoluteEnocdergroupBox.Controls.Add(this.AbCurrentJoint8textBox);
+            this.AbsoluteEnocdergroupBox.Controls.Add(this.AbVelocityJoint8textBox);
+            this.AbsoluteEnocdergroupBox.Controls.Add(this.AbPositionJoint8textBox);
+            this.AbsoluteEnocdergroupBox.Controls.Add(this.AbCurrentJoint7textBox);
+            this.AbsoluteEnocdergroupBox.Controls.Add(this.AbsPosJoint8textBox);
+            this.AbsoluteEnocdergroupBox.Controls.Add(this.AbCurrentJoint6textBox);
+            this.AbsoluteEnocdergroupBox.Controls.Add(this.AbVelocityJoint7textBox);
+            this.AbsoluteEnocdergroupBox.Controls.Add(this.AbVelocityJoint6textBox);
+            this.AbsoluteEnocdergroupBox.Controls.Add(this.AbPositionJoint7textBox);
+            this.AbsoluteEnocdergroupBox.Controls.Add(this.AbCurrentJoint5textBox);
+            this.AbsoluteEnocdergroupBox.Controls.Add(this.AbPositionJoint6textBox);
+            this.AbsoluteEnocdergroupBox.Controls.Add(this.AbVelocityJoint5textBox);
+            this.AbsoluteEnocdergroupBox.Controls.Add(this.AbsPosJoint7textBox);
+            this.AbsoluteEnocdergroupBox.Controls.Add(this.AbCurrentJoint4textBox);
+            this.AbsoluteEnocdergroupBox.Controls.Add(this.AbPositionJoint5textBox);
+            this.AbsoluteEnocdergroupBox.Controls.Add(this.AbVelocityJoint4textBox);
+            this.AbsoluteEnocdergroupBox.Controls.Add(this.AbsPosJoint6textBox);
+            this.AbsoluteEnocdergroupBox.Controls.Add(this.AbCurrentJoint3textBox);
+            this.AbsoluteEnocdergroupBox.Controls.Add(this.AbPositionJoint4textBox);
+            this.AbsoluteEnocdergroupBox.Controls.Add(this.AbVelocityJoint3textBox);
+            this.AbsoluteEnocdergroupBox.Controls.Add(this.AbsPosJoint5textBox);
+            this.AbsoluteEnocdergroupBox.Controls.Add(this.AbCurrentJoint2textBox);
+            this.AbsoluteEnocdergroupBox.Controls.Add(this.AbPositionJoint3textBox);
+            this.AbsoluteEnocdergroupBox.Controls.Add(this.AbVelocityJoint2textBox);
+            this.AbsoluteEnocdergroupBox.Controls.Add(this.AbsPosJoint4textBox);
+            this.AbsoluteEnocdergroupBox.Controls.Add(this.AbCurrentJoint1textBox);
+            this.AbsoluteEnocdergroupBox.Controls.Add(this.AbPositionJoint2textBox);
+            this.AbsoluteEnocdergroupBox.Controls.Add(this.AbVelocityJoint1textBox);
+            this.AbsoluteEnocdergroupBox.Controls.Add(this.AbsPosJoint3textBox);
+            this.AbsoluteEnocdergroupBox.Controls.Add(this.AbPositionJoint1textBox);
+            this.AbsoluteEnocdergroupBox.Controls.Add(this.AbsPosJoint2textBox);
+            this.AbsoluteEnocdergroupBox.Controls.Add(this.AbsPosJoint1textBox);
+            this.AbsoluteEnocdergroupBox.Controls.Add(this.label22);
+            this.AbsoluteEnocdergroupBox.Controls.Add(this.label21);
+            this.AbsoluteEnocdergroupBox.Controls.Add(this.label17);
+            this.AbsoluteEnocdergroupBox.Controls.Add(this.label16);
+            this.AbsoluteEnocdergroupBox.Controls.Add(this.label15);
+            this.AbsoluteEnocdergroupBox.Controls.Add(this.label14);
+            this.AbsoluteEnocdergroupBox.Controls.Add(this.label13);
+            this.AbsoluteEnocdergroupBox.Controls.Add(this.label12);
+            this.AbsoluteEnocdergroupBox.Controls.Add(this.label20);
+            this.AbsoluteEnocdergroupBox.Controls.Add(this.label19);
+            this.AbsoluteEnocdergroupBox.Controls.Add(this.label18);
+            this.AbsoluteEnocdergroupBox.Controls.Add(this.label11);
+            this.AbsoluteEnocdergroupBox.Font = new System.Drawing.Font("KoPub돋움체 Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.AbsoluteEnocdergroupBox.Location = new System.Drawing.Point(28, 71);
+            this.AbsoluteEnocdergroupBox.Name = "AbsoluteEnocdergroupBox";
+            this.AbsoluteEnocdergroupBox.Size = new System.Drawing.Size(985, 209);
+            this.AbsoluteEnocdergroupBox.TabIndex = 6;
+            this.AbsoluteEnocdergroupBox.TabStop = false;
+            this.AbsoluteEnocdergroupBox.Text = "Absolute Encoder";
+            // 
+            // AbCurrentJoint8textBox
+            // 
+            this.AbCurrentJoint8textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.AbCurrentJoint8textBox.Location = new System.Drawing.Point(867, 170);
+            this.AbCurrentJoint8textBox.Name = "AbCurrentJoint8textBox";
+            this.AbCurrentJoint8textBox.Size = new System.Drawing.Size(104, 28);
+            this.AbCurrentJoint8textBox.TabIndex = 6;
+            // 
+            // AbVelocityJoint8textBox
+            // 
+            this.AbVelocityJoint8textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.AbVelocityJoint8textBox.Location = new System.Drawing.Point(867, 136);
+            this.AbVelocityJoint8textBox.Name = "AbVelocityJoint8textBox";
+            this.AbVelocityJoint8textBox.Size = new System.Drawing.Size(104, 28);
+            this.AbVelocityJoint8textBox.TabIndex = 6;
+            // 
+            // AbPositionJoint8textBox
+            // 
+            this.AbPositionJoint8textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.AbPositionJoint8textBox.Location = new System.Drawing.Point(867, 102);
+            this.AbPositionJoint8textBox.Name = "AbPositionJoint8textBox";
+            this.AbPositionJoint8textBox.Size = new System.Drawing.Size(104, 28);
+            this.AbPositionJoint8textBox.TabIndex = 6;
+            // 
+            // AbCurrentJoint7textBox
+            // 
+            this.AbCurrentJoint7textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.AbCurrentJoint7textBox.Location = new System.Drawing.Point(757, 170);
+            this.AbCurrentJoint7textBox.Name = "AbCurrentJoint7textBox";
+            this.AbCurrentJoint7textBox.Size = new System.Drawing.Size(104, 28);
+            this.AbCurrentJoint7textBox.TabIndex = 6;
+            // 
+            // AbsPosJoint8textBox
+            // 
+            this.AbsPosJoint8textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.AbsPosJoint8textBox.Location = new System.Drawing.Point(867, 68);
+            this.AbsPosJoint8textBox.Name = "AbsPosJoint8textBox";
+            this.AbsPosJoint8textBox.Size = new System.Drawing.Size(104, 28);
+            this.AbsPosJoint8textBox.TabIndex = 6;
+            // 
+            // AbCurrentJoint6textBox
+            // 
+            this.AbCurrentJoint6textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.AbCurrentJoint6textBox.Location = new System.Drawing.Point(647, 170);
+            this.AbCurrentJoint6textBox.Name = "AbCurrentJoint6textBox";
+            this.AbCurrentJoint6textBox.Size = new System.Drawing.Size(104, 28);
+            this.AbCurrentJoint6textBox.TabIndex = 6;
             // 
-            // textBox25
+            // AbVelocityJoint7textBox
             // 
-            this.textBox25.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox25.Location = new System.Drawing.Point(757, 136);
-            this.textBox25.Name = "textBox25";
-            this.textBox25.Size = new System.Drawing.Size(104, 28);
-            this.textBox25.TabIndex = 6;
+            this.AbVelocityJoint7textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.AbVelocityJoint7textBox.Location = new System.Drawing.Point(757, 136);
+            this.AbVelocityJoint7textBox.Name = "AbVelocityJoint7textBox";
+            this.AbVelocityJoint7textBox.Size = new System.Drawing.Size(104, 28);
+            this.AbVelocityJoint7textBox.TabIndex = 6;
             // 
-            // textBox24
+            // AbVelocityJoint6textBox
             // 
-            this.textBox24.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox24.Location = new System.Drawing.Point(647, 136);
-            this.textBox24.Name = "textBox24";
-            this.textBox24.Size = new System.Drawing.Size(104, 28);
-            this.textBox24.TabIndex = 6;
+            this.AbVelocityJoint6textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.AbVelocityJoint6textBox.Location = new System.Drawing.Point(647, 136);
+            this.AbVelocityJoint6textBox.Name = "AbVelocityJoint6textBox";
+            this.AbVelocityJoint6textBox.Size = new System.Drawing.Size(104, 28);
+            this.AbVelocityJoint6textBox.TabIndex = 6;
             // 
-            // textBox17
+            // AbPositionJoint7textBox
             // 
-            this.textBox17.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox17.Location = new System.Drawing.Point(757, 102);
-            this.textBox17.Name = "textBox17";
-            this.textBox17.Size = new System.Drawing.Size(104, 28);
-            this.textBox17.TabIndex = 6;
+            this.AbPositionJoint7textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.AbPositionJoint7textBox.Location = new System.Drawing.Point(757, 102);
+            this.AbPositionJoint7textBox.Name = "AbPositionJoint7textBox";
+            this.AbPositionJoint7textBox.Size = new System.Drawing.Size(104, 28);
+            this.AbPositionJoint7textBox.TabIndex = 6;
             // 
-            // textBox31
+            // AbCurrentJoint5textBox
             // 
-            this.textBox31.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox31.Location = new System.Drawing.Point(537, 170);
-            this.textBox31.Name = "textBox31";
-            this.textBox31.Size = new System.Drawing.Size(104, 28);
-            this.textBox31.TabIndex = 6;
+            this.AbCurrentJoint5textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.AbCurrentJoint5textBox.Location = new System.Drawing.Point(537, 170);
+            this.AbCurrentJoint5textBox.Name = "AbCurrentJoint5textBox";
+            this.AbCurrentJoint5textBox.Size = new System.Drawing.Size(104, 28);
+            this.AbCurrentJoint5textBox.TabIndex = 6;
             // 
-            // textBox16
+            // AbPositionJoint6textBox
             // 
-            this.textBox16.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox16.Location = new System.Drawing.Point(647, 102);
-            this.textBox16.Name = "textBox16";
-            this.textBox16.Size = new System.Drawing.Size(104, 28);
-            this.textBox16.TabIndex = 6;
+            this.AbPositionJoint6textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.AbPositionJoint6textBox.Location = new System.Drawing.Point(647, 102);
+            this.AbPositionJoint6textBox.Name = "AbPositionJoint6textBox";
+            this.AbPositionJoint6textBox.Size = new System.Drawing.Size(104, 28);
+            this.AbPositionJoint6textBox.TabIndex = 6;
             // 
-            // textBox23
+            // AbVelocityJoint5textBox
             // 
-            this.textBox23.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox23.Location = new System.Drawing.Point(537, 136);
-            this.textBox23.Name = "textBox23";
-            this.textBox23.Size = new System.Drawing.Size(104, 28);
-            this.textBox23.TabIndex = 6;
+            this.AbVelocityJoint5textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.AbVelocityJoint5textBox.Location = new System.Drawing.Point(537, 136);
+            this.AbVelocityJoint5textBox.Name = "AbVelocityJoint5textBox";
+            this.AbVelocityJoint5textBox.Size = new System.Drawing.Size(104, 28);
+            this.AbVelocityJoint5textBox.TabIndex = 6;
             // 
-            // textBox9
+            // AbsPosJoint7textBox
             // 
-            this.textBox9.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox9.Location = new System.Drawing.Point(757, 68);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(104, 28);
-            this.textBox9.TabIndex = 6;
+            this.AbsPosJoint7textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.AbsPosJoint7textBox.Location = new System.Drawing.Point(757, 68);
+            this.AbsPosJoint7textBox.Name = "AbsPosJoint7textBox";
+            this.AbsPosJoint7textBox.Size = new System.Drawing.Size(104, 28);
+            this.AbsPosJoint7textBox.TabIndex = 6;
             // 
-            // textBox30
+            // AbCurrentJoint4textBox
             // 
-            this.textBox30.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox30.Location = new System.Drawing.Point(427, 170);
-            this.textBox30.Name = "textBox30";
-            this.textBox30.Size = new System.Drawing.Size(104, 28);
-            this.textBox30.TabIndex = 6;
+            this.AbCurrentJoint4textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.AbCurrentJoint4textBox.Location = new System.Drawing.Point(427, 170);
+            this.AbCurrentJoint4textBox.Name = "AbCurrentJoint4textBox";
+            this.AbCurrentJoint4textBox.Size = new System.Drawing.Size(104, 28);
+            this.AbCurrentJoint4textBox.TabIndex = 6;
             // 
-            // textBox15
+            // AbPositionJoint5textBox
             // 
-            this.textBox15.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox15.Location = new System.Drawing.Point(537, 102);
-            this.textBox15.Name = "textBox15";
-            this.textBox15.Size = new System.Drawing.Size(104, 28);
-            this.textBox15.TabIndex = 6;
+            this.AbPositionJoint5textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.AbPositionJoint5textBox.Location = new System.Drawing.Point(537, 102);
+            this.AbPositionJoint5textBox.Name = "AbPositionJoint5textBox";
+            this.AbPositionJoint5textBox.Size = new System.Drawing.Size(104, 28);
+            this.AbPositionJoint5textBox.TabIndex = 6;
             // 
-            // textBox22
+            // AbVelocityJoint4textBox
             // 
-            this.textBox22.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox22.Location = new System.Drawing.Point(427, 136);
-            this.textBox22.Name = "textBox22";
-            this.textBox22.Size = new System.Drawing.Size(104, 28);
-            this.textBox22.TabIndex = 6;
+            this.AbVelocityJoint4textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.AbVelocityJoint4textBox.Location = new System.Drawing.Point(427, 136);
+            this.AbVelocityJoint4textBox.Name = "AbVelocityJoint4textBox";
+            this.AbVelocityJoint4textBox.Size = new System.Drawing.Size(104, 28);
+            this.AbVelocityJoint4textBox.TabIndex = 6;
             // 
-            // textBox8
+            // AbsPosJoint6textBox
             // 
-            this.textBox8.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox8.Location = new System.Drawing.Point(647, 68);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(104, 28);
-            this.textBox8.TabIndex = 6;
+            this.AbsPosJoint6textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.AbsPosJoint6textBox.Location = new System.Drawing.Point(647, 68);
+            this.AbsPosJoint6textBox.Name = "AbsPosJoint6textBox";
+            this.AbsPosJoint6textBox.Size = new System.Drawing.Size(104, 28);
+            this.AbsPosJoint6textBox.TabIndex = 6;
             // 
-            // textBox29
+            // AbCurrentJoint3textBox
             // 
-            this.textBox29.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox29.Location = new System.Drawing.Point(317, 170);
-            this.textBox29.Name = "textBox29";
-            this.textBox29.Size = new System.Drawing.Size(104, 28);
-            this.textBox29.TabIndex = 6;
+            this.AbCurrentJoint3textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.AbCurrentJoint3textBox.Location = new System.Drawing.Point(317, 170);
+            this.AbCurrentJoint3textBox.Name = "AbCurrentJoint3textBox";
+            this.AbCurrentJoint3textBox.Size = new System.Drawing.Size(104, 28);
+            this.AbCurrentJoint3textBox.TabIndex = 6;
             // 
-            // textBox14
+            // AbPositionJoint4textBox
             // 
-            this.textBox14.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox14.Location = new System.Drawing.Point(427, 102);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(104, 28);
-            this.textBox14.TabIndex = 6;
+            this.AbPositionJoint4textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.AbPositionJoint4textBox.Location = new System.Drawing.Point(427, 102);
+            this.AbPositionJoint4textBox.Name = "AbPositionJoint4textBox";
+            this.AbPositionJoint4textBox.Size = new System.Drawing.Size(104, 28);
+            this.AbPositionJoint4textBox.TabIndex = 6;
             // 
-            // textBox21
+            // AbVelocityJoint3textBox
             // 
-            this.textBox21.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox21.Location = new System.Drawing.Point(317, 136);
-            this.textBox21.Name = "textBox21";
-            this.textBox21.Size = new System.Drawing.Size(104, 28);
-            this.textBox21.TabIndex = 6;
-            // 
-            // textBox7
-            // 
-            this.textBox7.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox7.Location = new System.Drawing.Point(537, 68);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(104, 28);
-            this.textBox7.TabIndex = 6;
-            // 
-            // textBox28
-            // 
-            this.textBox28.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox28.Location = new System.Drawing.Point(207, 170);
-            this.textBox28.Name = "textBox28";
-            this.textBox28.Size = new System.Drawing.Size(104, 28);
-            this.textBox28.TabIndex = 6;
-            // 
-            // textBox13
-            // 
-            this.textBox13.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox13.Location = new System.Drawing.Point(317, 102);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(104, 28);
-            this.textBox13.TabIndex = 6;
-            // 
-            // textBox20
-            // 
-            this.textBox20.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox20.Location = new System.Drawing.Point(207, 136);
-            this.textBox20.Name = "textBox20";
-            this.textBox20.Size = new System.Drawing.Size(104, 28);
-            this.textBox20.TabIndex = 6;
-            // 
-            // textBox6
-            // 
-            this.textBox6.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox6.Location = new System.Drawing.Point(427, 68);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(104, 28);
-            this.textBox6.TabIndex = 6;
-            // 
-            // textBox27
-            // 
-            this.textBox27.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox27.Location = new System.Drawing.Point(97, 170);
-            this.textBox27.Name = "textBox27";
-            this.textBox27.Size = new System.Drawing.Size(104, 28);
-            this.textBox27.TabIndex = 6;
-            // 
-            // textBox12
-            // 
-            this.textBox12.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox12.Location = new System.Drawing.Point(207, 102);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(104, 28);
-            this.textBox12.TabIndex = 6;
-            // 
-            // textBox19
-            // 
-            this.textBox19.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox19.Location = new System.Drawing.Point(97, 136);
-            this.textBox19.Name = "textBox19";
-            this.textBox19.Size = new System.Drawing.Size(104, 28);
-            this.textBox19.TabIndex = 6;
-            // 
-            // textBox5
-            // 
-            this.textBox5.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox5.Location = new System.Drawing.Point(317, 68);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(104, 28);
-            this.textBox5.TabIndex = 6;
-            // 
-            // textBox11
-            // 
-            this.textBox11.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox11.Location = new System.Drawing.Point(97, 102);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(104, 28);
-            this.textBox11.TabIndex = 6;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox4.Location = new System.Drawing.Point(207, 68);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(104, 28);
-            this.textBox4.TabIndex = 6;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox3.Location = new System.Drawing.Point(97, 68);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(104, 28);
-            this.textBox3.TabIndex = 6;
+            this.AbVelocityJoint3textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.AbVelocityJoint3textBox.Location = new System.Drawing.Point(317, 136);
+            this.AbVelocityJoint3textBox.Name = "AbVelocityJoint3textBox";
+            this.AbVelocityJoint3textBox.Size = new System.Drawing.Size(104, 28);
+            this.AbVelocityJoint3textBox.TabIndex = 6;
+            // 
+            // AbsPosJoint5textBox
+            // 
+            this.AbsPosJoint5textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.AbsPosJoint5textBox.Location = new System.Drawing.Point(537, 68);
+            this.AbsPosJoint5textBox.Name = "AbsPosJoint5textBox";
+            this.AbsPosJoint5textBox.Size = new System.Drawing.Size(104, 28);
+            this.AbsPosJoint5textBox.TabIndex = 6;
+            // 
+            // AbCurrentJoint2textBox
+            // 
+            this.AbCurrentJoint2textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.AbCurrentJoint2textBox.Location = new System.Drawing.Point(207, 170);
+            this.AbCurrentJoint2textBox.Name = "AbCurrentJoint2textBox";
+            this.AbCurrentJoint2textBox.Size = new System.Drawing.Size(104, 28);
+            this.AbCurrentJoint2textBox.TabIndex = 6;
+            // 
+            // AbPositionJoint3textBox
+            // 
+            this.AbPositionJoint3textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.AbPositionJoint3textBox.Location = new System.Drawing.Point(317, 102);
+            this.AbPositionJoint3textBox.Name = "AbPositionJoint3textBox";
+            this.AbPositionJoint3textBox.Size = new System.Drawing.Size(104, 28);
+            this.AbPositionJoint3textBox.TabIndex = 6;
+            // 
+            // AbVelocityJoint2textBox
+            // 
+            this.AbVelocityJoint2textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.AbVelocityJoint2textBox.Location = new System.Drawing.Point(207, 136);
+            this.AbVelocityJoint2textBox.Name = "AbVelocityJoint2textBox";
+            this.AbVelocityJoint2textBox.Size = new System.Drawing.Size(104, 28);
+            this.AbVelocityJoint2textBox.TabIndex = 6;
+            // 
+            // AbsPosJoint4textBox
+            // 
+            this.AbsPosJoint4textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.AbsPosJoint4textBox.Location = new System.Drawing.Point(427, 68);
+            this.AbsPosJoint4textBox.Name = "AbsPosJoint4textBox";
+            this.AbsPosJoint4textBox.Size = new System.Drawing.Size(104, 28);
+            this.AbsPosJoint4textBox.TabIndex = 6;
+            // 
+            // AbCurrentJoint1textBox
+            // 
+            this.AbCurrentJoint1textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.AbCurrentJoint1textBox.Location = new System.Drawing.Point(97, 170);
+            this.AbCurrentJoint1textBox.Name = "AbCurrentJoint1textBox";
+            this.AbCurrentJoint1textBox.Size = new System.Drawing.Size(104, 28);
+            this.AbCurrentJoint1textBox.TabIndex = 6;
+            // 
+            // AbPositionJoint2textBox
+            // 
+            this.AbPositionJoint2textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.AbPositionJoint2textBox.Location = new System.Drawing.Point(207, 102);
+            this.AbPositionJoint2textBox.Name = "AbPositionJoint2textBox";
+            this.AbPositionJoint2textBox.Size = new System.Drawing.Size(104, 28);
+            this.AbPositionJoint2textBox.TabIndex = 6;
+            // 
+            // AbVelocityJoint1textBox
+            // 
+            this.AbVelocityJoint1textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.AbVelocityJoint1textBox.Location = new System.Drawing.Point(97, 136);
+            this.AbVelocityJoint1textBox.Name = "AbVelocityJoint1textBox";
+            this.AbVelocityJoint1textBox.Size = new System.Drawing.Size(104, 28);
+            this.AbVelocityJoint1textBox.TabIndex = 6;
+            // 
+            // AbsPosJoint3textBox
+            // 
+            this.AbsPosJoint3textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.AbsPosJoint3textBox.Location = new System.Drawing.Point(317, 68);
+            this.AbsPosJoint3textBox.Name = "AbsPosJoint3textBox";
+            this.AbsPosJoint3textBox.Size = new System.Drawing.Size(104, 28);
+            this.AbsPosJoint3textBox.TabIndex = 6;
+            // 
+            // AbPositionJoint1textBox
+            // 
+            this.AbPositionJoint1textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.AbPositionJoint1textBox.Location = new System.Drawing.Point(97, 102);
+            this.AbPositionJoint1textBox.Name = "AbPositionJoint1textBox";
+            this.AbPositionJoint1textBox.Size = new System.Drawing.Size(104, 28);
+            this.AbPositionJoint1textBox.TabIndex = 6;
+            // 
+            // AbsPosJoint2textBox
+            // 
+            this.AbsPosJoint2textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.AbsPosJoint2textBox.Location = new System.Drawing.Point(207, 68);
+            this.AbsPosJoint2textBox.Name = "AbsPosJoint2textBox";
+            this.AbsPosJoint2textBox.Size = new System.Drawing.Size(104, 28);
+            this.AbsPosJoint2textBox.TabIndex = 6;
+            // 
+            // AbsPosJoint1textBox
+            // 
+            this.AbsPosJoint1textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.AbsPosJoint1textBox.Location = new System.Drawing.Point(97, 68);
+            this.AbsPosJoint1textBox.Name = "AbsPosJoint1textBox";
+            this.AbsPosJoint1textBox.Size = new System.Drawing.Size(104, 28);
+            this.AbsPosJoint1textBox.TabIndex = 6;
             // 
             // label22
             // 
@@ -3209,108 +4645,36 @@ namespace DebuggingToolGUI
             this.label11.TabIndex = 5;
             this.label11.Text = "ABS Pos";
             // 
-            // button3
+            // LoggingStartbutton
             // 
-            this.button3.Location = new System.Drawing.Point(6, 30);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(293, 59);
-            this.button3.TabIndex = 7;
-            this.button3.Text = "Logging Start";
-            this.button3.UseVisualStyleBackColor = true;
+            this.LoggingStartbutton.Location = new System.Drawing.Point(6, 30);
+            this.LoggingStartbutton.Name = "LoggingStartbutton";
+            this.LoggingStartbutton.Size = new System.Drawing.Size(293, 59);
+            this.LoggingStartbutton.TabIndex = 7;
+            this.LoggingStartbutton.Text = "Logging Start";
+            this.LoggingStartbutton.UseVisualStyleBackColor = true;
             // 
-            // groupBox4
+            // LoggingSystemgroupBox
             // 
-            this.groupBox4.Controls.Add(this.pictureBox14);
-            this.groupBox4.Controls.Add(this.label87);
-            this.groupBox4.Controls.Add(this.button4);
-            this.groupBox4.Controls.Add(this.button3);
-            this.groupBox4.Font = new System.Drawing.Font("KoPub돋움체 Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.groupBox4.Location = new System.Drawing.Point(1021, 71);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(305, 209);
-            this.groupBox4.TabIndex = 8;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Logging System";
+            this.LoggingSystemgroupBox.Controls.Add(this.LoggingpictureBox);
+            this.LoggingSystemgroupBox.Controls.Add(this.label87);
+            this.LoggingSystemgroupBox.Controls.Add(this.LoggingStopbutton);
+            this.LoggingSystemgroupBox.Controls.Add(this.LoggingStartbutton);
+            this.LoggingSystemgroupBox.Font = new System.Drawing.Font("KoPub돋움체 Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.LoggingSystemgroupBox.Location = new System.Drawing.Point(1021, 71);
+            this.LoggingSystemgroupBox.Name = "LoggingSystemgroupBox";
+            this.LoggingSystemgroupBox.Size = new System.Drawing.Size(305, 209);
+            this.LoggingSystemgroupBox.TabIndex = 8;
+            this.LoggingSystemgroupBox.TabStop = false;
+            this.LoggingSystemgroupBox.Text = "Logging System";
             // 
-            // button4
+            // LoggingpictureBox
             // 
-            this.button4.Location = new System.Drawing.Point(6, 95);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(293, 59);
-            this.button4.TabIndex = 7;
-            this.button4.Text = "Logging Stop";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // groupBox5
-            // 
-            this.groupBox5.Location = new System.Drawing.Point(1019, 308);
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(307, 197);
-            this.groupBox5.TabIndex = 9;
-            this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "groupBox5";
-            // 
-            // label84
-            // 
-            this.label84.AutoSize = true;
-            this.label84.Font = new System.Drawing.Font("KoPub돋움체 Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label84.Location = new System.Drawing.Point(235, 172);
-            this.label84.Name = "label84";
-            this.label84.Size = new System.Drawing.Size(49, 21);
-            this.label84.TabIndex = 4;
-            this.label84.Text = "G.C.";
-            // 
-            // pictureBox11
-            // 
-            this.pictureBox11.Location = new System.Drawing.Point(196, 165);
-            this.pictureBox11.Name = "pictureBox11";
-            this.pictureBox11.Size = new System.Drawing.Size(33, 28);
-            this.pictureBox11.TabIndex = 164;
-            this.pictureBox11.TabStop = false;
-            // 
-            // label85
-            // 
-            this.label85.AutoSize = true;
-            this.label85.Font = new System.Drawing.Font("KoPub돋움체 Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label85.Location = new System.Drawing.Point(235, 206);
-            this.label85.Name = "label85";
-            this.label85.Size = new System.Drawing.Size(132, 21);
-            this.label85.TabIndex = 4;
-            this.label85.Text = "Position Mode";
-            // 
-            // pictureBox12
-            // 
-            this.pictureBox12.Location = new System.Drawing.Point(196, 199);
-            this.pictureBox12.Name = "pictureBox12";
-            this.pictureBox12.Size = new System.Drawing.Size(33, 28);
-            this.pictureBox12.TabIndex = 164;
-            this.pictureBox12.TabStop = false;
-            // 
-            // label86
-            // 
-            this.label86.AutoSize = true;
-            this.label86.Font = new System.Drawing.Font("KoPub돋움체 Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label86.Location = new System.Drawing.Point(235, 240);
-            this.label86.Name = "label86";
-            this.label86.Size = new System.Drawing.Size(123, 21);
-            this.label86.TabIndex = 4;
-            this.label86.Text = "Torque Mode";
-            // 
-            // pictureBox13
-            // 
-            this.pictureBox13.Location = new System.Drawing.Point(196, 233);
-            this.pictureBox13.Name = "pictureBox13";
-            this.pictureBox13.Size = new System.Drawing.Size(33, 28);
-            this.pictureBox13.TabIndex = 164;
-            this.pictureBox13.TabStop = false;
-            // 
-            // pictureBox14
-            // 
-            this.pictureBox14.Location = new System.Drawing.Point(12, 170);
-            this.pictureBox14.Name = "pictureBox14";
-            this.pictureBox14.Size = new System.Drawing.Size(33, 28);
-            this.pictureBox14.TabIndex = 166;
-            this.pictureBox14.TabStop = false;
+            this.LoggingpictureBox.Location = new System.Drawing.Point(12, 170);
+            this.LoggingpictureBox.Name = "LoggingpictureBox";
+            this.LoggingpictureBox.Size = new System.Drawing.Size(33, 28);
+            this.LoggingpictureBox.TabIndex = 166;
+            this.LoggingpictureBox.TabStop = false;
             // 
             // label87
             // 
@@ -3322,786 +4686,114 @@ namespace DebuggingToolGUI
             this.label87.TabIndex = 165;
             this.label87.Text = "Logging";
             // 
-            // groupBox10
-            // 
-            this.groupBox10.Controls.Add(this.button9);
-            this.groupBox10.Controls.Add(this.textBox164);
-            this.groupBox10.Controls.Add(this.textBox165);
-            this.groupBox10.Controls.Add(this.textBox168);
-            this.groupBox10.Controls.Add(this.textBox169);
-            this.groupBox10.Controls.Add(this.textBox171);
-            this.groupBox10.Controls.Add(this.textBox172);
-            this.groupBox10.Controls.Add(this.textBox174);
-            this.groupBox10.Controls.Add(this.textBox175);
-            this.groupBox10.Controls.Add(this.textBox177);
-            this.groupBox10.Controls.Add(this.textBox178);
-            this.groupBox10.Controls.Add(this.textBox180);
-            this.groupBox10.Controls.Add(this.textBox181);
-            this.groupBox10.Controls.Add(this.textBox183);
-            this.groupBox10.Controls.Add(this.textBox184);
-            this.groupBox10.Controls.Add(this.textBox185);
-            this.groupBox10.Controls.Add(this.textBox186);
-            this.groupBox10.Controls.Add(this.label88);
-            this.groupBox10.Controls.Add(this.label89);
-            this.groupBox10.Controls.Add(this.label90);
-            this.groupBox10.Controls.Add(this.label91);
-            this.groupBox10.Controls.Add(this.label92);
-            this.groupBox10.Controls.Add(this.label93);
-            this.groupBox10.Controls.Add(this.label94);
-            this.groupBox10.Controls.Add(this.label95);
-            this.groupBox10.Controls.Add(this.label97);
-            this.groupBox10.Controls.Add(this.label98);
-            this.groupBox10.Font = new System.Drawing.Font("KoPub돋움체 Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.groupBox10.Location = new System.Drawing.Point(10, 19);
-            this.groupBox10.Name = "groupBox10";
-            this.groupBox10.Size = new System.Drawing.Size(1282, 147);
-            this.groupBox10.TabIndex = 8;
-            this.groupBox10.TabStop = false;
-            this.groupBox10.Text = "Joint Trajectory Param";
-            // 
-            // button9
-            // 
-            this.button9.Location = new System.Drawing.Point(977, 60);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(282, 70);
-            this.button9.TabIndex = 7;
-            this.button9.Text = "Joint Trajectory Set";
-            this.button9.UseVisualStyleBackColor = true;
-            // 
-            // textBox164
-            // 
-            this.textBox164.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox164.Location = new System.Drawing.Point(867, 102);
-            this.textBox164.Name = "textBox164";
-            this.textBox164.Size = new System.Drawing.Size(104, 28);
-            this.textBox164.TabIndex = 6;
-            // 
-            // textBox165
-            // 
-            this.textBox165.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox165.Location = new System.Drawing.Point(867, 68);
-            this.textBox165.Name = "textBox165";
-            this.textBox165.Size = new System.Drawing.Size(104, 28);
-            this.textBox165.TabIndex = 6;
-            // 
-            // textBox168
-            // 
-            this.textBox168.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox168.Location = new System.Drawing.Point(757, 102);
-            this.textBox168.Name = "textBox168";
-            this.textBox168.Size = new System.Drawing.Size(104, 28);
-            this.textBox168.TabIndex = 6;
-            // 
-            // textBox169
-            // 
-            this.textBox169.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox169.Location = new System.Drawing.Point(647, 102);
-            this.textBox169.Name = "textBox169";
-            this.textBox169.Size = new System.Drawing.Size(104, 28);
-            this.textBox169.TabIndex = 6;
-            // 
-            // textBox171
-            // 
-            this.textBox171.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox171.Location = new System.Drawing.Point(757, 68);
-            this.textBox171.Name = "textBox171";
-            this.textBox171.Size = new System.Drawing.Size(104, 28);
-            this.textBox171.TabIndex = 6;
-            // 
-            // textBox172
-            // 
-            this.textBox172.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox172.Location = new System.Drawing.Point(537, 102);
-            this.textBox172.Name = "textBox172";
-            this.textBox172.Size = new System.Drawing.Size(104, 28);
-            this.textBox172.TabIndex = 6;
-            // 
-            // textBox174
-            // 
-            this.textBox174.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox174.Location = new System.Drawing.Point(647, 68);
-            this.textBox174.Name = "textBox174";
-            this.textBox174.Size = new System.Drawing.Size(104, 28);
-            this.textBox174.TabIndex = 6;
-            // 
-            // textBox175
-            // 
-            this.textBox175.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox175.Location = new System.Drawing.Point(427, 102);
-            this.textBox175.Name = "textBox175";
-            this.textBox175.Size = new System.Drawing.Size(104, 28);
-            this.textBox175.TabIndex = 6;
-            // 
-            // textBox177
-            // 
-            this.textBox177.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox177.Location = new System.Drawing.Point(537, 68);
-            this.textBox177.Name = "textBox177";
-            this.textBox177.Size = new System.Drawing.Size(104, 28);
-            this.textBox177.TabIndex = 6;
-            // 
-            // textBox178
-            // 
-            this.textBox178.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox178.Location = new System.Drawing.Point(317, 102);
-            this.textBox178.Name = "textBox178";
-            this.textBox178.Size = new System.Drawing.Size(104, 28);
-            this.textBox178.TabIndex = 6;
-            // 
-            // textBox180
-            // 
-            this.textBox180.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox180.Location = new System.Drawing.Point(427, 68);
-            this.textBox180.Name = "textBox180";
-            this.textBox180.Size = new System.Drawing.Size(104, 28);
-            this.textBox180.TabIndex = 6;
-            // 
-            // textBox181
-            // 
-            this.textBox181.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox181.Location = new System.Drawing.Point(207, 102);
-            this.textBox181.Name = "textBox181";
-            this.textBox181.Size = new System.Drawing.Size(104, 28);
-            this.textBox181.TabIndex = 6;
-            // 
-            // textBox183
-            // 
-            this.textBox183.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox183.Location = new System.Drawing.Point(317, 68);
-            this.textBox183.Name = "textBox183";
-            this.textBox183.Size = new System.Drawing.Size(104, 28);
-            this.textBox183.TabIndex = 6;
-            // 
-            // textBox184
-            // 
-            this.textBox184.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox184.Location = new System.Drawing.Point(97, 102);
-            this.textBox184.Name = "textBox184";
-            this.textBox184.Size = new System.Drawing.Size(104, 28);
-            this.textBox184.TabIndex = 6;
-            // 
-            // textBox185
-            // 
-            this.textBox185.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox185.Location = new System.Drawing.Point(207, 68);
-            this.textBox185.Name = "textBox185";
-            this.textBox185.Size = new System.Drawing.Size(104, 28);
-            this.textBox185.TabIndex = 6;
-            // 
-            // textBox186
-            // 
-            this.textBox186.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox186.Location = new System.Drawing.Point(97, 68);
-            this.textBox186.Name = "textBox186";
-            this.textBox186.Size = new System.Drawing.Size(104, 28);
-            this.textBox186.TabIndex = 6;
-            // 
-            // label88
-            // 
-            this.label88.AutoSize = true;
-            this.label88.Font = new System.Drawing.Font("KoPub돋움체 Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label88.Location = new System.Drawing.Point(886, 43);
-            this.label88.Name = "label88";
-            this.label88.Size = new System.Drawing.Size(68, 21);
-            this.label88.TabIndex = 5;
-            this.label88.Text = "Joint 8";
-            // 
-            // label89
-            // 
-            this.label89.AutoSize = true;
-            this.label89.Font = new System.Drawing.Font("KoPub돋움체 Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label89.Location = new System.Drawing.Point(773, 43);
-            this.label89.Name = "label89";
-            this.label89.Size = new System.Drawing.Size(68, 21);
-            this.label89.TabIndex = 5;
-            this.label89.Text = "Joint 7";
-            // 
-            // label90
-            // 
-            this.label90.AutoSize = true;
-            this.label90.Font = new System.Drawing.Font("KoPub돋움체 Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label90.Location = new System.Drawing.Point(662, 43);
-            this.label90.Name = "label90";
-            this.label90.Size = new System.Drawing.Size(68, 21);
-            this.label90.TabIndex = 5;
-            this.label90.Text = "Joint 6";
-            // 
-            // label91
-            // 
-            this.label91.AutoSize = true;
-            this.label91.Font = new System.Drawing.Font("KoPub돋움체 Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label91.Location = new System.Drawing.Point(556, 43);
-            this.label91.Name = "label91";
-            this.label91.Size = new System.Drawing.Size(68, 21);
-            this.label91.TabIndex = 5;
-            this.label91.Text = "Joint 5";
-            // 
-            // label92
-            // 
-            this.label92.AutoSize = true;
-            this.label92.Font = new System.Drawing.Font("KoPub돋움체 Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label92.Location = new System.Drawing.Point(444, 43);
-            this.label92.Name = "label92";
-            this.label92.Size = new System.Drawing.Size(68, 21);
-            this.label92.TabIndex = 5;
-            this.label92.Text = "Joint 4";
-            // 
-            // label93
-            // 
-            this.label93.AutoSize = true;
-            this.label93.Font = new System.Drawing.Font("KoPub돋움체 Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label93.Location = new System.Drawing.Point(338, 43);
-            this.label93.Name = "label93";
-            this.label93.Size = new System.Drawing.Size(68, 21);
-            this.label93.TabIndex = 5;
-            this.label93.Text = "Joint 3";
-            // 
-            // label94
-            // 
-            this.label94.AutoSize = true;
-            this.label94.Font = new System.Drawing.Font("KoPub돋움체 Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label94.Location = new System.Drawing.Point(225, 43);
-            this.label94.Name = "label94";
-            this.label94.Size = new System.Drawing.Size(68, 21);
-            this.label94.TabIndex = 5;
-            this.label94.Text = "Joint 2";
-            // 
-            // label95
-            // 
-            this.label95.AutoSize = true;
-            this.label95.Font = new System.Drawing.Font("KoPub돋움체 Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label95.Location = new System.Drawing.Point(121, 43);
-            this.label95.Name = "label95";
-            this.label95.Size = new System.Drawing.Size(68, 21);
-            this.label95.TabIndex = 5;
-            this.label95.Text = "Joint 1";
-            // 
-            // label97
-            // 
-            this.label97.AutoSize = true;
-            this.label97.Font = new System.Drawing.Font("KoPub돋움체 Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label97.Location = new System.Drawing.Point(5, 105);
-            this.label97.Name = "label97";
-            this.label97.Size = new System.Drawing.Size(86, 21);
-            this.label97.TabIndex = 5;
-            this.label97.Text = "Acc/Dec";
-            // 
-            // label98
-            // 
-            this.label98.AutoSize = true;
-            this.label98.Font = new System.Drawing.Font("KoPub돋움체 Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label98.Location = new System.Drawing.Point(6, 71);
-            this.label98.Name = "label98";
-            this.label98.Size = new System.Drawing.Size(53, 21);
-            this.label98.TabIndex = 5;
-            this.label98.Text = "Time";
-            // 
-            // groupBox11
-            // 
-            this.groupBox11.Controls.Add(this.button10);
-            this.groupBox11.Controls.Add(this.textBox208);
-            this.groupBox11.Controls.Add(this.textBox170);
-            this.groupBox11.Controls.Add(this.textBox207);
-            this.groupBox11.Controls.Add(this.textBox176);
-            this.groupBox11.Controls.Add(this.textBox206);
-            this.groupBox11.Controls.Add(this.textBox179);
-            this.groupBox11.Controls.Add(this.textBox182);
-            this.groupBox11.Controls.Add(this.textBox205);
-            this.groupBox11.Controls.Add(this.textBox187);
-            this.groupBox11.Controls.Add(this.textBox188);
-            this.groupBox11.Controls.Add(this.textBox204);
-            this.groupBox11.Controls.Add(this.textBox189);
-            this.groupBox11.Controls.Add(this.textBox190);
-            this.groupBox11.Controls.Add(this.textBox203);
-            this.groupBox11.Controls.Add(this.textBox191);
-            this.groupBox11.Controls.Add(this.textBox192);
-            this.groupBox11.Controls.Add(this.textBox193);
-            this.groupBox11.Controls.Add(this.textBox194);
-            this.groupBox11.Controls.Add(this.label100);
-            this.groupBox11.Controls.Add(this.label101);
-            this.groupBox11.Controls.Add(this.label102);
-            this.groupBox11.Controls.Add(this.label103);
-            this.groupBox11.Controls.Add(this.label104);
-            this.groupBox11.Controls.Add(this.label114);
-            this.groupBox11.Controls.Add(this.label105);
-            this.groupBox11.Controls.Add(this.label106);
-            this.groupBox11.Controls.Add(this.label107);
-            this.groupBox11.Font = new System.Drawing.Font("KoPub돋움체 Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.groupBox11.Location = new System.Drawing.Point(10, 19);
-            this.groupBox11.Name = "groupBox11";
-            this.groupBox11.Size = new System.Drawing.Size(886, 192);
-            this.groupBox11.TabIndex = 9;
-            this.groupBox11.TabStop = false;
-            this.groupBox11.Text = "Cartesian Trajectory Param";
-            // 
-            // button10
-            // 
-            this.button10.Location = new System.Drawing.Point(757, 60);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(117, 104);
-            this.button10.TabIndex = 7;
-            this.button10.Text = "Cartesian PID Setting";
-            this.button10.UseVisualStyleBackColor = true;
-            // 
-            // textBox170
-            // 
-            this.textBox170.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox170.Location = new System.Drawing.Point(647, 102);
-            this.textBox170.Name = "textBox170";
-            this.textBox170.Size = new System.Drawing.Size(104, 28);
-            this.textBox170.TabIndex = 6;
-            // 
-            // textBox176
-            // 
-            this.textBox176.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox176.Location = new System.Drawing.Point(537, 102);
-            this.textBox176.Name = "textBox176";
-            this.textBox176.Size = new System.Drawing.Size(104, 28);
-            this.textBox176.TabIndex = 6;
-            // 
-            // textBox179
-            // 
-            this.textBox179.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox179.Location = new System.Drawing.Point(647, 68);
-            this.textBox179.Name = "textBox179";
-            this.textBox179.Size = new System.Drawing.Size(104, 28);
-            this.textBox179.TabIndex = 6;
-            // 
-            // textBox182
-            // 
-            this.textBox182.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox182.Location = new System.Drawing.Point(427, 102);
-            this.textBox182.Name = "textBox182";
-            this.textBox182.Size = new System.Drawing.Size(104, 28);
-            this.textBox182.TabIndex = 6;
-            // 
-            // textBox187
-            // 
-            this.textBox187.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox187.Location = new System.Drawing.Point(537, 68);
-            this.textBox187.Name = "textBox187";
-            this.textBox187.Size = new System.Drawing.Size(104, 28);
-            this.textBox187.TabIndex = 6;
-            // 
-            // textBox188
-            // 
-            this.textBox188.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox188.Location = new System.Drawing.Point(317, 102);
-            this.textBox188.Name = "textBox188";
-            this.textBox188.Size = new System.Drawing.Size(104, 28);
-            this.textBox188.TabIndex = 6;
-            // 
-            // textBox189
-            // 
-            this.textBox189.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox189.Location = new System.Drawing.Point(427, 68);
-            this.textBox189.Name = "textBox189";
-            this.textBox189.Size = new System.Drawing.Size(104, 28);
-            this.textBox189.TabIndex = 6;
-            // 
-            // textBox190
-            // 
-            this.textBox190.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox190.Location = new System.Drawing.Point(207, 102);
-            this.textBox190.Name = "textBox190";
-            this.textBox190.Size = new System.Drawing.Size(104, 28);
-            this.textBox190.TabIndex = 6;
-            // 
-            // textBox191
-            // 
-            this.textBox191.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox191.Location = new System.Drawing.Point(317, 68);
-            this.textBox191.Name = "textBox191";
-            this.textBox191.Size = new System.Drawing.Size(104, 28);
-            this.textBox191.TabIndex = 6;
-            // 
-            // textBox192
-            // 
-            this.textBox192.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox192.Location = new System.Drawing.Point(97, 102);
-            this.textBox192.Name = "textBox192";
-            this.textBox192.Size = new System.Drawing.Size(104, 28);
-            this.textBox192.TabIndex = 6;
-            // 
-            // textBox193
-            // 
-            this.textBox193.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox193.Location = new System.Drawing.Point(207, 68);
-            this.textBox193.Name = "textBox193";
-            this.textBox193.Size = new System.Drawing.Size(104, 28);
-            this.textBox193.TabIndex = 6;
-            // 
-            // textBox194
-            // 
-            this.textBox194.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox194.Location = new System.Drawing.Point(97, 68);
-            this.textBox194.Name = "textBox194";
-            this.textBox194.Size = new System.Drawing.Size(104, 28);
-            this.textBox194.TabIndex = 6;
-            // 
-            // label100
-            // 
-            this.label100.AutoSize = true;
-            this.label100.Font = new System.Drawing.Font("KoPub돋움체 Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label100.Location = new System.Drawing.Point(678, 43);
-            this.label100.Name = "label100";
-            this.label100.Size = new System.Drawing.Size(46, 21);
-            this.label100.TabIndex = 5;
-            this.label100.Text = "Yaw";
-            // 
-            // label101
-            // 
-            this.label101.AutoSize = true;
-            this.label101.Font = new System.Drawing.Font("KoPub돋움체 Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label101.Location = new System.Drawing.Point(572, 43);
-            this.label101.Name = "label101";
-            this.label101.Size = new System.Drawing.Size(53, 21);
-            this.label101.TabIndex = 5;
-            this.label101.Text = "Pitch";
-            // 
-            // label102
-            // 
-            this.label102.AutoSize = true;
-            this.label102.Font = new System.Drawing.Font("KoPub돋움체 Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label102.Location = new System.Drawing.Point(460, 43);
-            this.label102.Name = "label102";
-            this.label102.Size = new System.Drawing.Size(41, 21);
-            this.label102.TabIndex = 5;
-            this.label102.Text = "Roll";
-            // 
-            // label103
-            // 
-            this.label103.AutoSize = true;
-            this.label103.Font = new System.Drawing.Font("KoPub돋움체 Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label103.Location = new System.Drawing.Point(354, 43);
-            this.label103.Name = "label103";
-            this.label103.Size = new System.Drawing.Size(21, 21);
-            this.label103.TabIndex = 5;
-            this.label103.Text = "Z";
-            // 
-            // label104
-            // 
-            this.label104.AutoSize = true;
-            this.label104.Font = new System.Drawing.Font("KoPub돋움체 Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label104.Location = new System.Drawing.Point(241, 43);
-            this.label104.Name = "label104";
-            this.label104.Size = new System.Drawing.Size(22, 21);
-            this.label104.TabIndex = 5;
-            this.label104.Text = "Y";
-            // 
-            // label105
-            // 
-            this.label105.AutoSize = true;
-            this.label105.Font = new System.Drawing.Font("KoPub돋움체 Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label105.Location = new System.Drawing.Point(137, 43);
-            this.label105.Name = "label105";
-            this.label105.Size = new System.Drawing.Size(22, 21);
-            this.label105.TabIndex = 5;
-            this.label105.Text = "X";
-            // 
-            // label106
-            // 
-            this.label106.AutoSize = true;
-            this.label106.Font = new System.Drawing.Font("KoPub돋움체 Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label106.Location = new System.Drawing.Point(5, 105);
-            this.label106.Name = "label106";
-            this.label106.Size = new System.Drawing.Size(60, 21);
-            this.label106.TabIndex = 5;
-            this.label106.Text = "I Gain";
-            // 
-            // label107
-            // 
-            this.label107.AutoSize = true;
-            this.label107.Font = new System.Drawing.Font("KoPub돋움체 Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label107.Location = new System.Drawing.Point(6, 71);
-            this.label107.Name = "label107";
-            this.label107.Size = new System.Drawing.Size(67, 21);
-            this.label107.TabIndex = 5;
-            this.label107.Text = "P Gain";
-            // 
-            // groupBox12
-            // 
-            this.groupBox12.Controls.Add(this.button11);
-            this.groupBox12.Controls.Add(this.textBox163);
-            this.groupBox12.Controls.Add(this.textBox166);
-            this.groupBox12.Controls.Add(this.textBox167);
-            this.groupBox12.Controls.Add(this.textBox173);
-            this.groupBox12.Controls.Add(this.textBox195);
-            this.groupBox12.Controls.Add(this.textBox196);
-            this.groupBox12.Controls.Add(this.textBox197);
-            this.groupBox12.Controls.Add(this.textBox198);
-            this.groupBox12.Controls.Add(this.textBox199);
-            this.groupBox12.Controls.Add(this.textBox200);
-            this.groupBox12.Controls.Add(this.textBox201);
-            this.groupBox12.Controls.Add(this.textBox202);
-            this.groupBox12.Controls.Add(this.label96);
-            this.groupBox12.Controls.Add(this.label99);
-            this.groupBox12.Controls.Add(this.label108);
-            this.groupBox12.Controls.Add(this.label109);
-            this.groupBox12.Controls.Add(this.label110);
-            this.groupBox12.Controls.Add(this.label111);
-            this.groupBox12.Controls.Add(this.label112);
-            this.groupBox12.Controls.Add(this.label113);
-            this.groupBox12.Font = new System.Drawing.Font("KoPub돋움체 Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.groupBox12.Location = new System.Drawing.Point(10, 238);
-            this.groupBox12.Name = "groupBox12";
-            this.groupBox12.Size = new System.Drawing.Size(886, 147);
-            this.groupBox12.TabIndex = 9;
-            this.groupBox12.TabStop = false;
-            this.groupBox12.Text = "Cartesian Trajectory Param";
-            // 
-            // button11
-            // 
-            this.button11.Location = new System.Drawing.Point(757, 43);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(117, 87);
-            this.button11.TabIndex = 7;
-            this.button11.Text = "Cartesian Traj. Setting";
-            this.button11.UseVisualStyleBackColor = true;
-            // 
-            // textBox163
-            // 
-            this.textBox163.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox163.Location = new System.Drawing.Point(647, 102);
-            this.textBox163.Name = "textBox163";
-            this.textBox163.Size = new System.Drawing.Size(104, 28);
-            this.textBox163.TabIndex = 6;
-            // 
-            // textBox166
-            // 
-            this.textBox166.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox166.Location = new System.Drawing.Point(537, 102);
-            this.textBox166.Name = "textBox166";
-            this.textBox166.Size = new System.Drawing.Size(104, 28);
-            this.textBox166.TabIndex = 6;
-            // 
-            // textBox167
-            // 
-            this.textBox167.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox167.Location = new System.Drawing.Point(647, 68);
-            this.textBox167.Name = "textBox167";
-            this.textBox167.Size = new System.Drawing.Size(104, 28);
-            this.textBox167.TabIndex = 6;
-            // 
-            // textBox173
-            // 
-            this.textBox173.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox173.Location = new System.Drawing.Point(427, 102);
-            this.textBox173.Name = "textBox173";
-            this.textBox173.Size = new System.Drawing.Size(104, 28);
-            this.textBox173.TabIndex = 6;
-            // 
-            // textBox195
-            // 
-            this.textBox195.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox195.Location = new System.Drawing.Point(537, 68);
-            this.textBox195.Name = "textBox195";
-            this.textBox195.Size = new System.Drawing.Size(104, 28);
-            this.textBox195.TabIndex = 6;
-            // 
-            // textBox196
-            // 
-            this.textBox196.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox196.Location = new System.Drawing.Point(317, 102);
-            this.textBox196.Name = "textBox196";
-            this.textBox196.Size = new System.Drawing.Size(104, 28);
-            this.textBox196.TabIndex = 6;
-            // 
-            // textBox197
-            // 
-            this.textBox197.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox197.Location = new System.Drawing.Point(427, 68);
-            this.textBox197.Name = "textBox197";
-            this.textBox197.Size = new System.Drawing.Size(104, 28);
-            this.textBox197.TabIndex = 6;
-            // 
-            // textBox198
-            // 
-            this.textBox198.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox198.Location = new System.Drawing.Point(207, 102);
-            this.textBox198.Name = "textBox198";
-            this.textBox198.Size = new System.Drawing.Size(104, 28);
-            this.textBox198.TabIndex = 6;
-            // 
-            // textBox199
-            // 
-            this.textBox199.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox199.Location = new System.Drawing.Point(317, 68);
-            this.textBox199.Name = "textBox199";
-            this.textBox199.Size = new System.Drawing.Size(104, 28);
-            this.textBox199.TabIndex = 6;
-            // 
-            // textBox200
-            // 
-            this.textBox200.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox200.Location = new System.Drawing.Point(97, 102);
-            this.textBox200.Name = "textBox200";
-            this.textBox200.Size = new System.Drawing.Size(104, 28);
-            this.textBox200.TabIndex = 6;
-            // 
-            // textBox201
-            // 
-            this.textBox201.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox201.Location = new System.Drawing.Point(207, 68);
-            this.textBox201.Name = "textBox201";
-            this.textBox201.Size = new System.Drawing.Size(104, 28);
-            this.textBox201.TabIndex = 6;
-            // 
-            // textBox202
-            // 
-            this.textBox202.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox202.Location = new System.Drawing.Point(97, 68);
-            this.textBox202.Name = "textBox202";
-            this.textBox202.Size = new System.Drawing.Size(104, 28);
-            this.textBox202.TabIndex = 6;
-            // 
-            // label96
-            // 
-            this.label96.AutoSize = true;
-            this.label96.Font = new System.Drawing.Font("KoPub돋움체 Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label96.Location = new System.Drawing.Point(678, 43);
-            this.label96.Name = "label96";
-            this.label96.Size = new System.Drawing.Size(46, 21);
-            this.label96.TabIndex = 5;
-            this.label96.Text = "Yaw";
-            // 
-            // label99
-            // 
-            this.label99.AutoSize = true;
-            this.label99.Font = new System.Drawing.Font("KoPub돋움체 Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label99.Location = new System.Drawing.Point(572, 43);
-            this.label99.Name = "label99";
-            this.label99.Size = new System.Drawing.Size(53, 21);
-            this.label99.TabIndex = 5;
-            this.label99.Text = "Pitch";
-            // 
-            // label108
-            // 
-            this.label108.AutoSize = true;
-            this.label108.Font = new System.Drawing.Font("KoPub돋움체 Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label108.Location = new System.Drawing.Point(460, 43);
-            this.label108.Name = "label108";
-            this.label108.Size = new System.Drawing.Size(41, 21);
-            this.label108.TabIndex = 5;
-            this.label108.Text = "Roll";
-            // 
-            // label109
-            // 
-            this.label109.AutoSize = true;
-            this.label109.Font = new System.Drawing.Font("KoPub돋움체 Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label109.Location = new System.Drawing.Point(354, 43);
-            this.label109.Name = "label109";
-            this.label109.Size = new System.Drawing.Size(21, 21);
-            this.label109.TabIndex = 5;
-            this.label109.Text = "Z";
-            // 
-            // label110
-            // 
-            this.label110.AutoSize = true;
-            this.label110.Font = new System.Drawing.Font("KoPub돋움체 Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label110.Location = new System.Drawing.Point(241, 43);
-            this.label110.Name = "label110";
-            this.label110.Size = new System.Drawing.Size(22, 21);
-            this.label110.TabIndex = 5;
-            this.label110.Text = "Y";
-            // 
-            // label111
-            // 
-            this.label111.AutoSize = true;
-            this.label111.Font = new System.Drawing.Font("KoPub돋움체 Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label111.Location = new System.Drawing.Point(137, 43);
-            this.label111.Name = "label111";
-            this.label111.Size = new System.Drawing.Size(22, 21);
-            this.label111.TabIndex = 5;
-            this.label111.Text = "X";
-            // 
-            // label112
-            // 
-            this.label112.AutoSize = true;
-            this.label112.Font = new System.Drawing.Font("KoPub돋움체 Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label112.Location = new System.Drawing.Point(5, 105);
-            this.label112.Name = "label112";
-            this.label112.Size = new System.Drawing.Size(86, 21);
-            this.label112.TabIndex = 5;
-            this.label112.Text = "Acc/Dec";
-            // 
-            // label113
-            // 
-            this.label113.AutoSize = true;
-            this.label113.Font = new System.Drawing.Font("KoPub돋움체 Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label113.Location = new System.Drawing.Point(6, 71);
-            this.label113.Name = "label113";
-            this.label113.Size = new System.Drawing.Size(53, 21);
-            this.label113.TabIndex = 5;
-            this.label113.Text = "Time";
-            // 
-            // label114
-            // 
-            this.label114.AutoSize = true;
-            this.label114.Font = new System.Drawing.Font("KoPub돋움체 Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label114.Location = new System.Drawing.Point(5, 139);
-            this.label114.Name = "label114";
-            this.label114.Size = new System.Drawing.Size(69, 21);
-            this.label114.TabIndex = 5;
-            this.label114.Text = "D Gain";
-            // 
-            // textBox203
-            // 
-            this.textBox203.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox203.Location = new System.Drawing.Point(97, 136);
-            this.textBox203.Name = "textBox203";
-            this.textBox203.Size = new System.Drawing.Size(104, 28);
-            this.textBox203.TabIndex = 6;
-            // 
-            // textBox204
-            // 
-            this.textBox204.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox204.Location = new System.Drawing.Point(207, 136);
-            this.textBox204.Name = "textBox204";
-            this.textBox204.Size = new System.Drawing.Size(104, 28);
-            this.textBox204.TabIndex = 6;
-            // 
-            // textBox205
-            // 
-            this.textBox205.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox205.Location = new System.Drawing.Point(317, 136);
-            this.textBox205.Name = "textBox205";
-            this.textBox205.Size = new System.Drawing.Size(104, 28);
-            this.textBox205.TabIndex = 6;
-            // 
-            // textBox206
-            // 
-            this.textBox206.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox206.Location = new System.Drawing.Point(427, 136);
-            this.textBox206.Name = "textBox206";
-            this.textBox206.Size = new System.Drawing.Size(104, 28);
-            this.textBox206.TabIndex = 6;
-            // 
-            // textBox207
-            // 
-            this.textBox207.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox207.Location = new System.Drawing.Point(537, 136);
-            this.textBox207.Name = "textBox207";
-            this.textBox207.Size = new System.Drawing.Size(104, 28);
-            this.textBox207.TabIndex = 6;
-            // 
-            // textBox208
-            // 
-            this.textBox208.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox208.Location = new System.Drawing.Point(647, 136);
-            this.textBox208.Name = "textBox208";
-            this.textBox208.Size = new System.Drawing.Size(104, 28);
-            this.textBox208.TabIndex = 6;
+            // LoggingStopbutton
+            // 
+            this.LoggingStopbutton.Location = new System.Drawing.Point(6, 95);
+            this.LoggingStopbutton.Name = "LoggingStopbutton";
+            this.LoggingStopbutton.Size = new System.Drawing.Size(293, 59);
+            this.LoggingStopbutton.TabIndex = 7;
+            this.LoggingStopbutton.Text = "Logging Stop";
+            this.LoggingStopbutton.UseVisualStyleBackColor = true;
+            // 
+            // ParameterSetgroupBox
+            // 
+            this.ParameterSetgroupBox.Controls.Add(this.ParametersSavepictureBox);
+            this.ParameterSetgroupBox.Controls.Add(this.ParametersReadpictureBox);
+            this.ParameterSetgroupBox.Controls.Add(this.ParametersSavebutton);
+            this.ParameterSetgroupBox.Controls.Add(this.label141);
+            this.ParameterSetgroupBox.Controls.Add(this.label115);
+            this.ParameterSetgroupBox.Controls.Add(this.ParametersReadbutton);
+            this.ParameterSetgroupBox.Font = new System.Drawing.Font("KoPub돋움체 Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.ParameterSetgroupBox.Location = new System.Drawing.Point(1019, 296);
+            this.ParameterSetgroupBox.Name = "ParameterSetgroupBox";
+            this.ParameterSetgroupBox.Size = new System.Drawing.Size(307, 209);
+            this.ParameterSetgroupBox.TabIndex = 9;
+            this.ParameterSetgroupBox.TabStop = false;
+            this.ParameterSetgroupBox.Text = "Parameter Set";
+            // 
+            // ParametersSavepictureBox
+            // 
+            this.ParametersSavepictureBox.Location = new System.Drawing.Point(14, 171);
+            this.ParametersSavepictureBox.Name = "ParametersSavepictureBox";
+            this.ParametersSavepictureBox.Size = new System.Drawing.Size(33, 28);
+            this.ParametersSavepictureBox.TabIndex = 166;
+            this.ParametersSavepictureBox.TabStop = false;
+            // 
+            // ParametersReadpictureBox
+            // 
+            this.ParametersReadpictureBox.Location = new System.Drawing.Point(14, 81);
+            this.ParametersReadpictureBox.Name = "ParametersReadpictureBox";
+            this.ParametersReadpictureBox.Size = new System.Drawing.Size(33, 28);
+            this.ParametersReadpictureBox.TabIndex = 166;
+            this.ParametersReadpictureBox.TabStop = false;
+            // 
+            // ParametersSavebutton
+            // 
+            this.ParametersSavebutton.Location = new System.Drawing.Point(7, 120);
+            this.ParametersSavebutton.Name = "ParametersSavebutton";
+            this.ParametersSavebutton.Size = new System.Drawing.Size(293, 48);
+            this.ParametersSavebutton.TabIndex = 8;
+            this.ParametersSavebutton.Text = "Parameters Save";
+            this.ParametersSavebutton.UseVisualStyleBackColor = true;
+            // 
+            // label141
+            // 
+            this.label141.AutoSize = true;
+            this.label141.Font = new System.Drawing.Font("KoPub돋움체 Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label141.Location = new System.Drawing.Point(53, 177);
+            this.label141.Name = "label141";
+            this.label141.Size = new System.Drawing.Size(141, 21);
+            this.label141.TabIndex = 165;
+            this.label141.Text = "Save Complete";
+            // 
+            // label115
+            // 
+            this.label115.AutoSize = true;
+            this.label115.Font = new System.Drawing.Font("KoPub돋움체 Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label115.Location = new System.Drawing.Point(53, 88);
+            this.label115.Name = "label115";
+            this.label115.Size = new System.Drawing.Size(144, 21);
+            this.label115.TabIndex = 165;
+            this.label115.Text = "Read Complete";
+            // 
+            // ParametersReadbutton
+            // 
+            this.ParametersReadbutton.Location = new System.Drawing.Point(6, 31);
+            this.ParametersReadbutton.Name = "ParametersReadbutton";
+            this.ParametersReadbutton.Size = new System.Drawing.Size(293, 47);
+            this.ParametersReadbutton.TabIndex = 8;
+            this.ParametersReadbutton.Text = "Parameters Read";
+            this.ParametersReadbutton.UseVisualStyleBackColor = true;
+            // 
+            // ConnectCompletepictureBox
+            // 
+            this.ConnectCompletepictureBox.Location = new System.Drawing.Point(1326, 40);
+            this.ConnectCompletepictureBox.Name = "ConnectCompletepictureBox";
+            this.ConnectCompletepictureBox.Size = new System.Drawing.Size(33, 28);
+            this.ConnectCompletepictureBox.TabIndex = 166;
+            this.ConnectCompletepictureBox.TabStop = false;
+            // 
+            // ConnectComplete
+            // 
+            this.ConnectComplete.AutoSize = true;
+            this.ConnectComplete.Font = new System.Drawing.Font("KoPub돋움체 Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.ConnectComplete.Location = new System.Drawing.Point(1365, 47);
+            this.ConnectComplete.Name = "ConnectComplete";
+            this.ConnectComplete.Size = new System.Drawing.Size(171, 21);
+            this.ConnectComplete.TabIndex = 165;
+            this.ConnectComplete.Text = "Connect Complete";
             // 
             // DebuggingToolSW
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1904, 1041);
-            this.Controls.Add(this.groupBox5);
-            this.Controls.Add(this.groupBox4);
-            this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.groupBox2);
+            this.ClientSize = new System.Drawing.Size(1779, 971);
+            this.Controls.Add(this.ConnectCompletepictureBox);
+            this.Controls.Add(this.ConnectComplete);
+            this.Controls.Add(this.ParameterSetgroupBox);
+            this.Controls.Add(this.LoggingSystemgroupBox);
+            this.Controls.Add(this.IncrementalEncodergroupBox);
+            this.Controls.Add(this.AbsoluteEnocdergroupBox);
             this.Controls.Add(this.StateGroupBox);
             this.Controls.Add(this.LoginGroupBox);
             this.Controls.Add(this.MainTapControl);
@@ -4120,41 +4812,55 @@ namespace DebuggingToolGUI
             this.groupBox8.ResumeLayout(false);
             this.groupBox8.PerformLayout();
             this.tabPage1.ResumeLayout(false);
+            this.JointPositionSetgroupBox.ResumeLayout(false);
+            this.JointPositionSetgroupBox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.JointReachedpictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.JointMovingpictureBox)).EndInit();
+            this.groupBox10.ResumeLayout(false);
+            this.groupBox10.PerformLayout();
             this.tabPage3.ResumeLayout(false);
+            this.CartesianPositionSetgroupBox.ResumeLayout(false);
+            this.CartesianPositionSetgroupBox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.CartesianReachedpictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CartesianMovingpictureBox)).EndInit();
+            this.groupBox12.ResumeLayout(false);
+            this.groupBox12.PerformLayout();
+            this.groupBox11.ResumeLayout(false);
+            this.groupBox11.PerformLayout();
             this.LoginGroupBox.ResumeLayout(false);
             this.LoginGroupBox.PerformLayout();
             this.StateGroupBox.ResumeLayout(false);
             this.StateGroupBox.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbConnect)).EndInit();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            this.groupBox4.ResumeLayout(false);
-            this.groupBox4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
-            this.groupBox10.ResumeLayout(false);
-            this.groupBox10.PerformLayout();
-            this.groupBox11.ResumeLayout(false);
-            this.groupBox11.PerformLayout();
-            this.groupBox12.ResumeLayout(false);
-            this.groupBox12.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Joint4pictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Joint3pictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Joint2pictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Joint8pictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Joint7pictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Joint6pictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Joint5pictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Joint1pictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MainPowerpictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AuxPowerpictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TorqueModepictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PositionModepictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GCpictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ConnectpictureBox)).EndInit();
+            this.IncrementalEncodergroupBox.ResumeLayout(false);
+            this.IncrementalEncodergroupBox.PerformLayout();
+            this.AbsoluteEnocdergroupBox.ResumeLayout(false);
+            this.AbsoluteEnocdergroupBox.PerformLayout();
+            this.LoggingSystemgroupBox.ResumeLayout(false);
+            this.LoggingSystemgroupBox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.LoggingpictureBox)).EndInit();
+            this.ParameterSetgroupBox.ResumeLayout(false);
+            this.ParameterSetgroupBox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ParametersSavepictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ParametersReadpictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ConnectCompletepictureBox)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -4164,11 +4870,11 @@ namespace DebuggingToolGUI
         private System.Windows.Forms.TabControl MainTapControl;
         private System.Windows.Forms.TabPage Default;
         private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.Button Connect;
+        private System.Windows.Forms.Button Connectbutton;
         private System.Windows.Forms.Label IpAddressLabel;
         private System.Windows.Forms.TextBox IpAddressTextBox;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox PortTextBox;
         private System.Windows.Forms.GroupBox LoginGroupBox;
         private System.Windows.Forms.GroupBox StateGroupBox;
         private System.Windows.Forms.GroupBox groupBox1;
@@ -4176,13 +4882,13 @@ namespace DebuggingToolGUI
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox ErrorCodetextBox;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button Homingbutton;
+        private System.Windows.Forms.Button Readybutton;
         private System.Windows.Forms.Button ServoOnButton;
         private System.Windows.Forms.Label label35;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox NumJointcomboBox;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
@@ -4190,39 +4896,39 @@ namespace DebuggingToolGUI
         private System.Windows.Forms.Label label38;
         private System.Windows.Forms.Label label37;
         private System.Windows.Forms.Label label36;
-        private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.TextBox textBox35;
-        private System.Windows.Forms.TextBox textBox36;
-        private System.Windows.Forms.TextBox textBox37;
-        private System.Windows.Forms.TextBox textBox38;
-        private System.Windows.Forms.TextBox textBox39;
-        private System.Windows.Forms.TextBox textBox40;
-        private System.Windows.Forms.TextBox textBox41;
-        private System.Windows.Forms.TextBox textBox42;
-        private System.Windows.Forms.TextBox textBox43;
-        private System.Windows.Forms.TextBox textBox44;
-        private System.Windows.Forms.TextBox textBox45;
-        private System.Windows.Forms.TextBox textBox46;
-        private System.Windows.Forms.TextBox textBox47;
-        private System.Windows.Forms.TextBox textBox48;
-        private System.Windows.Forms.TextBox textBox49;
-        private System.Windows.Forms.TextBox textBox50;
-        private System.Windows.Forms.TextBox textBox51;
-        private System.Windows.Forms.TextBox textBox52;
-        private System.Windows.Forms.TextBox textBox53;
-        private System.Windows.Forms.TextBox textBox54;
-        private System.Windows.Forms.TextBox textBox55;
-        private System.Windows.Forms.TextBox textBox56;
-        private System.Windows.Forms.TextBox textBox57;
-        private System.Windows.Forms.TextBox textBox58;
-        private System.Windows.Forms.TextBox textBox59;
-        private System.Windows.Forms.TextBox textBox60;
-        private System.Windows.Forms.TextBox textBox61;
-        private System.Windows.Forms.TextBox textBox62;
-        private System.Windows.Forms.TextBox textBox63;
-        private System.Windows.Forms.TextBox textBox64;
-        private System.Windows.Forms.TextBox textBox65;
-        private System.Windows.Forms.TextBox textBox66;
+        private System.Windows.Forms.GroupBox IncrementalEncodergroupBox;
+        private System.Windows.Forms.TextBox IncCurrentJoint8textBox;
+        private System.Windows.Forms.TextBox IncVelocityJoint8textBox;
+        private System.Windows.Forms.TextBox IncPositionJoint8textBox;
+        private System.Windows.Forms.TextBox IncCurrentJoint7textBox;
+        private System.Windows.Forms.TextBox INCPosJoint8textBox;
+        private System.Windows.Forms.TextBox IncCurrentJoint6textBox;
+        private System.Windows.Forms.TextBox IncVelocityJoint7textBox;
+        private System.Windows.Forms.TextBox IncVelocityJoint6textBox;
+        private System.Windows.Forms.TextBox IncPositionJoint7textBox;
+        private System.Windows.Forms.TextBox IncCurrentJoint5textBox;
+        private System.Windows.Forms.TextBox IncPositionJoint6textBox;
+        private System.Windows.Forms.TextBox IncVelocityJoint5textBox;
+        private System.Windows.Forms.TextBox INCPosJoint7textBox;
+        private System.Windows.Forms.TextBox IncCurrentJoint4textBox;
+        private System.Windows.Forms.TextBox IncPositionJoint5textBox;
+        private System.Windows.Forms.TextBox IncVelocityJoint4textBox;
+        private System.Windows.Forms.TextBox INCPosJoint6textBox;
+        private System.Windows.Forms.TextBox IncCurrentJoint3textBox;
+        private System.Windows.Forms.TextBox IncPositionJoint4textBox;
+        private System.Windows.Forms.TextBox IncVelocityJoint3textBox;
+        private System.Windows.Forms.TextBox INCPosJoint5textBox;
+        private System.Windows.Forms.TextBox IncCurrentJoint2textBox;
+        private System.Windows.Forms.TextBox IncPositionJoint3textBox;
+        private System.Windows.Forms.TextBox IncVelocityJoint2textBox;
+        private System.Windows.Forms.TextBox IncPosJoint4textBox;
+        private System.Windows.Forms.TextBox IncCurrentJoint1textBox;
+        private System.Windows.Forms.TextBox IncPositionJoint2textBox;
+        private System.Windows.Forms.TextBox IncVelocityJoint1textBox;
+        private System.Windows.Forms.TextBox IncPosJoint3textBox;
+        private System.Windows.Forms.TextBox IncPositionJoint1textBox;
+        private System.Windows.Forms.TextBox IncPosJoint2textBox;
+        private System.Windows.Forms.TextBox IncPosJoint1textBox;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Label label25;
@@ -4235,39 +4941,39 @@ namespace DebuggingToolGUI
         private System.Windows.Forms.Label label32;
         private System.Windows.Forms.Label label33;
         private System.Windows.Forms.Label label34;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TextBox textBox34;
-        private System.Windows.Forms.TextBox textBox26;
-        private System.Windows.Forms.TextBox textBox18;
-        private System.Windows.Forms.TextBox textBox33;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.TextBox textBox32;
-        private System.Windows.Forms.TextBox textBox25;
-        private System.Windows.Forms.TextBox textBox24;
-        private System.Windows.Forms.TextBox textBox17;
-        private System.Windows.Forms.TextBox textBox31;
-        private System.Windows.Forms.TextBox textBox16;
-        private System.Windows.Forms.TextBox textBox23;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox30;
-        private System.Windows.Forms.TextBox textBox15;
-        private System.Windows.Forms.TextBox textBox22;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox29;
-        private System.Windows.Forms.TextBox textBox14;
-        private System.Windows.Forms.TextBox textBox21;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox28;
-        private System.Windows.Forms.TextBox textBox13;
-        private System.Windows.Forms.TextBox textBox20;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox27;
-        private System.Windows.Forms.TextBox textBox12;
-        private System.Windows.Forms.TextBox textBox19;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.GroupBox AbsoluteEnocdergroupBox;
+        private System.Windows.Forms.TextBox AbCurrentJoint8textBox;
+        private System.Windows.Forms.TextBox AbVelocityJoint8textBox;
+        private System.Windows.Forms.TextBox AbPositionJoint8textBox;
+        private System.Windows.Forms.TextBox AbCurrentJoint7textBox;
+        private System.Windows.Forms.TextBox AbsPosJoint8textBox;
+        private System.Windows.Forms.TextBox AbCurrentJoint6textBox;
+        private System.Windows.Forms.TextBox AbVelocityJoint7textBox;
+        private System.Windows.Forms.TextBox AbVelocityJoint6textBox;
+        private System.Windows.Forms.TextBox AbPositionJoint7textBox;
+        private System.Windows.Forms.TextBox AbCurrentJoint5textBox;
+        private System.Windows.Forms.TextBox AbPositionJoint6textBox;
+        private System.Windows.Forms.TextBox AbVelocityJoint5textBox;
+        private System.Windows.Forms.TextBox AbsPosJoint7textBox;
+        private System.Windows.Forms.TextBox AbCurrentJoint4textBox;
+        private System.Windows.Forms.TextBox AbPositionJoint5textBox;
+        private System.Windows.Forms.TextBox AbVelocityJoint4textBox;
+        private System.Windows.Forms.TextBox AbsPosJoint6textBox;
+        private System.Windows.Forms.TextBox AbCurrentJoint3textBox;
+        private System.Windows.Forms.TextBox AbPositionJoint4textBox;
+        private System.Windows.Forms.TextBox AbVelocityJoint3textBox;
+        private System.Windows.Forms.TextBox AbsPosJoint5textBox;
+        private System.Windows.Forms.TextBox AbCurrentJoint2textBox;
+        private System.Windows.Forms.TextBox AbPositionJoint3textBox;
+        private System.Windows.Forms.TextBox AbVelocityJoint2textBox;
+        private System.Windows.Forms.TextBox AbsPosJoint4textBox;
+        private System.Windows.Forms.TextBox AbCurrentJoint1textBox;
+        private System.Windows.Forms.TextBox AbPositionJoint2textBox;
+        private System.Windows.Forms.TextBox AbVelocityJoint1textBox;
+        private System.Windows.Forms.TextBox AbsPosJoint3textBox;
+        private System.Windows.Forms.TextBox AbPositionJoint1textBox;
+        private System.Windows.Forms.TextBox AbsPosJoint2textBox;
+        private System.Windows.Forms.TextBox AbsPosJoint1textBox;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label17;
@@ -4280,38 +4986,38 @@ namespace DebuggingToolGUI
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button LoggingStartbutton;
+        private System.Windows.Forms.GroupBox LoggingSystemgroupBox;
+        private System.Windows.Forms.Button LoggingStopbutton;
         private System.Windows.Forms.Label label39;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.ComboBox CommunicationComboBox;
+        private System.Windows.Forms.GroupBox ParameterSetgroupBox;
         private System.Windows.Forms.GroupBox groupBox7;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.TextBox textBox67;
-        private System.Windows.Forms.TextBox textBox70;
-        private System.Windows.Forms.TextBox textBox72;
-        private System.Windows.Forms.TextBox textBox76;
-        private System.Windows.Forms.TextBox textBox80;
-        private System.Windows.Forms.TextBox textBox84;
-        private System.Windows.Forms.TextBox textBox88;
-        private System.Windows.Forms.TextBox textBox92;
-        private System.Windows.Forms.TextBox textBox99;
-        private System.Windows.Forms.TextBox textBox100;
-        private System.Windows.Forms.TextBox textBox101;
-        private System.Windows.Forms.TextBox textBox102;
-        private System.Windows.Forms.TextBox textBox103;
-        private System.Windows.Forms.TextBox textBox104;
-        private System.Windows.Forms.TextBox textBox105;
-        private System.Windows.Forms.TextBox textBox106;
-        private System.Windows.Forms.TextBox textBox107;
-        private System.Windows.Forms.TextBox textBox108;
-        private System.Windows.Forms.TextBox textBox109;
-        private System.Windows.Forms.TextBox textBox110;
-        private System.Windows.Forms.TextBox textBox111;
-        private System.Windows.Forms.TextBox textBox112;
-        private System.Windows.Forms.TextBox textBox113;
-        private System.Windows.Forms.TextBox textBox114;
+        private System.Windows.Forms.Button SetJointToqPIDGainbutton;
+        private System.Windows.Forms.TextBox jtDgainJoint8textBox;
+        private System.Windows.Forms.TextBox jtIgainJoint8textBox;
+        private System.Windows.Forms.TextBox jtPgainJoint8textBox;
+        private System.Windows.Forms.TextBox jtDgainJoint7textBox;
+        private System.Windows.Forms.TextBox jtDgainJoint6textBox;
+        private System.Windows.Forms.TextBox jtIgainJoint7textBox;
+        private System.Windows.Forms.TextBox jtIgainJoint6textBox;
+        private System.Windows.Forms.TextBox jtDgainJoint5textBox;
+        private System.Windows.Forms.TextBox jtPgainJoint7textBox;
+        private System.Windows.Forms.TextBox jtIgainJoint5textBox;
+        private System.Windows.Forms.TextBox jtDgainJoint4textBox;
+        private System.Windows.Forms.TextBox jtPgainJoint6textBox;
+        private System.Windows.Forms.TextBox jtIgainJoint4textBox;
+        private System.Windows.Forms.TextBox jtDgainJoint3textBox;
+        private System.Windows.Forms.TextBox jtPgainJoint5textBox;
+        private System.Windows.Forms.TextBox jtIgainJoint3textBox;
+        private System.Windows.Forms.TextBox jtDgainJoint2textBox;
+        private System.Windows.Forms.TextBox jtPgainJoint4textBox;
+        private System.Windows.Forms.TextBox jtIgainJoint2textBox;
+        private System.Windows.Forms.TextBox jtDgainJoint1textBox;
+        private System.Windows.Forms.TextBox jtPgainJoint3textBox;
+        private System.Windows.Forms.TextBox jtIgainJoint1textBox;
+        private System.Windows.Forms.TextBox jtPgainJoint2textBox;
+        private System.Windows.Forms.TextBox jtPgainJoint1textBox;
         private System.Windows.Forms.Label label48;
         private System.Windows.Forms.Label label52;
         private System.Windows.Forms.Label label53;
@@ -4324,31 +5030,31 @@ namespace DebuggingToolGUI
         private System.Windows.Forms.Label label60;
         private System.Windows.Forms.Label label61;
         private System.Windows.Forms.GroupBox groupBox6;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.TextBox textBox68;
-        private System.Windows.Forms.TextBox textBox69;
-        private System.Windows.Forms.TextBox textBox71;
-        private System.Windows.Forms.TextBox textBox73;
-        private System.Windows.Forms.TextBox textBox74;
-        private System.Windows.Forms.TextBox textBox75;
-        private System.Windows.Forms.TextBox textBox77;
-        private System.Windows.Forms.TextBox textBox78;
-        private System.Windows.Forms.TextBox textBox79;
-        private System.Windows.Forms.TextBox textBox81;
-        private System.Windows.Forms.TextBox textBox82;
-        private System.Windows.Forms.TextBox textBox83;
-        private System.Windows.Forms.TextBox textBox85;
-        private System.Windows.Forms.TextBox textBox86;
-        private System.Windows.Forms.TextBox textBox87;
-        private System.Windows.Forms.TextBox textBox89;
-        private System.Windows.Forms.TextBox textBox90;
-        private System.Windows.Forms.TextBox textBox91;
-        private System.Windows.Forms.TextBox textBox93;
-        private System.Windows.Forms.TextBox textBox94;
-        private System.Windows.Forms.TextBox textBox95;
-        private System.Windows.Forms.TextBox textBox96;
-        private System.Windows.Forms.TextBox textBox97;
-        private System.Windows.Forms.TextBox textBox98;
+        private System.Windows.Forms.Button SetJointPosPIDGainbutton;
+        private System.Windows.Forms.TextBox jpDgainJoint8textBox;
+        private System.Windows.Forms.TextBox jpIgainJoint8textBox;
+        private System.Windows.Forms.TextBox jpPgainJoint8textBox;
+        private System.Windows.Forms.TextBox jpDgainJoint7textBox;
+        private System.Windows.Forms.TextBox jpDgainJoint6textBox;
+        private System.Windows.Forms.TextBox jpIgainJoint7textBox;
+        private System.Windows.Forms.TextBox jpIgainJoint6textBox;
+        private System.Windows.Forms.TextBox jpDgainJoint5textBox;
+        private System.Windows.Forms.TextBox jpPgainJoint7textBox;
+        private System.Windows.Forms.TextBox jpIgainJoint5textBox;
+        private System.Windows.Forms.TextBox jpDgainJoint4textBox;
+        private System.Windows.Forms.TextBox jpPgainJoint6textBox;
+        private System.Windows.Forms.TextBox jpIgainJoint4textBox;
+        private System.Windows.Forms.TextBox jpDgainJoint3textBox;
+        private System.Windows.Forms.TextBox jpPgainJoint5textBox;
+        private System.Windows.Forms.TextBox jpIgainJoint3textBox;
+        private System.Windows.Forms.TextBox jpDgainJoint2textBox;
+        private System.Windows.Forms.TextBox jpPgainJoint4textBox;
+        private System.Windows.Forms.TextBox jpIgainJoint2textBox;
+        private System.Windows.Forms.TextBox jpDgainJoint1textBox;
+        private System.Windows.Forms.TextBox jpPgainJoint3textBox;
+        private System.Windows.Forms.TextBox jpIgainJoint1textBox;
+        private System.Windows.Forms.TextBox jpPgainJoint2textBox;
+        private System.Windows.Forms.TextBox jpPgainJoint1textBox;
         private System.Windows.Forms.Label label40;
         private System.Windows.Forms.Label label41;
         private System.Windows.Forms.Label label42;
@@ -4361,31 +5067,31 @@ namespace DebuggingToolGUI
         private System.Windows.Forms.Label label50;
         private System.Windows.Forms.Label label51;
         private System.Windows.Forms.GroupBox groupBox9;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.TextBox textBox139;
-        private System.Windows.Forms.TextBox textBox140;
-        private System.Windows.Forms.TextBox textBox141;
-        private System.Windows.Forms.TextBox textBox142;
-        private System.Windows.Forms.TextBox textBox143;
-        private System.Windows.Forms.TextBox textBox144;
-        private System.Windows.Forms.TextBox textBox145;
-        private System.Windows.Forms.TextBox textBox146;
-        private System.Windows.Forms.TextBox textBox147;
-        private System.Windows.Forms.TextBox textBox148;
-        private System.Windows.Forms.TextBox textBox149;
-        private System.Windows.Forms.TextBox textBox150;
-        private System.Windows.Forms.TextBox textBox151;
-        private System.Windows.Forms.TextBox textBox152;
-        private System.Windows.Forms.TextBox textBox153;
-        private System.Windows.Forms.TextBox textBox154;
-        private System.Windows.Forms.TextBox textBox155;
-        private System.Windows.Forms.TextBox textBox156;
-        private System.Windows.Forms.TextBox textBox157;
-        private System.Windows.Forms.TextBox textBox158;
-        private System.Windows.Forms.TextBox textBox159;
-        private System.Windows.Forms.TextBox textBox160;
-        private System.Windows.Forms.TextBox textBox161;
-        private System.Windows.Forms.TextBox textBox162;
+        private System.Windows.Forms.Button GCnFricParamSetbutton;
+        private System.Windows.Forms.TextBox FricGainJoint8textBox;
+        private System.Windows.Forms.TextBox CurGainJoint8textBox;
+        private System.Windows.Forms.TextBox GCGainJoint8textBox;
+        private System.Windows.Forms.TextBox FricGainJoint7textBox;
+        private System.Windows.Forms.TextBox FricGainJoint6textBox;
+        private System.Windows.Forms.TextBox CurGainJoint7textBox;
+        private System.Windows.Forms.TextBox CurGainJoint6textBox;
+        private System.Windows.Forms.TextBox FricGainJoint5textBox;
+        private System.Windows.Forms.TextBox GCGainJoint7textBox;
+        private System.Windows.Forms.TextBox CurGainJoint5textBox;
+        private System.Windows.Forms.TextBox FricGainJoint4textBox;
+        private System.Windows.Forms.TextBox GCGainJoint6textBox;
+        private System.Windows.Forms.TextBox CurGainJoint4textBox;
+        private System.Windows.Forms.TextBox FricGainJoint3textBox;
+        private System.Windows.Forms.TextBox GCGainJoint5textBox;
+        private System.Windows.Forms.TextBox CurGainJoint3textBox;
+        private System.Windows.Forms.TextBox FricGainJoint2textBox;
+        private System.Windows.Forms.TextBox GCGainJoint4textBox;
+        private System.Windows.Forms.TextBox CurGainJoint2textBox;
+        private System.Windows.Forms.TextBox FricGainJoint1textBox;
+        private System.Windows.Forms.TextBox GCGainJoint3textBox;
+        private System.Windows.Forms.TextBox CurGainJoint1textBox;
+        private System.Windows.Forms.TextBox GCGainJoint2textBox;
+        private System.Windows.Forms.TextBox GCGainJoint1textBox;
         private System.Windows.Forms.Label label73;
         private System.Windows.Forms.Label label74;
         private System.Windows.Forms.Label label75;
@@ -4398,31 +5104,31 @@ namespace DebuggingToolGUI
         private System.Windows.Forms.Label label82;
         private System.Windows.Forms.Label label83;
         private System.Windows.Forms.GroupBox groupBox8;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.TextBox textBox115;
-        private System.Windows.Forms.TextBox textBox116;
-        private System.Windows.Forms.TextBox textBox117;
-        private System.Windows.Forms.TextBox textBox118;
-        private System.Windows.Forms.TextBox textBox119;
-        private System.Windows.Forms.TextBox textBox120;
-        private System.Windows.Forms.TextBox textBox121;
-        private System.Windows.Forms.TextBox textBox122;
-        private System.Windows.Forms.TextBox textBox123;
-        private System.Windows.Forms.TextBox textBox124;
-        private System.Windows.Forms.TextBox textBox125;
-        private System.Windows.Forms.TextBox textBox126;
-        private System.Windows.Forms.TextBox textBox127;
-        private System.Windows.Forms.TextBox textBox128;
-        private System.Windows.Forms.TextBox textBox129;
-        private System.Windows.Forms.TextBox textBox130;
-        private System.Windows.Forms.TextBox textBox131;
-        private System.Windows.Forms.TextBox textBox132;
-        private System.Windows.Forms.TextBox textBox133;
-        private System.Windows.Forms.TextBox textBox134;
-        private System.Windows.Forms.TextBox textBox135;
-        private System.Windows.Forms.TextBox textBox136;
-        private System.Windows.Forms.TextBox textBox137;
-        private System.Windows.Forms.TextBox textBox138;
+        private System.Windows.Forms.Button JointConstantParamSetbutton;
+        private System.Windows.Forms.TextBox jcSpringJoint8textBox;
+        private System.Windows.Forms.TextBox jcTorqueConstJoint8textBox;
+        private System.Windows.Forms.TextBox jcEfficiencyJoint8textBox;
+        private System.Windows.Forms.TextBox jcSpringJoint7textBox;
+        private System.Windows.Forms.TextBox jcSpringJoint6textBox;
+        private System.Windows.Forms.TextBox jcTorqueConstJoint7textBox;
+        private System.Windows.Forms.TextBox jcTorqueConstJoint6textBox;
+        private System.Windows.Forms.TextBox jcSpringJoint5textBox;
+        private System.Windows.Forms.TextBox jcEfficiencyJoint7textBox;
+        private System.Windows.Forms.TextBox jcTorqueConstJoint5textBox;
+        private System.Windows.Forms.TextBox jcSpringJoint4textBox;
+        private System.Windows.Forms.TextBox jcEfficiencyJoint6textBox;
+        private System.Windows.Forms.TextBox jcTorqueConstJoint4textBox;
+        private System.Windows.Forms.TextBox jcSpringJoint3textBox;
+        private System.Windows.Forms.TextBox jcEfficiencyJoint5textBox;
+        private System.Windows.Forms.TextBox jcTorqueConstJoint3textBox;
+        private System.Windows.Forms.TextBox jcSpringJoint2textBox;
+        private System.Windows.Forms.TextBox jcEfficiencyJoint4textBox;
+        private System.Windows.Forms.TextBox jcTorqueConstJoint2textBox;
+        private System.Windows.Forms.TextBox jcSpringJoint1textBox;
+        private System.Windows.Forms.TextBox jcEfficiencyJoint3textBox;
+        private System.Windows.Forms.TextBox jcTorqueConstJoint1textBox;
+        private System.Windows.Forms.TextBox jcEfficiencyJoint2textBox;
+        private System.Windows.Forms.TextBox jcEfficiencyJoint1textBox;
         private System.Windows.Forms.Label label62;
         private System.Windows.Forms.Label label63;
         private System.Windows.Forms.Label label64;
@@ -4437,35 +5143,35 @@ namespace DebuggingToolGUI
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.TabPage tabPage4;
-        private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox10;
-        private System.Windows.Forms.PictureBox pictureBox9;
-        private System.Windows.Forms.PictureBox pictureBox8;
-        private System.Windows.Forms.PictureBox pictureBox7;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox6;
-        private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.PictureBox pbConnect;
+        private System.Windows.Forms.PictureBox Joint4pictureBox;
+        private System.Windows.Forms.PictureBox Joint3pictureBox;
+        private System.Windows.Forms.PictureBox Joint2pictureBox;
+        private System.Windows.Forms.PictureBox Joint8pictureBox;
+        private System.Windows.Forms.PictureBox Joint7pictureBox;
+        private System.Windows.Forms.PictureBox Joint6pictureBox;
+        private System.Windows.Forms.PictureBox Joint5pictureBox;
+        private System.Windows.Forms.PictureBox Joint1pictureBox;
+        private System.Windows.Forms.PictureBox MainPowerpictureBox;
+        private System.Windows.Forms.PictureBox AuxPowerpictureBox;
+        private System.Windows.Forms.PictureBox ConnectpictureBox;
         private System.Windows.Forms.GroupBox groupBox10;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.TextBox textBox164;
-        private System.Windows.Forms.TextBox textBox165;
-        private System.Windows.Forms.TextBox textBox168;
-        private System.Windows.Forms.TextBox textBox169;
-        private System.Windows.Forms.TextBox textBox171;
-        private System.Windows.Forms.TextBox textBox172;
-        private System.Windows.Forms.TextBox textBox174;
-        private System.Windows.Forms.TextBox textBox175;
-        private System.Windows.Forms.TextBox textBox177;
-        private System.Windows.Forms.TextBox textBox178;
-        private System.Windows.Forms.TextBox textBox180;
-        private System.Windows.Forms.TextBox textBox181;
-        private System.Windows.Forms.TextBox textBox183;
-        private System.Windows.Forms.TextBox textBox184;
-        private System.Windows.Forms.TextBox textBox185;
-        private System.Windows.Forms.TextBox textBox186;
+        private System.Windows.Forms.Button JointTrajetorySetbutton;
+        private System.Windows.Forms.TextBox TrajAccJoint8textBox;
+        private System.Windows.Forms.TextBox TrajTimeJoint8textBox;
+        private System.Windows.Forms.TextBox TrajAccJoint7textBox;
+        private System.Windows.Forms.TextBox TrajAccJoint6textBox;
+        private System.Windows.Forms.TextBox TrajTimeJoint7textBox;
+        private System.Windows.Forms.TextBox TrajAccJoint5textBox;
+        private System.Windows.Forms.TextBox TrajTimeJoint6textBox;
+        private System.Windows.Forms.TextBox TrajAccJoint4textBox;
+        private System.Windows.Forms.TextBox TrajTimeJoint5textBox;
+        private System.Windows.Forms.TextBox TrajAccJoint3textBox;
+        private System.Windows.Forms.TextBox TrajTimeJoint4textBox;
+        private System.Windows.Forms.TextBox TrajAccJoint2textBox;
+        private System.Windows.Forms.TextBox TrajTimeJoint3textBox;
+        private System.Windows.Forms.TextBox TrajAccJoint1textBox;
+        private System.Windows.Forms.TextBox TrajTimeJoint2textBox;
+        private System.Windows.Forms.TextBox TrajTimeJoint1textBox;
         private System.Windows.Forms.Label label88;
         private System.Windows.Forms.Label label89;
         private System.Windows.Forms.Label label90;
@@ -4477,19 +5183,19 @@ namespace DebuggingToolGUI
         private System.Windows.Forms.Label label97;
         private System.Windows.Forms.Label label98;
         private System.Windows.Forms.GroupBox groupBox12;
-        private System.Windows.Forms.Button button11;
-        private System.Windows.Forms.TextBox textBox163;
-        private System.Windows.Forms.TextBox textBox166;
-        private System.Windows.Forms.TextBox textBox167;
-        private System.Windows.Forms.TextBox textBox173;
-        private System.Windows.Forms.TextBox textBox195;
-        private System.Windows.Forms.TextBox textBox196;
-        private System.Windows.Forms.TextBox textBox197;
-        private System.Windows.Forms.TextBox textBox198;
-        private System.Windows.Forms.TextBox textBox199;
-        private System.Windows.Forms.TextBox textBox200;
-        private System.Windows.Forms.TextBox textBox201;
-        private System.Windows.Forms.TextBox textBox202;
+        private System.Windows.Forms.Button CartesianTrajSetbutton;
+        private System.Windows.Forms.TextBox TrajAccCartesianYawtextBox;
+        private System.Windows.Forms.TextBox TrajAccCartesianPitchtextBox;
+        private System.Windows.Forms.TextBox TrajTimeCartesianYawtextBox;
+        private System.Windows.Forms.TextBox TrajAccCartesianRolltextBox;
+        private System.Windows.Forms.TextBox TrajTimeCartesianPitchtextBox;
+        private System.Windows.Forms.TextBox TrajAccCartesianZtextBox;
+        private System.Windows.Forms.TextBox TrajTimeCartesianRolltextBox;
+        private System.Windows.Forms.TextBox TrajAccCartesianYtextBox;
+        private System.Windows.Forms.TextBox TrajTimeCartesianZtextBox;
+        private System.Windows.Forms.TextBox TrajAccCartesianXtextBox;
+        private System.Windows.Forms.TextBox TrajTimeCartesianYtextBox;
+        private System.Windows.Forms.TextBox TrajTimeCartesianXtextBox;
         private System.Windows.Forms.Label label96;
         private System.Windows.Forms.Label label99;
         private System.Windows.Forms.Label label108;
@@ -4499,25 +5205,25 @@ namespace DebuggingToolGUI
         private System.Windows.Forms.Label label112;
         private System.Windows.Forms.Label label113;
         private System.Windows.Forms.GroupBox groupBox11;
-        private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.TextBox textBox208;
-        private System.Windows.Forms.TextBox textBox170;
-        private System.Windows.Forms.TextBox textBox207;
-        private System.Windows.Forms.TextBox textBox176;
-        private System.Windows.Forms.TextBox textBox206;
-        private System.Windows.Forms.TextBox textBox179;
-        private System.Windows.Forms.TextBox textBox182;
-        private System.Windows.Forms.TextBox textBox205;
-        private System.Windows.Forms.TextBox textBox187;
-        private System.Windows.Forms.TextBox textBox188;
-        private System.Windows.Forms.TextBox textBox204;
-        private System.Windows.Forms.TextBox textBox189;
-        private System.Windows.Forms.TextBox textBox190;
-        private System.Windows.Forms.TextBox textBox203;
-        private System.Windows.Forms.TextBox textBox191;
-        private System.Windows.Forms.TextBox textBox192;
-        private System.Windows.Forms.TextBox textBox193;
-        private System.Windows.Forms.TextBox textBox194;
+        private System.Windows.Forms.Button CartesianPIDSetbutton;
+        private System.Windows.Forms.TextBox cpDgainCartesianYawtextBox;
+        private System.Windows.Forms.TextBox cpIgainCartesianYawtextBox;
+        private System.Windows.Forms.TextBox cpDgainCartesianPitchtextBox;
+        private System.Windows.Forms.TextBox cpIgainCartesianPitchtextBox;
+        private System.Windows.Forms.TextBox cpDgainCartesianRolltextBox;
+        private System.Windows.Forms.TextBox cpPgainCartesianYawtextBox;
+        private System.Windows.Forms.TextBox cpIgainCartesianRolltextBox;
+        private System.Windows.Forms.TextBox cpDgainCartesianZtextBox;
+        private System.Windows.Forms.TextBox cpPgainCartesianPitchtextBox;
+        private System.Windows.Forms.TextBox cpIgainCartesianZtextBox;
+        private System.Windows.Forms.TextBox cpDgainCartesianYtextBox;
+        private System.Windows.Forms.TextBox cpPgainCartesianRolltextBox;
+        private System.Windows.Forms.TextBox cpIgainCartesianYtextBox;
+        private System.Windows.Forms.TextBox cpDgainCartesianXtextBox;
+        private System.Windows.Forms.TextBox cpPgainCartesianZtextBox;
+        private System.Windows.Forms.TextBox cpIgainCartesianXtextBox;
+        private System.Windows.Forms.TextBox cpPgainCartesianYtextBox;
+        private System.Windows.Forms.TextBox cpPgainCartesianXtextBox;
         private System.Windows.Forms.Label label100;
         private System.Windows.Forms.Label label101;
         private System.Windows.Forms.Label label102;
@@ -4527,14 +5233,73 @@ namespace DebuggingToolGUI
         private System.Windows.Forms.Label label105;
         private System.Windows.Forms.Label label106;
         private System.Windows.Forms.Label label107;
-        private System.Windows.Forms.PictureBox pictureBox13;
-        private System.Windows.Forms.PictureBox pictureBox12;
-        private System.Windows.Forms.PictureBox pictureBox11;
+        private System.Windows.Forms.PictureBox TorqueModepictureBox;
+        private System.Windows.Forms.PictureBox PositionModepictureBox;
+        private System.Windows.Forms.PictureBox GCpictureBox;
         private System.Windows.Forms.Label label86;
         private System.Windows.Forms.Label label85;
         private System.Windows.Forms.Label label84;
-        private System.Windows.Forms.PictureBox pictureBox14;
+        private System.Windows.Forms.PictureBox LoggingpictureBox;
         private System.Windows.Forms.Label label87;
+        private System.Windows.Forms.PictureBox ParametersReadpictureBox;
+        private System.Windows.Forms.Button ParametersSavebutton;
+        private System.Windows.Forms.Label label115;
+        private System.Windows.Forms.Button ParametersReadbutton;
+        private System.Windows.Forms.Button CartesianModebutton;
+        private System.Windows.Forms.Button JointModebutton;
+        private System.Windows.Forms.Button GCbutton;
+        private System.Windows.Forms.GroupBox JointPositionSetgroupBox;
+        private System.Windows.Forms.Button JointPositionSetbutton;
+        private System.Windows.Forms.TextBox PositionJoint8textBox;
+        private System.Windows.Forms.TextBox PositionJoint7textBox;
+        private System.Windows.Forms.TextBox PositionJoint6textBox;
+        private System.Windows.Forms.TextBox PositionJoint5textBox;
+        private System.Windows.Forms.TextBox PositionJoint4textBox;
+        private System.Windows.Forms.TextBox PositionJoint3textBox;
+        private System.Windows.Forms.TextBox PositionJoint2textBox;
+        private System.Windows.Forms.TextBox PositionJoint1textBox;
+        private System.Windows.Forms.Label label116;
+        private System.Windows.Forms.Label label117;
+        private System.Windows.Forms.Label label118;
+        private System.Windows.Forms.Label label119;
+        private System.Windows.Forms.Label label120;
+        private System.Windows.Forms.Label label121;
+        private System.Windows.Forms.Label label122;
+        private System.Windows.Forms.Label label123;
+        private System.Windows.Forms.Label label125;
+        private System.Windows.Forms.GroupBox CartesianPositionSetgroupBox;
+        private System.Windows.Forms.PictureBox CartesianReachedpictureBox;
+        private System.Windows.Forms.PictureBox CartesianMovingpictureBox;
+        private System.Windows.Forms.Button CartesianPositionSetbutton;
+        private System.Windows.Forms.Label label136;
+        private System.Windows.Forms.Label label138;
+        private System.Windows.Forms.Label label137;
+        private System.Windows.Forms.Label label130;
+        private System.Windows.Forms.Label label135;
+        private System.Windows.Forms.Label label129;
+        private System.Windows.Forms.Label label134;
+        private System.Windows.Forms.Label label124;
+        private System.Windows.Forms.Label label133;
+        private System.Windows.Forms.Label label128;
+        private System.Windows.Forms.Label label132;
+        private System.Windows.Forms.Label label126;
+        private System.Windows.Forms.Label label131;
+        private System.Windows.Forms.Label label127;
+        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.PictureBox JointReachedpictureBox;
+        private System.Windows.Forms.PictureBox JointMovingpictureBox;
+        private System.Windows.Forms.Label label139;
+        private System.Windows.Forms.Label label140;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.PictureBox ConnectCompletepictureBox;
+        private System.Windows.Forms.Label ConnectComplete;
+        private System.Windows.Forms.PictureBox ParametersSavepictureBox;
+        private System.Windows.Forms.Label label141;
     }
 }
 
