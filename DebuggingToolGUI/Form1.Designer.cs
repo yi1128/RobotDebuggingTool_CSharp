@@ -963,6 +963,7 @@ namespace DebuggingToolGUI
             this.jpDgainJoint8textBox.Name = "jpDgainJoint8textBox";
             this.jpDgainJoint8textBox.Size = new System.Drawing.Size(104, 28);
             this.jpDgainJoint8textBox.TabIndex = 6;
+            this.jpDgainJoint8textBox.Text = "0";
             // 
             // jpIgainJoint8textBox
             // 
@@ -971,6 +972,7 @@ namespace DebuggingToolGUI
             this.jpIgainJoint8textBox.Name = "jpIgainJoint8textBox";
             this.jpIgainJoint8textBox.Size = new System.Drawing.Size(104, 28);
             this.jpIgainJoint8textBox.TabIndex = 6;
+            this.jpIgainJoint8textBox.Text = "0";
             // 
             // jpPgainJoint8textBox
             // 
@@ -979,6 +981,7 @@ namespace DebuggingToolGUI
             this.jpPgainJoint8textBox.Name = "jpPgainJoint8textBox";
             this.jpPgainJoint8textBox.Size = new System.Drawing.Size(104, 28);
             this.jpPgainJoint8textBox.TabIndex = 6;
+            this.jpPgainJoint8textBox.Text = "0";
             // 
             // jpDgainJoint7textBox
             // 
@@ -987,6 +990,7 @@ namespace DebuggingToolGUI
             this.jpDgainJoint7textBox.Name = "jpDgainJoint7textBox";
             this.jpDgainJoint7textBox.Size = new System.Drawing.Size(104, 28);
             this.jpDgainJoint7textBox.TabIndex = 6;
+            this.jpDgainJoint7textBox.Text = "0";
             // 
             // jpDgainJoint6textBox
             // 
@@ -995,6 +999,7 @@ namespace DebuggingToolGUI
             this.jpDgainJoint6textBox.Name = "jpDgainJoint6textBox";
             this.jpDgainJoint6textBox.Size = new System.Drawing.Size(104, 28);
             this.jpDgainJoint6textBox.TabIndex = 6;
+            this.jpDgainJoint6textBox.Text = "0";
             // 
             // jpIgainJoint7textBox
             // 
@@ -1003,6 +1008,7 @@ namespace DebuggingToolGUI
             this.jpIgainJoint7textBox.Name = "jpIgainJoint7textBox";
             this.jpIgainJoint7textBox.Size = new System.Drawing.Size(104, 28);
             this.jpIgainJoint7textBox.TabIndex = 6;
+            this.jpIgainJoint7textBox.Text = "0";
             // 
             // jpIgainJoint6textBox
             // 
@@ -1011,6 +1017,7 @@ namespace DebuggingToolGUI
             this.jpIgainJoint6textBox.Name = "jpIgainJoint6textBox";
             this.jpIgainJoint6textBox.Size = new System.Drawing.Size(104, 28);
             this.jpIgainJoint6textBox.TabIndex = 6;
+            this.jpIgainJoint6textBox.Text = "0";
             // 
             // jpDgainJoint5textBox
             // 
@@ -1019,6 +1026,7 @@ namespace DebuggingToolGUI
             this.jpDgainJoint5textBox.Name = "jpDgainJoint5textBox";
             this.jpDgainJoint5textBox.Size = new System.Drawing.Size(104, 28);
             this.jpDgainJoint5textBox.TabIndex = 6;
+            this.jpDgainJoint5textBox.Text = "0";
             // 
             // jpPgainJoint7textBox
             // 
@@ -1027,6 +1035,7 @@ namespace DebuggingToolGUI
             this.jpPgainJoint7textBox.Name = "jpPgainJoint7textBox";
             this.jpPgainJoint7textBox.Size = new System.Drawing.Size(104, 28);
             this.jpPgainJoint7textBox.TabIndex = 6;
+            this.jpPgainJoint7textBox.Text = "0";
             // 
             // jpIgainJoint5textBox
             // 
@@ -1035,6 +1044,7 @@ namespace DebuggingToolGUI
             this.jpIgainJoint5textBox.Name = "jpIgainJoint5textBox";
             this.jpIgainJoint5textBox.Size = new System.Drawing.Size(104, 28);
             this.jpIgainJoint5textBox.TabIndex = 6;
+            this.jpIgainJoint5textBox.Text = "0";
             // 
             // jpDgainJoint4textBox
             // 
@@ -1043,6 +1053,7 @@ namespace DebuggingToolGUI
             this.jpDgainJoint4textBox.Name = "jpDgainJoint4textBox";
             this.jpDgainJoint4textBox.Size = new System.Drawing.Size(104, 28);
             this.jpDgainJoint4textBox.TabIndex = 6;
+            this.jpDgainJoint4textBox.Text = "0";
             // 
             // jpPgainJoint6textBox
             // 
@@ -1051,6 +1062,7 @@ namespace DebuggingToolGUI
             this.jpPgainJoint6textBox.Name = "jpPgainJoint6textBox";
             this.jpPgainJoint6textBox.Size = new System.Drawing.Size(104, 28);
             this.jpPgainJoint6textBox.TabIndex = 6;
+            this.jpPgainJoint6textBox.Text = "0";
             // 
             // jpIgainJoint4textBox
             // 
@@ -1059,6 +1071,7 @@ namespace DebuggingToolGUI
             this.jpIgainJoint4textBox.Name = "jpIgainJoint4textBox";
             this.jpIgainJoint4textBox.Size = new System.Drawing.Size(104, 28);
             this.jpIgainJoint4textBox.TabIndex = 6;
+            this.jpIgainJoint4textBox.Text = "0";
             // 
             // jpDgainJoint3textBox
             // 
@@ -1067,6 +1080,7 @@ namespace DebuggingToolGUI
             this.jpDgainJoint3textBox.Name = "jpDgainJoint3textBox";
             this.jpDgainJoint3textBox.Size = new System.Drawing.Size(104, 28);
             this.jpDgainJoint3textBox.TabIndex = 6;
+            this.jpDgainJoint3textBox.Text = "0";
             // 
             // jpPgainJoint5textBox
             // 
@@ -1075,6 +1089,7 @@ namespace DebuggingToolGUI
             this.jpPgainJoint5textBox.Name = "jpPgainJoint5textBox";
             this.jpPgainJoint5textBox.Size = new System.Drawing.Size(104, 28);
             this.jpPgainJoint5textBox.TabIndex = 6;
+            this.jpPgainJoint5textBox.Text = "0";
             // 
             // jpIgainJoint3textBox
             // 
@@ -1083,6 +1098,7 @@ namespace DebuggingToolGUI
             this.jpIgainJoint3textBox.Name = "jpIgainJoint3textBox";
             this.jpIgainJoint3textBox.Size = new System.Drawing.Size(104, 28);
             this.jpIgainJoint3textBox.TabIndex = 6;
+            this.jpIgainJoint3textBox.Text = "0";
             // 
             // jpDgainJoint2textBox
             // 
@@ -1091,6 +1107,7 @@ namespace DebuggingToolGUI
             this.jpDgainJoint2textBox.Name = "jpDgainJoint2textBox";
             this.jpDgainJoint2textBox.Size = new System.Drawing.Size(104, 28);
             this.jpDgainJoint2textBox.TabIndex = 6;
+            this.jpDgainJoint2textBox.Text = "0";
             // 
             // jpPgainJoint4textBox
             // 
@@ -1099,6 +1116,7 @@ namespace DebuggingToolGUI
             this.jpPgainJoint4textBox.Name = "jpPgainJoint4textBox";
             this.jpPgainJoint4textBox.Size = new System.Drawing.Size(104, 28);
             this.jpPgainJoint4textBox.TabIndex = 6;
+            this.jpPgainJoint4textBox.Text = "0";
             // 
             // jpIgainJoint2textBox
             // 
@@ -1107,6 +1125,7 @@ namespace DebuggingToolGUI
             this.jpIgainJoint2textBox.Name = "jpIgainJoint2textBox";
             this.jpIgainJoint2textBox.Size = new System.Drawing.Size(104, 28);
             this.jpIgainJoint2textBox.TabIndex = 6;
+            this.jpIgainJoint2textBox.Text = "0";
             // 
             // jpDgainJoint1textBox
             // 
@@ -1115,6 +1134,7 @@ namespace DebuggingToolGUI
             this.jpDgainJoint1textBox.Name = "jpDgainJoint1textBox";
             this.jpDgainJoint1textBox.Size = new System.Drawing.Size(104, 28);
             this.jpDgainJoint1textBox.TabIndex = 6;
+            this.jpDgainJoint1textBox.Text = "0";
             // 
             // jpPgainJoint3textBox
             // 
@@ -1123,6 +1143,7 @@ namespace DebuggingToolGUI
             this.jpPgainJoint3textBox.Name = "jpPgainJoint3textBox";
             this.jpPgainJoint3textBox.Size = new System.Drawing.Size(104, 28);
             this.jpPgainJoint3textBox.TabIndex = 6;
+            this.jpPgainJoint3textBox.Text = "0";
             // 
             // jpIgainJoint1textBox
             // 
@@ -1131,6 +1152,7 @@ namespace DebuggingToolGUI
             this.jpIgainJoint1textBox.Name = "jpIgainJoint1textBox";
             this.jpIgainJoint1textBox.Size = new System.Drawing.Size(104, 28);
             this.jpIgainJoint1textBox.TabIndex = 6;
+            this.jpIgainJoint1textBox.Text = "0";
             // 
             // jpPgainJoint2textBox
             // 
@@ -1139,6 +1161,7 @@ namespace DebuggingToolGUI
             this.jpPgainJoint2textBox.Name = "jpPgainJoint2textBox";
             this.jpPgainJoint2textBox.Size = new System.Drawing.Size(104, 28);
             this.jpPgainJoint2textBox.TabIndex = 6;
+            this.jpPgainJoint2textBox.Text = "0";
             // 
             // jpPgainJoint1textBox
             // 
@@ -1147,6 +1170,7 @@ namespace DebuggingToolGUI
             this.jpPgainJoint1textBox.Name = "jpPgainJoint1textBox";
             this.jpPgainJoint1textBox.Size = new System.Drawing.Size(104, 28);
             this.jpPgainJoint1textBox.TabIndex = 6;
+            this.jpPgainJoint1textBox.Text = "0";
             // 
             // label40
             // 
@@ -3322,7 +3346,7 @@ namespace DebuggingToolGUI
             // 
             // LoginGroupBox
             // 
-            this.LoginGroupBox.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.LoginGroupBox.BackColor = System.Drawing.SystemColors.Control;
             this.LoginGroupBox.Controls.Add(this.label39);
             this.LoginGroupBox.Controls.Add(this.CommunicationComboBox);
             this.LoginGroupBox.Controls.Add(this.Connectbutton);
@@ -3723,6 +3747,7 @@ namespace DebuggingToolGUI
             this.CartesianModebutton.TabIndex = 3;
             this.CartesianModebutton.Text = "Cartesian Mode";
             this.CartesianModebutton.UseVisualStyleBackColor = true;
+            this.CartesianModebutton.Click += new System.EventHandler(this.CartesianModebutton_Click);
             // 
             // JointModebutton
             // 
@@ -3732,6 +3757,7 @@ namespace DebuggingToolGUI
             this.JointModebutton.TabIndex = 3;
             this.JointModebutton.Text = "Joint Mode";
             this.JointModebutton.UseVisualStyleBackColor = true;
+            this.JointModebutton.Click += new System.EventHandler(this.JointModebutton_Click);
             // 
             // GCbutton
             // 
@@ -4653,6 +4679,7 @@ namespace DebuggingToolGUI
             this.LoggingStartbutton.TabIndex = 7;
             this.LoggingStartbutton.Text = "Logging Start";
             this.LoggingStartbutton.UseVisualStyleBackColor = true;
+            this.LoggingStartbutton.Click += new System.EventHandler(this.LoggingStartbutton_Click);
             // 
             // LoggingSystemgroupBox
             // 
@@ -4694,6 +4721,7 @@ namespace DebuggingToolGUI
             this.LoggingStopbutton.TabIndex = 7;
             this.LoggingStopbutton.Text = "Logging Stop";
             this.LoggingStopbutton.UseVisualStyleBackColor = true;
+            this.LoggingStopbutton.Click += new System.EventHandler(this.LoggingStopbutton_Click);
             // 
             // ParameterSetgroupBox
             // 
@@ -4735,6 +4763,7 @@ namespace DebuggingToolGUI
             this.ParametersSavebutton.TabIndex = 8;
             this.ParametersSavebutton.Text = "Parameters Save";
             this.ParametersSavebutton.UseVisualStyleBackColor = true;
+            this.ParametersSavebutton.Click += new System.EventHandler(this.ParametersSavebutton_Click);
             // 
             // label141
             // 
@@ -4764,6 +4793,7 @@ namespace DebuggingToolGUI
             this.ParametersReadbutton.TabIndex = 8;
             this.ParametersReadbutton.Text = "Parameters Read";
             this.ParametersReadbutton.UseVisualStyleBackColor = true;
+            this.ParametersReadbutton.Click += new System.EventHandler(this.ParametersReadbutton_Click);
             // 
             // ConnectCompletepictureBox
             // 
@@ -4800,6 +4830,7 @@ namespace DebuggingToolGUI
             this.Name = "DebuggingToolSW";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Debugging Tool";
+            this.Load += new System.EventHandler(this.DebuggingToolSW_Load);
             this.MainTapControl.ResumeLayout(false);
             this.Default.ResumeLayout(false);
             this.groupBox7.ResumeLayout(false);

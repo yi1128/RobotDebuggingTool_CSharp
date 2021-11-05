@@ -7,11 +7,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
+using System.Runtime.InteropServices;
+using System.Net;
+using System.Net.Sockets;
+using System.Threading;
+using System.Threading.Tasks;
+using System.Diagnostics;
+using log4net;
+using log4net.Config;
 
 namespace DebuggingToolGUI
 {
+
     public partial class DebuggingToolSW : Form
     {
+
         /* Status Check Variable */
         public bool StatusMainTimerStart = false;
         public bool StatusCommunicationConnect = false;
@@ -28,6 +39,9 @@ namespace DebuggingToolGUI
         public bool StatusJointTrajectoryParamSet = false;
         public bool StatusCartesianPositionPIDgainSet = false;
         public bool StatusCartesianTrajectoryParamSet = false;
+        public bool StatusLogging = false;
+        public bool StatusThreadStop = false;
+        public bool StatusCommunicationStart = false;
         /* End Status Check Variable */
 
 
@@ -36,10 +50,196 @@ namespace DebuggingToolGUI
         Image StatusOffImage = Image.FromFile(Application.StartupPath + @"\\Status_Off.bmp");
         /* End Initailize Image Box */
 
+        [StructLayout(LayoutKind.Sequential, Pack = 1), Serializable]
+        public struct AXIS_DATA
+        {
+            [MarshalAs(UnmanagedType.ByValArray, SizeConst = 8)]
+            public float[] actual_motor_position;
+            [MarshalAs(UnmanagedType.ByValArray, SizeConst = 8)]
+            public float[] actual_link_position;
+            [MarshalAs(UnmanagedType.ByValArray, SizeConst = 8)]
+            public float[] actual_motor_velocity;
+            [MarshalAs(UnmanagedType.ByValArray, SizeConst = 8)]
+            public float[] actual_link_velocity;
+            [MarshalAs(UnmanagedType.ByValArray, SizeConst = 8)]
+            public float[] actual_current;
+            [MarshalAs(UnmanagedType.ByValArray, SizeConst = 8)]
+            public float[] target_position;
+            [MarshalAs(UnmanagedType.ByValArray, SizeConst = 8)]
+            public float[] target_velocity;
+            [MarshalAs(UnmanagedType.ByValArray, SizeConst = 8)]
+            public float[] target_current;
+            [MarshalAs(UnmanagedType.ByValArray, SizeConst = 8)]
+            public Int32[] mode_of_operation;
+            [MarshalAs(UnmanagedType.ByValArray, SizeConst = 8)]
+            public Int32[] status_word;
+            [MarshalAs(UnmanagedType.ByValArray, SizeConst = 8)]
+            public float[] cartesian_target_pose;
+            [MarshalAs(UnmanagedType.ByValArray, SizeConst = 8)]
+            public float[] cartesian_current_pose;
+        };
 
+
+        [StructLayout(LayoutKind.Sequential, Pack = 1), Serializable]
+        public struct ADSServer_SystemData
+        {
+            [MarshalAs(UnmanagedType.ByValArray, SizeConst = 500)]
+            public Int32[] m_Cnt;
+            public Int32 m_log_cnt;
+            public Int32 m_cycle_sec;
+            public Int32 m_cycle_min;
+            public Int32 m_cycle_hour;
+            public Int32 Gravity_Mode;
+            public Int32 TorquePosition_Mode;
+            public Int32 target_reached;
+            public Int32 m_dSystemMode;// 0: Gravity mode, 1:Joint Mode, 2:Cartesian Mode
+
+            // Position Mode
+            [MarshalAs(UnmanagedType.ByValArray, SizeConst = 3)]
+            public float[] accel_time;
+            [MarshalAs(UnmanagedType.ByValArray, SizeConst = 3)]
+            public float[] target_reach_time;
+
+            // Test Buffer Data
+            [MarshalAs(UnmanagedType.ByValArray, SizeConst = 3)]
+            public float[] TestBuffer1;
+            [MarshalAs(UnmanagedType.ByValArray, SizeConst = 3)]
+            public float[] TestBuffer2;
+            [MarshalAs(UnmanagedType.ByValArray, SizeConst = 3)]
+            public float[] TestBuffer3;
+
+            // Module Data
+            [MarshalAs(UnmanagedType.ByValArray, SizeConst = 500)]
+            public AXIS_DATA[] ModuleData;
+        };
+        public ADSServer_SystemData ADS_ServerData;
+
+        /* Parameters Tunning & Target Structure */
+        [StructLayout(LayoutKind.Sequential, Pack = 1), Serializable]
+        public struct JointParameterSettingStruct
+        {
+            public float[] jointPositionPgain;
+            public float[] jointPositionIgain;
+            public float[] jointPositionDgain;
+
+            public float[] jointTorquePgain;
+            public float[] jointTorqueIgain;
+            public float[] jointTorqueDgain;
+
+            public float[] jointConstantEfficiency;
+            public float[] jointConstantTorque;
+            public float[] jointConstantSpring;
+
+            public float[] jointGravityGain;
+            public float[] jointCurrentGain;
+            public float[] jointFrictionGain;
+
+            public float[] jointTrajectoryTime;
+            public float[] jointTrajectoryAcc;
+        };
+        JointParameterSettingStruct jParamSet;
+        
+        public void JointParameterSettingInit()
+        {
+            /* Joint Parameters Init */
+            jParamSet.jointPositionPgain = new float[8];
+            jParamSet.jointPositionIgain = new float[8];
+            jParamSet.jointPositionDgain = new float[8];
+
+            jParamSet.jointTorquePgain = new float[8];
+            jParamSet.jointTorqueIgain = new float[8];
+            jParamSet.jointTorqueDgain = new float[8];
+
+            jParamSet.jointConstantEfficiency = new float[8];
+            jParamSet.jointConstantTorque = new float[8];
+            jParamSet.jointConstantSpring = new float[8];
+
+            jParamSet.jointGravityGain = new float[8];
+            jParamSet.jointCurrentGain = new float[8];
+            jParamSet.jointFrictionGain = new float[8];
+
+            jParamSet.jointTrajectoryTime = new float[8];
+            jParamSet.jointTrajectoryAcc = new float[8];
+        }
+
+
+        [StructLayout(LayoutKind.Sequential, Pack = 1), Serializable]
+        public struct CartesianParameterSettingStruct
+        {
+            public float[] cartesianPositionPgain;
+            public float[] cartesianPositionIgain;
+            public float[] cartesianPositionDgain;
+
+            public float[] cartesianTrajectoryTime;
+            public float[] cartesianTrajectoryAcc;
+        };
+        CartesianParameterSettingStruct cParamSet;
+
+        public void CartesianParameterSettingInit()
+        {
+            /* Cartesian Parameter pX, pY, pZ, rX, rY, rZ Init */
+            cParamSet.cartesianPositionPgain = new float[6];
+            cParamSet.cartesianPositionIgain = new float[6];
+            cParamSet.cartesianPositionDgain = new float[6];
+
+            cParamSet.cartesianTrajectoryTime = new float[6];
+            cParamSet.cartesianTrajectoryAcc = new float[6];
+        }
+
+        [StructLayout(LayoutKind.Sequential, Pack = 1), Serializable]
+        public struct JointTargetStruct
+        {
+            public float[] jointTarget;
+        };
+        JointTargetStruct jTarget;
+        
+        public void JointTargetInit()
+        {
+           jTarget.jointTarget = new float[8];
+        }
+
+        [StructLayout(LayoutKind.Sequential, Pack = 1), Serializable]
+        public struct CartesianTargetStruct
+        {
+            public float pX;
+            public float pY;
+            public float pZ;
+            public float rX;
+            public float rY;
+            public float rZ;
+        };
+        CartesianParameterSettingStruct cTarget;
+        /* End Parameters Tunning & Target Structure */
+
+        /* Text Box Update Invoke */
+        private void UpdateTextBox(TextBox textBox, string data)
+        {
+            if (textBox.InvokeRequired)
+            {
+                // 작업쓰레드인 경우
+                textBox.BeginInvoke(new Action(() =>
+                {
+                    textBox.Text = data;
+                }));
+            }
+            else
+            {
+                // UI 쓰레드인 경우
+                textBox.Text = data;
+            }
+        }
+
+
+
+        /* Log4net Initialize */
+        //private static readonly log4net.ILog log = log4net.LogManager.GetLogger(typeof(DebuggingToolSW));
+        private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
         public DebuggingToolSW()
         {
             InitializeComponent();
+            /* Log4net XML Configurator Initialize */
+            //XmlConfigurator.Configure(new FileInfo("log4net.xml"));
+            
             /* Nonactivation GroupBox */
             LoginGroupBox.Enabled = true;
             StateGroupBox.Enabled = false;
@@ -97,6 +297,7 @@ namespace DebuggingToolGUI
             /* End Communication Select */
 
             /* Number of Joint Set */
+            NumJointcomboBox.Items.Add("0");
             NumJointcomboBox.Items.Add("1");
             NumJointcomboBox.Items.Add("2");
             NumJointcomboBox.Items.Add("3");
@@ -105,8 +306,6 @@ namespace DebuggingToolGUI
             NumJointcomboBox.Items.Add("6");
             NumJointcomboBox.Items.Add("7");
             NumJointcomboBox.Items.Add("8");
-            NumJointcomboBox.Items.Add("9");
-            NumJointcomboBox.Items.Add("10");
             NumJointcomboBox.SelectedIndex = 0;
             /* End Number of Joint Set */
 
@@ -179,9 +378,51 @@ namespace DebuggingToolGUI
         {
 
         }
+        TcpClient tcpClient;
+        
+        private void TcpClientRun(String ipStr, int port)
+        {
+            IPAddress ipAddr;
+
+            if (IPAddress.TryParse(ipStr, out ipAddr))
+            {
+                try
+                {
+                    if (StatusThreadStop)
+                    {
+                        tcpRunThread.Join();
+                        StatusCommunicationStart = false;
+                    }
+
+                    tcpClient = new TcpClient();
+                    NetworkStream tcpClientNS = tcpClient.GetStream();
+                    tcpClientNS.WriteTimeout = 10;
+                    tcpClientNS.ReadTimeout = 10;
+
+                    // Todo : State Machine for EtherNET Communication
+
+                    //tcpClientNS.Write();
+                    //tcpClientNS.Flush();
+
+                    //int nRead = tcpClientNS.Read();
+                    
+
+
+                    StatusCommunicationStart = true;
+                    Thread.Sleep(1);
+                    
+                }
+                catch(Exception)
+                {
+                    log.Error("TCP Client Communication Error");
+                }
+            }
+        }
+
         const int ADS = 0;
         const int TCP = 1;
         const int UDP = 2;
+        Thread tcpRunThread;
         private void Connectbutton_Click(object sender, EventArgs e)
         {
             switch(CommunicationComboBox.SelectedIndex)
@@ -191,15 +432,41 @@ namespace DebuggingToolGUI
                         /* Main Timer Start */
                         StatusMainTimerStart = true;
                         StatusCommunicationConnect = true;
-                        
+                        /* Status Light */
+                        ConnectpictureBox.Image = StatusOnImage;
+                        /* End Status Light */
+
+                        /* Logger */
+                        log.Info("Communication Ready : ADS Communication");
                         break;
                     }
                 case TCP:
                     {
+                        /* Tcp Thread Init */
+                        try
+                        {
+                            tcpRunThread = new Thread(() => TcpClientRun(IpAddressTextBox.Text, int.Parse(PortTextBox.Text)));
+                            tcpRunThread.IsBackground = true;
+
+                            StatusThreadStop = false;
+
+                            tcpRunThread.Start();
+                        }
+                        catch(Exception ex)
+                        {
+                            Debug.WriteLine(ex.Message);
+                            log.Error(ex.Message);
+                        }
+
                         /* Main Timer Start */
                         StatusMainTimerStart = true;
                         StatusCommunicationConnect = true;
-                        
+                        /* Status Light */
+                        ConnectpictureBox.Image = StatusOnImage;
+                        /* End Status Light */
+
+                        /* Logger */
+                        log.Info("Communication Ready : TCP Communication");
                         break;
                     }
                 case UDP:
@@ -207,6 +474,12 @@ namespace DebuggingToolGUI
                         /* Main Timer Start */
                         StatusMainTimerStart = true;
                         StatusCommunicationConnect = true;
+                        /* Status Light */
+                        ConnectpictureBox.Image = StatusOnImage;
+                        /* End Status Light */
+
+                        /* Logger */
+                        log.Info("CommunicationComboBox Ready : UDP Communication");
                         break;
                     }   
                 default:
@@ -214,21 +487,24 @@ namespace DebuggingToolGUI
                     StatusCommunicationConnect = false;
                     break;
             }
-
             
             if(StatusCommunicationConnect == true)
             {
                 /* Activation GroupBox */
                 StateGroupBox.Enabled = true;
                 ServoOnButton.Enabled = true;
+                LoggingSystemgroupBox.Enabled = true;
+                ParameterSetgroupBox.Enabled = true;
                 /* End Activation GroupBox */
+
+                ConnectCompletepictureBox.Image = StatusOnImage;
             }
         }
 
         private void MainTimer_Tick(object sender, EventArgs e)
         {
 
-            ErrorCodetextBox.Text = "Checking....";
+            //ErrorCodetextBox.Text = "Checking....";
 
            if (StatusMainTimerStart == true)
             {
@@ -240,18 +516,31 @@ namespace DebuggingToolGUI
         public static bool ServoOnCheck = false;
         private void ServoOnButton_Click(object sender, EventArgs e)
         {
+            /* Variable Initialize */
+            int _dof = Convert.ToInt32(NumJointcomboBox.SelectedItem.ToString());
+            UpdateTextBox(ErrorCodetextBox, _dof.ToString() + " Setting");
+            /* Parameters and Command Initialize */
+            JointParameterSettingInit();
+            CartesianParameterSettingInit();
+            JointTargetInit();
+            /* End Parameters and Command Initialize */
+            /* End Variable Initialize */
 
             /* Servo On Behavior */
-            
             StatusServoOn = true;
             /* End Servo On Behavior */
-            
+           
             if(StatusServoOn == true)
             {
                 /* ServoOn Button Color Change */
                 ServoOnButton.ForeColor = System.Drawing.Color.Black;
                 ServoOnButton.BackColor = System.Drawing.Color.YellowGreen;
                 /* End ServoOn Button Color Change */
+
+                /* Status Light */
+                AuxPowerpictureBox.Image = StatusOnImage;
+                MainPowerpictureBox.Image = StatusOnImage;
+                /* End Status Light */
 
                 IncrementalEncodergroupBox.Enabled = true;
                 AbsoluteEnocdergroupBox.Enabled = true;
@@ -262,7 +551,32 @@ namespace DebuggingToolGUI
         private void SetJointPosPIDGainbutton_Click(object sender, EventArgs e)
         {
             /* Joint Position PID Gain Set */
+            jParamSet.jointPositionPgain[0] = float.Parse(jpPgainJoint1textBox.Text);
+            jParamSet.jointPositionPgain[1] = float.Parse(jpPgainJoint2textBox.Text);
+            jParamSet.jointPositionPgain[2] = float.Parse(jpPgainJoint3textBox.Text);
+            jParamSet.jointPositionPgain[3] = float.Parse(jpPgainJoint4textBox.Text);
+            jParamSet.jointPositionPgain[4] = float.Parse(jpPgainJoint5textBox.Text);
+            jParamSet.jointPositionPgain[5] = float.Parse(jpPgainJoint6textBox.Text);
+            jParamSet.jointPositionPgain[6] = float.Parse(jpPgainJoint7textBox.Text);
+            jParamSet.jointPositionPgain[7] = float.Parse(jpPgainJoint8textBox.Text);
 
+            jParamSet.jointPositionIgain[0] = float.Parse(jpIgainJoint1textBox.Text);
+            jParamSet.jointPositionIgain[1] = float.Parse(jpIgainJoint2textBox.Text);
+            jParamSet.jointPositionIgain[2] = float.Parse(jpIgainJoint3textBox.Text);
+            jParamSet.jointPositionIgain[3] = float.Parse(jpIgainJoint4textBox.Text);
+            jParamSet.jointPositionIgain[4] = float.Parse(jpIgainJoint5textBox.Text);
+            jParamSet.jointPositionIgain[5] = float.Parse(jpIgainJoint6textBox.Text);
+            jParamSet.jointPositionIgain[6] = float.Parse(jpIgainJoint7textBox.Text);
+            jParamSet.jointPositionIgain[7] = float.Parse(jpIgainJoint8textBox.Text);
+
+            jParamSet.jointPositionDgain[0] = float.Parse(jpDgainJoint1textBox.Text);
+            jParamSet.jointPositionDgain[1] = float.Parse(jpDgainJoint2textBox.Text);
+            jParamSet.jointPositionDgain[2] = float.Parse(jpDgainJoint3textBox.Text);
+            jParamSet.jointPositionDgain[3] = float.Parse(jpDgainJoint4textBox.Text);
+            jParamSet.jointPositionDgain[4] = float.Parse(jpDgainJoint5textBox.Text);
+            jParamSet.jointPositionDgain[5] = float.Parse(jpDgainJoint6textBox.Text);
+            jParamSet.jointPositionDgain[6] = float.Parse(jpDgainJoint7textBox.Text);
+            jParamSet.jointPositionDgain[7] = float.Parse(jpDgainJoint8textBox.Text);
             /* End Joint Position PID Gain Set */
             StatusJointPositionPIDgainSet = true;
 
@@ -273,9 +587,33 @@ namespace DebuggingToolGUI
 
         private void SetJointToqPIDGainbutton_Click(object sender, EventArgs e)
         {
-
             /* Joint Torque PID Gain Set */
+            jParamSet.jointTorquePgain[0] = float.Parse(jtPgainJoint1textBox.Text);
+            jParamSet.jointTorquePgain[1] = float.Parse(jtPgainJoint2textBox.Text);
+            jParamSet.jointTorquePgain[2] = float.Parse(jtPgainJoint3textBox.Text);
+            jParamSet.jointTorquePgain[3] = float.Parse(jtPgainJoint4textBox.Text);
+            jParamSet.jointTorquePgain[4] = float.Parse(jtPgainJoint5textBox.Text);
+            jParamSet.jointTorquePgain[5] = float.Parse(jtPgainJoint6textBox.Text);
+            jParamSet.jointTorquePgain[6] = float.Parse(jtPgainJoint7textBox.Text);
+            jParamSet.jointTorquePgain[7] = float.Parse(jtPgainJoint8textBox.Text);
 
+            jParamSet.jointTorqueIgain[0] = float.Parse(jtIgainJoint1textBox.Text);
+            jParamSet.jointTorqueIgain[1] = float.Parse(jtIgainJoint2textBox.Text);
+            jParamSet.jointTorqueIgain[2] = float.Parse(jtIgainJoint3textBox.Text);
+            jParamSet.jointTorqueIgain[3] = float.Parse(jtIgainJoint4textBox.Text);
+            jParamSet.jointTorqueIgain[4] = float.Parse(jtIgainJoint5textBox.Text);
+            jParamSet.jointTorqueIgain[5] = float.Parse(jtIgainJoint6textBox.Text);
+            jParamSet.jointTorqueIgain[6] = float.Parse(jtIgainJoint7textBox.Text);
+            jParamSet.jointTorqueIgain[7] = float.Parse(jtIgainJoint8textBox.Text);
+
+            jParamSet.jointTorqueDgain[0] = float.Parse(jtDgainJoint1textBox.Text);
+            jParamSet.jointTorqueDgain[1] = float.Parse(jtDgainJoint2textBox.Text);
+            jParamSet.jointTorqueDgain[2] = float.Parse(jtDgainJoint3textBox.Text);
+            jParamSet.jointTorqueDgain[3] = float.Parse(jtDgainJoint4textBox.Text);
+            jParamSet.jointTorqueDgain[4] = float.Parse(jtDgainJoint5textBox.Text);
+            jParamSet.jointTorqueDgain[5] = float.Parse(jtDgainJoint6textBox.Text);
+            jParamSet.jointTorqueDgain[6] = float.Parse(jtDgainJoint7textBox.Text);
+            jParamSet.jointTorqueDgain[7] = float.Parse(jtDgainJoint8textBox.Text);
             /* End Joint Torque PID Gain Set */
             StatusJointTorquePIDgainSet = true;
 
@@ -287,7 +625,32 @@ namespace DebuggingToolGUI
         private void JointConstantParamSetbutton_Click(object sender, EventArgs e)
         {
             /* Joint Constant Param Gain Set */
+            jParamSet.jointConstantTorque[0] = float.Parse(jcTorqueConstJoint1textBox.Text);
+            jParamSet.jointConstantTorque[1] = float.Parse(jcTorqueConstJoint2textBox.Text);
+            jParamSet.jointConstantTorque[2] = float.Parse(jcTorqueConstJoint3textBox.Text);
+            jParamSet.jointConstantTorque[3] = float.Parse(jcTorqueConstJoint4textBox.Text);
+            jParamSet.jointConstantTorque[4] = float.Parse(jcTorqueConstJoint5textBox.Text);
+            jParamSet.jointConstantTorque[5] = float.Parse(jcTorqueConstJoint6textBox.Text);
+            jParamSet.jointConstantTorque[6] = float.Parse(jcTorqueConstJoint7textBox.Text);
+            jParamSet.jointConstantTorque[7] = float.Parse(jcTorqueConstJoint8textBox.Text);
 
+            jParamSet.jointConstantEfficiency[0] = float.Parse(jcEfficiencyJoint1textBox.Text);
+            jParamSet.jointConstantEfficiency[1] = float.Parse(jcEfficiencyJoint2textBox.Text);
+            jParamSet.jointConstantEfficiency[2] = float.Parse(jcEfficiencyJoint3textBox.Text);
+            jParamSet.jointConstantEfficiency[3] = float.Parse(jcEfficiencyJoint4textBox.Text);
+            jParamSet.jointConstantEfficiency[4] = float.Parse(jcEfficiencyJoint5textBox.Text);
+            jParamSet.jointConstantEfficiency[5] = float.Parse(jcEfficiencyJoint6textBox.Text);
+            jParamSet.jointConstantEfficiency[6] = float.Parse(jcEfficiencyJoint7textBox.Text);
+            jParamSet.jointConstantEfficiency[7] = float.Parse(jcEfficiencyJoint8textBox.Text);
+
+            jParamSet.jointConstantSpring[0] = float.Parse(jcSpringJoint1textBox.Text);
+            jParamSet.jointConstantSpring[1] = float.Parse(jcSpringJoint2textBox.Text);
+            jParamSet.jointConstantSpring[2] = float.Parse(jcSpringJoint3textBox.Text);
+            jParamSet.jointConstantSpring[3] = float.Parse(jcSpringJoint4textBox.Text);
+            jParamSet.jointConstantSpring[4] = float.Parse(jcSpringJoint5textBox.Text);
+            jParamSet.jointConstantSpring[5] = float.Parse(jcSpringJoint6textBox.Text);
+            jParamSet.jointConstantSpring[6] = float.Parse(jcSpringJoint7textBox.Text);
+            jParamSet.jointConstantSpring[7] = float.Parse(jcSpringJoint8textBox.Text);
             /* End Joint Constant Param Gain Set */
             StatusJointConstantParamSet = true;
 
@@ -299,7 +662,32 @@ namespace DebuggingToolGUI
         private void GCnFricParamSetbutton_Click(object sender, EventArgs e)
         {
             /* Gravity Compensator and Friction Compensator Parameters Set */
+            jParamSet.jointGravityGain[0] = float.Parse(GCGainJoint1textBox.Text);
+            jParamSet.jointGravityGain[1] = float.Parse(GCGainJoint2textBox.Text);
+            jParamSet.jointGravityGain[2] = float.Parse(GCGainJoint3textBox.Text);
+            jParamSet.jointGravityGain[3] = float.Parse(GCGainJoint4textBox.Text);
+            jParamSet.jointGravityGain[4] = float.Parse(GCGainJoint5textBox.Text);
+            jParamSet.jointGravityGain[5] = float.Parse(GCGainJoint6textBox.Text);
+            jParamSet.jointGravityGain[6] = float.Parse(GCGainJoint7textBox.Text);
+            jParamSet.jointGravityGain[7] = float.Parse(GCGainJoint8textBox.Text);
 
+            jParamSet.jointCurrentGain[0] = float.Parse(CurGainJoint1textBox.Text);
+            jParamSet.jointCurrentGain[1] = float.Parse(CurGainJoint2textBox.Text);
+            jParamSet.jointCurrentGain[2] = float.Parse(CurGainJoint3textBox.Text);
+            jParamSet.jointCurrentGain[3] = float.Parse(CurGainJoint4textBox.Text);
+            jParamSet.jointCurrentGain[4] = float.Parse(CurGainJoint5textBox.Text);
+            jParamSet.jointCurrentGain[5] = float.Parse(CurGainJoint6textBox.Text);
+            jParamSet.jointCurrentGain[6] = float.Parse(CurGainJoint7textBox.Text);
+            jParamSet.jointCurrentGain[7] = float.Parse(CurGainJoint8textBox.Text);
+
+            jParamSet.jointFrictionGain[0] = float.Parse(FricGainJoint1textBox.Text);
+            jParamSet.jointFrictionGain[1] = float.Parse(FricGainJoint2textBox.Text);
+            jParamSet.jointFrictionGain[2] = float.Parse(FricGainJoint3textBox.Text);
+            jParamSet.jointFrictionGain[3] = float.Parse(FricGainJoint4textBox.Text);
+            jParamSet.jointFrictionGain[4] = float.Parse(FricGainJoint5textBox.Text);
+            jParamSet.jointFrictionGain[5] = float.Parse(FricGainJoint6textBox.Text);
+            jParamSet.jointFrictionGain[6] = float.Parse(FricGainJoint7textBox.Text);
+            jParamSet.jointFrictionGain[7] = float.Parse(FricGainJoint8textBox.Text);
             /* End Gravity Compensator and Friction Compensator Parameters Set */
             StatusJointGravityNFrictionParamSet = true;
 
@@ -311,7 +699,23 @@ namespace DebuggingToolGUI
         private void JointTrajetorySetbutton_Click(object sender, EventArgs e)
         {
             /* Joint Trajectory Parameters Set */
+            jParamSet.jointTrajectoryTime[0] = float.Parse(TrajTimeJoint1textBox.Text);
+            jParamSet.jointTrajectoryTime[1] = float.Parse(TrajTimeJoint2textBox.Text);
+            jParamSet.jointTrajectoryTime[2] = float.Parse(TrajTimeJoint3textBox.Text);
+            jParamSet.jointTrajectoryTime[3] = float.Parse(TrajTimeJoint4textBox.Text);
+            jParamSet.jointTrajectoryTime[4] = float.Parse(TrajTimeJoint5textBox.Text);
+            jParamSet.jointTrajectoryTime[5] = float.Parse(TrajTimeJoint6textBox.Text);
+            jParamSet.jointTrajectoryTime[6] = float.Parse(TrajTimeJoint7textBox.Text);
+            jParamSet.jointTrajectoryTime[7] = float.Parse(TrajTimeJoint8textBox.Text);
 
+            jParamSet.jointTrajectoryAcc[0] = float.Parse(TrajAccJoint1textBox.Text);
+            jParamSet.jointTrajectoryAcc[1] = float.Parse(TrajAccJoint2textBox.Text);
+            jParamSet.jointTrajectoryAcc[2] = float.Parse(TrajAccJoint3textBox.Text);
+            jParamSet.jointTrajectoryAcc[3] = float.Parse(TrajAccJoint4textBox.Text);
+            jParamSet.jointTrajectoryAcc[4] = float.Parse(TrajAccJoint5textBox.Text);
+            jParamSet.jointTrajectoryAcc[5] = float.Parse(TrajAccJoint6textBox.Text);
+            jParamSet.jointTrajectoryAcc[6] = float.Parse(TrajAccJoint7textBox.Text);
+            jParamSet.jointTrajectoryAcc[7] = float.Parse(TrajAccJoint8textBox.Text);
             /* End Joint Trajectory Parameters Set */
             StatusJointTrajectoryParamSet = true;
 
@@ -323,7 +727,26 @@ namespace DebuggingToolGUI
         private void CartesianPIDSetbutton_Click(object sender, EventArgs e)
         {
             /* Cartesian Position PID Gain Set */
+            cParamSet.cartesianPositionPgain[0] = float.Parse(cpPgainCartesianXtextBox.Text);
+            cParamSet.cartesianPositionPgain[1] = float.Parse(cpPgainCartesianYtextBox.Text);
+            cParamSet.cartesianPositionPgain[2] = float.Parse(cpPgainCartesianZtextBox.Text);
+            cParamSet.cartesianPositionPgain[3] = float.Parse(cpPgainCartesianRolltextBox.Text);
+            cParamSet.cartesianPositionPgain[4] = float.Parse(cpPgainCartesianPitchtextBox.Text);
+            cParamSet.cartesianPositionPgain[5] = float.Parse(cpPgainCartesianYawtextBox.Text);
 
+            cParamSet.cartesianPositionIgain[0] = float.Parse(cpIgainCartesianXtextBox.Text);
+            cParamSet.cartesianPositionIgain[1] = float.Parse(cpIgainCartesianYtextBox.Text);
+            cParamSet.cartesianPositionIgain[2] = float.Parse(cpIgainCartesianZtextBox.Text);
+            cParamSet.cartesianPositionIgain[3] = float.Parse(cpIgainCartesianRolltextBox.Text);
+            cParamSet.cartesianPositionIgain[4] = float.Parse(cpIgainCartesianPitchtextBox.Text);
+            cParamSet.cartesianPositionIgain[5] = float.Parse(cpIgainCartesianYawtextBox.Text);
+
+            cParamSet.cartesianPositionDgain[0] = float.Parse(cpDgainCartesianXtextBox.Text);
+            cParamSet.cartesianPositionDgain[1] = float.Parse(cpDgainCartesianYtextBox.Text);
+            cParamSet.cartesianPositionDgain[2] = float.Parse(cpDgainCartesianZtextBox.Text);
+            cParamSet.cartesianPositionDgain[3] = float.Parse(cpDgainCartesianRolltextBox.Text);
+            cParamSet.cartesianPositionDgain[4] = float.Parse(cpDgainCartesianPitchtextBox.Text);
+            cParamSet.cartesianPositionDgain[5] = float.Parse(cpDgainCartesianYawtextBox.Text);
             /* End Cartesian Position PID Gain Set */
             StatusCartesianPositionPIDgainSet = true;
 
@@ -335,7 +758,19 @@ namespace DebuggingToolGUI
         private void CartesianTrajSetbutton_Click(object sender, EventArgs e)
         {
             /* Cartesian Trajectory Parameters Set */
+            cParamSet.cartesianTrajectoryTime[0] = float.Parse(TrajTimeCartesianXtextBox.Text);
+            cParamSet.cartesianTrajectoryTime[1] = float.Parse(TrajTimeCartesianYtextBox.Text);
+            cParamSet.cartesianTrajectoryTime[2] = float.Parse(TrajTimeCartesianZtextBox.Text);
+            cParamSet.cartesianTrajectoryTime[3] = float.Parse(TrajTimeCartesianRolltextBox.Text);
+            cParamSet.cartesianTrajectoryTime[4] = float.Parse(TrajTimeCartesianPitchtextBox.Text);
+            cParamSet.cartesianTrajectoryTime[5] = float.Parse(TrajTimeCartesianYawtextBox.Text);
 
+            cParamSet.cartesianTrajectoryAcc[0] = float.Parse(TrajAccCartesianXtextBox.Text);
+            cParamSet.cartesianTrajectoryAcc[1] = float.Parse(TrajAccCartesianYtextBox.Text);
+            cParamSet.cartesianTrajectoryAcc[2] = float.Parse(TrajAccCartesianZtextBox.Text);
+            cParamSet.cartesianTrajectoryAcc[3] = float.Parse(TrajAccCartesianRolltextBox.Text);
+            cParamSet.cartesianTrajectoryAcc[4] = float.Parse(TrajAccCartesianPitchtextBox.Text);
+            cParamSet.cartesianTrajectoryAcc[5] = float.Parse(TrajAccCartesianYawtextBox.Text);
             /* End Cartesian Trajectory Parameters Set */
             StatusCartesianTrajectoryParamSet = true;
 
@@ -383,6 +818,7 @@ namespace DebuggingToolGUI
 
             /* Main Timer Start */
             StatusMainTimerStart = true;
+
             /* Actiavtion Joint Set & Joint Mode & Gravity Compensation Button */
             JointPositionSetgroupBox.Enabled = true;
             JointModebutton.Enabled = true;
@@ -393,21 +829,660 @@ namespace DebuggingToolGUI
         public static bool GCbuttonCheck = false;
         private void GCbutton_Click(object sender, EventArgs e)
         {
-
-
             /* GCbutton Color Change */
             if(GCbuttonCheck == false)
             {
+                /* Gravtiy Compensator Button Color Change */
                 GCbutton.ForeColor = System.Drawing.Color.Black;
                 GCbutton.BackColor = System.Drawing.Color.YellowGreen;
+                /* End Gravtiy Compensator Button Color Change */
 
                 /* Status Light */
+                GCpictureBox.Image = StatusOnImage;
                 TorqueModepictureBox.Image = StatusOnImage;
                 PositionModepictureBox.Image = StatusOffImage;
                 /* End Status Light */
                 GCbuttonCheck = true;
             }
+            else
+            {
+                /* Gravtiy Compensator Button Color Change */
+                GCbutton.ForeColor = System.Drawing.Color.Black;
+                GCbutton.BackColor = System.Drawing.Color.LightGray;
+                /* End Gravtiy Compensator Button Color Change */
+
+                /* Status Light */
+                GCpictureBox.Image = StatusOffImage;
+                /* End Status Light */
+                GCbuttonCheck = false;
+            }
             /* End GCbutton Color Change */
+        }
+        public static bool JointModeButtonCheck = false;
+        private void JointModebutton_Click(object sender, EventArgs e)
+        {
+            /* Activate Joint Mode */
+            if(JointModeButtonCheck == false)
+            {
+                /* Joint Mode Button Color Change */
+                JointModebutton.ForeColor = System.Drawing.Color.Black;
+                JointModebutton.BackColor = System.Drawing.Color.YellowGreen;
+                /* End Joint Mode Button Color Change */
+
+                /* Cartesian Mode Deactivate */
+                CartesianModeButtonCheck = true;
+                CartesianModebutton_Click(null, null);
+
+                JointModeButtonCheck = true;
+            }
+            else /* Deactivate Joint Mode */
+            {
+                /* Joint Mode Button Color Change */
+                JointModebutton.ForeColor = System.Drawing.Color.Black;
+                JointModebutton.BackColor = System.Drawing.Color.LightGray;
+                /* End Joint Mode Button Color Change */
+                JointModeButtonCheck = false;
+            }
+        }
+        public static bool CartesianModeButtonCheck = false;
+        private void CartesianModebutton_Click(object sender, EventArgs e)
+        {
+            /*  Activate Cartesian Mode */
+            if (CartesianModeButtonCheck == false)
+            {
+                /* Cartesian Mode Button Color Change */
+                CartesianModebutton.ForeColor = System.Drawing.Color.Black;
+                CartesianModebutton.BackColor = System.Drawing.Color.YellowGreen;
+                /* End Joint Mode Button Color Change */
+
+                /* Joint Deactiavte */
+                JointModeButtonCheck = true;
+                JointModebutton_Click(null, null);
+
+                CartesianModeButtonCheck = true;
+            }
+            else /* Deactivate Cartesian Mode */
+            {
+                /* Cartesian Mode Button Color Change */
+                CartesianModebutton.ForeColor = System.Drawing.Color.Black;
+                CartesianModebutton.BackColor = System.Drawing.Color.LightGray;
+                /* End Joint Mode Button Color Change */
+                CartesianModeButtonCheck = false;
+            }
+        }
+
+        private void NumJointcomboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void ParametersReadbutton_Click(object sender, EventArgs e)
+        {
+            string path = @"Parameters.txt";
+            FileInfo file = new FileInfo(path);
+            if(file.Exists)
+            {
+                FileStream paramRead = new FileStream(path, FileMode.Open, FileAccess.Read);
+                StreamReader strRead = new StreamReader(paramRead);
+                string readBuffer = strRead.ReadToEnd();
+
+                string[] data = readBuffer.Split(';');
+                for (int i = 0; i < data.Length; i++)
+                {
+                    string[] divName = data[i].Split(Environment.NewLine.ToCharArray(), StringSplitOptions.RemoveEmptyEntries); 
+                    
+                    if(divName.Length < 1)
+                    {
+                        continue;
+                    }
+
+                    /* Joint Position PID Gain Parameters Read */
+                    if (divName[0] == "Joint Position PID Gain Param")
+                    {
+                        for (int j = 1; j < divName.Length; j++)
+                        {
+                            if (String.Equals(divName[j], "P Gain"))
+                            {
+                                string[] divGain = divName[j+1].Split(' ');
+
+                                jpPgainJoint1textBox.Text = divGain[0];
+                                jpPgainJoint2textBox.Text = divGain[1];
+                                jpPgainJoint3textBox.Text = divGain[2];
+                                jpPgainJoint4textBox.Text = divGain[3];
+                                jpPgainJoint5textBox.Text = divGain[4];
+                                jpPgainJoint6textBox.Text = divGain[5];
+                                jpPgainJoint7textBox.Text = divGain[6];
+                                jpPgainJoint8textBox.Text = divGain[7];
+                            }
+                            else if (String.Equals(divName[j], "I Gain"))
+                            {
+                                string[] divGain = divName[j+1].Split(' ');
+                                jpIgainJoint1textBox.Text = divGain[0];
+                                jpIgainJoint2textBox.Text = divGain[1];
+                                jpIgainJoint3textBox.Text = divGain[2];
+                                jpIgainJoint4textBox.Text = divGain[3];
+                                jpIgainJoint5textBox.Text = divGain[4];
+                                jpIgainJoint6textBox.Text = divGain[5];
+                                jpIgainJoint7textBox.Text = divGain[6];
+                                jpIgainJoint8textBox.Text = divGain[7];
+                            }
+                            else if (String.Equals(divName[j], "D Gain"))
+                            {
+                                string[] divGain = divName[j+1].Split(' ');
+                                jpDgainJoint1textBox.Text = divGain[0];
+                                jpDgainJoint2textBox.Text = divGain[1];
+                                jpDgainJoint3textBox.Text = divGain[2];
+                                jpDgainJoint4textBox.Text = divGain[3];
+                                jpDgainJoint5textBox.Text = divGain[4];
+                                jpDgainJoint6textBox.Text = divGain[5];
+                                jpDgainJoint7textBox.Text = divGain[6];
+                                jpDgainJoint8textBox.Text = divGain[7];
+                            }
+                        }    
+                    }
+                    /* End Joint Position PID Gain Parameters Read */
+
+                    /* Torque PID Gain Parameters Read */
+                    if (divName[0] == "Torque PID Gain Param")
+                    {
+                        for (int j = 1; j < divName.Length; j++)
+                        {
+                            if (String.Equals(divName[j], "P Gain"))
+                            {
+                                string[] divGain = divName[j + 1].Split(' ');
+
+                                jtPgainJoint1textBox.Text = divGain[0];
+                                jtPgainJoint2textBox.Text = divGain[1];
+                                jtPgainJoint3textBox.Text = divGain[2];
+                                jtPgainJoint4textBox.Text = divGain[3];
+                                jtPgainJoint5textBox.Text = divGain[4];
+                                jtPgainJoint6textBox.Text = divGain[5];
+                                jtPgainJoint7textBox.Text = divGain[6];
+                                jtPgainJoint8textBox.Text = divGain[7];
+                            }
+                            else if (String.Equals(divName[j], "I Gain"))
+                            {
+                                string[] divGain = divName[j + 1].Split(' ');
+                                jtIgainJoint1textBox.Text = divGain[0];
+                                jtIgainJoint2textBox.Text = divGain[1];
+                                jtIgainJoint3textBox.Text = divGain[2];
+                                jtIgainJoint4textBox.Text = divGain[3];
+                                jtIgainJoint5textBox.Text = divGain[4];
+                                jtIgainJoint6textBox.Text = divGain[5];
+                                jtIgainJoint7textBox.Text = divGain[6];
+                                jtIgainJoint8textBox.Text = divGain[7];
+                            }
+                            else if (String.Equals(divName[j], "D Gain"))
+                            {
+                                string[] divGain = divName[j + 1].Split(' ');
+                                jtDgainJoint1textBox.Text = divGain[0];
+                                jtDgainJoint2textBox.Text = divGain[1];
+                                jtDgainJoint3textBox.Text = divGain[2];
+                                jtDgainJoint4textBox.Text = divGain[3];
+                                jtDgainJoint5textBox.Text = divGain[4];
+                                jtDgainJoint6textBox.Text = divGain[5];
+                                jtDgainJoint7textBox.Text = divGain[6];
+                                jtDgainJoint8textBox.Text = divGain[7];
+                            }
+                        }
+
+                    }
+                    /* End Torque PID Gain Parameters Read */
+
+                    /* Joint Constant Setting Parameters Read */
+                    if (divName[0] == "Joint Constant Setting")
+                    {
+                        for (int j = 1; j < divName.Length; j++)
+                        {
+                            if (String.Equals(divName[j], "Torque"))
+                            {
+                                string[] divGain = divName[j + 1].Split(' ');
+
+                                jcTorqueConstJoint1textBox.Text = divGain[0];
+                                jcTorqueConstJoint2textBox.Text = divGain[1];
+                                jcTorqueConstJoint3textBox.Text = divGain[2];
+                                jcTorqueConstJoint4textBox.Text = divGain[3];
+                                jcTorqueConstJoint5textBox.Text = divGain[4];
+                                jcTorqueConstJoint6textBox.Text = divGain[5];
+                                jcTorqueConstJoint7textBox.Text = divGain[6];
+                                jcTorqueConstJoint8textBox.Text = divGain[7];
+                            }
+                            else if (String.Equals(divName[j], "Efficiency"))
+                            {
+                                string[] divGain = divName[j + 1].Split(' ');
+                                jcEfficiencyJoint1textBox.Text = divGain[0];
+                                jcEfficiencyJoint2textBox.Text = divGain[1];
+                                jcEfficiencyJoint3textBox.Text = divGain[2];
+                                jcEfficiencyJoint4textBox.Text = divGain[3];
+                                jcEfficiencyJoint5textBox.Text = divGain[4];
+                                jcEfficiencyJoint6textBox.Text = divGain[5];
+                                jcEfficiencyJoint7textBox.Text = divGain[6];
+                                jcEfficiencyJoint8textBox.Text = divGain[7];
+                            }
+                            else if (String.Equals(divName[j], "Spring"))
+                            {
+                                string[] divGain = divName[j + 1].Split(' ');
+                                jcSpringJoint1textBox.Text = divGain[0];
+                                jcSpringJoint2textBox.Text = divGain[1];
+                                jcSpringJoint3textBox.Text = divGain[2];
+                                jcSpringJoint4textBox.Text = divGain[3];
+                                jcSpringJoint5textBox.Text = divGain[4];
+                                jcSpringJoint6textBox.Text = divGain[5];
+                                jcSpringJoint7textBox.Text = divGain[6];
+                                jcSpringJoint8textBox.Text = divGain[7];
+                            }
+                        }
+                    }
+                    /* End Joint Constant Setting Parameters Read */
+
+                    /* Joint Gravity n Friction Param Parameters Read */
+                    if (divName[0] == "Joint Gravity n Friction Param")
+                    {
+                        for (int j = 1; j < divName.Length; j++)
+                        {
+                            if (String.Equals(divName[j], "G.C. Gain"))
+                            {
+                                string[] divGain = divName[j + 1].Split(' ');
+                                GCGainJoint1textBox.Text = divGain[0];
+                                GCGainJoint2textBox.Text = divGain[1];
+                                GCGainJoint3textBox.Text = divGain[2];
+                                GCGainJoint4textBox.Text = divGain[3];
+                                GCGainJoint5textBox.Text = divGain[4];
+                                GCGainJoint6textBox.Text = divGain[5];
+                                GCGainJoint7textBox.Text = divGain[6];
+                                GCGainJoint8textBox.Text = divGain[7];
+                            }
+                            else if (String.Equals(divName[j], "Cur. Gain"))
+                            {
+                                string[] divGain = divName[j + 1].Split(' ');
+                                CurGainJoint1textBox.Text = divGain[0];
+                                CurGainJoint2textBox.Text = divGain[1];
+                                CurGainJoint3textBox.Text = divGain[2];
+                                CurGainJoint4textBox.Text = divGain[3];
+                                CurGainJoint5textBox.Text = divGain[4];
+                                CurGainJoint6textBox.Text = divGain[5];
+                                CurGainJoint7textBox.Text = divGain[6];
+                                CurGainJoint8textBox.Text = divGain[7];
+                            }
+                            else if (String.Equals(divName[j], "Fric. Gain"))
+                            {
+                                string[] divGain = divName[j + 1].Split(' ');
+                                FricGainJoint1textBox.Text = divGain[0];
+                                FricGainJoint2textBox.Text = divGain[1];
+                                FricGainJoint3textBox.Text = divGain[2];
+                                FricGainJoint4textBox.Text = divGain[3];
+                                FricGainJoint5textBox.Text = divGain[4];
+                                FricGainJoint6textBox.Text = divGain[5];
+                                FricGainJoint7textBox.Text = divGain[6];
+                                FricGainJoint8textBox.Text = divGain[7];
+                            }
+                        }
+                    }
+                    /* End Joint Gravity n Friction Param Parameters Read */
+
+                    /* Joint Trajectory Param Parameters Read */
+                    if (divName[0] == "Joint Trajectory Param")
+                    {
+                        for (int j = 1; j < divName.Length; j++)
+                        {
+                            if (String.Equals(divName[j], "Time"))
+                            {
+                                string[] divGain = divName[j + 1].Split(' ');
+                                TrajTimeJoint1textBox.Text = divGain[0];
+                                TrajTimeJoint2textBox.Text = divGain[1];
+                                TrajTimeJoint3textBox.Text = divGain[2];
+                                TrajTimeJoint4textBox.Text = divGain[3];
+                                TrajTimeJoint5textBox.Text = divGain[4];
+                                TrajTimeJoint6textBox.Text = divGain[5];
+                                TrajTimeJoint7textBox.Text = divGain[6];
+                                TrajTimeJoint8textBox.Text = divGain[7];
+                            }
+                            else if (String.Equals(divName[j], "Acc/Dec"))
+                            {
+                                string[] divGain = divName[j + 1].Split(' ');
+                                TrajAccJoint1textBox.Text = divGain[0];
+                                TrajAccJoint2textBox.Text = divGain[1];
+                                TrajAccJoint3textBox.Text = divGain[2];
+                                TrajAccJoint4textBox.Text = divGain[3];
+                                TrajAccJoint5textBox.Text = divGain[4];
+                                TrajAccJoint6textBox.Text = divGain[5];
+                                TrajAccJoint7textBox.Text = divGain[6];
+                                TrajAccJoint8textBox.Text = divGain[7];
+                            }
+                        }
+                    }
+                    /* End Joint Trajectory Param Parameters Read */
+
+                    /* Cartesian Position PID gain Parameters Read */
+                    if (divName[0] == "Cartesian Position PID gain")
+                    {
+                        for (int j = 1; j < divName.Length; j++)
+                        {
+                            if (String.Equals(divName[j], "P Gain"))
+                            {
+                                string[] divGain = divName[j + 1].Split(' ');
+
+                                cpPgainCartesianXtextBox.Text = divGain[0];
+                                cpPgainCartesianYtextBox.Text = divGain[1];
+                                cpPgainCartesianZtextBox.Text = divGain[2];
+                                cpPgainCartesianRolltextBox.Text = divGain[3];
+                                cpPgainCartesianPitchtextBox.Text = divGain[4];
+                                cpPgainCartesianYawtextBox.Text = divGain[5];
+                            }
+                            else if (String.Equals(divName[j], "I Gain"))
+                            {
+                                string[] divGain = divName[j + 1].Split(' ');
+                                cpIgainCartesianXtextBox.Text = divGain[0];
+                                cpIgainCartesianYtextBox.Text = divGain[1];
+                                cpIgainCartesianZtextBox.Text = divGain[2];
+                                cpIgainCartesianRolltextBox.Text = divGain[3];
+                                cpIgainCartesianPitchtextBox.Text = divGain[4];
+                                cpIgainCartesianYawtextBox.Text = divGain[5];
+                            }
+                            else if (String.Equals(divName[j], "D Gain"))
+                            {
+                                string[] divGain = divName[j + 1].Split(' ');
+                                cpDgainCartesianXtextBox.Text = divGain[0];
+                                cpDgainCartesianYtextBox.Text = divGain[1];
+                                cpDgainCartesianZtextBox.Text = divGain[2];
+                                cpDgainCartesianRolltextBox.Text = divGain[3];
+                                cpDgainCartesianPitchtextBox.Text = divGain[4];
+                                cpDgainCartesianYawtextBox.Text = divGain[5];
+                            }
+                        }
+                    }
+                    /* End Cartesian Position PID gain Parameters Read */
+
+                    /* Cartesian Trajectory Parameters Read */
+                    if (divName[0] == "Cartesian Trajectory Param")
+                    {
+                        for (int j = 1; j < divName.Length; j++)
+                        {
+                            if (String.Equals(divName[j], "Time"))
+                            {
+                                string[] divGain = divName[j + 1].Split(' ');
+                                TrajTimeCartesianXtextBox.Text = divGain[0];
+                                TrajTimeCartesianYtextBox.Text = divGain[1];
+                                TrajTimeCartesianZtextBox.Text = divGain[2];
+                                TrajTimeCartesianRolltextBox.Text = divGain[3];
+                                TrajTimeCartesianPitchtextBox.Text = divGain[4];
+                                TrajTimeCartesianYawtextBox.Text = divGain[5];
+                            }
+                            else if (String.Equals(divName[j], "Acc/Dec"))
+                            {
+                                string[] divGain = divName[j + 1].Split(' ');
+                                TrajAccCartesianXtextBox.Text = divGain[0];
+                                TrajAccCartesianYtextBox.Text = divGain[1];
+                                TrajAccCartesianZtextBox.Text = divGain[2];
+                                TrajAccCartesianRolltextBox.Text = divGain[3];
+                                TrajAccCartesianPitchtextBox.Text = divGain[4];
+                                TrajAccCartesianYawtextBox.Text = divGain[5];
+                            }
+                        }
+                    }
+                    /* End Cartesian Trajectory Parameters Read */
+                }
+               
+                /* Close StreamReader */
+                strRead.Close();
+                ParametersReadpictureBox.Image = StatusOnImage;
+                log.Info("Parameters File Read Complete");
+            }
+            else
+            {
+                UpdateTextBox(ErrorCodetextBox, "Parameters Read Error!!");
+                ParametersReadpictureBox.Image = StatusOffImage;
+
+                log.Error("Parameters File Read Error");
+            }
+        }
+
+        private void ParametersSavebutton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string path = "Parameters";
+                string curFileName = path + "_" + DateTime.Now.ToString("yyyymmdd-HHmmdd") + ".txt";
+                UpdateTextBox(ErrorCodetextBox, curFileName);
+
+                FileStream curParamSave = new FileStream(curFileName, FileMode.Create, FileAccess.ReadWrite);
+                StreamWriter curStrWrite = new StreamWriter(curParamSave);
+
+                curStrWrite.WriteLine("Joint Position PID Gain Param");
+                curStrWrite.WriteLine("P Gain");
+                curStrWrite.WriteLine(jParamSet.jointPositionPgain[0] + " " + jParamSet.jointPositionPgain[1]
+                    + " " + jParamSet.jointPositionPgain[2] + " " + jParamSet.jointPositionPgain[3] + " " + jParamSet.jointPositionPgain[4]
+                    + " " + jParamSet.jointPositionPgain[5] + " " + jParamSet.jointPositionPgain[6] + " " + jParamSet.jointPositionPgain[7]);
+                curStrWrite.WriteLine("I Gain");
+                curStrWrite.WriteLine(jParamSet.jointPositionIgain[0] + " " + jParamSet.jointPositionIgain[1]
+                    + " " + jParamSet.jointPositionIgain[2] + " " + jParamSet.jointPositionIgain[3] + " " + jParamSet.jointPositionIgain[4]
+                    + " " + jParamSet.jointPositionIgain[5] + " " + jParamSet.jointPositionIgain[6] + " " + jParamSet.jointPositionIgain[7]);
+                curStrWrite.WriteLine("D Gain");
+                curStrWrite.WriteLine(jParamSet.jointPositionDgain[0] + " " + jParamSet.jointPositionDgain[1]
+                    + " " + jParamSet.jointPositionDgain[2] + " " + jParamSet.jointPositionDgain[3] + " " + jParamSet.jointPositionDgain[4]
+                    + " " + jParamSet.jointPositionDgain[5] + " " + jParamSet.jointPositionDgain[6] + " " + jParamSet.jointPositionDgain[7] + ";");
+                curStrWrite.WriteLine("");
+
+                curStrWrite.WriteLine("Torque PID Gain Param");
+                curStrWrite.WriteLine("P Gain");
+                curStrWrite.WriteLine(jParamSet.jointTorquePgain[0] + " " + jParamSet.jointTorquePgain[1]
+                    + " " + jParamSet.jointTorquePgain[2] + " " + jParamSet.jointTorquePgain[3] + " " + jParamSet.jointTorquePgain[4]
+                    + " " + jParamSet.jointTorquePgain[5] + " " + jParamSet.jointTorquePgain[6] + " " + jParamSet.jointTorquePgain[7]);
+                curStrWrite.WriteLine("I Gain");
+                curStrWrite.WriteLine(jParamSet.jointTorqueIgain[0] + " " + jParamSet.jointTorqueIgain[1]
+                    + " " + jParamSet.jointTorqueIgain[2] + " " + jParamSet.jointTorqueIgain[3] + " " + jParamSet.jointTorqueIgain[4]
+                    + " " + jParamSet.jointTorqueIgain[5] + " " + jParamSet.jointTorqueIgain[6] + " " + jParamSet.jointTorqueIgain[7]);
+                curStrWrite.WriteLine("D Gain");
+                curStrWrite.WriteLine(jParamSet.jointTorqueDgain[0] + " " + jParamSet.jointTorqueDgain[1]
+                    + " " + jParamSet.jointTorqueDgain[2] + " " + jParamSet.jointTorqueDgain[3] + " " + jParamSet.jointTorqueDgain[4]
+                    + " " + jParamSet.jointTorqueDgain[5] + " " + jParamSet.jointTorqueDgain[6] + " " + jParamSet.jointTorqueDgain[7] + ";");
+                curStrWrite.WriteLine("");
+
+                curStrWrite.WriteLine("Joint Constant Setting");
+                curStrWrite.WriteLine("Efficiency");
+                curStrWrite.WriteLine(jParamSet.jointConstantEfficiency[0] + " " + jParamSet.jointConstantEfficiency[1]
+                    + " " + jParamSet.jointConstantEfficiency[2] + " " + jParamSet.jointConstantEfficiency[3] + " " + jParamSet.jointConstantEfficiency[4]
+                    + " " + jParamSet.jointConstantEfficiency[5] + " " + jParamSet.jointConstantEfficiency[6] + " " + jParamSet.jointConstantEfficiency[7]);
+                curStrWrite.WriteLine("Torque");
+                curStrWrite.WriteLine(jParamSet.jointConstantTorque[0] + " " + jParamSet.jointConstantTorque[1]
+                    + " " + jParamSet.jointConstantTorque[2] + " " + jParamSet.jointConstantTorque[3] + " " + jParamSet.jointConstantTorque[4]
+                    + " " + jParamSet.jointConstantTorque[5] + " " + jParamSet.jointConstantTorque[6] + " " + jParamSet.jointConstantTorque[7]);
+                curStrWrite.WriteLine("Spring");
+                curStrWrite.WriteLine(jParamSet.jointConstantSpring[0] + " " + jParamSet.jointConstantSpring[1]
+                    + " " + jParamSet.jointConstantSpring[2] + " " + jParamSet.jointConstantSpring[3] + " " + jParamSet.jointConstantSpring[4]
+                    + " " + jParamSet.jointConstantSpring[5] + " " + jParamSet.jointConstantSpring[6] + " " + jParamSet.jointConstantSpring[7] + ";");
+                curStrWrite.WriteLine("");
+
+                curStrWrite.WriteLine("Joint Gravity n Friction Param");
+                curStrWrite.WriteLine("G.C. Gain");
+                curStrWrite.WriteLine(jParamSet.jointGravityGain[0] + " " + jParamSet.jointGravityGain[1]
+                    + " " + jParamSet.jointGravityGain[2] + " " + jParamSet.jointGravityGain[3] + " " + jParamSet.jointGravityGain[4]
+                    + " " + jParamSet.jointGravityGain[5] + " " + jParamSet.jointGravityGain[6] + " " + jParamSet.jointGravityGain[7]);
+                curStrWrite.WriteLine("Cur. Gain");
+                curStrWrite.WriteLine(jParamSet.jointCurrentGain[0] + " " + jParamSet.jointCurrentGain[1]
+                    + " " + jParamSet.jointCurrentGain[2] + " " + jParamSet.jointCurrentGain[3] + " " + jParamSet.jointCurrentGain[4]
+                    + " " + jParamSet.jointCurrentGain[5] + " " + jParamSet.jointCurrentGain[6] + " " + jParamSet.jointCurrentGain[7]);
+                curStrWrite.WriteLine("Fric. Gain");
+                curStrWrite.WriteLine(jParamSet.jointFrictionGain[0] + " " + jParamSet.jointFrictionGain[1]
+                    + " " + jParamSet.jointFrictionGain[2] + " " + jParamSet.jointFrictionGain[3] + " " + jParamSet.jointFrictionGain[4]
+                    + " " + jParamSet.jointFrictionGain[5] + " " + jParamSet.jointFrictionGain[6] + " " + jParamSet.jointFrictionGain[7] + ";");
+                curStrWrite.WriteLine("");
+
+                curStrWrite.WriteLine("Joint Trajectory Param");
+                curStrWrite.WriteLine("Time");
+                curStrWrite.WriteLine(jParamSet.jointTrajectoryTime[0] + " " + jParamSet.jointTrajectoryTime[1]
+                    + " " + jParamSet.jointTrajectoryTime[2] + " " + jParamSet.jointTrajectoryTime[3] + " " + jParamSet.jointTrajectoryTime[4]
+                    + " " + jParamSet.jointTrajectoryTime[5] + " " + jParamSet.jointTrajectoryTime[6] + " " + jParamSet.jointTrajectoryTime[7]);
+                curStrWrite.WriteLine("Acc/Dec");
+                curStrWrite.WriteLine(jParamSet.jointTrajectoryAcc[0] + " " + jParamSet.jointTrajectoryAcc[1]
+                    + " " + jParamSet.jointTrajectoryAcc[2] + " " + jParamSet.jointTrajectoryAcc[3] + " " + jParamSet.jointTrajectoryAcc[4]
+                    + " " + jParamSet.jointTrajectoryAcc[5] + " " + jParamSet.jointTrajectoryAcc[6] + " " + jParamSet.jointTrajectoryAcc[7] + ";");
+                curStrWrite.WriteLine("");
+
+                curStrWrite.WriteLine("Cartesian Position PID gain");
+                curStrWrite.WriteLine("P Gain");
+                curStrWrite.WriteLine(cParamSet.cartesianPositionPgain[0] + " " + cParamSet.cartesianPositionPgain[1]
+                    + " " + cParamSet.cartesianPositionPgain[2] + " " + cParamSet.cartesianPositionPgain[3] + " " + cParamSet.cartesianPositionPgain[4]
+                    + " " + cParamSet.cartesianPositionPgain[5]);
+                curStrWrite.WriteLine("I Gain");
+                curStrWrite.WriteLine(cParamSet.cartesianPositionIgain[0] + " " + cParamSet.cartesianPositionIgain[1]
+                    + " " + cParamSet.cartesianPositionIgain[2] + " " + cParamSet.cartesianPositionIgain[3] + " " + cParamSet.cartesianPositionIgain[4]
+                    + " " + cParamSet.cartesianPositionIgain[5]);
+                curStrWrite.WriteLine("D Gain");
+                curStrWrite.WriteLine(cParamSet.cartesianPositionDgain[0] + " " + cParamSet.cartesianPositionDgain[1]
+                    + " " + cParamSet.cartesianPositionDgain[2] + " " + cParamSet.cartesianPositionDgain[3] + " " + cParamSet.cartesianPositionDgain[4]
+                    + " " + cParamSet.cartesianPositionDgain[5] + ";");
+                curStrWrite.WriteLine("");
+
+                curStrWrite.WriteLine("Cartesian Trajectory Param");
+                curStrWrite.WriteLine("Time");
+                curStrWrite.WriteLine(cParamSet.cartesianTrajectoryTime[0] + " " + cParamSet.cartesianTrajectoryTime[1]
+                    + " " + cParamSet.cartesianTrajectoryTime[2] + " " + cParamSet.cartesianTrajectoryTime[3] + " " + cParamSet.cartesianTrajectoryTime[4]
+                    + " " + cParamSet.cartesianTrajectoryTime[5]);
+                curStrWrite.WriteLine("Acc/Dec");
+                curStrWrite.WriteLine(cParamSet.cartesianTrajectoryAcc[0] + " " + cParamSet.cartesianTrajectoryAcc[1]
+                    + " " + cParamSet.cartesianTrajectoryAcc[2] + " " + cParamSet.cartesianTrajectoryAcc[3] + " " + cParamSet.cartesianTrajectoryAcc[4]
+                    + " " + cParamSet.cartesianTrajectoryAcc[5] + ";");
+
+                /* Close curStrWrite StreamWriter */
+                curStrWrite.Close();
+
+                FileStream ParamSave = new FileStream(path + ".txt", FileMode.Create, FileAccess.ReadWrite);
+                StreamWriter StrWrite = new StreamWriter(ParamSave);
+
+                StrWrite.WriteLine("Joint Position PID Gain Param");
+                StrWrite.WriteLine("P Gain");
+                StrWrite.WriteLine(jParamSet.jointPositionPgain[0] + " " + jParamSet.jointPositionPgain[1]
+                    + " " + jParamSet.jointPositionPgain[2] + " " + jParamSet.jointPositionPgain[3] + " " + jParamSet.jointPositionPgain[4]
+                    + " " + jParamSet.jointPositionPgain[5] + " " + jParamSet.jointPositionPgain[6] + " " + jParamSet.jointPositionPgain[7]);
+                StrWrite.WriteLine("I Gain");
+                StrWrite.WriteLine(jParamSet.jointPositionIgain[0] + " " + jParamSet.jointPositionIgain[1]
+                    + " " + jParamSet.jointPositionIgain[2] + " " + jParamSet.jointPositionIgain[3] + " " + jParamSet.jointPositionIgain[4]
+                    + " " + jParamSet.jointPositionIgain[5] + " " + jParamSet.jointPositionIgain[6] + " " + jParamSet.jointPositionIgain[7]);
+                StrWrite.WriteLine("D Gain");
+                StrWrite.WriteLine(jParamSet.jointPositionDgain[0] + " " + jParamSet.jointPositionDgain[1]
+                    + " " + jParamSet.jointPositionDgain[2] + " " + jParamSet.jointPositionDgain[3] + " " + jParamSet.jointPositionDgain[4]
+                    + " " + jParamSet.jointPositionDgain[5] + " " + jParamSet.jointPositionDgain[6] + " " + jParamSet.jointPositionDgain[7] + ";");
+                StrWrite.WriteLine("");
+
+                StrWrite.WriteLine("Torque PID Gain Param");
+                StrWrite.WriteLine("P Gain");
+                StrWrite.WriteLine(jParamSet.jointTorquePgain[0] + " " + jParamSet.jointTorquePgain[1]
+                    + " " + jParamSet.jointTorquePgain[2] + " " + jParamSet.jointTorquePgain[3] + " " + jParamSet.jointTorquePgain[4]
+                    + " " + jParamSet.jointTorquePgain[5] + " " + jParamSet.jointTorquePgain[6] + " " + jParamSet.jointTorquePgain[7]);
+                StrWrite.WriteLine("I Gain");
+                StrWrite.WriteLine(jParamSet.jointTorqueIgain[0] + " " + jParamSet.jointTorqueIgain[1]
+                    + " " + jParamSet.jointTorqueIgain[2] + " " + jParamSet.jointTorqueIgain[3] + " " + jParamSet.jointTorqueIgain[4]
+                    + " " + jParamSet.jointTorqueIgain[5] + " " + jParamSet.jointTorqueIgain[6] + " " + jParamSet.jointTorqueIgain[7]);
+                StrWrite.WriteLine("D Gain");
+                StrWrite.WriteLine(jParamSet.jointTorqueDgain[0] + " " + jParamSet.jointTorqueDgain[1]
+                    + " " + jParamSet.jointTorqueDgain[2] + " " + jParamSet.jointTorqueDgain[3] + " " + jParamSet.jointTorqueDgain[4]
+                    + " " + jParamSet.jointTorqueDgain[5] + " " + jParamSet.jointTorqueDgain[6] + " " + jParamSet.jointTorqueDgain[7] + ";");
+                StrWrite.WriteLine("");
+
+                StrWrite.WriteLine("Joint Constant Setting");
+                StrWrite.WriteLine("Efficiency");
+                StrWrite.WriteLine(jParamSet.jointConstantEfficiency[0] + " " + jParamSet.jointConstantEfficiency[1]
+                    + " " + jParamSet.jointConstantEfficiency[2] + " " + jParamSet.jointConstantEfficiency[3] + " " + jParamSet.jointConstantEfficiency[4]
+                    + " " + jParamSet.jointConstantEfficiency[5] + " " + jParamSet.jointConstantEfficiency[6] + " " + jParamSet.jointConstantEfficiency[7]);
+                StrWrite.WriteLine("Torque");
+                StrWrite.WriteLine(jParamSet.jointConstantTorque[0] + " " + jParamSet.jointConstantTorque[1]
+                    + " " + jParamSet.jointConstantTorque[2] + " " + jParamSet.jointConstantTorque[3] + " " + jParamSet.jointConstantTorque[4]
+                    + " " + jParamSet.jointConstantTorque[5] + " " + jParamSet.jointConstantTorque[6] + " " + jParamSet.jointConstantTorque[7]);
+                StrWrite.WriteLine("Spring");
+                StrWrite.WriteLine(jParamSet.jointConstantSpring[0] + " " + jParamSet.jointConstantSpring[1]
+                    + " " + jParamSet.jointConstantSpring[2] + " " + jParamSet.jointConstantSpring[3] + " " + jParamSet.jointConstantSpring[4]
+                    + " " + jParamSet.jointConstantSpring[5] + " " + jParamSet.jointConstantSpring[6] + " " + jParamSet.jointConstantSpring[7] + ";");
+                StrWrite.WriteLine("");
+
+                StrWrite.WriteLine("Joint Gravity n Friction Param");
+                StrWrite.WriteLine("G.C. Gain");
+                StrWrite.WriteLine(jParamSet.jointGravityGain[0] + " " + jParamSet.jointGravityGain[1]
+                    + " " + jParamSet.jointGravityGain[2] + " " + jParamSet.jointGravityGain[3] + " " + jParamSet.jointGravityGain[4]
+                    + " " + jParamSet.jointGravityGain[5] + " " + jParamSet.jointGravityGain[6] + " " + jParamSet.jointGravityGain[7]);
+                StrWrite.WriteLine("Cur. Gain");
+                StrWrite.WriteLine(jParamSet.jointCurrentGain[0] + " " + jParamSet.jointCurrentGain[1]
+                    + " " + jParamSet.jointCurrentGain[2] + " " + jParamSet.jointCurrentGain[3] + " " + jParamSet.jointCurrentGain[4]
+                    + " " + jParamSet.jointCurrentGain[5] + " " + jParamSet.jointCurrentGain[6] + " " + jParamSet.jointCurrentGain[7]);
+                StrWrite.WriteLine("Fric. Gain");
+                StrWrite.WriteLine(jParamSet.jointFrictionGain[0] + " " + jParamSet.jointFrictionGain[1]
+                    + " " + jParamSet.jointFrictionGain[2] + " " + jParamSet.jointFrictionGain[3] + " " + jParamSet.jointFrictionGain[4]
+                    + " " + jParamSet.jointFrictionGain[5] + " " + jParamSet.jointFrictionGain[6] + " " + jParamSet.jointFrictionGain[7] + ";");
+                StrWrite.WriteLine("");
+
+                StrWrite.WriteLine("Joint Trajectory Param");
+                StrWrite.WriteLine("Time");
+                StrWrite.WriteLine(jParamSet.jointTrajectoryTime[0] + " " + jParamSet.jointTrajectoryTime[1]
+                    + " " + jParamSet.jointTrajectoryTime[2] + " " + jParamSet.jointTrajectoryTime[3] + " " + jParamSet.jointTrajectoryTime[4]
+                    + " " + jParamSet.jointTrajectoryTime[5] + " " + jParamSet.jointTrajectoryTime[6] + " " + jParamSet.jointTrajectoryTime[7]);
+                StrWrite.WriteLine("Acc/Dec");
+                StrWrite.WriteLine(jParamSet.jointTrajectoryAcc[0] + " " + jParamSet.jointTrajectoryAcc[1]
+                    + " " + jParamSet.jointTrajectoryAcc[2] + " " + jParamSet.jointTrajectoryAcc[3] + " " + jParamSet.jointTrajectoryAcc[4]
+                    + " " + jParamSet.jointTrajectoryAcc[5] + " " + jParamSet.jointTrajectoryAcc[6] + " " + jParamSet.jointTrajectoryAcc[7] + ";");
+                StrWrite.WriteLine("");
+
+                StrWrite.WriteLine("Cartesian Position PID gain");
+                StrWrite.WriteLine("P Gain");
+                StrWrite.WriteLine(cParamSet.cartesianPositionPgain[0] + " " + cParamSet.cartesianPositionPgain[1]
+                    + " " + cParamSet.cartesianPositionPgain[2] + " " + cParamSet.cartesianPositionPgain[3] + " " + cParamSet.cartesianPositionPgain[4]
+                    + " " + cParamSet.cartesianPositionPgain[5]);
+                StrWrite.WriteLine("I Gain");
+                StrWrite.WriteLine(cParamSet.cartesianPositionIgain[0] + " " + cParamSet.cartesianPositionIgain[1]
+                    + " " + cParamSet.cartesianPositionIgain[2] + " " + cParamSet.cartesianPositionIgain[3] + " " + cParamSet.cartesianPositionIgain[4]
+                    + " " + cParamSet.cartesianPositionIgain[5]);
+                StrWrite.WriteLine("D Gain");
+                StrWrite.WriteLine(cParamSet.cartesianPositionDgain[0] + " " + cParamSet.cartesianPositionDgain[1]
+                    + " " + cParamSet.cartesianPositionDgain[2] + " " + cParamSet.cartesianPositionDgain[3] + " " + cParamSet.cartesianPositionDgain[4]
+                    + " " + cParamSet.cartesianPositionDgain[5] + ";");
+                StrWrite.WriteLine("");
+
+                StrWrite.WriteLine("Cartesian Trajectory Param");
+                StrWrite.WriteLine("Time");
+                StrWrite.WriteLine(cParamSet.cartesianTrajectoryTime[0] + " " + cParamSet.cartesianTrajectoryTime[1]
+                    + " " + cParamSet.cartesianTrajectoryTime[2] + " " + cParamSet.cartesianTrajectoryTime[3] + " " + cParamSet.cartesianTrajectoryTime[4]
+                    + " " + cParamSet.cartesianTrajectoryTime[5]);
+                StrWrite.WriteLine("Acc/Dec");
+                StrWrite.WriteLine(cParamSet.cartesianTrajectoryAcc[0] + " " + cParamSet.cartesianTrajectoryAcc[1]
+                    + " " + cParamSet.cartesianTrajectoryAcc[2] + " " + cParamSet.cartesianTrajectoryAcc[3] + " " + cParamSet.cartesianTrajectoryAcc[4]
+                    + " " + cParamSet.cartesianTrajectoryAcc[5] + ";");
+
+                /* Close StrWrite StreamWriter */
+                StrWrite.Close();
+                ParametersSavepictureBox.Image = StatusOnImage;
+                log.Info("Parameters File Save Complete , File Name : " + curFileName);
+            }
+            catch(FileNotFoundException err)
+            {
+                ErrorCodetextBox.Text = "File Save Error!!";
+                log.Error("Parameters File Save Error");
+                ParametersSavepictureBox.Image = StatusOffImage;
+            }
+        }
+
+        private void DebuggingToolSW_Load(object sender, EventArgs e)
+        {
+            log.Info("DebuggingToolSW Loaded Complete");
+            UpdateTextBox(ErrorCodetextBox,"DebuggingToolSW Loaded Complete");
+        }
+
+
+        private void LoggingStartbutton_Click(object sender, EventArgs e)
+        {
+            FileInfo file = new FileInfo("logging_.csv");
+
+            StreamWriter logging_SW = file.CreateText();
+            logging_SW.Close();
+
+            /* Logging Status On */
+            LoggingpictureBox.Image = StatusOnImage;
+            StatusLogging = true;
+        }
+
+        private void LoggingStopbutton_Click(object sender, EventArgs e)
+        {
+            /* Logging Status Off */
+            LoggingpictureBox.Image = StatusOffImage;
+            StatusLogging = false;
         }
     }
 }
