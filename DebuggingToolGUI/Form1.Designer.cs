@@ -34,6 +34,7 @@ namespace DebuggingToolGUI
             this.MainTapControl = new System.Windows.Forms.TabControl();
             this.Default = new System.Windows.Forms.TabPage();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.button3 = new System.Windows.Forms.Button();
             this.SetJointToqPIDGainbutton = new System.Windows.Forms.Button();
             this.jtDgainJoint8textBox = new System.Windows.Forms.TextBox();
             this.jtIgainJoint8textBox = new System.Windows.Forms.TextBox();
@@ -71,6 +72,7 @@ namespace DebuggingToolGUI
             this.label60 = new System.Windows.Forms.Label();
             this.label61 = new System.Windows.Forms.Label();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.button2 = new System.Windows.Forms.Button();
             this.SetJointPosPIDGainbutton = new System.Windows.Forms.Button();
             this.jpDgainJoint8textBox = new System.Windows.Forms.TextBox();
             this.jpIgainJoint8textBox = new System.Windows.Forms.TextBox();
@@ -109,6 +111,7 @@ namespace DebuggingToolGUI
             this.label51 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
+            this.button5 = new System.Windows.Forms.Button();
             this.GCnFricParamSetbutton = new System.Windows.Forms.Button();
             this.FricGainJoint8textBox = new System.Windows.Forms.TextBox();
             this.CurGainJoint8textBox = new System.Windows.Forms.TextBox();
@@ -146,6 +149,7 @@ namespace DebuggingToolGUI
             this.label82 = new System.Windows.Forms.Label();
             this.label83 = new System.Windows.Forms.Label();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
+            this.button4 = new System.Windows.Forms.Button();
             this.JointConstantParamSetbutton = new System.Windows.Forms.Button();
             this.jcSpringJoint8textBox = new System.Windows.Forms.TextBox();
             this.jcTorqueConstJoint8textBox = new System.Windows.Forms.TextBox();
@@ -236,6 +240,8 @@ namespace DebuggingToolGUI
             this.label98 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.CartesianPositionSetgroupBox = new System.Windows.Forms.GroupBox();
+            this.cRightbutton = new System.Windows.Forms.Button();
+            this.cLeftbutton = new System.Windows.Forms.Button();
             this.CartesianReachedpictureBox = new System.Windows.Forms.PictureBox();
             this.CartesianMovingpictureBox = new System.Windows.Forms.PictureBox();
             this.CartesianPositionSetbutton = new System.Windows.Forms.Button();
@@ -253,12 +259,12 @@ namespace DebuggingToolGUI
             this.label126 = new System.Windows.Forms.Label();
             this.label131 = new System.Windows.Forms.Label();
             this.label127 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.PositionCartesianRztextBox = new System.Windows.Forms.TextBox();
+            this.PositionCartesianRytextBox = new System.Windows.Forms.TextBox();
+            this.PositionCartesianPztextBox = new System.Windows.Forms.TextBox();
+            this.PositionCartesianRxtextBox = new System.Windows.Forms.TextBox();
+            this.PositionCartesianPytextBox = new System.Windows.Forms.TextBox();
+            this.PositionCartesianPxtextBox = new System.Windows.Forms.TextBox();
             this.groupBox12 = new System.Windows.Forms.GroupBox();
             this.CartesianTrajSetbutton = new System.Windows.Forms.Button();
             this.TrajAccCartesianYawtextBox = new System.Windows.Forms.TextBox();
@@ -282,6 +288,7 @@ namespace DebuggingToolGUI
             this.label112 = new System.Windows.Forms.Label();
             this.label113 = new System.Windows.Forms.Label();
             this.groupBox11 = new System.Windows.Forms.GroupBox();
+            this.button8 = new System.Windows.Forms.Button();
             this.CartesianPIDSetbutton = new System.Windows.Forms.Button();
             this.cpDgainCartesianYawtextBox = new System.Windows.Forms.TextBox();
             this.cpIgainCartesianYawtextBox = new System.Windows.Forms.TextBox();
@@ -360,82 +367,37 @@ namespace DebuggingToolGUI
             this.Readybutton = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.ServoOnButton = new System.Windows.Forms.Button();
-            this.IncrementalEncodergroupBox = new System.Windows.Forms.GroupBox();
-            this.IncCurrentJoint8textBox = new System.Windows.Forms.TextBox();
+            this.AbsoluteEnocdergroupBox = new System.Windows.Forms.GroupBox();
+            this.CurrentJoint8textBox = new System.Windows.Forms.TextBox();
             this.IncVelocityJoint8textBox = new System.Windows.Forms.TextBox();
             this.IncPositionJoint8textBox = new System.Windows.Forms.TextBox();
-            this.IncCurrentJoint7textBox = new System.Windows.Forms.TextBox();
-            this.INCPosJoint8textBox = new System.Windows.Forms.TextBox();
-            this.IncCurrentJoint6textBox = new System.Windows.Forms.TextBox();
+            this.CurrentJoint7textBox = new System.Windows.Forms.TextBox();
+            this.AbsPosJoint8textBox = new System.Windows.Forms.TextBox();
+            this.CurrentJoint6textBox = new System.Windows.Forms.TextBox();
             this.IncVelocityJoint7textBox = new System.Windows.Forms.TextBox();
             this.IncVelocityJoint6textBox = new System.Windows.Forms.TextBox();
             this.IncPositionJoint7textBox = new System.Windows.Forms.TextBox();
-            this.IncCurrentJoint5textBox = new System.Windows.Forms.TextBox();
+            this.CurrentJoint5textBox = new System.Windows.Forms.TextBox();
             this.IncPositionJoint6textBox = new System.Windows.Forms.TextBox();
             this.IncVelocityJoint5textBox = new System.Windows.Forms.TextBox();
-            this.INCPosJoint7textBox = new System.Windows.Forms.TextBox();
-            this.IncCurrentJoint4textBox = new System.Windows.Forms.TextBox();
+            this.AbsPosJoint7textBox = new System.Windows.Forms.TextBox();
+            this.CurrentJoint4textBox = new System.Windows.Forms.TextBox();
             this.IncPositionJoint5textBox = new System.Windows.Forms.TextBox();
             this.IncVelocityJoint4textBox = new System.Windows.Forms.TextBox();
-            this.INCPosJoint6textBox = new System.Windows.Forms.TextBox();
-            this.IncCurrentJoint3textBox = new System.Windows.Forms.TextBox();
+            this.AbsPosJoint6textBox = new System.Windows.Forms.TextBox();
+            this.CurrentJoint3textBox = new System.Windows.Forms.TextBox();
             this.IncPositionJoint4textBox = new System.Windows.Forms.TextBox();
             this.IncVelocityJoint3textBox = new System.Windows.Forms.TextBox();
-            this.INCPosJoint5textBox = new System.Windows.Forms.TextBox();
-            this.IncCurrentJoint2textBox = new System.Windows.Forms.TextBox();
+            this.AbsPosJoint5textBox = new System.Windows.Forms.TextBox();
+            this.CurrentJoint2textBox = new System.Windows.Forms.TextBox();
             this.IncPositionJoint3textBox = new System.Windows.Forms.TextBox();
             this.IncVelocityJoint2textBox = new System.Windows.Forms.TextBox();
-            this.IncPosJoint4textBox = new System.Windows.Forms.TextBox();
-            this.IncCurrentJoint1textBox = new System.Windows.Forms.TextBox();
+            this.AbsPosJoint4textBox = new System.Windows.Forms.TextBox();
+            this.CurrentJoint1textBox = new System.Windows.Forms.TextBox();
             this.IncPositionJoint2textBox = new System.Windows.Forms.TextBox();
             this.IncVelocityJoint1textBox = new System.Windows.Forms.TextBox();
-            this.IncPosJoint3textBox = new System.Windows.Forms.TextBox();
-            this.IncPositionJoint1textBox = new System.Windows.Forms.TextBox();
-            this.IncPosJoint2textBox = new System.Windows.Forms.TextBox();
-            this.IncPosJoint1textBox = new System.Windows.Forms.TextBox();
-            this.label23 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
-            this.label26 = new System.Windows.Forms.Label();
-            this.label27 = new System.Windows.Forms.Label();
-            this.label28 = new System.Windows.Forms.Label();
-            this.label29 = new System.Windows.Forms.Label();
-            this.label30 = new System.Windows.Forms.Label();
-            this.label31 = new System.Windows.Forms.Label();
-            this.label32 = new System.Windows.Forms.Label();
-            this.label33 = new System.Windows.Forms.Label();
-            this.label34 = new System.Windows.Forms.Label();
-            this.AbsoluteEnocdergroupBox = new System.Windows.Forms.GroupBox();
-            this.AbCurrentJoint8textBox = new System.Windows.Forms.TextBox();
-            this.AbVelocityJoint8textBox = new System.Windows.Forms.TextBox();
-            this.AbPositionJoint8textBox = new System.Windows.Forms.TextBox();
-            this.AbCurrentJoint7textBox = new System.Windows.Forms.TextBox();
-            this.AbsPosJoint8textBox = new System.Windows.Forms.TextBox();
-            this.AbCurrentJoint6textBox = new System.Windows.Forms.TextBox();
-            this.AbVelocityJoint7textBox = new System.Windows.Forms.TextBox();
-            this.AbVelocityJoint6textBox = new System.Windows.Forms.TextBox();
-            this.AbPositionJoint7textBox = new System.Windows.Forms.TextBox();
-            this.AbCurrentJoint5textBox = new System.Windows.Forms.TextBox();
-            this.AbPositionJoint6textBox = new System.Windows.Forms.TextBox();
-            this.AbVelocityJoint5textBox = new System.Windows.Forms.TextBox();
-            this.AbsPosJoint7textBox = new System.Windows.Forms.TextBox();
-            this.AbCurrentJoint4textBox = new System.Windows.Forms.TextBox();
-            this.AbPositionJoint5textBox = new System.Windows.Forms.TextBox();
-            this.AbVelocityJoint4textBox = new System.Windows.Forms.TextBox();
-            this.AbsPosJoint6textBox = new System.Windows.Forms.TextBox();
-            this.AbCurrentJoint3textBox = new System.Windows.Forms.TextBox();
-            this.AbPositionJoint4textBox = new System.Windows.Forms.TextBox();
-            this.AbVelocityJoint3textBox = new System.Windows.Forms.TextBox();
-            this.AbsPosJoint5textBox = new System.Windows.Forms.TextBox();
-            this.AbCurrentJoint2textBox = new System.Windows.Forms.TextBox();
-            this.AbPositionJoint3textBox = new System.Windows.Forms.TextBox();
-            this.AbVelocityJoint2textBox = new System.Windows.Forms.TextBox();
-            this.AbsPosJoint4textBox = new System.Windows.Forms.TextBox();
-            this.AbCurrentJoint1textBox = new System.Windows.Forms.TextBox();
-            this.AbPositionJoint2textBox = new System.Windows.Forms.TextBox();
-            this.AbVelocityJoint1textBox = new System.Windows.Forms.TextBox();
             this.AbsPosJoint3textBox = new System.Windows.Forms.TextBox();
-            this.AbPositionJoint1textBox = new System.Windows.Forms.TextBox();
+            this.IncPositionJoint1textBox = new System.Windows.Forms.TextBox();
             this.AbsPosJoint2textBox = new System.Windows.Forms.TextBox();
             this.AbsPosJoint1textBox = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
@@ -464,6 +426,7 @@ namespace DebuggingToolGUI
             this.ParametersReadbutton = new System.Windows.Forms.Button();
             this.ConnectCompletepictureBox = new System.Windows.Forms.PictureBox();
             this.ConnectComplete = new System.Windows.Forms.Label();
+            this.LoglistBox = new System.Windows.Forms.ListBox();
             this.MainTapControl.SuspendLayout();
             this.Default.SuspendLayout();
             this.groupBox7.SuspendLayout();
@@ -499,7 +462,6 @@ namespace DebuggingToolGUI
             ((System.ComponentModel.ISupportInitialize)(this.PositionModepictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GCpictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ConnectpictureBox)).BeginInit();
-            this.IncrementalEncodergroupBox.SuspendLayout();
             this.AbsoluteEnocdergroupBox.SuspendLayout();
             this.LoggingSystemgroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.LoggingpictureBox)).BeginInit();
@@ -522,10 +484,10 @@ namespace DebuggingToolGUI
             this.MainTapControl.Controls.Add(this.tabPage4);
             this.MainTapControl.Cursor = System.Windows.Forms.Cursors.Default;
             this.MainTapControl.Font = new System.Drawing.Font("KoPub돋움체 Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.MainTapControl.Location = new System.Drawing.Point(24, 511);
+            this.MainTapControl.Location = new System.Drawing.Point(24, 286);
             this.MainTapControl.Name = "MainTapControl";
             this.MainTapControl.SelectedIndex = 0;
-            this.MainTapControl.Size = new System.Drawing.Size(1308, 437);
+            this.MainTapControl.Size = new System.Drawing.Size(1308, 662);
             this.MainTapControl.TabIndex = 0;
             // 
             // Default
@@ -537,13 +499,14 @@ namespace DebuggingToolGUI
             this.Default.Location = new System.Drawing.Point(4, 30);
             this.Default.Name = "Default";
             this.Default.Padding = new System.Windows.Forms.Padding(3);
-            this.Default.Size = new System.Drawing.Size(1300, 403);
+            this.Default.Size = new System.Drawing.Size(1300, 628);
             this.Default.TabIndex = 0;
             this.Default.Text = "Joint PID Setting";
             this.Default.Click += new System.EventHandler(this.Default_Click);
             // 
             // groupBox7
             // 
+            this.groupBox7.Controls.Add(this.button3);
             this.groupBox7.Controls.Add(this.SetJointToqPIDGainbutton);
             this.groupBox7.Controls.Add(this.jtDgainJoint8textBox);
             this.groupBox7.Controls.Add(this.jtIgainJoint8textBox);
@@ -588,11 +551,21 @@ namespace DebuggingToolGUI
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Torque PID Gain Param";
             // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(1133, 54);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(146, 110);
+            this.button3.TabIndex = 7;
+            this.button3.Text = "Set PID Gain Get";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.SetJointToqPIDGainbutton_Click);
+            // 
             // SetJointToqPIDGainbutton
             // 
             this.SetJointToqPIDGainbutton.Location = new System.Drawing.Point(983, 54);
             this.SetJointToqPIDGainbutton.Name = "SetJointToqPIDGainbutton";
-            this.SetJointToqPIDGainbutton.Size = new System.Drawing.Size(282, 110);
+            this.SetJointToqPIDGainbutton.Size = new System.Drawing.Size(146, 110);
             this.SetJointToqPIDGainbutton.TabIndex = 7;
             this.SetJointToqPIDGainbutton.Text = "Set PID Gain Set";
             this.SetJointToqPIDGainbutton.UseVisualStyleBackColor = true;
@@ -902,6 +875,7 @@ namespace DebuggingToolGUI
             // 
             // groupBox6
             // 
+            this.groupBox6.Controls.Add(this.button2);
             this.groupBox6.Controls.Add(this.SetJointPosPIDGainbutton);
             this.groupBox6.Controls.Add(this.jpDgainJoint8textBox);
             this.groupBox6.Controls.Add(this.jpIgainJoint8textBox);
@@ -946,11 +920,20 @@ namespace DebuggingToolGUI
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Joint Position PID Gain Param";
             // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(1134, 54);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(148, 110);
+            this.button2.TabIndex = 8;
+            this.button2.Text = "Set PID Gain Get";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
             // SetJointPosPIDGainbutton
             // 
             this.SetJointPosPIDGainbutton.Location = new System.Drawing.Point(983, 54);
             this.SetJointPosPIDGainbutton.Name = "SetJointPosPIDGainbutton";
-            this.SetJointPosPIDGainbutton.Size = new System.Drawing.Size(282, 110);
+            this.SetJointPosPIDGainbutton.Size = new System.Drawing.Size(148, 110);
             this.SetJointPosPIDGainbutton.TabIndex = 7;
             this.SetJointPosPIDGainbutton.Text = "Set PID Gain Set";
             this.SetJointPosPIDGainbutton.UseVisualStyleBackColor = true;
@@ -1290,12 +1273,13 @@ namespace DebuggingToolGUI
             this.tabPage2.Location = new System.Drawing.Point(4, 30);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1300, 403);
+            this.tabPage2.Size = new System.Drawing.Size(1300, 628);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Joint Constant Setting";
             // 
             // groupBox9
             // 
+            this.groupBox9.Controls.Add(this.button5);
             this.groupBox9.Controls.Add(this.GCnFricParamSetbutton);
             this.groupBox9.Controls.Add(this.FricGainJoint8textBox);
             this.groupBox9.Controls.Add(this.CurGainJoint8textBox);
@@ -1340,11 +1324,20 @@ namespace DebuggingToolGUI
             this.groupBox9.TabStop = false;
             this.groupBox9.Text = "Joint Gravity n Friction Param";
             // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(1134, 54);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(148, 110);
+            this.button5.TabIndex = 10;
+            this.button5.Text = "Set G.C. n Fric. Param Get";
+            this.button5.UseVisualStyleBackColor = true;
+            // 
             // GCnFricParamSetbutton
             // 
             this.GCnFricParamSetbutton.Location = new System.Drawing.Point(983, 54);
             this.GCnFricParamSetbutton.Name = "GCnFricParamSetbutton";
-            this.GCnFricParamSetbutton.Size = new System.Drawing.Size(282, 110);
+            this.GCnFricParamSetbutton.Size = new System.Drawing.Size(148, 110);
             this.GCnFricParamSetbutton.TabIndex = 7;
             this.GCnFricParamSetbutton.Text = "Set G.C. n Fric. Param Set";
             this.GCnFricParamSetbutton.UseVisualStyleBackColor = true;
@@ -1654,6 +1647,7 @@ namespace DebuggingToolGUI
             // 
             // groupBox8
             // 
+            this.groupBox8.Controls.Add(this.button4);
             this.groupBox8.Controls.Add(this.JointConstantParamSetbutton);
             this.groupBox8.Controls.Add(this.jcSpringJoint8textBox);
             this.groupBox8.Controls.Add(this.jcTorqueConstJoint8textBox);
@@ -1698,12 +1692,21 @@ namespace DebuggingToolGUI
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "Joint Constant Param";
             // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(1134, 54);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(148, 110);
+            this.button4.TabIndex = 9;
+            this.button4.Text = "Set Constant Param Get";
+            this.button4.UseVisualStyleBackColor = true;
+            // 
             // JointConstantParamSetbutton
             // 
             this.JointConstantParamSetbutton.BackColor = System.Drawing.SystemColors.ControlLight;
             this.JointConstantParamSetbutton.Location = new System.Drawing.Point(983, 54);
             this.JointConstantParamSetbutton.Name = "JointConstantParamSetbutton";
-            this.JointConstantParamSetbutton.Size = new System.Drawing.Size(282, 110);
+            this.JointConstantParamSetbutton.Size = new System.Drawing.Size(148, 110);
             this.JointConstantParamSetbutton.TabIndex = 7;
             this.JointConstantParamSetbutton.Text = "Set Constant Param Set";
             this.JointConstantParamSetbutton.UseVisualStyleBackColor = false;
@@ -2018,7 +2021,7 @@ namespace DebuggingToolGUI
             this.tabPage1.Controls.Add(this.groupBox10);
             this.tabPage1.Location = new System.Drawing.Point(4, 30);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Size = new System.Drawing.Size(1300, 403);
+            this.tabPage1.Size = new System.Drawing.Size(1300, 628);
             this.tabPage1.TabIndex = 2;
             this.tabPage1.Text = "Joint Control Set";
             // 
@@ -2094,10 +2097,11 @@ namespace DebuggingToolGUI
             // 
             this.JointPositionSetbutton.Location = new System.Drawing.Point(977, 26);
             this.JointPositionSetbutton.Name = "JointPositionSetbutton";
-            this.JointPositionSetbutton.Size = new System.Drawing.Size(282, 70);
+            this.JointPositionSetbutton.Size = new System.Drawing.Size(285, 70);
             this.JointPositionSetbutton.TabIndex = 7;
             this.JointPositionSetbutton.Text = "Joint Position Set";
             this.JointPositionSetbutton.UseVisualStyleBackColor = true;
+            this.JointPositionSetbutton.Click += new System.EventHandler(this.JointPositionSetbutton_Click);
             // 
             // PositionJoint8textBox
             // 
@@ -2294,7 +2298,7 @@ namespace DebuggingToolGUI
             // 
             this.JointTrajetorySetbutton.Location = new System.Drawing.Point(977, 60);
             this.JointTrajetorySetbutton.Name = "JointTrajetorySetbutton";
-            this.JointTrajetorySetbutton.Size = new System.Drawing.Size(282, 70);
+            this.JointTrajetorySetbutton.Size = new System.Drawing.Size(285, 70);
             this.JointTrajetorySetbutton.TabIndex = 7;
             this.JointTrajetorySetbutton.Text = "Joint Trajectory Set";
             this.JointTrajetorySetbutton.UseVisualStyleBackColor = true;
@@ -2536,12 +2540,14 @@ namespace DebuggingToolGUI
             this.tabPage3.Controls.Add(this.groupBox11);
             this.tabPage3.Location = new System.Drawing.Point(4, 30);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(1300, 403);
+            this.tabPage3.Size = new System.Drawing.Size(1300, 628);
             this.tabPage3.TabIndex = 3;
             this.tabPage3.Text = "Cartesian Control Set";
             // 
             // CartesianPositionSetgroupBox
             // 
+            this.CartesianPositionSetgroupBox.Controls.Add(this.cRightbutton);
+            this.CartesianPositionSetgroupBox.Controls.Add(this.cLeftbutton);
             this.CartesianPositionSetgroupBox.Controls.Add(this.CartesianReachedpictureBox);
             this.CartesianPositionSetgroupBox.Controls.Add(this.CartesianMovingpictureBox);
             this.CartesianPositionSetgroupBox.Controls.Add(this.CartesianPositionSetbutton);
@@ -2559,18 +2565,36 @@ namespace DebuggingToolGUI
             this.CartesianPositionSetgroupBox.Controls.Add(this.label126);
             this.CartesianPositionSetgroupBox.Controls.Add(this.label131);
             this.CartesianPositionSetgroupBox.Controls.Add(this.label127);
-            this.CartesianPositionSetgroupBox.Controls.Add(this.textBox6);
-            this.CartesianPositionSetgroupBox.Controls.Add(this.textBox5);
-            this.CartesianPositionSetgroupBox.Controls.Add(this.textBox1);
-            this.CartesianPositionSetgroupBox.Controls.Add(this.textBox4);
-            this.CartesianPositionSetgroupBox.Controls.Add(this.textBox2);
-            this.CartesianPositionSetgroupBox.Controls.Add(this.textBox3);
+            this.CartesianPositionSetgroupBox.Controls.Add(this.PositionCartesianRztextBox);
+            this.CartesianPositionSetgroupBox.Controls.Add(this.PositionCartesianRytextBox);
+            this.CartesianPositionSetgroupBox.Controls.Add(this.PositionCartesianPztextBox);
+            this.CartesianPositionSetgroupBox.Controls.Add(this.PositionCartesianRxtextBox);
+            this.CartesianPositionSetgroupBox.Controls.Add(this.PositionCartesianPytextBox);
+            this.CartesianPositionSetgroupBox.Controls.Add(this.PositionCartesianPxtextBox);
             this.CartesianPositionSetgroupBox.Location = new System.Drawing.Point(903, 19);
             this.CartesianPositionSetgroupBox.Name = "CartesianPositionSetgroupBox";
             this.CartesianPositionSetgroupBox.Size = new System.Drawing.Size(388, 365);
             this.CartesianPositionSetgroupBox.TabIndex = 10;
             this.CartesianPositionSetgroupBox.TabStop = false;
             this.CartesianPositionSetgroupBox.Text = "Cartesian Position Set";
+            // 
+            // cRightbutton
+            // 
+            this.cRightbutton.Location = new System.Drawing.Point(306, 27);
+            this.cRightbutton.Name = "cRightbutton";
+            this.cRightbutton.Size = new System.Drawing.Size(76, 69);
+            this.cRightbutton.TabIndex = 167;
+            this.cRightbutton.Text = "Right";
+            this.cRightbutton.UseVisualStyleBackColor = true;
+            // 
+            // cLeftbutton
+            // 
+            this.cLeftbutton.Location = new System.Drawing.Point(236, 27);
+            this.cLeftbutton.Name = "cLeftbutton";
+            this.cLeftbutton.Size = new System.Drawing.Size(74, 69);
+            this.cLeftbutton.TabIndex = 167;
+            this.cLeftbutton.Text = "Left";
+            this.cLeftbutton.UseVisualStyleBackColor = true;
             // 
             // CartesianReachedpictureBox
             // 
@@ -2590,12 +2614,13 @@ namespace DebuggingToolGUI
             // 
             // CartesianPositionSetbutton
             // 
-            this.CartesianPositionSetbutton.Location = new System.Drawing.Point(236, 68);
+            this.CartesianPositionSetbutton.Location = new System.Drawing.Point(236, 102);
             this.CartesianPositionSetbutton.Name = "CartesianPositionSetbutton";
-            this.CartesianPositionSetbutton.Size = new System.Drawing.Size(131, 198);
+            this.CartesianPositionSetbutton.Size = new System.Drawing.Size(146, 164);
             this.CartesianPositionSetbutton.TabIndex = 13;
             this.CartesianPositionSetbutton.Text = "Position Set";
             this.CartesianPositionSetbutton.UseVisualStyleBackColor = true;
+            this.CartesianPositionSetbutton.Click += new System.EventHandler(this.CartesianPositionSetbutton_Click);
             // 
             // label136
             // 
@@ -2738,53 +2763,53 @@ namespace DebuggingToolGUI
             this.label127.TabIndex = 12;
             this.label127.Text = "Px";
             // 
-            // textBox6
+            // PositionCartesianRztextBox
             // 
-            this.textBox6.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox6.Location = new System.Drawing.Point(67, 238);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(104, 28);
-            this.textBox6.TabIndex = 7;
+            this.PositionCartesianRztextBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.PositionCartesianRztextBox.Location = new System.Drawing.Point(67, 238);
+            this.PositionCartesianRztextBox.Name = "PositionCartesianRztextBox";
+            this.PositionCartesianRztextBox.Size = new System.Drawing.Size(104, 28);
+            this.PositionCartesianRztextBox.TabIndex = 7;
             // 
-            // textBox5
+            // PositionCartesianRytextBox
             // 
-            this.textBox5.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox5.Location = new System.Drawing.Point(67, 204);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(104, 28);
-            this.textBox5.TabIndex = 8;
+            this.PositionCartesianRytextBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.PositionCartesianRytextBox.Location = new System.Drawing.Point(67, 204);
+            this.PositionCartesianRytextBox.Name = "PositionCartesianRytextBox";
+            this.PositionCartesianRytextBox.Size = new System.Drawing.Size(104, 28);
+            this.PositionCartesianRytextBox.TabIndex = 8;
             // 
-            // textBox1
+            // PositionCartesianPztextBox
             // 
-            this.textBox1.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox1.Location = new System.Drawing.Point(67, 136);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(104, 28);
-            this.textBox1.TabIndex = 7;
+            this.PositionCartesianPztextBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.PositionCartesianPztextBox.Location = new System.Drawing.Point(67, 136);
+            this.PositionCartesianPztextBox.Name = "PositionCartesianPztextBox";
+            this.PositionCartesianPztextBox.Size = new System.Drawing.Size(104, 28);
+            this.PositionCartesianPztextBox.TabIndex = 7;
             // 
-            // textBox4
+            // PositionCartesianRxtextBox
             // 
-            this.textBox4.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox4.Location = new System.Drawing.Point(67, 170);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(104, 28);
-            this.textBox4.TabIndex = 9;
+            this.PositionCartesianRxtextBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.PositionCartesianRxtextBox.Location = new System.Drawing.Point(67, 170);
+            this.PositionCartesianRxtextBox.Name = "PositionCartesianRxtextBox";
+            this.PositionCartesianRxtextBox.Size = new System.Drawing.Size(104, 28);
+            this.PositionCartesianRxtextBox.TabIndex = 9;
             // 
-            // textBox2
+            // PositionCartesianPytextBox
             // 
-            this.textBox2.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox2.Location = new System.Drawing.Point(67, 102);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(104, 28);
-            this.textBox2.TabIndex = 8;
+            this.PositionCartesianPytextBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.PositionCartesianPytextBox.Location = new System.Drawing.Point(67, 102);
+            this.PositionCartesianPytextBox.Name = "PositionCartesianPytextBox";
+            this.PositionCartesianPytextBox.Size = new System.Drawing.Size(104, 28);
+            this.PositionCartesianPytextBox.TabIndex = 8;
             // 
-            // textBox3
+            // PositionCartesianPxtextBox
             // 
-            this.textBox3.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox3.Location = new System.Drawing.Point(67, 68);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(104, 28);
-            this.textBox3.TabIndex = 9;
+            this.PositionCartesianPxtextBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.PositionCartesianPxtextBox.Location = new System.Drawing.Point(67, 68);
+            this.PositionCartesianPxtextBox.Name = "PositionCartesianPxtextBox";
+            this.PositionCartesianPxtextBox.Size = new System.Drawing.Size(104, 28);
+            this.PositionCartesianPxtextBox.TabIndex = 9;
             // 
             // groupBox12
             // 
@@ -3005,6 +3030,7 @@ namespace DebuggingToolGUI
             // 
             // groupBox11
             // 
+            this.groupBox11.Controls.Add(this.button8);
             this.groupBox11.Controls.Add(this.CartesianPIDSetbutton);
             this.groupBox11.Controls.Add(this.cpDgainCartesianYawtextBox);
             this.groupBox11.Controls.Add(this.cpIgainCartesianYawtextBox);
@@ -3041,13 +3067,23 @@ namespace DebuggingToolGUI
             this.groupBox11.TabStop = false;
             this.groupBox11.Text = "Cartesian Position PID gain";
             // 
+            // button8
+            // 
+            this.button8.Location = new System.Drawing.Point(757, 102);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(117, 77);
+            this.button8.TabIndex = 7;
+            this.button8.Text = "Cartesian PID Get";
+            this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.CartesianPIDSetbutton_Click);
+            // 
             // CartesianPIDSetbutton
             // 
-            this.CartesianPIDSetbutton.Location = new System.Drawing.Point(757, 60);
+            this.CartesianPIDSetbutton.Location = new System.Drawing.Point(757, 19);
             this.CartesianPIDSetbutton.Name = "CartesianPIDSetbutton";
-            this.CartesianPIDSetbutton.Size = new System.Drawing.Size(117, 104);
+            this.CartesianPIDSetbutton.Size = new System.Drawing.Size(117, 77);
             this.CartesianPIDSetbutton.TabIndex = 7;
-            this.CartesianPIDSetbutton.Text = "Cartesian PID Setting";
+            this.CartesianPIDSetbutton.Text = "Cartesian PID Set";
             this.CartesianPIDSetbutton.UseVisualStyleBackColor = true;
             this.CartesianPIDSetbutton.Click += new System.EventHandler(this.CartesianPIDSetbutton_Click);
             // 
@@ -3289,7 +3325,7 @@ namespace DebuggingToolGUI
             // 
             this.tabPage4.Location = new System.Drawing.Point(4, 30);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(1300, 403);
+            this.tabPage4.Size = new System.Drawing.Size(1300, 628);
             this.tabPage4.TabIndex = 4;
             this.tabPage4.Text = "tabPage4";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -3811,67 +3847,67 @@ namespace DebuggingToolGUI
             this.ServoOnButton.UseVisualStyleBackColor = true;
             this.ServoOnButton.Click += new System.EventHandler(this.ServoOnButton_Click);
             // 
-            // IncrementalEncodergroupBox
+            // AbsoluteEnocdergroupBox
             // 
-            this.IncrementalEncodergroupBox.Controls.Add(this.IncCurrentJoint8textBox);
-            this.IncrementalEncodergroupBox.Controls.Add(this.IncVelocityJoint8textBox);
-            this.IncrementalEncodergroupBox.Controls.Add(this.IncPositionJoint8textBox);
-            this.IncrementalEncodergroupBox.Controls.Add(this.IncCurrentJoint7textBox);
-            this.IncrementalEncodergroupBox.Controls.Add(this.INCPosJoint8textBox);
-            this.IncrementalEncodergroupBox.Controls.Add(this.IncCurrentJoint6textBox);
-            this.IncrementalEncodergroupBox.Controls.Add(this.IncVelocityJoint7textBox);
-            this.IncrementalEncodergroupBox.Controls.Add(this.IncVelocityJoint6textBox);
-            this.IncrementalEncodergroupBox.Controls.Add(this.IncPositionJoint7textBox);
-            this.IncrementalEncodergroupBox.Controls.Add(this.IncCurrentJoint5textBox);
-            this.IncrementalEncodergroupBox.Controls.Add(this.IncPositionJoint6textBox);
-            this.IncrementalEncodergroupBox.Controls.Add(this.IncVelocityJoint5textBox);
-            this.IncrementalEncodergroupBox.Controls.Add(this.INCPosJoint7textBox);
-            this.IncrementalEncodergroupBox.Controls.Add(this.IncCurrentJoint4textBox);
-            this.IncrementalEncodergroupBox.Controls.Add(this.IncPositionJoint5textBox);
-            this.IncrementalEncodergroupBox.Controls.Add(this.IncVelocityJoint4textBox);
-            this.IncrementalEncodergroupBox.Controls.Add(this.INCPosJoint6textBox);
-            this.IncrementalEncodergroupBox.Controls.Add(this.IncCurrentJoint3textBox);
-            this.IncrementalEncodergroupBox.Controls.Add(this.IncPositionJoint4textBox);
-            this.IncrementalEncodergroupBox.Controls.Add(this.IncVelocityJoint3textBox);
-            this.IncrementalEncodergroupBox.Controls.Add(this.INCPosJoint5textBox);
-            this.IncrementalEncodergroupBox.Controls.Add(this.IncCurrentJoint2textBox);
-            this.IncrementalEncodergroupBox.Controls.Add(this.IncPositionJoint3textBox);
-            this.IncrementalEncodergroupBox.Controls.Add(this.IncVelocityJoint2textBox);
-            this.IncrementalEncodergroupBox.Controls.Add(this.IncPosJoint4textBox);
-            this.IncrementalEncodergroupBox.Controls.Add(this.IncCurrentJoint1textBox);
-            this.IncrementalEncodergroupBox.Controls.Add(this.IncPositionJoint2textBox);
-            this.IncrementalEncodergroupBox.Controls.Add(this.IncVelocityJoint1textBox);
-            this.IncrementalEncodergroupBox.Controls.Add(this.IncPosJoint3textBox);
-            this.IncrementalEncodergroupBox.Controls.Add(this.IncPositionJoint1textBox);
-            this.IncrementalEncodergroupBox.Controls.Add(this.IncPosJoint2textBox);
-            this.IncrementalEncodergroupBox.Controls.Add(this.IncPosJoint1textBox);
-            this.IncrementalEncodergroupBox.Controls.Add(this.label23);
-            this.IncrementalEncodergroupBox.Controls.Add(this.label24);
-            this.IncrementalEncodergroupBox.Controls.Add(this.label25);
-            this.IncrementalEncodergroupBox.Controls.Add(this.label26);
-            this.IncrementalEncodergroupBox.Controls.Add(this.label27);
-            this.IncrementalEncodergroupBox.Controls.Add(this.label28);
-            this.IncrementalEncodergroupBox.Controls.Add(this.label29);
-            this.IncrementalEncodergroupBox.Controls.Add(this.label30);
-            this.IncrementalEncodergroupBox.Controls.Add(this.label31);
-            this.IncrementalEncodergroupBox.Controls.Add(this.label32);
-            this.IncrementalEncodergroupBox.Controls.Add(this.label33);
-            this.IncrementalEncodergroupBox.Controls.Add(this.label34);
-            this.IncrementalEncodergroupBox.Font = new System.Drawing.Font("KoPub돋움체 Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.IncrementalEncodergroupBox.Location = new System.Drawing.Point(28, 296);
-            this.IncrementalEncodergroupBox.Name = "IncrementalEncodergroupBox";
-            this.IncrementalEncodergroupBox.Size = new System.Drawing.Size(985, 209);
-            this.IncrementalEncodergroupBox.TabIndex = 5;
-            this.IncrementalEncodergroupBox.TabStop = false;
-            this.IncrementalEncodergroupBox.Text = "Incremental Encoder";
+            this.AbsoluteEnocdergroupBox.Controls.Add(this.CurrentJoint8textBox);
+            this.AbsoluteEnocdergroupBox.Controls.Add(this.IncVelocityJoint8textBox);
+            this.AbsoluteEnocdergroupBox.Controls.Add(this.IncPositionJoint8textBox);
+            this.AbsoluteEnocdergroupBox.Controls.Add(this.CurrentJoint7textBox);
+            this.AbsoluteEnocdergroupBox.Controls.Add(this.AbsPosJoint8textBox);
+            this.AbsoluteEnocdergroupBox.Controls.Add(this.CurrentJoint6textBox);
+            this.AbsoluteEnocdergroupBox.Controls.Add(this.IncVelocityJoint7textBox);
+            this.AbsoluteEnocdergroupBox.Controls.Add(this.IncVelocityJoint6textBox);
+            this.AbsoluteEnocdergroupBox.Controls.Add(this.IncPositionJoint7textBox);
+            this.AbsoluteEnocdergroupBox.Controls.Add(this.CurrentJoint5textBox);
+            this.AbsoluteEnocdergroupBox.Controls.Add(this.IncPositionJoint6textBox);
+            this.AbsoluteEnocdergroupBox.Controls.Add(this.IncVelocityJoint5textBox);
+            this.AbsoluteEnocdergroupBox.Controls.Add(this.AbsPosJoint7textBox);
+            this.AbsoluteEnocdergroupBox.Controls.Add(this.CurrentJoint4textBox);
+            this.AbsoluteEnocdergroupBox.Controls.Add(this.IncPositionJoint5textBox);
+            this.AbsoluteEnocdergroupBox.Controls.Add(this.IncVelocityJoint4textBox);
+            this.AbsoluteEnocdergroupBox.Controls.Add(this.AbsPosJoint6textBox);
+            this.AbsoluteEnocdergroupBox.Controls.Add(this.CurrentJoint3textBox);
+            this.AbsoluteEnocdergroupBox.Controls.Add(this.IncPositionJoint4textBox);
+            this.AbsoluteEnocdergroupBox.Controls.Add(this.IncVelocityJoint3textBox);
+            this.AbsoluteEnocdergroupBox.Controls.Add(this.AbsPosJoint5textBox);
+            this.AbsoluteEnocdergroupBox.Controls.Add(this.CurrentJoint2textBox);
+            this.AbsoluteEnocdergroupBox.Controls.Add(this.IncPositionJoint3textBox);
+            this.AbsoluteEnocdergroupBox.Controls.Add(this.IncVelocityJoint2textBox);
+            this.AbsoluteEnocdergroupBox.Controls.Add(this.AbsPosJoint4textBox);
+            this.AbsoluteEnocdergroupBox.Controls.Add(this.CurrentJoint1textBox);
+            this.AbsoluteEnocdergroupBox.Controls.Add(this.IncPositionJoint2textBox);
+            this.AbsoluteEnocdergroupBox.Controls.Add(this.IncVelocityJoint1textBox);
+            this.AbsoluteEnocdergroupBox.Controls.Add(this.AbsPosJoint3textBox);
+            this.AbsoluteEnocdergroupBox.Controls.Add(this.IncPositionJoint1textBox);
+            this.AbsoluteEnocdergroupBox.Controls.Add(this.AbsPosJoint2textBox);
+            this.AbsoluteEnocdergroupBox.Controls.Add(this.AbsPosJoint1textBox);
+            this.AbsoluteEnocdergroupBox.Controls.Add(this.label22);
+            this.AbsoluteEnocdergroupBox.Controls.Add(this.label21);
+            this.AbsoluteEnocdergroupBox.Controls.Add(this.label17);
+            this.AbsoluteEnocdergroupBox.Controls.Add(this.label16);
+            this.AbsoluteEnocdergroupBox.Controls.Add(this.label15);
+            this.AbsoluteEnocdergroupBox.Controls.Add(this.label14);
+            this.AbsoluteEnocdergroupBox.Controls.Add(this.label13);
+            this.AbsoluteEnocdergroupBox.Controls.Add(this.label12);
+            this.AbsoluteEnocdergroupBox.Controls.Add(this.label20);
+            this.AbsoluteEnocdergroupBox.Controls.Add(this.label19);
+            this.AbsoluteEnocdergroupBox.Controls.Add(this.label18);
+            this.AbsoluteEnocdergroupBox.Controls.Add(this.label11);
+            this.AbsoluteEnocdergroupBox.Font = new System.Drawing.Font("KoPub돋움체 Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.AbsoluteEnocdergroupBox.Location = new System.Drawing.Point(28, 71);
+            this.AbsoluteEnocdergroupBox.Name = "AbsoluteEnocdergroupBox";
+            this.AbsoluteEnocdergroupBox.Size = new System.Drawing.Size(985, 209);
+            this.AbsoluteEnocdergroupBox.TabIndex = 6;
+            this.AbsoluteEnocdergroupBox.TabStop = false;
+            this.AbsoluteEnocdergroupBox.Text = "Encoder";
             // 
-            // IncCurrentJoint8textBox
+            // CurrentJoint8textBox
             // 
-            this.IncCurrentJoint8textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.IncCurrentJoint8textBox.Location = new System.Drawing.Point(867, 170);
-            this.IncCurrentJoint8textBox.Name = "IncCurrentJoint8textBox";
-            this.IncCurrentJoint8textBox.Size = new System.Drawing.Size(104, 28);
-            this.IncCurrentJoint8textBox.TabIndex = 6;
+            this.CurrentJoint8textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.CurrentJoint8textBox.Location = new System.Drawing.Point(867, 170);
+            this.CurrentJoint8textBox.Name = "CurrentJoint8textBox";
+            this.CurrentJoint8textBox.Size = new System.Drawing.Size(104, 28);
+            this.CurrentJoint8textBox.TabIndex = 6;
             // 
             // IncVelocityJoint8textBox
             // 
@@ -3888,30 +3924,31 @@ namespace DebuggingToolGUI
             this.IncPositionJoint8textBox.Name = "IncPositionJoint8textBox";
             this.IncPositionJoint8textBox.Size = new System.Drawing.Size(104, 28);
             this.IncPositionJoint8textBox.TabIndex = 6;
+            this.IncPositionJoint8textBox.TextChanged += new System.EventHandler(this.AbPositionJoint8textBox_TextChanged);
             // 
-            // IncCurrentJoint7textBox
+            // CurrentJoint7textBox
             // 
-            this.IncCurrentJoint7textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.IncCurrentJoint7textBox.Location = new System.Drawing.Point(757, 170);
-            this.IncCurrentJoint7textBox.Name = "IncCurrentJoint7textBox";
-            this.IncCurrentJoint7textBox.Size = new System.Drawing.Size(104, 28);
-            this.IncCurrentJoint7textBox.TabIndex = 6;
+            this.CurrentJoint7textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.CurrentJoint7textBox.Location = new System.Drawing.Point(757, 170);
+            this.CurrentJoint7textBox.Name = "CurrentJoint7textBox";
+            this.CurrentJoint7textBox.Size = new System.Drawing.Size(104, 28);
+            this.CurrentJoint7textBox.TabIndex = 6;
             // 
-            // INCPosJoint8textBox
+            // AbsPosJoint8textBox
             // 
-            this.INCPosJoint8textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.INCPosJoint8textBox.Location = new System.Drawing.Point(867, 68);
-            this.INCPosJoint8textBox.Name = "INCPosJoint8textBox";
-            this.INCPosJoint8textBox.Size = new System.Drawing.Size(104, 28);
-            this.INCPosJoint8textBox.TabIndex = 6;
+            this.AbsPosJoint8textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.AbsPosJoint8textBox.Location = new System.Drawing.Point(867, 68);
+            this.AbsPosJoint8textBox.Name = "AbsPosJoint8textBox";
+            this.AbsPosJoint8textBox.Size = new System.Drawing.Size(104, 28);
+            this.AbsPosJoint8textBox.TabIndex = 6;
             // 
-            // IncCurrentJoint6textBox
+            // CurrentJoint6textBox
             // 
-            this.IncCurrentJoint6textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.IncCurrentJoint6textBox.Location = new System.Drawing.Point(647, 170);
-            this.IncCurrentJoint6textBox.Name = "IncCurrentJoint6textBox";
-            this.IncCurrentJoint6textBox.Size = new System.Drawing.Size(104, 28);
-            this.IncCurrentJoint6textBox.TabIndex = 6;
+            this.CurrentJoint6textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.CurrentJoint6textBox.Location = new System.Drawing.Point(647, 170);
+            this.CurrentJoint6textBox.Name = "CurrentJoint6textBox";
+            this.CurrentJoint6textBox.Size = new System.Drawing.Size(104, 28);
+            this.CurrentJoint6textBox.TabIndex = 6;
             // 
             // IncVelocityJoint7textBox
             // 
@@ -3937,13 +3974,13 @@ namespace DebuggingToolGUI
             this.IncPositionJoint7textBox.Size = new System.Drawing.Size(104, 28);
             this.IncPositionJoint7textBox.TabIndex = 6;
             // 
-            // IncCurrentJoint5textBox
+            // CurrentJoint5textBox
             // 
-            this.IncCurrentJoint5textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.IncCurrentJoint5textBox.Location = new System.Drawing.Point(537, 170);
-            this.IncCurrentJoint5textBox.Name = "IncCurrentJoint5textBox";
-            this.IncCurrentJoint5textBox.Size = new System.Drawing.Size(104, 28);
-            this.IncCurrentJoint5textBox.TabIndex = 6;
+            this.CurrentJoint5textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.CurrentJoint5textBox.Location = new System.Drawing.Point(537, 170);
+            this.CurrentJoint5textBox.Name = "CurrentJoint5textBox";
+            this.CurrentJoint5textBox.Size = new System.Drawing.Size(104, 28);
+            this.CurrentJoint5textBox.TabIndex = 6;
             // 
             // IncPositionJoint6textBox
             // 
@@ -3952,6 +3989,7 @@ namespace DebuggingToolGUI
             this.IncPositionJoint6textBox.Name = "IncPositionJoint6textBox";
             this.IncPositionJoint6textBox.Size = new System.Drawing.Size(104, 28);
             this.IncPositionJoint6textBox.TabIndex = 6;
+            this.IncPositionJoint6textBox.TextChanged += new System.EventHandler(this.AbPositionJoint6textBox_TextChanged);
             // 
             // IncVelocityJoint5textBox
             // 
@@ -3961,21 +3999,21 @@ namespace DebuggingToolGUI
             this.IncVelocityJoint5textBox.Size = new System.Drawing.Size(104, 28);
             this.IncVelocityJoint5textBox.TabIndex = 6;
             // 
-            // INCPosJoint7textBox
+            // AbsPosJoint7textBox
             // 
-            this.INCPosJoint7textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.INCPosJoint7textBox.Location = new System.Drawing.Point(757, 68);
-            this.INCPosJoint7textBox.Name = "INCPosJoint7textBox";
-            this.INCPosJoint7textBox.Size = new System.Drawing.Size(104, 28);
-            this.INCPosJoint7textBox.TabIndex = 6;
+            this.AbsPosJoint7textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.AbsPosJoint7textBox.Location = new System.Drawing.Point(757, 68);
+            this.AbsPosJoint7textBox.Name = "AbsPosJoint7textBox";
+            this.AbsPosJoint7textBox.Size = new System.Drawing.Size(104, 28);
+            this.AbsPosJoint7textBox.TabIndex = 6;
             // 
-            // IncCurrentJoint4textBox
+            // CurrentJoint4textBox
             // 
-            this.IncCurrentJoint4textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.IncCurrentJoint4textBox.Location = new System.Drawing.Point(427, 170);
-            this.IncCurrentJoint4textBox.Name = "IncCurrentJoint4textBox";
-            this.IncCurrentJoint4textBox.Size = new System.Drawing.Size(104, 28);
-            this.IncCurrentJoint4textBox.TabIndex = 6;
+            this.CurrentJoint4textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.CurrentJoint4textBox.Location = new System.Drawing.Point(427, 170);
+            this.CurrentJoint4textBox.Name = "CurrentJoint4textBox";
+            this.CurrentJoint4textBox.Size = new System.Drawing.Size(104, 28);
+            this.CurrentJoint4textBox.TabIndex = 6;
             // 
             // IncPositionJoint5textBox
             // 
@@ -3993,21 +4031,21 @@ namespace DebuggingToolGUI
             this.IncVelocityJoint4textBox.Size = new System.Drawing.Size(104, 28);
             this.IncVelocityJoint4textBox.TabIndex = 6;
             // 
-            // INCPosJoint6textBox
+            // AbsPosJoint6textBox
             // 
-            this.INCPosJoint6textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.INCPosJoint6textBox.Location = new System.Drawing.Point(647, 68);
-            this.INCPosJoint6textBox.Name = "INCPosJoint6textBox";
-            this.INCPosJoint6textBox.Size = new System.Drawing.Size(104, 28);
-            this.INCPosJoint6textBox.TabIndex = 6;
+            this.AbsPosJoint6textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.AbsPosJoint6textBox.Location = new System.Drawing.Point(647, 68);
+            this.AbsPosJoint6textBox.Name = "AbsPosJoint6textBox";
+            this.AbsPosJoint6textBox.Size = new System.Drawing.Size(104, 28);
+            this.AbsPosJoint6textBox.TabIndex = 6;
             // 
-            // IncCurrentJoint3textBox
+            // CurrentJoint3textBox
             // 
-            this.IncCurrentJoint3textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.IncCurrentJoint3textBox.Location = new System.Drawing.Point(317, 170);
-            this.IncCurrentJoint3textBox.Name = "IncCurrentJoint3textBox";
-            this.IncCurrentJoint3textBox.Size = new System.Drawing.Size(104, 28);
-            this.IncCurrentJoint3textBox.TabIndex = 6;
+            this.CurrentJoint3textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.CurrentJoint3textBox.Location = new System.Drawing.Point(317, 170);
+            this.CurrentJoint3textBox.Name = "CurrentJoint3textBox";
+            this.CurrentJoint3textBox.Size = new System.Drawing.Size(104, 28);
+            this.CurrentJoint3textBox.TabIndex = 6;
             // 
             // IncPositionJoint4textBox
             // 
@@ -4024,22 +4062,23 @@ namespace DebuggingToolGUI
             this.IncVelocityJoint3textBox.Name = "IncVelocityJoint3textBox";
             this.IncVelocityJoint3textBox.Size = new System.Drawing.Size(104, 28);
             this.IncVelocityJoint3textBox.TabIndex = 6;
+            this.IncVelocityJoint3textBox.TextChanged += new System.EventHandler(this.AbVelocityJoint3textBox_TextChanged);
             // 
-            // INCPosJoint5textBox
+            // AbsPosJoint5textBox
             // 
-            this.INCPosJoint5textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.INCPosJoint5textBox.Location = new System.Drawing.Point(537, 68);
-            this.INCPosJoint5textBox.Name = "INCPosJoint5textBox";
-            this.INCPosJoint5textBox.Size = new System.Drawing.Size(104, 28);
-            this.INCPosJoint5textBox.TabIndex = 6;
+            this.AbsPosJoint5textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.AbsPosJoint5textBox.Location = new System.Drawing.Point(537, 68);
+            this.AbsPosJoint5textBox.Name = "AbsPosJoint5textBox";
+            this.AbsPosJoint5textBox.Size = new System.Drawing.Size(104, 28);
+            this.AbsPosJoint5textBox.TabIndex = 6;
             // 
-            // IncCurrentJoint2textBox
+            // CurrentJoint2textBox
             // 
-            this.IncCurrentJoint2textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.IncCurrentJoint2textBox.Location = new System.Drawing.Point(207, 170);
-            this.IncCurrentJoint2textBox.Name = "IncCurrentJoint2textBox";
-            this.IncCurrentJoint2textBox.Size = new System.Drawing.Size(104, 28);
-            this.IncCurrentJoint2textBox.TabIndex = 6;
+            this.CurrentJoint2textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.CurrentJoint2textBox.Location = new System.Drawing.Point(207, 170);
+            this.CurrentJoint2textBox.Name = "CurrentJoint2textBox";
+            this.CurrentJoint2textBox.Size = new System.Drawing.Size(104, 28);
+            this.CurrentJoint2textBox.TabIndex = 6;
             // 
             // IncPositionJoint3textBox
             // 
@@ -4048,6 +4087,7 @@ namespace DebuggingToolGUI
             this.IncPositionJoint3textBox.Name = "IncPositionJoint3textBox";
             this.IncPositionJoint3textBox.Size = new System.Drawing.Size(104, 28);
             this.IncPositionJoint3textBox.TabIndex = 6;
+            this.IncPositionJoint3textBox.TextChanged += new System.EventHandler(this.AbPositionJoint3textBox_TextChanged);
             // 
             // IncVelocityJoint2textBox
             // 
@@ -4057,21 +4097,21 @@ namespace DebuggingToolGUI
             this.IncVelocityJoint2textBox.Size = new System.Drawing.Size(104, 28);
             this.IncVelocityJoint2textBox.TabIndex = 6;
             // 
-            // IncPosJoint4textBox
+            // AbsPosJoint4textBox
             // 
-            this.IncPosJoint4textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.IncPosJoint4textBox.Location = new System.Drawing.Point(427, 68);
-            this.IncPosJoint4textBox.Name = "IncPosJoint4textBox";
-            this.IncPosJoint4textBox.Size = new System.Drawing.Size(104, 28);
-            this.IncPosJoint4textBox.TabIndex = 6;
+            this.AbsPosJoint4textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.AbsPosJoint4textBox.Location = new System.Drawing.Point(427, 68);
+            this.AbsPosJoint4textBox.Name = "AbsPosJoint4textBox";
+            this.AbsPosJoint4textBox.Size = new System.Drawing.Size(104, 28);
+            this.AbsPosJoint4textBox.TabIndex = 6;
             // 
-            // IncCurrentJoint1textBox
+            // CurrentJoint1textBox
             // 
-            this.IncCurrentJoint1textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.IncCurrentJoint1textBox.Location = new System.Drawing.Point(97, 170);
-            this.IncCurrentJoint1textBox.Name = "IncCurrentJoint1textBox";
-            this.IncCurrentJoint1textBox.Size = new System.Drawing.Size(104, 28);
-            this.IncCurrentJoint1textBox.TabIndex = 6;
+            this.CurrentJoint1textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.CurrentJoint1textBox.Location = new System.Drawing.Point(97, 170);
+            this.CurrentJoint1textBox.Name = "CurrentJoint1textBox";
+            this.CurrentJoint1textBox.Size = new System.Drawing.Size(104, 28);
+            this.CurrentJoint1textBox.TabIndex = 6;
             // 
             // IncPositionJoint2textBox
             // 
@@ -4089,436 +4129,6 @@ namespace DebuggingToolGUI
             this.IncVelocityJoint1textBox.Size = new System.Drawing.Size(104, 28);
             this.IncVelocityJoint1textBox.TabIndex = 6;
             // 
-            // IncPosJoint3textBox
-            // 
-            this.IncPosJoint3textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.IncPosJoint3textBox.Location = new System.Drawing.Point(317, 68);
-            this.IncPosJoint3textBox.Name = "IncPosJoint3textBox";
-            this.IncPosJoint3textBox.Size = new System.Drawing.Size(104, 28);
-            this.IncPosJoint3textBox.TabIndex = 6;
-            // 
-            // IncPositionJoint1textBox
-            // 
-            this.IncPositionJoint1textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.IncPositionJoint1textBox.Location = new System.Drawing.Point(97, 102);
-            this.IncPositionJoint1textBox.Name = "IncPositionJoint1textBox";
-            this.IncPositionJoint1textBox.Size = new System.Drawing.Size(104, 28);
-            this.IncPositionJoint1textBox.TabIndex = 6;
-            // 
-            // IncPosJoint2textBox
-            // 
-            this.IncPosJoint2textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.IncPosJoint2textBox.Location = new System.Drawing.Point(207, 68);
-            this.IncPosJoint2textBox.Name = "IncPosJoint2textBox";
-            this.IncPosJoint2textBox.Size = new System.Drawing.Size(104, 28);
-            this.IncPosJoint2textBox.TabIndex = 6;
-            // 
-            // IncPosJoint1textBox
-            // 
-            this.IncPosJoint1textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.IncPosJoint1textBox.Location = new System.Drawing.Point(97, 68);
-            this.IncPosJoint1textBox.Name = "IncPosJoint1textBox";
-            this.IncPosJoint1textBox.Size = new System.Drawing.Size(104, 28);
-            this.IncPosJoint1textBox.TabIndex = 6;
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Font = new System.Drawing.Font("KoPub돋움체 Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label23.Location = new System.Drawing.Point(886, 43);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(68, 21);
-            this.label23.TabIndex = 5;
-            this.label23.Text = "Joint 8";
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("KoPub돋움체 Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label24.Location = new System.Drawing.Point(773, 43);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(68, 21);
-            this.label24.TabIndex = 5;
-            this.label24.Text = "Joint 7";
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.Font = new System.Drawing.Font("KoPub돋움체 Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label25.Location = new System.Drawing.Point(662, 43);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(68, 21);
-            this.label25.TabIndex = 5;
-            this.label25.Text = "Joint 6";
-            // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.Font = new System.Drawing.Font("KoPub돋움체 Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label26.Location = new System.Drawing.Point(556, 43);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(68, 21);
-            this.label26.TabIndex = 5;
-            this.label26.Text = "Joint 5";
-            // 
-            // label27
-            // 
-            this.label27.AutoSize = true;
-            this.label27.Font = new System.Drawing.Font("KoPub돋움체 Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label27.Location = new System.Drawing.Point(444, 43);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(68, 21);
-            this.label27.TabIndex = 5;
-            this.label27.Text = "Joint 4";
-            // 
-            // label28
-            // 
-            this.label28.AutoSize = true;
-            this.label28.Font = new System.Drawing.Font("KoPub돋움체 Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label28.Location = new System.Drawing.Point(338, 43);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(68, 21);
-            this.label28.TabIndex = 5;
-            this.label28.Text = "Joint 3";
-            // 
-            // label29
-            // 
-            this.label29.AutoSize = true;
-            this.label29.Font = new System.Drawing.Font("KoPub돋움체 Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label29.Location = new System.Drawing.Point(225, 43);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(68, 21);
-            this.label29.TabIndex = 5;
-            this.label29.Text = "Joint 2";
-            // 
-            // label30
-            // 
-            this.label30.AutoSize = true;
-            this.label30.Font = new System.Drawing.Font("KoPub돋움체 Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label30.Location = new System.Drawing.Point(121, 43);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(68, 21);
-            this.label30.TabIndex = 5;
-            this.label30.Text = "Joint 1";
-            // 
-            // label31
-            // 
-            this.label31.AutoSize = true;
-            this.label31.Font = new System.Drawing.Font("KoPub돋움체 Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label31.Location = new System.Drawing.Point(6, 173);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(73, 21);
-            this.label31.TabIndex = 5;
-            this.label31.Text = "Current";
-            // 
-            // label32
-            // 
-            this.label32.AutoSize = true;
-            this.label32.Font = new System.Drawing.Font("KoPub돋움체 Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label32.Location = new System.Drawing.Point(6, 139);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(76, 21);
-            this.label32.TabIndex = 5;
-            this.label32.Text = "Velocity";
-            // 
-            // label33
-            // 
-            this.label33.AutoSize = true;
-            this.label33.Font = new System.Drawing.Font("KoPub돋움체 Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label33.Location = new System.Drawing.Point(5, 105);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(77, 21);
-            this.label33.TabIndex = 5;
-            this.label33.Text = "Position";
-            // 
-            // label34
-            // 
-            this.label34.AutoSize = true;
-            this.label34.Font = new System.Drawing.Font("KoPub돋움체 Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label34.Location = new System.Drawing.Point(6, 71);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(80, 21);
-            this.label34.TabIndex = 5;
-            this.label34.Text = "INC Pos";
-            // 
-            // AbsoluteEnocdergroupBox
-            // 
-            this.AbsoluteEnocdergroupBox.Controls.Add(this.AbCurrentJoint8textBox);
-            this.AbsoluteEnocdergroupBox.Controls.Add(this.AbVelocityJoint8textBox);
-            this.AbsoluteEnocdergroupBox.Controls.Add(this.AbPositionJoint8textBox);
-            this.AbsoluteEnocdergroupBox.Controls.Add(this.AbCurrentJoint7textBox);
-            this.AbsoluteEnocdergroupBox.Controls.Add(this.AbsPosJoint8textBox);
-            this.AbsoluteEnocdergroupBox.Controls.Add(this.AbCurrentJoint6textBox);
-            this.AbsoluteEnocdergroupBox.Controls.Add(this.AbVelocityJoint7textBox);
-            this.AbsoluteEnocdergroupBox.Controls.Add(this.AbVelocityJoint6textBox);
-            this.AbsoluteEnocdergroupBox.Controls.Add(this.AbPositionJoint7textBox);
-            this.AbsoluteEnocdergroupBox.Controls.Add(this.AbCurrentJoint5textBox);
-            this.AbsoluteEnocdergroupBox.Controls.Add(this.AbPositionJoint6textBox);
-            this.AbsoluteEnocdergroupBox.Controls.Add(this.AbVelocityJoint5textBox);
-            this.AbsoluteEnocdergroupBox.Controls.Add(this.AbsPosJoint7textBox);
-            this.AbsoluteEnocdergroupBox.Controls.Add(this.AbCurrentJoint4textBox);
-            this.AbsoluteEnocdergroupBox.Controls.Add(this.AbPositionJoint5textBox);
-            this.AbsoluteEnocdergroupBox.Controls.Add(this.AbVelocityJoint4textBox);
-            this.AbsoluteEnocdergroupBox.Controls.Add(this.AbsPosJoint6textBox);
-            this.AbsoluteEnocdergroupBox.Controls.Add(this.AbCurrentJoint3textBox);
-            this.AbsoluteEnocdergroupBox.Controls.Add(this.AbPositionJoint4textBox);
-            this.AbsoluteEnocdergroupBox.Controls.Add(this.AbVelocityJoint3textBox);
-            this.AbsoluteEnocdergroupBox.Controls.Add(this.AbsPosJoint5textBox);
-            this.AbsoluteEnocdergroupBox.Controls.Add(this.AbCurrentJoint2textBox);
-            this.AbsoluteEnocdergroupBox.Controls.Add(this.AbPositionJoint3textBox);
-            this.AbsoluteEnocdergroupBox.Controls.Add(this.AbVelocityJoint2textBox);
-            this.AbsoluteEnocdergroupBox.Controls.Add(this.AbsPosJoint4textBox);
-            this.AbsoluteEnocdergroupBox.Controls.Add(this.AbCurrentJoint1textBox);
-            this.AbsoluteEnocdergroupBox.Controls.Add(this.AbPositionJoint2textBox);
-            this.AbsoluteEnocdergroupBox.Controls.Add(this.AbVelocityJoint1textBox);
-            this.AbsoluteEnocdergroupBox.Controls.Add(this.AbsPosJoint3textBox);
-            this.AbsoluteEnocdergroupBox.Controls.Add(this.AbPositionJoint1textBox);
-            this.AbsoluteEnocdergroupBox.Controls.Add(this.AbsPosJoint2textBox);
-            this.AbsoluteEnocdergroupBox.Controls.Add(this.AbsPosJoint1textBox);
-            this.AbsoluteEnocdergroupBox.Controls.Add(this.label22);
-            this.AbsoluteEnocdergroupBox.Controls.Add(this.label21);
-            this.AbsoluteEnocdergroupBox.Controls.Add(this.label17);
-            this.AbsoluteEnocdergroupBox.Controls.Add(this.label16);
-            this.AbsoluteEnocdergroupBox.Controls.Add(this.label15);
-            this.AbsoluteEnocdergroupBox.Controls.Add(this.label14);
-            this.AbsoluteEnocdergroupBox.Controls.Add(this.label13);
-            this.AbsoluteEnocdergroupBox.Controls.Add(this.label12);
-            this.AbsoluteEnocdergroupBox.Controls.Add(this.label20);
-            this.AbsoluteEnocdergroupBox.Controls.Add(this.label19);
-            this.AbsoluteEnocdergroupBox.Controls.Add(this.label18);
-            this.AbsoluteEnocdergroupBox.Controls.Add(this.label11);
-            this.AbsoluteEnocdergroupBox.Font = new System.Drawing.Font("KoPub돋움체 Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.AbsoluteEnocdergroupBox.Location = new System.Drawing.Point(28, 71);
-            this.AbsoluteEnocdergroupBox.Name = "AbsoluteEnocdergroupBox";
-            this.AbsoluteEnocdergroupBox.Size = new System.Drawing.Size(985, 209);
-            this.AbsoluteEnocdergroupBox.TabIndex = 6;
-            this.AbsoluteEnocdergroupBox.TabStop = false;
-            this.AbsoluteEnocdergroupBox.Text = "Absolute Encoder";
-            // 
-            // AbCurrentJoint8textBox
-            // 
-            this.AbCurrentJoint8textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.AbCurrentJoint8textBox.Location = new System.Drawing.Point(867, 170);
-            this.AbCurrentJoint8textBox.Name = "AbCurrentJoint8textBox";
-            this.AbCurrentJoint8textBox.Size = new System.Drawing.Size(104, 28);
-            this.AbCurrentJoint8textBox.TabIndex = 6;
-            // 
-            // AbVelocityJoint8textBox
-            // 
-            this.AbVelocityJoint8textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.AbVelocityJoint8textBox.Location = new System.Drawing.Point(867, 136);
-            this.AbVelocityJoint8textBox.Name = "AbVelocityJoint8textBox";
-            this.AbVelocityJoint8textBox.Size = new System.Drawing.Size(104, 28);
-            this.AbVelocityJoint8textBox.TabIndex = 6;
-            // 
-            // AbPositionJoint8textBox
-            // 
-            this.AbPositionJoint8textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.AbPositionJoint8textBox.Location = new System.Drawing.Point(867, 102);
-            this.AbPositionJoint8textBox.Name = "AbPositionJoint8textBox";
-            this.AbPositionJoint8textBox.Size = new System.Drawing.Size(104, 28);
-            this.AbPositionJoint8textBox.TabIndex = 6;
-            // 
-            // AbCurrentJoint7textBox
-            // 
-            this.AbCurrentJoint7textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.AbCurrentJoint7textBox.Location = new System.Drawing.Point(757, 170);
-            this.AbCurrentJoint7textBox.Name = "AbCurrentJoint7textBox";
-            this.AbCurrentJoint7textBox.Size = new System.Drawing.Size(104, 28);
-            this.AbCurrentJoint7textBox.TabIndex = 6;
-            // 
-            // AbsPosJoint8textBox
-            // 
-            this.AbsPosJoint8textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.AbsPosJoint8textBox.Location = new System.Drawing.Point(867, 68);
-            this.AbsPosJoint8textBox.Name = "AbsPosJoint8textBox";
-            this.AbsPosJoint8textBox.Size = new System.Drawing.Size(104, 28);
-            this.AbsPosJoint8textBox.TabIndex = 6;
-            // 
-            // AbCurrentJoint6textBox
-            // 
-            this.AbCurrentJoint6textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.AbCurrentJoint6textBox.Location = new System.Drawing.Point(647, 170);
-            this.AbCurrentJoint6textBox.Name = "AbCurrentJoint6textBox";
-            this.AbCurrentJoint6textBox.Size = new System.Drawing.Size(104, 28);
-            this.AbCurrentJoint6textBox.TabIndex = 6;
-            // 
-            // AbVelocityJoint7textBox
-            // 
-            this.AbVelocityJoint7textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.AbVelocityJoint7textBox.Location = new System.Drawing.Point(757, 136);
-            this.AbVelocityJoint7textBox.Name = "AbVelocityJoint7textBox";
-            this.AbVelocityJoint7textBox.Size = new System.Drawing.Size(104, 28);
-            this.AbVelocityJoint7textBox.TabIndex = 6;
-            // 
-            // AbVelocityJoint6textBox
-            // 
-            this.AbVelocityJoint6textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.AbVelocityJoint6textBox.Location = new System.Drawing.Point(647, 136);
-            this.AbVelocityJoint6textBox.Name = "AbVelocityJoint6textBox";
-            this.AbVelocityJoint6textBox.Size = new System.Drawing.Size(104, 28);
-            this.AbVelocityJoint6textBox.TabIndex = 6;
-            // 
-            // AbPositionJoint7textBox
-            // 
-            this.AbPositionJoint7textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.AbPositionJoint7textBox.Location = new System.Drawing.Point(757, 102);
-            this.AbPositionJoint7textBox.Name = "AbPositionJoint7textBox";
-            this.AbPositionJoint7textBox.Size = new System.Drawing.Size(104, 28);
-            this.AbPositionJoint7textBox.TabIndex = 6;
-            // 
-            // AbCurrentJoint5textBox
-            // 
-            this.AbCurrentJoint5textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.AbCurrentJoint5textBox.Location = new System.Drawing.Point(537, 170);
-            this.AbCurrentJoint5textBox.Name = "AbCurrentJoint5textBox";
-            this.AbCurrentJoint5textBox.Size = new System.Drawing.Size(104, 28);
-            this.AbCurrentJoint5textBox.TabIndex = 6;
-            // 
-            // AbPositionJoint6textBox
-            // 
-            this.AbPositionJoint6textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.AbPositionJoint6textBox.Location = new System.Drawing.Point(647, 102);
-            this.AbPositionJoint6textBox.Name = "AbPositionJoint6textBox";
-            this.AbPositionJoint6textBox.Size = new System.Drawing.Size(104, 28);
-            this.AbPositionJoint6textBox.TabIndex = 6;
-            // 
-            // AbVelocityJoint5textBox
-            // 
-            this.AbVelocityJoint5textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.AbVelocityJoint5textBox.Location = new System.Drawing.Point(537, 136);
-            this.AbVelocityJoint5textBox.Name = "AbVelocityJoint5textBox";
-            this.AbVelocityJoint5textBox.Size = new System.Drawing.Size(104, 28);
-            this.AbVelocityJoint5textBox.TabIndex = 6;
-            // 
-            // AbsPosJoint7textBox
-            // 
-            this.AbsPosJoint7textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.AbsPosJoint7textBox.Location = new System.Drawing.Point(757, 68);
-            this.AbsPosJoint7textBox.Name = "AbsPosJoint7textBox";
-            this.AbsPosJoint7textBox.Size = new System.Drawing.Size(104, 28);
-            this.AbsPosJoint7textBox.TabIndex = 6;
-            // 
-            // AbCurrentJoint4textBox
-            // 
-            this.AbCurrentJoint4textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.AbCurrentJoint4textBox.Location = new System.Drawing.Point(427, 170);
-            this.AbCurrentJoint4textBox.Name = "AbCurrentJoint4textBox";
-            this.AbCurrentJoint4textBox.Size = new System.Drawing.Size(104, 28);
-            this.AbCurrentJoint4textBox.TabIndex = 6;
-            // 
-            // AbPositionJoint5textBox
-            // 
-            this.AbPositionJoint5textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.AbPositionJoint5textBox.Location = new System.Drawing.Point(537, 102);
-            this.AbPositionJoint5textBox.Name = "AbPositionJoint5textBox";
-            this.AbPositionJoint5textBox.Size = new System.Drawing.Size(104, 28);
-            this.AbPositionJoint5textBox.TabIndex = 6;
-            // 
-            // AbVelocityJoint4textBox
-            // 
-            this.AbVelocityJoint4textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.AbVelocityJoint4textBox.Location = new System.Drawing.Point(427, 136);
-            this.AbVelocityJoint4textBox.Name = "AbVelocityJoint4textBox";
-            this.AbVelocityJoint4textBox.Size = new System.Drawing.Size(104, 28);
-            this.AbVelocityJoint4textBox.TabIndex = 6;
-            // 
-            // AbsPosJoint6textBox
-            // 
-            this.AbsPosJoint6textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.AbsPosJoint6textBox.Location = new System.Drawing.Point(647, 68);
-            this.AbsPosJoint6textBox.Name = "AbsPosJoint6textBox";
-            this.AbsPosJoint6textBox.Size = new System.Drawing.Size(104, 28);
-            this.AbsPosJoint6textBox.TabIndex = 6;
-            // 
-            // AbCurrentJoint3textBox
-            // 
-            this.AbCurrentJoint3textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.AbCurrentJoint3textBox.Location = new System.Drawing.Point(317, 170);
-            this.AbCurrentJoint3textBox.Name = "AbCurrentJoint3textBox";
-            this.AbCurrentJoint3textBox.Size = new System.Drawing.Size(104, 28);
-            this.AbCurrentJoint3textBox.TabIndex = 6;
-            // 
-            // AbPositionJoint4textBox
-            // 
-            this.AbPositionJoint4textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.AbPositionJoint4textBox.Location = new System.Drawing.Point(427, 102);
-            this.AbPositionJoint4textBox.Name = "AbPositionJoint4textBox";
-            this.AbPositionJoint4textBox.Size = new System.Drawing.Size(104, 28);
-            this.AbPositionJoint4textBox.TabIndex = 6;
-            // 
-            // AbVelocityJoint3textBox
-            // 
-            this.AbVelocityJoint3textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.AbVelocityJoint3textBox.Location = new System.Drawing.Point(317, 136);
-            this.AbVelocityJoint3textBox.Name = "AbVelocityJoint3textBox";
-            this.AbVelocityJoint3textBox.Size = new System.Drawing.Size(104, 28);
-            this.AbVelocityJoint3textBox.TabIndex = 6;
-            // 
-            // AbsPosJoint5textBox
-            // 
-            this.AbsPosJoint5textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.AbsPosJoint5textBox.Location = new System.Drawing.Point(537, 68);
-            this.AbsPosJoint5textBox.Name = "AbsPosJoint5textBox";
-            this.AbsPosJoint5textBox.Size = new System.Drawing.Size(104, 28);
-            this.AbsPosJoint5textBox.TabIndex = 6;
-            // 
-            // AbCurrentJoint2textBox
-            // 
-            this.AbCurrentJoint2textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.AbCurrentJoint2textBox.Location = new System.Drawing.Point(207, 170);
-            this.AbCurrentJoint2textBox.Name = "AbCurrentJoint2textBox";
-            this.AbCurrentJoint2textBox.Size = new System.Drawing.Size(104, 28);
-            this.AbCurrentJoint2textBox.TabIndex = 6;
-            // 
-            // AbPositionJoint3textBox
-            // 
-            this.AbPositionJoint3textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.AbPositionJoint3textBox.Location = new System.Drawing.Point(317, 102);
-            this.AbPositionJoint3textBox.Name = "AbPositionJoint3textBox";
-            this.AbPositionJoint3textBox.Size = new System.Drawing.Size(104, 28);
-            this.AbPositionJoint3textBox.TabIndex = 6;
-            // 
-            // AbVelocityJoint2textBox
-            // 
-            this.AbVelocityJoint2textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.AbVelocityJoint2textBox.Location = new System.Drawing.Point(207, 136);
-            this.AbVelocityJoint2textBox.Name = "AbVelocityJoint2textBox";
-            this.AbVelocityJoint2textBox.Size = new System.Drawing.Size(104, 28);
-            this.AbVelocityJoint2textBox.TabIndex = 6;
-            // 
-            // AbsPosJoint4textBox
-            // 
-            this.AbsPosJoint4textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.AbsPosJoint4textBox.Location = new System.Drawing.Point(427, 68);
-            this.AbsPosJoint4textBox.Name = "AbsPosJoint4textBox";
-            this.AbsPosJoint4textBox.Size = new System.Drawing.Size(104, 28);
-            this.AbsPosJoint4textBox.TabIndex = 6;
-            // 
-            // AbCurrentJoint1textBox
-            // 
-            this.AbCurrentJoint1textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.AbCurrentJoint1textBox.Location = new System.Drawing.Point(97, 170);
-            this.AbCurrentJoint1textBox.Name = "AbCurrentJoint1textBox";
-            this.AbCurrentJoint1textBox.Size = new System.Drawing.Size(104, 28);
-            this.AbCurrentJoint1textBox.TabIndex = 6;
-            // 
-            // AbPositionJoint2textBox
-            // 
-            this.AbPositionJoint2textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.AbPositionJoint2textBox.Location = new System.Drawing.Point(207, 102);
-            this.AbPositionJoint2textBox.Name = "AbPositionJoint2textBox";
-            this.AbPositionJoint2textBox.Size = new System.Drawing.Size(104, 28);
-            this.AbPositionJoint2textBox.TabIndex = 6;
-            // 
-            // AbVelocityJoint1textBox
-            // 
-            this.AbVelocityJoint1textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.AbVelocityJoint1textBox.Location = new System.Drawing.Point(97, 136);
-            this.AbVelocityJoint1textBox.Name = "AbVelocityJoint1textBox";
-            this.AbVelocityJoint1textBox.Size = new System.Drawing.Size(104, 28);
-            this.AbVelocityJoint1textBox.TabIndex = 6;
-            // 
             // AbsPosJoint3textBox
             // 
             this.AbsPosJoint3textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
@@ -4527,13 +4137,13 @@ namespace DebuggingToolGUI
             this.AbsPosJoint3textBox.Size = new System.Drawing.Size(104, 28);
             this.AbsPosJoint3textBox.TabIndex = 6;
             // 
-            // AbPositionJoint1textBox
+            // IncPositionJoint1textBox
             // 
-            this.AbPositionJoint1textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.AbPositionJoint1textBox.Location = new System.Drawing.Point(97, 102);
-            this.AbPositionJoint1textBox.Name = "AbPositionJoint1textBox";
-            this.AbPositionJoint1textBox.Size = new System.Drawing.Size(104, 28);
-            this.AbPositionJoint1textBox.TabIndex = 6;
+            this.IncPositionJoint1textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.IncPositionJoint1textBox.Location = new System.Drawing.Point(97, 102);
+            this.IncPositionJoint1textBox.Name = "IncPositionJoint1textBox";
+            this.IncPositionJoint1textBox.Size = new System.Drawing.Size(104, 28);
+            this.IncPositionJoint1textBox.TabIndex = 6;
             // 
             // AbsPosJoint2textBox
             // 
@@ -4657,9 +4267,9 @@ namespace DebuggingToolGUI
             this.label18.Font = new System.Drawing.Font("KoPub돋움체 Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label18.Location = new System.Drawing.Point(5, 105);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(77, 21);
+            this.label18.Size = new System.Drawing.Size(80, 21);
             this.label18.TabIndex = 5;
-            this.label18.Text = "Position";
+            this.label18.Text = "INC Pos";
             // 
             // label11
             // 
@@ -4673,11 +4283,11 @@ namespace DebuggingToolGUI
             // 
             // LoggingStartbutton
             // 
-            this.LoggingStartbutton.Location = new System.Drawing.Point(6, 30);
+            this.LoggingStartbutton.Location = new System.Drawing.Point(3, 44);
             this.LoggingStartbutton.Name = "LoggingStartbutton";
-            this.LoggingStartbutton.Size = new System.Drawing.Size(293, 59);
+            this.LoggingStartbutton.Size = new System.Drawing.Size(100, 59);
             this.LoggingStartbutton.TabIndex = 7;
-            this.LoggingStartbutton.Text = "Logging Start";
+            this.LoggingStartbutton.Text = "Start";
             this.LoggingStartbutton.UseVisualStyleBackColor = true;
             this.LoggingStartbutton.Click += new System.EventHandler(this.LoggingStartbutton_Click);
             // 
@@ -4690,14 +4300,14 @@ namespace DebuggingToolGUI
             this.LoggingSystemgroupBox.Font = new System.Drawing.Font("KoPub돋움체 Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.LoggingSystemgroupBox.Location = new System.Drawing.Point(1021, 71);
             this.LoggingSystemgroupBox.Name = "LoggingSystemgroupBox";
-            this.LoggingSystemgroupBox.Size = new System.Drawing.Size(305, 209);
+            this.LoggingSystemgroupBox.Size = new System.Drawing.Size(108, 209);
             this.LoggingSystemgroupBox.TabIndex = 8;
             this.LoggingSystemgroupBox.TabStop = false;
             this.LoggingSystemgroupBox.Text = "Logging System";
             // 
             // LoggingpictureBox
             // 
-            this.LoggingpictureBox.Location = new System.Drawing.Point(12, 170);
+            this.LoggingpictureBox.Location = new System.Drawing.Point(5, 170);
             this.LoggingpictureBox.Name = "LoggingpictureBox";
             this.LoggingpictureBox.Size = new System.Drawing.Size(33, 28);
             this.LoggingpictureBox.TabIndex = 166;
@@ -4707,19 +4317,19 @@ namespace DebuggingToolGUI
             // 
             this.label87.AutoSize = true;
             this.label87.Font = new System.Drawing.Font("KoPub돋움체 Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label87.Location = new System.Drawing.Point(51, 177);
+            this.label87.Location = new System.Drawing.Point(37, 177);
             this.label87.Name = "label87";
-            this.label87.Size = new System.Drawing.Size(79, 21);
+            this.label87.Size = new System.Drawing.Size(42, 21);
             this.label87.TabIndex = 165;
-            this.label87.Text = "Logging";
+            this.label87.Text = "Log";
             // 
             // LoggingStopbutton
             // 
-            this.LoggingStopbutton.Location = new System.Drawing.Point(6, 95);
+            this.LoggingStopbutton.Location = new System.Drawing.Point(4, 109);
             this.LoggingStopbutton.Name = "LoggingStopbutton";
-            this.LoggingStopbutton.Size = new System.Drawing.Size(293, 59);
+            this.LoggingStopbutton.Size = new System.Drawing.Size(100, 59);
             this.LoggingStopbutton.TabIndex = 7;
-            this.LoggingStopbutton.Text = "Logging Stop";
+            this.LoggingStopbutton.Text = "Stop";
             this.LoggingStopbutton.UseVisualStyleBackColor = true;
             this.LoggingStopbutton.Click += new System.EventHandler(this.LoggingStopbutton_Click);
             // 
@@ -4732,16 +4342,16 @@ namespace DebuggingToolGUI
             this.ParameterSetgroupBox.Controls.Add(this.label115);
             this.ParameterSetgroupBox.Controls.Add(this.ParametersReadbutton);
             this.ParameterSetgroupBox.Font = new System.Drawing.Font("KoPub돋움체 Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.ParameterSetgroupBox.Location = new System.Drawing.Point(1019, 296);
+            this.ParameterSetgroupBox.Location = new System.Drawing.Point(1130, 71);
             this.ParameterSetgroupBox.Name = "ParameterSetgroupBox";
-            this.ParameterSetgroupBox.Size = new System.Drawing.Size(307, 209);
+            this.ParameterSetgroupBox.Size = new System.Drawing.Size(198, 209);
             this.ParameterSetgroupBox.TabIndex = 9;
             this.ParameterSetgroupBox.TabStop = false;
             this.ParameterSetgroupBox.Text = "Parameter Set";
             // 
             // ParametersSavepictureBox
             // 
-            this.ParametersSavepictureBox.Location = new System.Drawing.Point(14, 171);
+            this.ParametersSavepictureBox.Location = new System.Drawing.Point(14, 174);
             this.ParametersSavepictureBox.Name = "ParametersSavepictureBox";
             this.ParametersSavepictureBox.Size = new System.Drawing.Size(33, 28);
             this.ParametersSavepictureBox.TabIndex = 166;
@@ -4749,7 +4359,7 @@ namespace DebuggingToolGUI
             // 
             // ParametersReadpictureBox
             // 
-            this.ParametersReadpictureBox.Location = new System.Drawing.Point(14, 81);
+            this.ParametersReadpictureBox.Location = new System.Drawing.Point(14, 87);
             this.ParametersReadpictureBox.Name = "ParametersReadpictureBox";
             this.ParametersReadpictureBox.Size = new System.Drawing.Size(33, 28);
             this.ParametersReadpictureBox.TabIndex = 166;
@@ -4759,7 +4369,7 @@ namespace DebuggingToolGUI
             // 
             this.ParametersSavebutton.Location = new System.Drawing.Point(7, 120);
             this.ParametersSavebutton.Name = "ParametersSavebutton";
-            this.ParametersSavebutton.Size = new System.Drawing.Size(293, 48);
+            this.ParametersSavebutton.Size = new System.Drawing.Size(176, 48);
             this.ParametersSavebutton.TabIndex = 8;
             this.ParametersSavebutton.Text = "Parameters Save";
             this.ParametersSavebutton.UseVisualStyleBackColor = true;
@@ -4769,27 +4379,27 @@ namespace DebuggingToolGUI
             // 
             this.label141.AutoSize = true;
             this.label141.Font = new System.Drawing.Font("KoPub돋움체 Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label141.Location = new System.Drawing.Point(53, 177);
+            this.label141.Location = new System.Drawing.Point(53, 180);
             this.label141.Name = "label141";
-            this.label141.Size = new System.Drawing.Size(141, 21);
+            this.label141.Size = new System.Drawing.Size(52, 21);
             this.label141.TabIndex = 165;
-            this.label141.Text = "Save Complete";
+            this.label141.Text = "Save";
             // 
             // label115
             // 
             this.label115.AutoSize = true;
             this.label115.Font = new System.Drawing.Font("KoPub돋움체 Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label115.Location = new System.Drawing.Point(53, 88);
+            this.label115.Location = new System.Drawing.Point(53, 94);
             this.label115.Name = "label115";
-            this.label115.Size = new System.Drawing.Size(144, 21);
+            this.label115.Size = new System.Drawing.Size(55, 21);
             this.label115.TabIndex = 165;
-            this.label115.Text = "Read Complete";
+            this.label115.Text = "Read";
             // 
             // ParametersReadbutton
             // 
             this.ParametersReadbutton.Location = new System.Drawing.Point(6, 31);
             this.ParametersReadbutton.Name = "ParametersReadbutton";
-            this.ParametersReadbutton.Size = new System.Drawing.Size(293, 47);
+            this.ParametersReadbutton.Size = new System.Drawing.Size(177, 47);
             this.ParametersReadbutton.TabIndex = 8;
             this.ParametersReadbutton.Text = "Parameters Read";
             this.ParametersReadbutton.UseVisualStyleBackColor = true;
@@ -4797,7 +4407,7 @@ namespace DebuggingToolGUI
             // 
             // ConnectCompletepictureBox
             // 
-            this.ConnectCompletepictureBox.Location = new System.Drawing.Point(1326, 40);
+            this.ConnectCompletepictureBox.Location = new System.Drawing.Point(1336, 40);
             this.ConnectCompletepictureBox.Name = "ConnectCompletepictureBox";
             this.ConnectCompletepictureBox.Size = new System.Drawing.Size(33, 28);
             this.ConnectCompletepictureBox.TabIndex = 166;
@@ -4807,22 +4417,31 @@ namespace DebuggingToolGUI
             // 
             this.ConnectComplete.AutoSize = true;
             this.ConnectComplete.Font = new System.Drawing.Font("KoPub돋움체 Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.ConnectComplete.Location = new System.Drawing.Point(1365, 47);
+            this.ConnectComplete.Location = new System.Drawing.Point(1375, 47);
             this.ConnectComplete.Name = "ConnectComplete";
             this.ConnectComplete.Size = new System.Drawing.Size(171, 21);
             this.ConnectComplete.TabIndex = 165;
             this.ConnectComplete.Text = "Connect Complete";
             // 
+            // LoglistBox
+            // 
+            this.LoglistBox.FormattingEnabled = true;
+            this.LoglistBox.ItemHeight = 12;
+            this.LoglistBox.Location = new System.Drawing.Point(1021, 13);
+            this.LoglistBox.Name = "LoglistBox";
+            this.LoglistBox.Size = new System.Drawing.Size(308, 52);
+            this.LoglistBox.TabIndex = 167;
+            // 
             // DebuggingToolSW
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1779, 971);
+            this.ClientSize = new System.Drawing.Size(1779, 1016);
+            this.Controls.Add(this.LoglistBox);
             this.Controls.Add(this.ConnectCompletepictureBox);
             this.Controls.Add(this.ConnectComplete);
             this.Controls.Add(this.ParameterSetgroupBox);
             this.Controls.Add(this.LoggingSystemgroupBox);
-            this.Controls.Add(this.IncrementalEncodergroupBox);
             this.Controls.Add(this.AbsoluteEnocdergroupBox);
             this.Controls.Add(this.StateGroupBox);
             this.Controls.Add(this.LoginGroupBox);
@@ -4878,8 +4497,6 @@ namespace DebuggingToolGUI
             ((System.ComponentModel.ISupportInitialize)(this.PositionModepictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.GCpictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ConnectpictureBox)).EndInit();
-            this.IncrementalEncodergroupBox.ResumeLayout(false);
-            this.IncrementalEncodergroupBox.PerformLayout();
             this.AbsoluteEnocdergroupBox.ResumeLayout(false);
             this.AbsoluteEnocdergroupBox.PerformLayout();
             this.LoggingSystemgroupBox.ResumeLayout(false);
@@ -4927,82 +4544,37 @@ namespace DebuggingToolGUI
         private System.Windows.Forms.Label label38;
         private System.Windows.Forms.Label label37;
         private System.Windows.Forms.Label label36;
-        private System.Windows.Forms.GroupBox IncrementalEncodergroupBox;
-        private System.Windows.Forms.TextBox IncCurrentJoint8textBox;
+        private System.Windows.Forms.GroupBox AbsoluteEnocdergroupBox;
+        private System.Windows.Forms.TextBox CurrentJoint8textBox;
         private System.Windows.Forms.TextBox IncVelocityJoint8textBox;
         private System.Windows.Forms.TextBox IncPositionJoint8textBox;
-        private System.Windows.Forms.TextBox IncCurrentJoint7textBox;
-        private System.Windows.Forms.TextBox INCPosJoint8textBox;
-        private System.Windows.Forms.TextBox IncCurrentJoint6textBox;
+        private System.Windows.Forms.TextBox CurrentJoint7textBox;
+        private System.Windows.Forms.TextBox AbsPosJoint8textBox;
+        private System.Windows.Forms.TextBox CurrentJoint6textBox;
         private System.Windows.Forms.TextBox IncVelocityJoint7textBox;
         private System.Windows.Forms.TextBox IncVelocityJoint6textBox;
         private System.Windows.Forms.TextBox IncPositionJoint7textBox;
-        private System.Windows.Forms.TextBox IncCurrentJoint5textBox;
+        private System.Windows.Forms.TextBox CurrentJoint5textBox;
         private System.Windows.Forms.TextBox IncPositionJoint6textBox;
         private System.Windows.Forms.TextBox IncVelocityJoint5textBox;
-        private System.Windows.Forms.TextBox INCPosJoint7textBox;
-        private System.Windows.Forms.TextBox IncCurrentJoint4textBox;
+        private System.Windows.Forms.TextBox AbsPosJoint7textBox;
+        private System.Windows.Forms.TextBox CurrentJoint4textBox;
         private System.Windows.Forms.TextBox IncPositionJoint5textBox;
         private System.Windows.Forms.TextBox IncVelocityJoint4textBox;
-        private System.Windows.Forms.TextBox INCPosJoint6textBox;
-        private System.Windows.Forms.TextBox IncCurrentJoint3textBox;
+        private System.Windows.Forms.TextBox AbsPosJoint6textBox;
+        private System.Windows.Forms.TextBox CurrentJoint3textBox;
         private System.Windows.Forms.TextBox IncPositionJoint4textBox;
         private System.Windows.Forms.TextBox IncVelocityJoint3textBox;
-        private System.Windows.Forms.TextBox INCPosJoint5textBox;
-        private System.Windows.Forms.TextBox IncCurrentJoint2textBox;
+        private System.Windows.Forms.TextBox AbsPosJoint5textBox;
+        private System.Windows.Forms.TextBox CurrentJoint2textBox;
         private System.Windows.Forms.TextBox IncPositionJoint3textBox;
         private System.Windows.Forms.TextBox IncVelocityJoint2textBox;
-        private System.Windows.Forms.TextBox IncPosJoint4textBox;
-        private System.Windows.Forms.TextBox IncCurrentJoint1textBox;
+        private System.Windows.Forms.TextBox AbsPosJoint4textBox;
+        private System.Windows.Forms.TextBox CurrentJoint1textBox;
         private System.Windows.Forms.TextBox IncPositionJoint2textBox;
         private System.Windows.Forms.TextBox IncVelocityJoint1textBox;
-        private System.Windows.Forms.TextBox IncPosJoint3textBox;
-        private System.Windows.Forms.TextBox IncPositionJoint1textBox;
-        private System.Windows.Forms.TextBox IncPosJoint2textBox;
-        private System.Windows.Forms.TextBox IncPosJoint1textBox;
-        private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.Label label28;
-        private System.Windows.Forms.Label label29;
-        private System.Windows.Forms.Label label30;
-        private System.Windows.Forms.Label label31;
-        private System.Windows.Forms.Label label32;
-        private System.Windows.Forms.Label label33;
-        private System.Windows.Forms.Label label34;
-        private System.Windows.Forms.GroupBox AbsoluteEnocdergroupBox;
-        private System.Windows.Forms.TextBox AbCurrentJoint8textBox;
-        private System.Windows.Forms.TextBox AbVelocityJoint8textBox;
-        private System.Windows.Forms.TextBox AbPositionJoint8textBox;
-        private System.Windows.Forms.TextBox AbCurrentJoint7textBox;
-        private System.Windows.Forms.TextBox AbsPosJoint8textBox;
-        private System.Windows.Forms.TextBox AbCurrentJoint6textBox;
-        private System.Windows.Forms.TextBox AbVelocityJoint7textBox;
-        private System.Windows.Forms.TextBox AbVelocityJoint6textBox;
-        private System.Windows.Forms.TextBox AbPositionJoint7textBox;
-        private System.Windows.Forms.TextBox AbCurrentJoint5textBox;
-        private System.Windows.Forms.TextBox AbPositionJoint6textBox;
-        private System.Windows.Forms.TextBox AbVelocityJoint5textBox;
-        private System.Windows.Forms.TextBox AbsPosJoint7textBox;
-        private System.Windows.Forms.TextBox AbCurrentJoint4textBox;
-        private System.Windows.Forms.TextBox AbPositionJoint5textBox;
-        private System.Windows.Forms.TextBox AbVelocityJoint4textBox;
-        private System.Windows.Forms.TextBox AbsPosJoint6textBox;
-        private System.Windows.Forms.TextBox AbCurrentJoint3textBox;
-        private System.Windows.Forms.TextBox AbPositionJoint4textBox;
-        private System.Windows.Forms.TextBox AbVelocityJoint3textBox;
-        private System.Windows.Forms.TextBox AbsPosJoint5textBox;
-        private System.Windows.Forms.TextBox AbCurrentJoint2textBox;
-        private System.Windows.Forms.TextBox AbPositionJoint3textBox;
-        private System.Windows.Forms.TextBox AbVelocityJoint2textBox;
-        private System.Windows.Forms.TextBox AbsPosJoint4textBox;
-        private System.Windows.Forms.TextBox AbCurrentJoint1textBox;
-        private System.Windows.Forms.TextBox AbPositionJoint2textBox;
-        private System.Windows.Forms.TextBox AbVelocityJoint1textBox;
         private System.Windows.Forms.TextBox AbsPosJoint3textBox;
-        private System.Windows.Forms.TextBox AbPositionJoint1textBox;
+        private System.Windows.Forms.TextBox IncPositionJoint1textBox;
         private System.Windows.Forms.TextBox AbsPosJoint2textBox;
         private System.Windows.Forms.TextBox AbsPosJoint1textBox;
         private System.Windows.Forms.Label label22;
@@ -5316,12 +4888,12 @@ namespace DebuggingToolGUI
         private System.Windows.Forms.Label label126;
         private System.Windows.Forms.Label label131;
         private System.Windows.Forms.Label label127;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox PositionCartesianRztextBox;
+        private System.Windows.Forms.TextBox PositionCartesianRytextBox;
+        private System.Windows.Forms.TextBox PositionCartesianPztextBox;
+        private System.Windows.Forms.TextBox PositionCartesianRxtextBox;
+        private System.Windows.Forms.TextBox PositionCartesianPytextBox;
+        private System.Windows.Forms.TextBox PositionCartesianPxtextBox;
         private System.Windows.Forms.PictureBox JointReachedpictureBox;
         private System.Windows.Forms.PictureBox JointMovingpictureBox;
         private System.Windows.Forms.Label label139;
@@ -5331,6 +4903,14 @@ namespace DebuggingToolGUI
         private System.Windows.Forms.Label ConnectComplete;
         private System.Windows.Forms.PictureBox ParametersSavepictureBox;
         private System.Windows.Forms.Label label141;
+        private System.Windows.Forms.ListBox LoglistBox;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button cRightbutton;
+        private System.Windows.Forms.Button cLeftbutton;
+        private System.Windows.Forms.Button button8;
     }
 }
 
