@@ -26,7 +26,9 @@ namespace DebuggingToolGUI
 
     public partial class DebuggingToolSW : Form
     {
-        const int Axis_Size = 8;
+        /* Dof Select */
+        public int LegDofSelect = 4;
+        public int CartesianDofSelect = 3;
 
         /* Status Check Variable */
         public bool StatusMainTimerStart = false;
@@ -70,6 +72,7 @@ namespace DebuggingToolGUI
         public const int HOMING = 6;
         public const int HOMING_COMPLETE = 7;
         public const int FREE_STATE = 8;
+        public const int READY_STATE = 128;
         /* End Communication State */
 
         /* Control Mode Select */
@@ -111,94 +114,163 @@ namespace DebuggingToolGUI
         [StructLayout(LayoutKind.Sequential, Pack = 1), Serializable]
         public struct AxisServerData
         {
-            [MarshalAs(UnmanagedType.ByValArray, SizeConst = Axis_Size)]
+            //[MarshalAs(UnmanagedType.ByValArray, SizeConst = Axis_Size)]
             public float[] actualMotorPosition;
-            [MarshalAs(UnmanagedType.ByValArray, SizeConst = Axis_Size)]
+            //[MarshalAs(UnmanagedType.ByValArray, SizeConst = Axis_Size)]
             public float[] actualLinkPosition;
-            [MarshalAs(UnmanagedType.ByValArray, SizeConst = Axis_Size)]
+            //[MarshalAs(UnmanagedType.ByValArray, SizeConst = Axis_Size)]
             public float[] actualMotorVelocity;
-            [MarshalAs(UnmanagedType.ByValArray, SizeConst = Axis_Size)]
+            //[MarshalAs(UnmanagedType.ByValArray, SizeConst = Axis_Size)]
             public float[] actualLinkVelocity;
-            [MarshalAs(UnmanagedType.ByValArray, SizeConst = Axis_Size)]
+            //[MarshalAs(UnmanagedType.ByValArray, SizeConst = Axis_Size)]
             public float[] actualCurrent;
-            [MarshalAs(UnmanagedType.ByValArray, SizeConst = Axis_Size)]
+            //[MarshalAs(UnmanagedType.ByValArray, SizeConst = Axis_Size)]
             public float[] targetPosition;
-            [MarshalAs(UnmanagedType.ByValArray, SizeConst = Axis_Size)]
+            //[MarshalAs(UnmanagedType.ByValArray, SizeConst = Axis_Size)]
             public float[] targetVelocity;
-            [MarshalAs(UnmanagedType.ByValArray, SizeConst = Axis_Size)]
+            //[MarshalAs(UnmanagedType.ByValArray, SizeConst = Axis_Size)]
             public float[] targetCurrent;
-            [MarshalAs(UnmanagedType.ByValArray, SizeConst = Axis_Size)]
+            //[MarshalAs(UnmanagedType.ByValArray, SizeConst = Axis_Size)]
             public Int32[] modeOfOperation;
-            [MarshalAs(UnmanagedType.ByValArray, SizeConst = Axis_Size)]
+            //[MarshalAs(UnmanagedType.ByValArray, SizeConst = Axis_Size)]
             public Int32[] statusword;
         };
 
         [StructLayout(LayoutKind.Sequential, Pack = 1), Serializable]
         public struct ServerSystemData
         {
-            [MarshalAs(UnmanagedType.ByValArray, SizeConst = 10)]
+            //[MarshalAs(UnmanagedType.ByValArray, SizeConst = 1)]
             public Int32[] cnt;
             public Int32 logCnt;
             public Int32 gravityMode;
             public Int32 targetReached;
             public Int32 controlMode;// 0: Gravity mode, 1:Joint Mode, 2:Cartesian Mode
 
-            [MarshalAs(UnmanagedType.ByValArray, SizeConst = 6)]
+            //[MarshalAs(UnmanagedType.ByValArray, SizeConst = 6)]
             public float[] cartesianTargetPose;
-            [MarshalAs(UnmanagedType.ByValArray, SizeConst = 6)]
+            //[MarshalAs(UnmanagedType.ByValArray, SizeConst = 6)]
             public float[] cartesianCurrentPose;
             
             // Position Mode
-            [MarshalAs(UnmanagedType.ByValArray, SizeConst = 6)]
+            //[MarshalAs(UnmanagedType.ByValArray, SizeConst = 6)]
             public float[] targetTrajectoryTime;
-            [MarshalAs(UnmanagedType.ByValArray, SizeConst = 6)]
+            //[MarshalAs(UnmanagedType.ByValArray, SizeConst = 6)]
             public float[] targetTrajectoryAcc;
 
             // Module Data
-            [MarshalAs(UnmanagedType.ByValArray, SizeConst = 10)]
+            //[MarshalAs(UnmanagedType.ByValArray, SizeConst = 10)]
             public AxisServerData[] moduleData;
         };
+        public static ServerSystemData ServerDataSave;
         public static ServerSystemData ServerData;
         /* End Basic Communication Structure */
+
+        public void ServerSystemDataInit(int Axis_Size)
+        {
+            /* ServerData Init */
+            ServerData.cnt = new Int32[1];
+
+            ServerData.cartesianTargetPose = new float[6];
+            ServerData.cartesianCurrentPose = new float[6];
+
+            ServerData.targetTrajectoryTime = new float[6];
+            ServerData.targetTrajectoryAcc = new float[6];
+
+            ServerData.moduleData = new AxisServerData[1];
+            ServerData.moduleData[0].actualMotorPosition = new float[Axis_Size];
+            ServerData.moduleData[0].actualLinkPosition = new float[Axis_Size];
+            ServerData.moduleData[0].actualMotorVelocity = new float[Axis_Size];
+            ServerData.moduleData[0].actualLinkVelocity = new float[Axis_Size];
+            ServerData.moduleData[0].actualCurrent = new float[Axis_Size];
+            ServerData.moduleData[0].targetPosition = new float[Axis_Size];
+            ServerData.moduleData[0].targetVelocity = new float[Axis_Size];
+            ServerData.moduleData[0].targetCurrent = new float[Axis_Size];
+            ServerData.moduleData[0].modeOfOperation = new Int32[Axis_Size];
+            ServerData.moduleData[0].statusword = new Int32[Axis_Size];
+
+            /* ServerDataSave Init */
+            ServerDataSave.cnt = new Int32[1];
+
+            ServerDataSave.cartesianTargetPose = new float[3];
+            ServerDataSave.cartesianCurrentPose = new float[3];
+
+            ServerDataSave.targetTrajectoryTime = new float[3];
+            ServerDataSave.targetTrajectoryAcc = new float[3];
+
+            ServerDataSave.moduleData = new AxisServerData[1];
+            ServerDataSave.moduleData[0].actualMotorPosition = new float[Axis_Size];
+            ServerDataSave.moduleData[0].actualLinkPosition = new float[Axis_Size];
+            ServerDataSave.moduleData[0].actualMotorVelocity = new float[Axis_Size];
+            ServerDataSave.moduleData[0].actualLinkVelocity = new float[Axis_Size];
+            ServerDataSave.moduleData[0].actualCurrent = new float[Axis_Size];
+            ServerDataSave.moduleData[0].targetPosition = new float[Axis_Size];
+            ServerDataSave.moduleData[0].targetVelocity = new float[Axis_Size];
+            ServerDataSave.moduleData[0].targetCurrent = new float[Axis_Size];
+            ServerDataSave.moduleData[0].modeOfOperation = new Int32[Axis_Size];
+            ServerDataSave.moduleData[0].statusword = new Int32[Axis_Size];
+        }
+
 
         /* Parameters Tunning & Target Structure */
         [StructLayout(LayoutKind.Sequential, Pack = 1), Serializable]
         public struct JointParameterSettingStruct
         {
-            [MarshalAs(UnmanagedType.ByValArray, SizeConst = Axis_Size)]
+            //[MarshalAs(UnmanagedType.ByValArray, SizeConst = Axis_Size)]
             public float[] jointPositionPgain;
-            [MarshalAs(UnmanagedType.ByValArray, SizeConst = Axis_Size)]
+            //[MarshalAs(UnmanagedType.ByValArray, SizeConst = Axis_Size)]
             public float[] jointPositionIgain;
-            [MarshalAs(UnmanagedType.ByValArray, SizeConst = Axis_Size)]
+            //[MarshalAs(UnmanagedType.ByValArray, SizeConst = Axis_Size)]
             public float[] jointPositionDgain;
 
-            [MarshalAs(UnmanagedType.ByValArray, SizeConst = Axis_Size)]
+            //[MarshalAs(UnmanagedType.ByValArray, SizeConst = Axis_Size)]
             public float[] jointTorquePgain;
-            [MarshalAs(UnmanagedType.ByValArray, SizeConst = Axis_Size)]
+            //[MarshalAs(UnmanagedType.ByValArray, SizeConst = Axis_Size)]
             public float[] jointTorqueIgain;
-            [MarshalAs(UnmanagedType.ByValArray, SizeConst = Axis_Size)]
+            //[MarshalAs(UnmanagedType.ByValArray, SizeConst = Axis_Size)]
             public float[] jointTorqueDgain;
 
-            [MarshalAs(UnmanagedType.ByValArray, SizeConst = Axis_Size)]
+            //[MarshalAs(UnmanagedType.ByValArray, SizeConst = Axis_Size)]
             public float[] jointConstantEfficiency;
-            [MarshalAs(UnmanagedType.ByValArray, SizeConst = Axis_Size)]
+            //[MarshalAs(UnmanagedType.ByValArray, SizeConst = Axis_Size)]
             public float[] jointConstantTorque;
-            [MarshalAs(UnmanagedType.ByValArray, SizeConst = Axis_Size)]
+            //[MarshalAs(UnmanagedType.ByValArray, SizeConst = Axis_Size)]
             public float[] jointConstantSpring;
 
-            [MarshalAs(UnmanagedType.ByValArray, SizeConst = Axis_Size)]
+            //[MarshalAs(UnmanagedType.ByValArray, SizeConst = Axis_Size)]
             public float[] jointGravityGain;
-            [MarshalAs(UnmanagedType.ByValArray, SizeConst = Axis_Size)]
+            //[MarshalAs(UnmanagedType.ByValArray, SizeConst = Axis_Size)]
             public float[] jointCurrentGain;
-            [MarshalAs(UnmanagedType.ByValArray, SizeConst = Axis_Size)]
+            //[MarshalAs(UnmanagedType.ByValArray, SizeConst = Axis_Size)]
             public float[] jointFrictionGain;
         };
+        public static JointParameterSettingStruct jParam;
         public static JointParameterSettingStruct jParamSet;
         public static JointParameterSettingStruct jParamGet;
-        
-        public void JointParameterSettingInit()
+        /* End Parameters Tunning & Target Structure */
+
+        public void JointParameterSettingInit(int Axis_Size)
         {
             /* Joint Parameters Init */
+            /* Save Data  */
+            jParam.jointPositionPgain = new float[8];
+            jParam.jointPositionIgain = new float[8];
+            jParam.jointPositionDgain = new float[8];
+
+            jParam.jointTorquePgain = new float[8];
+            jParam.jointTorqueIgain = new float[8];
+            jParam.jointTorqueDgain = new float[8];
+
+            jParam.jointConstantEfficiency = new float[8];
+            jParam.jointConstantTorque = new float[8];
+            jParam.jointConstantSpring = new float[8];
+
+            jParam.jointGravityGain = new float[8];
+            jParam.jointCurrentGain = new float[8];
+            jParam.jointFrictionGain = new float[8];
+
+            jTraj.jointTrajectoryAcc = new float[8];
+            jTraj.jointTrajectoryTime = new float[8];
+
             /* Send Data  */
             jParamSet.jointPositionPgain = new float[Axis_Size];
             jParamSet.jointPositionIgain = new float[Axis_Size];
@@ -243,73 +315,88 @@ namespace DebuggingToolGUI
         [StructLayout(LayoutKind.Sequential, Pack = 1), Serializable]
         public struct JointTrajectorySetStruct
         {
-            [MarshalAs(UnmanagedType.ByValArray, SizeConst = Axis_Size)]
+            //[MarshalAs(UnmanagedType.ByValArray, SizeConst = Axis_Size)]
             public float[] jointTrajectoryTime;
-            [MarshalAs(UnmanagedType.ByValArray, SizeConst = Axis_Size)]
+            //[MarshalAs(UnmanagedType.ByValArray, SizeConst = Axis_Size)]
             public float[] jointTrajectoryAcc;
         };
+        public static JointTrajectorySetStruct jTraj;
         public static JointTrajectorySetStruct jTrajSet;
         public static JointTrajectorySetStruct jTrajGet;
 
         [StructLayout(LayoutKind.Sequential, Pack = 1), Serializable]
         public struct CartesianParameterSettingStruct
         {
-            [MarshalAs(UnmanagedType.ByValArray, SizeConst = 6)]
+            //[MarshalAs(UnmanagedType.ByValArray, SizeConst = 6)]
             public float[] cartesianPositionPgain;
-            [MarshalAs(UnmanagedType.ByValArray, SizeConst = 6)]
+            //[MarshalAs(UnmanagedType.ByValArray, SizeConst = 6)]
             public float[] cartesianPositionIgain;
-            [MarshalAs(UnmanagedType.ByValArray, SizeConst = 6)]
+            //[MarshalAs(UnmanagedType.ByValArray, SizeConst = 6)]
             public float[] cartesianPositionDgain;
 
             
         };
+        public static CartesianParameterSettingStruct cParam;
         public static CartesianParameterSettingStruct cParamSet;
         public static CartesianParameterSettingStruct cParamGet;
 
         public void CartesianParameterSettingInit()
         {
-            /* Send Data */
-            cParamSet.cartesianPositionPgain = new float[6];
-            cParamSet.cartesianPositionIgain = new float[6];
-            cParamSet.cartesianPositionDgain = new float[6];
+            /* Data Save */
+            cParam.cartesianPositionPgain = new float[6];
+            cParam.cartesianPositionIgain = new float[6];
+            cParam.cartesianPositionDgain = new float[6];
 
-            cTrajSet.cartesianTrajectoryTime = new float[6];
-            cTrajSet.cartesianTrajectoryAcc = new float[6];
+            cTraj.cartesianTrajectoryTime = new float[6];
+            cTraj.cartesianTrajectoryAcc = new float[6];
+
+
+            /* Send Data */
+            cParamSet.cartesianPositionPgain = new float[CartesianDofSelect];
+            cParamSet.cartesianPositionIgain = new float[CartesianDofSelect];
+            cParamSet.cartesianPositionDgain = new float[CartesianDofSelect];
+
+            cTrajSet.cartesianTrajectoryTime = new float[CartesianDofSelect];
+            cTrajSet.cartesianTrajectoryAcc = new float[CartesianDofSelect];
             
             /* Recv Data */
-            cParamGet.cartesianPositionPgain = new float[6];
-            cParamGet.cartesianPositionIgain = new float[6];
-            cParamGet.cartesianPositionDgain = new float[6];
+            cParamGet.cartesianPositionPgain = new float[CartesianDofSelect];
+            cParamGet.cartesianPositionIgain = new float[CartesianDofSelect];
+            cParamGet.cartesianPositionDgain = new float[CartesianDofSelect];
 
-            cTrajGet.cartesianTrajectoryTime = new float[6];
-            cTrajGet.cartesianTrajectoryAcc = new float[6];
+            cTrajGet.cartesianTrajectoryTime = new float[CartesianDofSelect];
+            cTrajGet.cartesianTrajectoryAcc = new float[CartesianDofSelect];
         }
 
         [StructLayout(LayoutKind.Sequential, Pack = 1), Serializable]
         public struct CartesianTrajectorySetStruct
         {
-            [MarshalAs(UnmanagedType.ByValArray, SizeConst = 6)]
+            //[MarshalAs(UnmanagedType.ByValArray, SizeConst = 6)]
             public float[] cartesianTrajectoryTime;
-            [MarshalAs(UnmanagedType.ByValArray, SizeConst = 6)]
+            //[MarshalAs(UnmanagedType.ByValArray, SizeConst = 6)]
             public float[] cartesianTrajectoryAcc;
         };
+        public static CartesianTrajectorySetStruct cTraj;
         public static CartesianTrajectorySetStruct cTrajSet;
         public static CartesianTrajectorySetStruct cTrajGet;
 
         [StructLayout(LayoutKind.Sequential, Pack = 1), Serializable]
         public struct JointTargetStruct
         {
-            [MarshalAs(UnmanagedType.ByValArray, SizeConst = Axis_Size)]
+            //[MarshalAs(UnmanagedType.ByValArray, SizeConst = Axis_Size)]
             public float[] jointTarget;
         };
         public static JointTargetStruct jTarget;
+        public static JointTargetStruct jTargetSet;
         public static JointTargetStruct jTargetGet;
-        public void JointTargetInit()
+        public void JointTargetInit(int Axis_Size)
         {
-            /* Send Data */
+            /* Data Save */
             jTarget.jointTarget = new float[8];
+            /* Send Data */
+            jTargetSet.jointTarget = new float[Axis_Size];
             /* Recv Data */
-            jTargetGet.jointTarget = new float[8];
+            jTargetGet.jointTarget = new float[Axis_Size];
         }
 
         [StructLayout(LayoutKind.Sequential, Pack = 1), Serializable]
@@ -323,6 +410,7 @@ namespace DebuggingToolGUI
             public float rZ;
         };
         public static CartesianTargetStruct cTarget;
+        public static CartesianTargetStruct cTargetSet;
         public static CartesianTargetStruct cTargetGet;
         /* End Parameters Tunning & Target Structure */
 
@@ -611,8 +699,6 @@ namespace DebuggingToolGUI
         {
             AddListBox(LoglistBox, "TCP Thread Running");
 
-            byte[] sndBuffer = { 0x7B, 0x7D, 0x22, 0x33, 0x44, 0x55, 0x66, 0x77 };
-            byte[] rcvBuffer = new byte[sndBuffer.Length];
             int errCnt = 0;
 
             if (IPAddress.TryParse(ipStr, out ipAddr))
@@ -621,6 +707,53 @@ namespace DebuggingToolGUI
                 {
                     /* Mutex Start */
                     tcpIpMutex.WaitOne();
+
+                    for (int i=0;i<LegDofSelect;i++)
+                    {
+                        /* Joint Parameters Set from Save Data */
+                        jParamSet.jointPositionPgain[i] = jParam.jointPositionPgain[i];
+                        jParamSet.jointPositionIgain[i] = jParam.jointPositionPgain[i];
+                        jParamSet.jointPositionDgain[i] = jParam.jointPositionDgain[i];
+
+                        jParamSet.jointTorquePgain[i] = jParam.jointTorquePgain[i];
+                        jParamSet.jointTorqueIgain[i] = jParam.jointTorqueIgain[i];
+                        jParamSet.jointTorqueDgain[i] = jParam.jointTorqueDgain[i];
+
+                        jParamSet.jointConstantEfficiency[i] = jParam.jointConstantEfficiency[i];
+                        jParamSet.jointConstantTorque[i] = jParam.jointConstantTorque[i];
+                        jParamSet.jointConstantSpring[i] = jParam.jointConstantSpring[i];
+
+                        jParamSet.jointGravityGain[i] = jParam.jointGravityGain[i];
+                        jParamSet.jointCurrentGain[i] = jParam.jointCurrentGain[i];
+                        jParamSet.jointFrictionGain[i] = jParam.jointFrictionGain[i];
+
+                        /* Joint Trajectory Set from Save Data */
+                        jTrajSet.jointTrajectoryTime[i] = jTraj.jointTrajectoryTime[i];
+                        jTrajSet.jointTrajectoryAcc[i] = jTraj.jointTrajectoryAcc[i];
+
+                        /* Joint Target Set from Save Data */
+                        jTargetSet.jointTarget[i] = jTarget.jointTarget[i];
+                    }
+
+                    for(int i = 0; i < CartesianDofSelect; i++)
+                    {
+                        /* Cartesian Parameters Set from Save Data */
+                        cParamSet.cartesianPositionPgain[i] = cParam.cartesianPositionPgain[i];
+                        cParamSet.cartesianPositionIgain[i] = cParam.cartesianPositionIgain[i];
+                        cParamSet.cartesianPositionDgain[i] = cParam.cartesianPositionDgain[i];
+
+                        /* Cartesian Trajectory Set from Save Data */
+                        cTrajSet.cartesianTrajectoryTime[i] = cTraj.cartesianTrajectoryTime[i];
+                        cTrajSet.cartesianTrajectoryAcc[i] = cTraj.cartesianTrajectoryAcc[i];
+                        
+                    }
+
+                    /* Cartesian Parameters Set from Save Data */
+                    cParamSet = cParam;
+                    /* Cartesian Trajectory Set from Save Data */
+                    cTrajSet = cTraj;
+                    /* Cartesian Target Set from Save Data */
+                    cTargetSet = cTarget;
 
                     tcpClient = new TcpClient();
                     tcpClient.Connect(ipAddr, port);
@@ -631,7 +764,7 @@ namespace DebuggingToolGUI
                     
                     BitArray SendPacketType1 = new BitArray(new byte[] { MsgStateSend.packetType[0]});
                     BitArray SendPacketType2 = new BitArray(new byte[] { MsgStateSend.packetType[1]});
-
+                    
                     UInt16 bufferSize = Convert.ToUInt16(Marshal.SizeOf(MsgStateSend));
                     
                     byte[] VariableDataInput = new byte[0];
@@ -700,12 +833,6 @@ namespace DebuggingToolGUI
                             }
                         }
                     }
-                    
-                    // Todo : Move to Button
-                    MsgStateSend.commState = Convert.ToUInt16(REGISTRATION);
-                    MsgStateSend.controlMode = Convert.ToByte(GRAVITY_MODE);
-
-                    MsgStateSend.payloadSize = bufferSize;
 
                     byte[] LoadBuffer;
                     if (bufferSize > Convert.ToUInt16(Marshal.SizeOf(MsgStateSend)))
@@ -717,6 +844,7 @@ namespace DebuggingToolGUI
                         AddListBox(LoglistBox, "Send Load Buffer");
                         tcpClientNS.Write(LoadBuffer, 0, LoadBuffer.Length);
                         tcpClientNS.Flush();
+                        LoadBuffer = null;
                     }
                     else
                     {
@@ -730,7 +858,6 @@ namespace DebuggingToolGUI
 
 
                     /* TCP/IP Communication - Recv Part */
-
                     /* Msg State Read */
                     byte[] msgStatebuffer = new byte[Marshal.SizeOf(MsgStateRecv)];
                     int _msgStateRead = tcpClientNS.Read(msgStatebuffer, 0, msgStatebuffer.Length);
@@ -745,39 +872,89 @@ namespace DebuggingToolGUI
 
                         BitArray RecvPacketType1 = new BitArray(new byte[] { MsgStateRecv.packetType[0] });
                         BitArray RecvPacketType2 = new BitArray(new byte[] { MsgStateRecv.packetType[1] });
-
+                        
                         /* Communication State Machine */
                         int recvState = Convert.ToInt32(MsgStateRecv.commState);
                         switch (recvState)
                         {
+                            case REGISTRATION:
+                                {
+                                    MsgStateSend.packetType[0] = 0;
+                                    MsgStateSend.packetType[1] = 0;
+                                    MsgStateSend.commState = REGISTRATION;
+                                    MsgStateSend.payloadSize = Convert.ToUInt16(Marshal.SizeOf(MsgStateSend));
+                                    break;
+                                }
                             case REGISTRATION_COMPLETE:
                                 {
+                                    if(MsgStateSend.commState == SERVO_ON)
+                                    {
+                                        MsgStateSend.packetType[0] = 0;
+                                        MsgStateSend.packetType[1] = 0;
+                                        MsgStateSend.commState = SERVO_ON;
+                                        MsgStateSend.payloadSize = Convert.ToUInt16(Marshal.SizeOf(MsgStateSend));
+                                    }
+                                    else
+                                    {
+                                        MsgStateSend.packetType[0] = 0;
+                                        MsgStateSend.packetType[1] = 0;
+                                        MsgStateSend.commState = REGISTRATION;
+                                        MsgStateSend.payloadSize = Convert.ToUInt16(Marshal.SizeOf(MsgStateSend));
+                                    }
+                                    break;
+                                }
+                            case SERVO_ON:
+                                {
+                                    MsgStateSend.packetType[0] = 0;
+                                    MsgStateSend.packetType[1] = 0;
                                     MsgStateSend.commState = SERVO_ON;
-                                    
+                                    MsgStateSend.payloadSize = Convert.ToUInt16(Marshal.SizeOf(MsgStateSend));
                                     break;
                                 }
                             case SERVO_ON_COMPLETE:
                                 {
                                     MsgStateSend.commState = TUNNING_STATE;
-
+                                    break;
+                                }
+                            case TUNNING_STATE:
+                                {
+                                    MsgStateSend.commState = TUNNING_STATE;
                                     break;
                                 }
                             case TUNNING_STATE_COMPLETE:
                                 {
-                                    MsgStateSend.commState = HOMING;
-                                    
+                                    if(MsgStateSend.commState == HOMING)
+                                    {
+                                        MsgStateSend.commState = HOMING;
+                                    }
+                                    else
+                                    {
+                                        MsgStateSend.packetType[0] = 0;
+                                        MsgStateSend.packetType[1] = 0;
+                                        MsgStateSend.commState = TUNNING_STATE;
+                                        MsgStateSend.payloadSize = Convert.ToUInt16(Marshal.SizeOf(MsgStateSend));
+                                    }
+                                    break;
+                                }
+                            case HOMING:
+                                {
                                     break;
                                 }
                             case HOMING_COMPLETE:
                                 {
-                                    MsgStateSend.commState = FREE_STATE;
-                                    
+                                    if(MsgStateSend.commState == FREE_STATE)
+                                    {
+                                        MsgStateSend.commState = FREE_STATE;
+                                    }
+                                    else
+                                    {
+                                        MsgStateSend.commState = HOMING;
+                                    }
                                     break;
                                 }
                             case FREE_STATE:
                                 {
                                     MsgStateSend.commState = FREE_STATE;
-                                    
                                     break;
                                 }
                         }
@@ -891,9 +1068,11 @@ namespace DebuggingToolGUI
                             }
                         }
 
-                    } 
+                    }
                     /* End TCP/IP Communication - Recv Part */
+
                     
+
                     /* Communication State Machine */
                     if (tcpClient.Connected)
                     {
@@ -920,7 +1099,12 @@ namespace DebuggingToolGUI
             {
                 case ADS:
                     {
-
+                        /* Registration */
+                        MsgStateSend.packetType[0] = 0;
+                        MsgStateSend.packetType[1] = 0;
+                        MsgStateSend.commState = REGISTRATION;
+                        MsgStateSend.payloadSize = Convert.ToUInt16(Marshal.SizeOf(MsgStateSend));
+                        /* End Registration */
 
                         /* Main Timer Start */
                         StatusMainTimerStart = true;
@@ -938,6 +1122,13 @@ namespace DebuggingToolGUI
                         /* Tcp Thread Init */
                         try
                         {
+                            /* Registration */
+                            MsgStateSend.packetType[0] = 0;
+                            MsgStateSend.packetType[1] = 0;
+                            MsgStateSend.commState = REGISTRATION;
+                            MsgStateSend.payloadSize = Convert.ToUInt16(Marshal.SizeOf(MsgStateSend));
+                            /* End Registration */
+
                             tcpRunThread = new Thread(() => TcpClientRun(IpAddressTextBox.Text, int.Parse(PortTextBox.Text)));
                             AddListBox(LoglistBox, "TCP Client Thread Run IP : " + IpAddressTextBox.Text + " Port : " + PortTextBox.Text);
                             tcpRunThread.IsBackground = true;
@@ -960,6 +1151,13 @@ namespace DebuggingToolGUI
                     }
                 case UDP:
                     {
+                        /* Registration */
+                        MsgStateSend.packetType[0] = 0;
+                        MsgStateSend.packetType[1] = 0;
+                        MsgStateSend.commState = REGISTRATION;
+                        MsgStateSend.payloadSize = Convert.ToUInt16(Marshal.SizeOf(MsgStateSend));
+                        /* End Registration */
+
                         /* Main Timer Start */
                         StatusMainTimerStart = true;
                         StatusCommunicationConnect = true;
@@ -1061,9 +1259,9 @@ namespace DebuggingToolGUI
             int _dof = Convert.ToInt32(NumJointcomboBox.SelectedItem.ToString());
             UpdateTextBox(ErrorCodetextBox, _dof.ToString() + " Setting");
             /* Parameters and Command Initialize */
-            JointParameterSettingInit();
+            JointParameterSettingInit(_dof);
             CartesianParameterSettingInit();
-            JointTargetInit();
+            JointTargetInit(_dof);
             /* End Parameters and Command Initialize */
             /* End Variable Initialize */
 
@@ -1109,32 +1307,32 @@ namespace DebuggingToolGUI
         private void SetJointPosPIDGainbutton_Click(object sender, EventArgs e)
         {
             /* Joint Position PID Gain Set */
-            jParamSet.jointPositionPgain[0] = float.Parse(jpPgainJoint1textBox.Text);
-            jParamSet.jointPositionPgain[1] = float.Parse(jpPgainJoint2textBox.Text);
-            jParamSet.jointPositionPgain[2] = float.Parse(jpPgainJoint3textBox.Text);
-            jParamSet.jointPositionPgain[3] = float.Parse(jpPgainJoint4textBox.Text);
-            jParamSet.jointPositionPgain[4] = float.Parse(jpPgainJoint5textBox.Text);
-            jParamSet.jointPositionPgain[5] = float.Parse(jpPgainJoint6textBox.Text);
-            jParamSet.jointPositionPgain[6] = float.Parse(jpPgainJoint7textBox.Text);
-            jParamSet.jointPositionPgain[7] = float.Parse(jpPgainJoint8textBox.Text);
+            jParam.jointPositionPgain[0] = float.Parse(jpPgainJoint1textBox.Text);
+            jParam.jointPositionPgain[1] = float.Parse(jpPgainJoint2textBox.Text);
+            jParam.jointPositionPgain[2] = float.Parse(jpPgainJoint3textBox.Text);
+            jParam.jointPositionPgain[3] = float.Parse(jpPgainJoint4textBox.Text);
+            jParam.jointPositionPgain[4] = float.Parse(jpPgainJoint5textBox.Text);
+            jParam.jointPositionPgain[5] = float.Parse(jpPgainJoint6textBox.Text);
+            jParam.jointPositionPgain[6] = float.Parse(jpPgainJoint7textBox.Text);
+            jParam.jointPositionPgain[7] = float.Parse(jpPgainJoint8textBox.Text);
 
-            jParamSet.jointPositionIgain[0] = float.Parse(jpIgainJoint1textBox.Text);
-            jParamSet.jointPositionIgain[1] = float.Parse(jpIgainJoint2textBox.Text);
-            jParamSet.jointPositionIgain[2] = float.Parse(jpIgainJoint3textBox.Text);
-            jParamSet.jointPositionIgain[3] = float.Parse(jpIgainJoint4textBox.Text);
-            jParamSet.jointPositionIgain[4] = float.Parse(jpIgainJoint5textBox.Text);
-            jParamSet.jointPositionIgain[5] = float.Parse(jpIgainJoint6textBox.Text);
-            jParamSet.jointPositionIgain[6] = float.Parse(jpIgainJoint7textBox.Text);
-            jParamSet.jointPositionIgain[7] = float.Parse(jpIgainJoint8textBox.Text);
+            jParam.jointPositionIgain[0] = float.Parse(jpIgainJoint1textBox.Text);
+            jParam.jointPositionIgain[1] = float.Parse(jpIgainJoint2textBox.Text);
+            jParam.jointPositionIgain[2] = float.Parse(jpIgainJoint3textBox.Text);
+            jParam.jointPositionIgain[3] = float.Parse(jpIgainJoint4textBox.Text);
+            jParam.jointPositionIgain[4] = float.Parse(jpIgainJoint5textBox.Text);
+            jParam.jointPositionIgain[5] = float.Parse(jpIgainJoint6textBox.Text);
+            jParam.jointPositionIgain[6] = float.Parse(jpIgainJoint7textBox.Text);
+            jParam.jointPositionIgain[7] = float.Parse(jpIgainJoint8textBox.Text);
 
-            jParamSet.jointPositionDgain[0] = float.Parse(jpDgainJoint1textBox.Text);
-            jParamSet.jointPositionDgain[1] = float.Parse(jpDgainJoint2textBox.Text);
-            jParamSet.jointPositionDgain[2] = float.Parse(jpDgainJoint3textBox.Text);
-            jParamSet.jointPositionDgain[3] = float.Parse(jpDgainJoint4textBox.Text);
-            jParamSet.jointPositionDgain[4] = float.Parse(jpDgainJoint5textBox.Text);
-            jParamSet.jointPositionDgain[5] = float.Parse(jpDgainJoint6textBox.Text);
-            jParamSet.jointPositionDgain[6] = float.Parse(jpDgainJoint7textBox.Text);
-            jParamSet.jointPositionDgain[7] = float.Parse(jpDgainJoint8textBox.Text);
+            jParam.jointPositionDgain[0] = float.Parse(jpDgainJoint1textBox.Text);
+            jParam.jointPositionDgain[1] = float.Parse(jpDgainJoint2textBox.Text);
+            jParam.jointPositionDgain[2] = float.Parse(jpDgainJoint3textBox.Text);
+            jParam.jointPositionDgain[3] = float.Parse(jpDgainJoint4textBox.Text);
+            jParam.jointPositionDgain[4] = float.Parse(jpDgainJoint5textBox.Text);
+            jParam.jointPositionDgain[5] = float.Parse(jpDgainJoint6textBox.Text);
+            jParam.jointPositionDgain[6] = float.Parse(jpDgainJoint7textBox.Text);
+            jParam.jointPositionDgain[7] = float.Parse(jpDgainJoint8textBox.Text);
             /* End Joint Position PID Gain Set */
             StatusJointPositionPIDgainSet = true;
             /* packetType[0] Set */
@@ -1147,32 +1345,32 @@ namespace DebuggingToolGUI
         private void SetJointToqPIDGainbutton_Click(object sender, EventArgs e)
         {
             /* Joint Torque PID Gain Set */
-            jParamSet.jointTorquePgain[0] = float.Parse(jtPgainJoint1textBox.Text);
-            jParamSet.jointTorquePgain[1] = float.Parse(jtPgainJoint2textBox.Text);
-            jParamSet.jointTorquePgain[2] = float.Parse(jtPgainJoint3textBox.Text);
-            jParamSet.jointTorquePgain[3] = float.Parse(jtPgainJoint4textBox.Text);
-            jParamSet.jointTorquePgain[4] = float.Parse(jtPgainJoint5textBox.Text);
-            jParamSet.jointTorquePgain[5] = float.Parse(jtPgainJoint6textBox.Text);
-            jParamSet.jointTorquePgain[6] = float.Parse(jtPgainJoint7textBox.Text);
-            jParamSet.jointTorquePgain[7] = float.Parse(jtPgainJoint8textBox.Text);
+            jParam.jointTorquePgain[0] = float.Parse(jtPgainJoint1textBox.Text);
+            jParam.jointTorquePgain[1] = float.Parse(jtPgainJoint2textBox.Text);
+            jParam.jointTorquePgain[2] = float.Parse(jtPgainJoint3textBox.Text);
+            jParam.jointTorquePgain[3] = float.Parse(jtPgainJoint4textBox.Text);
+            jParam.jointTorquePgain[4] = float.Parse(jtPgainJoint5textBox.Text);
+            jParam.jointTorquePgain[5] = float.Parse(jtPgainJoint6textBox.Text);
+            jParam.jointTorquePgain[6] = float.Parse(jtPgainJoint7textBox.Text);
+            jParam.jointTorquePgain[7] = float.Parse(jtPgainJoint8textBox.Text);
 
-            jParamSet.jointTorqueIgain[0] = float.Parse(jtIgainJoint1textBox.Text);
-            jParamSet.jointTorqueIgain[1] = float.Parse(jtIgainJoint2textBox.Text);
-            jParamSet.jointTorqueIgain[2] = float.Parse(jtIgainJoint3textBox.Text);
-            jParamSet.jointTorqueIgain[3] = float.Parse(jtIgainJoint4textBox.Text);
-            jParamSet.jointTorqueIgain[4] = float.Parse(jtIgainJoint5textBox.Text);
-            jParamSet.jointTorqueIgain[5] = float.Parse(jtIgainJoint6textBox.Text);
-            jParamSet.jointTorqueIgain[6] = float.Parse(jtIgainJoint7textBox.Text);
-            jParamSet.jointTorqueIgain[7] = float.Parse(jtIgainJoint8textBox.Text);
+            jParam.jointTorqueIgain[0] = float.Parse(jtIgainJoint1textBox.Text);
+            jParam.jointTorqueIgain[1] = float.Parse(jtIgainJoint2textBox.Text);
+            jParam.jointTorqueIgain[2] = float.Parse(jtIgainJoint3textBox.Text);
+            jParam.jointTorqueIgain[3] = float.Parse(jtIgainJoint4textBox.Text);
+            jParam.jointTorqueIgain[4] = float.Parse(jtIgainJoint5textBox.Text);
+            jParam.jointTorqueIgain[5] = float.Parse(jtIgainJoint6textBox.Text);
+            jParam.jointTorqueIgain[6] = float.Parse(jtIgainJoint7textBox.Text);
+            jParam.jointTorqueIgain[7] = float.Parse(jtIgainJoint8textBox.Text);
 
-            jParamSet.jointTorqueDgain[0] = float.Parse(jtDgainJoint1textBox.Text);
-            jParamSet.jointTorqueDgain[1] = float.Parse(jtDgainJoint2textBox.Text);
-            jParamSet.jointTorqueDgain[2] = float.Parse(jtDgainJoint3textBox.Text);
-            jParamSet.jointTorqueDgain[3] = float.Parse(jtDgainJoint4textBox.Text);
-            jParamSet.jointTorqueDgain[4] = float.Parse(jtDgainJoint5textBox.Text);
-            jParamSet.jointTorqueDgain[5] = float.Parse(jtDgainJoint6textBox.Text);
-            jParamSet.jointTorqueDgain[6] = float.Parse(jtDgainJoint7textBox.Text);
-            jParamSet.jointTorqueDgain[7] = float.Parse(jtDgainJoint8textBox.Text);
+            jParam.jointTorqueDgain[0] = float.Parse(jtDgainJoint1textBox.Text);
+            jParam.jointTorqueDgain[1] = float.Parse(jtDgainJoint2textBox.Text);
+            jParam.jointTorqueDgain[2] = float.Parse(jtDgainJoint3textBox.Text);
+            jParam.jointTorqueDgain[3] = float.Parse(jtDgainJoint4textBox.Text);
+            jParam.jointTorqueDgain[4] = float.Parse(jtDgainJoint5textBox.Text);
+            jParam.jointTorqueDgain[5] = float.Parse(jtDgainJoint6textBox.Text);
+            jParam.jointTorqueDgain[6] = float.Parse(jtDgainJoint7textBox.Text);
+            jParam.jointTorqueDgain[7] = float.Parse(jtDgainJoint8textBox.Text);
             /* End Joint Torque PID Gain Set */
             StatusJointTorquePIDgainSet = true;
             /* packetType[0] Set */
@@ -1185,32 +1383,32 @@ namespace DebuggingToolGUI
         private void JointConstantParamSetbutton_Click(object sender, EventArgs e)
         {
             /* Joint Constant Param Gain Set */
-            jParamSet.jointConstantTorque[0] = float.Parse(jcTorqueConstJoint1textBox.Text);
-            jParamSet.jointConstantTorque[1] = float.Parse(jcTorqueConstJoint2textBox.Text);
-            jParamSet.jointConstantTorque[2] = float.Parse(jcTorqueConstJoint3textBox.Text);
-            jParamSet.jointConstantTorque[3] = float.Parse(jcTorqueConstJoint4textBox.Text);
-            jParamSet.jointConstantTorque[4] = float.Parse(jcTorqueConstJoint5textBox.Text);
-            jParamSet.jointConstantTorque[5] = float.Parse(jcTorqueConstJoint6textBox.Text);
-            jParamSet.jointConstantTorque[6] = float.Parse(jcTorqueConstJoint7textBox.Text);
-            jParamSet.jointConstantTorque[7] = float.Parse(jcTorqueConstJoint8textBox.Text);
+            jParam.jointConstantTorque[0] = float.Parse(jcTorqueConstJoint1textBox.Text);
+            jParam.jointConstantTorque[1] = float.Parse(jcTorqueConstJoint2textBox.Text);
+            jParam.jointConstantTorque[2] = float.Parse(jcTorqueConstJoint3textBox.Text);
+            jParam.jointConstantTorque[3] = float.Parse(jcTorqueConstJoint4textBox.Text);
+            jParam.jointConstantTorque[4] = float.Parse(jcTorqueConstJoint5textBox.Text);
+            jParam.jointConstantTorque[5] = float.Parse(jcTorqueConstJoint6textBox.Text);
+            jParam.jointConstantTorque[6] = float.Parse(jcTorqueConstJoint7textBox.Text);
+            jParam.jointConstantTorque[7] = float.Parse(jcTorqueConstJoint8textBox.Text);
 
-            jParamSet.jointConstantEfficiency[0] = float.Parse(jcEfficiencyJoint1textBox.Text);
-            jParamSet.jointConstantEfficiency[1] = float.Parse(jcEfficiencyJoint2textBox.Text);
-            jParamSet.jointConstantEfficiency[2] = float.Parse(jcEfficiencyJoint3textBox.Text);
-            jParamSet.jointConstantEfficiency[3] = float.Parse(jcEfficiencyJoint4textBox.Text);
-            jParamSet.jointConstantEfficiency[4] = float.Parse(jcEfficiencyJoint5textBox.Text);
-            jParamSet.jointConstantEfficiency[5] = float.Parse(jcEfficiencyJoint6textBox.Text);
-            jParamSet.jointConstantEfficiency[6] = float.Parse(jcEfficiencyJoint7textBox.Text);
-            jParamSet.jointConstantEfficiency[7] = float.Parse(jcEfficiencyJoint8textBox.Text);
+            jParam.jointConstantEfficiency[0] = float.Parse(jcEfficiencyJoint1textBox.Text);
+            jParam.jointConstantEfficiency[1] = float.Parse(jcEfficiencyJoint2textBox.Text);
+            jParam.jointConstantEfficiency[2] = float.Parse(jcEfficiencyJoint3textBox.Text);
+            jParam.jointConstantEfficiency[3] = float.Parse(jcEfficiencyJoint4textBox.Text);
+            jParam.jointConstantEfficiency[4] = float.Parse(jcEfficiencyJoint5textBox.Text);
+            jParam.jointConstantEfficiency[5] = float.Parse(jcEfficiencyJoint6textBox.Text);
+            jParam.jointConstantEfficiency[6] = float.Parse(jcEfficiencyJoint7textBox.Text);
+            jParam.jointConstantEfficiency[7] = float.Parse(jcEfficiencyJoint8textBox.Text);
 
-            jParamSet.jointConstantSpring[0] = float.Parse(jcSpringJoint1textBox.Text);
-            jParamSet.jointConstantSpring[1] = float.Parse(jcSpringJoint2textBox.Text);
-            jParamSet.jointConstantSpring[2] = float.Parse(jcSpringJoint3textBox.Text);
-            jParamSet.jointConstantSpring[3] = float.Parse(jcSpringJoint4textBox.Text);
-            jParamSet.jointConstantSpring[4] = float.Parse(jcSpringJoint5textBox.Text);
-            jParamSet.jointConstantSpring[5] = float.Parse(jcSpringJoint6textBox.Text);
-            jParamSet.jointConstantSpring[6] = float.Parse(jcSpringJoint7textBox.Text);
-            jParamSet.jointConstantSpring[7] = float.Parse(jcSpringJoint8textBox.Text);
+            jParam.jointConstantSpring[0] = float.Parse(jcSpringJoint1textBox.Text);
+            jParam.jointConstantSpring[1] = float.Parse(jcSpringJoint2textBox.Text);
+            jParam.jointConstantSpring[2] = float.Parse(jcSpringJoint3textBox.Text);
+            jParam.jointConstantSpring[3] = float.Parse(jcSpringJoint4textBox.Text);
+            jParam.jointConstantSpring[4] = float.Parse(jcSpringJoint5textBox.Text);
+            jParam.jointConstantSpring[5] = float.Parse(jcSpringJoint6textBox.Text);
+            jParam.jointConstantSpring[6] = float.Parse(jcSpringJoint7textBox.Text);
+            jParam.jointConstantSpring[7] = float.Parse(jcSpringJoint8textBox.Text);
             /* End Joint Constant Param Gain Set */
             StatusJointConstantParamSet = true;
             /* packetType[0] Set */
@@ -1223,32 +1421,32 @@ namespace DebuggingToolGUI
         private void GCnFricParamSetbutton_Click(object sender, EventArgs e)
         {
             /* Gravity Compensator and Friction Compensator Parameters Set */
-            jParamSet.jointGravityGain[0] = float.Parse(GCGainJoint1textBox.Text);
-            jParamSet.jointGravityGain[1] = float.Parse(GCGainJoint2textBox.Text);
-            jParamSet.jointGravityGain[2] = float.Parse(GCGainJoint3textBox.Text);
-            jParamSet.jointGravityGain[3] = float.Parse(GCGainJoint4textBox.Text);
-            jParamSet.jointGravityGain[4] = float.Parse(GCGainJoint5textBox.Text);
-            jParamSet.jointGravityGain[5] = float.Parse(GCGainJoint6textBox.Text);
-            jParamSet.jointGravityGain[6] = float.Parse(GCGainJoint7textBox.Text);
-            jParamSet.jointGravityGain[7] = float.Parse(GCGainJoint8textBox.Text);
+            jParam.jointGravityGain[0] = float.Parse(GCGainJoint1textBox.Text);
+            jParam.jointGravityGain[1] = float.Parse(GCGainJoint2textBox.Text);
+            jParam.jointGravityGain[2] = float.Parse(GCGainJoint3textBox.Text);
+            jParam.jointGravityGain[3] = float.Parse(GCGainJoint4textBox.Text);
+            jParam.jointGravityGain[4] = float.Parse(GCGainJoint5textBox.Text);
+            jParam.jointGravityGain[5] = float.Parse(GCGainJoint6textBox.Text);
+            jParam.jointGravityGain[6] = float.Parse(GCGainJoint7textBox.Text);
+            jParam.jointGravityGain[7] = float.Parse(GCGainJoint8textBox.Text);
 
-            jParamSet.jointCurrentGain[0] = float.Parse(CurGainJoint1textBox.Text);
-            jParamSet.jointCurrentGain[1] = float.Parse(CurGainJoint2textBox.Text);
-            jParamSet.jointCurrentGain[2] = float.Parse(CurGainJoint3textBox.Text);
-            jParamSet.jointCurrentGain[3] = float.Parse(CurGainJoint4textBox.Text);
-            jParamSet.jointCurrentGain[4] = float.Parse(CurGainJoint5textBox.Text);
-            jParamSet.jointCurrentGain[5] = float.Parse(CurGainJoint6textBox.Text);
-            jParamSet.jointCurrentGain[6] = float.Parse(CurGainJoint7textBox.Text);
-            jParamSet.jointCurrentGain[7] = float.Parse(CurGainJoint8textBox.Text);
+            jParam.jointCurrentGain[0] = float.Parse(CurGainJoint1textBox.Text);
+            jParam.jointCurrentGain[1] = float.Parse(CurGainJoint2textBox.Text);
+            jParam.jointCurrentGain[2] = float.Parse(CurGainJoint3textBox.Text);
+            jParam.jointCurrentGain[3] = float.Parse(CurGainJoint4textBox.Text);
+            jParam.jointCurrentGain[4] = float.Parse(CurGainJoint5textBox.Text);
+            jParam.jointCurrentGain[5] = float.Parse(CurGainJoint6textBox.Text);
+            jParam.jointCurrentGain[6] = float.Parse(CurGainJoint7textBox.Text);
+            jParam.jointCurrentGain[7] = float.Parse(CurGainJoint8textBox.Text);
 
-            jParamSet.jointFrictionGain[0] = float.Parse(FricGainJoint1textBox.Text);
-            jParamSet.jointFrictionGain[1] = float.Parse(FricGainJoint2textBox.Text);
-            jParamSet.jointFrictionGain[2] = float.Parse(FricGainJoint3textBox.Text);
-            jParamSet.jointFrictionGain[3] = float.Parse(FricGainJoint4textBox.Text);
-            jParamSet.jointFrictionGain[4] = float.Parse(FricGainJoint5textBox.Text);
-            jParamSet.jointFrictionGain[5] = float.Parse(FricGainJoint6textBox.Text);
-            jParamSet.jointFrictionGain[6] = float.Parse(FricGainJoint7textBox.Text);
-            jParamSet.jointFrictionGain[7] = float.Parse(FricGainJoint8textBox.Text);
+            jParam.jointFrictionGain[0] = float.Parse(FricGainJoint1textBox.Text);
+            jParam.jointFrictionGain[1] = float.Parse(FricGainJoint2textBox.Text);
+            jParam.jointFrictionGain[2] = float.Parse(FricGainJoint3textBox.Text);
+            jParam.jointFrictionGain[3] = float.Parse(FricGainJoint4textBox.Text);
+            jParam.jointFrictionGain[4] = float.Parse(FricGainJoint5textBox.Text);
+            jParam.jointFrictionGain[5] = float.Parse(FricGainJoint6textBox.Text);
+            jParam.jointFrictionGain[6] = float.Parse(FricGainJoint7textBox.Text);
+            jParam.jointFrictionGain[7] = float.Parse(FricGainJoint8textBox.Text);
             /* End Gravity Compensator and Friction Compensator Parameters Set */
             StatusJointGravityNFrictionParamSet = true;
             /* packetType[0] Set */
@@ -1261,23 +1459,23 @@ namespace DebuggingToolGUI
         private void JointTrajetorySetbutton_Click(object sender, EventArgs e)
         {
             /* Joint Trajectory Parameters Set */
-            jTrajSet.jointTrajectoryTime[0] = float.Parse(TrajTimeJoint1textBox.Text);
-            jTrajSet.jointTrajectoryTime[1] = float.Parse(TrajTimeJoint2textBox.Text);
-            jTrajSet.jointTrajectoryTime[2] = float.Parse(TrajTimeJoint3textBox.Text);
-            jTrajSet.jointTrajectoryTime[3] = float.Parse(TrajTimeJoint4textBox.Text);
-            jTrajSet.jointTrajectoryTime[4] = float.Parse(TrajTimeJoint5textBox.Text);
-            jTrajSet.jointTrajectoryTime[5] = float.Parse(TrajTimeJoint6textBox.Text);
-            jTrajSet.jointTrajectoryTime[6] = float.Parse(TrajTimeJoint7textBox.Text);
-            jTrajSet.jointTrajectoryTime[7] = float.Parse(TrajTimeJoint8textBox.Text);
+            jTraj.jointTrajectoryTime[0] = float.Parse(TrajTimeJoint1textBox.Text);
+            jTraj.jointTrajectoryTime[1] = float.Parse(TrajTimeJoint2textBox.Text);
+            jTraj.jointTrajectoryTime[2] = float.Parse(TrajTimeJoint3textBox.Text);
+            jTraj.jointTrajectoryTime[3] = float.Parse(TrajTimeJoint4textBox.Text);
+            jTraj.jointTrajectoryTime[4] = float.Parse(TrajTimeJoint5textBox.Text);
+            jTraj.jointTrajectoryTime[5] = float.Parse(TrajTimeJoint6textBox.Text);
+            jTraj.jointTrajectoryTime[6] = float.Parse(TrajTimeJoint7textBox.Text);
+            jTraj.jointTrajectoryTime[7] = float.Parse(TrajTimeJoint8textBox.Text);
 
-            jTrajSet.jointTrajectoryAcc[0] = float.Parse(TrajAccJoint1textBox.Text);
-            jTrajSet.jointTrajectoryAcc[1] = float.Parse(TrajAccJoint2textBox.Text);
-            jTrajSet.jointTrajectoryAcc[2] = float.Parse(TrajAccJoint3textBox.Text);
-            jTrajSet.jointTrajectoryAcc[3] = float.Parse(TrajAccJoint4textBox.Text);
-            jTrajSet.jointTrajectoryAcc[4] = float.Parse(TrajAccJoint5textBox.Text);
-            jTrajSet.jointTrajectoryAcc[5] = float.Parse(TrajAccJoint6textBox.Text);
-            jTrajSet.jointTrajectoryAcc[6] = float.Parse(TrajAccJoint7textBox.Text);
-            jTrajSet.jointTrajectoryAcc[7] = float.Parse(TrajAccJoint8textBox.Text);
+            jTraj.jointTrajectoryAcc[0] = float.Parse(TrajAccJoint1textBox.Text);
+            jTraj.jointTrajectoryAcc[1] = float.Parse(TrajAccJoint2textBox.Text);
+            jTraj.jointTrajectoryAcc[2] = float.Parse(TrajAccJoint3textBox.Text);
+            jTraj.jointTrajectoryAcc[3] = float.Parse(TrajAccJoint4textBox.Text);
+            jTraj.jointTrajectoryAcc[4] = float.Parse(TrajAccJoint5textBox.Text);
+            jTraj.jointTrajectoryAcc[5] = float.Parse(TrajAccJoint6textBox.Text);
+            jTraj.jointTrajectoryAcc[6] = float.Parse(TrajAccJoint7textBox.Text);
+            jTraj.jointTrajectoryAcc[7] = float.Parse(TrajAccJoint8textBox.Text);
             /* End Joint Trajectory Parameters Set */
             StatusJointTrajectoryParamSet = true;
             /* packetType[0] Set */
@@ -1290,26 +1488,26 @@ namespace DebuggingToolGUI
         private void CartesianPIDSetbutton_Click(object sender, EventArgs e)
         {
             /* Cartesian Position PID Gain Set */
-            cParamSet.cartesianPositionPgain[0] = float.Parse(cpPgainCartesianXtextBox.Text);
-            cParamSet.cartesianPositionPgain[1] = float.Parse(cpPgainCartesianYtextBox.Text);
-            cParamSet.cartesianPositionPgain[2] = float.Parse(cpPgainCartesianZtextBox.Text);
-            cParamSet.cartesianPositionPgain[3] = float.Parse(cpPgainCartesianRolltextBox.Text);
-            cParamSet.cartesianPositionPgain[4] = float.Parse(cpPgainCartesianPitchtextBox.Text);
-            cParamSet.cartesianPositionPgain[5] = float.Parse(cpPgainCartesianYawtextBox.Text);
+            cParam.cartesianPositionPgain[0] = float.Parse(cpPgainCartesianXtextBox.Text);
+            cParam.cartesianPositionPgain[1] = float.Parse(cpPgainCartesianYtextBox.Text);
+            cParam.cartesianPositionPgain[2] = float.Parse(cpPgainCartesianZtextBox.Text);
+            cParam.cartesianPositionPgain[3] = float.Parse(cpPgainCartesianRolltextBox.Text);
+            cParam.cartesianPositionPgain[4] = float.Parse(cpPgainCartesianPitchtextBox.Text);
+            cParam.cartesianPositionPgain[5] = float.Parse(cpPgainCartesianYawtextBox.Text);
 
-            cParamSet.cartesianPositionIgain[0] = float.Parse(cpIgainCartesianXtextBox.Text);
-            cParamSet.cartesianPositionIgain[1] = float.Parse(cpIgainCartesianYtextBox.Text);
-            cParamSet.cartesianPositionIgain[2] = float.Parse(cpIgainCartesianZtextBox.Text);
-            cParamSet.cartesianPositionIgain[3] = float.Parse(cpIgainCartesianRolltextBox.Text);
-            cParamSet.cartesianPositionIgain[4] = float.Parse(cpIgainCartesianPitchtextBox.Text);
-            cParamSet.cartesianPositionIgain[5] = float.Parse(cpIgainCartesianYawtextBox.Text);
+            cParam.cartesianPositionIgain[0] = float.Parse(cpIgainCartesianXtextBox.Text);
+            cParam.cartesianPositionIgain[1] = float.Parse(cpIgainCartesianYtextBox.Text);
+            cParam.cartesianPositionIgain[2] = float.Parse(cpIgainCartesianZtextBox.Text);
+            cParam.cartesianPositionIgain[3] = float.Parse(cpIgainCartesianRolltextBox.Text);
+            cParam.cartesianPositionIgain[4] = float.Parse(cpIgainCartesianPitchtextBox.Text);
+            cParam.cartesianPositionIgain[5] = float.Parse(cpIgainCartesianYawtextBox.Text);
 
-            cParamSet.cartesianPositionDgain[0] = float.Parse(cpDgainCartesianXtextBox.Text);
-            cParamSet.cartesianPositionDgain[1] = float.Parse(cpDgainCartesianYtextBox.Text);
-            cParamSet.cartesianPositionDgain[2] = float.Parse(cpDgainCartesianZtextBox.Text);
-            cParamSet.cartesianPositionDgain[3] = float.Parse(cpDgainCartesianRolltextBox.Text);
-            cParamSet.cartesianPositionDgain[4] = float.Parse(cpDgainCartesianPitchtextBox.Text);
-            cParamSet.cartesianPositionDgain[5] = float.Parse(cpDgainCartesianYawtextBox.Text);
+            cParam.cartesianPositionDgain[0] = float.Parse(cpDgainCartesianXtextBox.Text);
+            cParam.cartesianPositionDgain[1] = float.Parse(cpDgainCartesianYtextBox.Text);
+            cParam.cartesianPositionDgain[2] = float.Parse(cpDgainCartesianZtextBox.Text);
+            cParam.cartesianPositionDgain[3] = float.Parse(cpDgainCartesianRolltextBox.Text);
+            cParam.cartesianPositionDgain[4] = float.Parse(cpDgainCartesianPitchtextBox.Text);
+            cParam.cartesianPositionDgain[5] = float.Parse(cpDgainCartesianYawtextBox.Text);
             /* End Cartesian Position PID Gain Set */
             StatusCartesianPositionPIDgainSet = true;
             /* packetType[0] Set */
@@ -1323,19 +1521,19 @@ namespace DebuggingToolGUI
         {
             
             /* Cartesian Trajectory Parameters Set */
-            cTrajSet.cartesianTrajectoryTime[0] = float.Parse(TrajTimeCartesianXtextBox.Text);
-            cTrajSet.cartesianTrajectoryTime[1] = float.Parse(TrajTimeCartesianYtextBox.Text);
-            cTrajSet.cartesianTrajectoryTime[2] = float.Parse(TrajTimeCartesianZtextBox.Text);
-            cTrajSet.cartesianTrajectoryTime[3] = float.Parse(TrajTimeCartesianRolltextBox.Text);
-            cTrajSet.cartesianTrajectoryTime[4] = float.Parse(TrajTimeCartesianPitchtextBox.Text);
-            cTrajSet.cartesianTrajectoryTime[5] = float.Parse(TrajTimeCartesianYawtextBox.Text);
+            cTraj.cartesianTrajectoryTime[0] = float.Parse(TrajTimeCartesianXtextBox.Text);
+            cTraj.cartesianTrajectoryTime[1] = float.Parse(TrajTimeCartesianYtextBox.Text);
+            cTraj.cartesianTrajectoryTime[2] = float.Parse(TrajTimeCartesianZtextBox.Text);
+            cTraj.cartesianTrajectoryTime[3] = float.Parse(TrajTimeCartesianRolltextBox.Text);
+            cTraj.cartesianTrajectoryTime[4] = float.Parse(TrajTimeCartesianPitchtextBox.Text);
+            cTraj.cartesianTrajectoryTime[5] = float.Parse(TrajTimeCartesianYawtextBox.Text);
 
-            cTrajSet.cartesianTrajectoryAcc[0] = float.Parse(TrajAccCartesianXtextBox.Text);
-            cTrajSet.cartesianTrajectoryAcc[1] = float.Parse(TrajAccCartesianYtextBox.Text);
-            cTrajSet.cartesianTrajectoryAcc[2] = float.Parse(TrajAccCartesianZtextBox.Text);
-            cTrajSet.cartesianTrajectoryAcc[3] = float.Parse(TrajAccCartesianRolltextBox.Text);
-            cTrajSet.cartesianTrajectoryAcc[4] = float.Parse(TrajAccCartesianPitchtextBox.Text);
-            cTrajSet.cartesianTrajectoryAcc[5] = float.Parse(TrajAccCartesianYawtextBox.Text);
+            cTraj.cartesianTrajectoryAcc[0] = float.Parse(TrajAccCartesianXtextBox.Text);
+            cTraj.cartesianTrajectoryAcc[1] = float.Parse(TrajAccCartesianYtextBox.Text);
+            cTraj.cartesianTrajectoryAcc[2] = float.Parse(TrajAccCartesianZtextBox.Text);
+            cTraj.cartesianTrajectoryAcc[3] = float.Parse(TrajAccCartesianRolltextBox.Text);
+            cTraj.cartesianTrajectoryAcc[4] = float.Parse(TrajAccCartesianPitchtextBox.Text);
+            cTraj.cartesianTrajectoryAcc[5] = float.Parse(TrajAccCartesianYawtextBox.Text);
             /* End Cartesian Trajectory Parameters Set */
             StatusCartesianTrajectoryParamSet = true;
             /* packetType[0] Set */
@@ -2099,6 +2297,11 @@ namespace DebuggingToolGUI
         private void AbVelocityJoint3textBox_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void NumJointcomboBox_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            LegDofSelect = Convert.ToInt32(NumJointcomboBox.SelectedItem.ToString());
         }
     }
 }

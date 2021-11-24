@@ -3460,6 +3460,7 @@ namespace DebuggingToolGUI
             this.NumJointcomboBox.Size = new System.Drawing.Size(217, 29);
             this.NumJointcomboBox.TabIndex = 7;
             this.NumJointcomboBox.Text = "7";
+            this.NumJointcomboBox.SelectedIndexChanged += new System.EventHandler(this.NumJointcomboBox_SelectedIndexChanged_1);
             // 
             // groupBox1
             // 
