@@ -3327,7 +3327,7 @@ namespace DebuggingToolGUI
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Size = new System.Drawing.Size(1300, 628);
             this.tabPage4.TabIndex = 4;
-            this.tabPage4.Text = "tabPage4";
+            this.tabPage4.Text = "Reserved";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
             // Connectbutton
@@ -3397,7 +3397,6 @@ namespace DebuggingToolGUI
             this.LoginGroupBox.TabIndex = 3;
             this.LoginGroupBox.TabStop = false;
             this.LoginGroupBox.Text = "Login";
-            this.LoginGroupBox.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // label39
             // 
@@ -3925,7 +3924,6 @@ namespace DebuggingToolGUI
             this.IncPositionJoint8textBox.Name = "IncPositionJoint8textBox";
             this.IncPositionJoint8textBox.Size = new System.Drawing.Size(104, 28);
             this.IncPositionJoint8textBox.TabIndex = 6;
-            this.IncPositionJoint8textBox.TextChanged += new System.EventHandler(this.AbPositionJoint8textBox_TextChanged);
             // 
             // CurrentJoint7textBox
             // 
@@ -3990,7 +3988,6 @@ namespace DebuggingToolGUI
             this.IncPositionJoint6textBox.Name = "IncPositionJoint6textBox";
             this.IncPositionJoint6textBox.Size = new System.Drawing.Size(104, 28);
             this.IncPositionJoint6textBox.TabIndex = 6;
-            this.IncPositionJoint6textBox.TextChanged += new System.EventHandler(this.AbPositionJoint6textBox_TextChanged);
             // 
             // IncVelocityJoint5textBox
             // 
@@ -4063,7 +4060,6 @@ namespace DebuggingToolGUI
             this.IncVelocityJoint3textBox.Name = "IncVelocityJoint3textBox";
             this.IncVelocityJoint3textBox.Size = new System.Drawing.Size(104, 28);
             this.IncVelocityJoint3textBox.TabIndex = 6;
-            this.IncVelocityJoint3textBox.TextChanged += new System.EventHandler(this.AbVelocityJoint3textBox_TextChanged);
             // 
             // AbsPosJoint5textBox
             // 
@@ -4088,7 +4084,6 @@ namespace DebuggingToolGUI
             this.IncPositionJoint3textBox.Name = "IncPositionJoint3textBox";
             this.IncPositionJoint3textBox.Size = new System.Drawing.Size(104, 28);
             this.IncPositionJoint3textBox.TabIndex = 6;
-            this.IncPositionJoint3textBox.TextChanged += new System.EventHandler(this.AbPositionJoint3textBox_TextChanged);
             // 
             // IncVelocityJoint2textBox
             // 

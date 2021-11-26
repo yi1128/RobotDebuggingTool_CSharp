@@ -94,6 +94,8 @@ namespace DebuggingToolGUI
         /* End Mutex declaration */
 
         /* Basic Communication Structure */
+        private static int totalPacketSize = 0;
+        
         [StructLayout(LayoutKind.Sequential, Pack = 1), Serializable]
         public struct MsgState
         {
@@ -468,6 +470,7 @@ namespace DebuggingToolGUI
             return arr;
         }
 
+        /* Byte to structure Convert Function */
         public static T ByteToStruct<T>(byte[] buffer) where T : struct
         {
             int size = Marshal.SizeOf(typeof(T));
@@ -483,7 +486,6 @@ namespace DebuggingToolGUI
             return obj;
         }
 
-
         /* String to byte Array Convert Function */
         public static byte[] StringToByte(string obj, int dstSize)
         {
@@ -494,6 +496,18 @@ namespace DebuggingToolGUI
 
             Marshal.FreeHGlobal(ptr);
             return arr;
+        }
+
+        /* Bit Array to byte Convert Function */
+        byte ConvertToByte(BitArray bits)
+        {
+            if (bits.Count != 8)
+            {
+                throw new ArgumentException("bits");
+            }
+            byte[] bytes = new byte[1];
+            bits.CopyTo(bytes, 0);
+            return bytes[0];
         }
 
         /* Log4net Initialize */
@@ -662,10 +676,6 @@ namespace DebuggingToolGUI
             return array[0];
         }
 
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
 
         private void label6_Click(object sender, EventArgs e)
         {
@@ -707,7 +717,7 @@ namespace DebuggingToolGUI
                 {
                     /* Mutex Start */
                     tcpIpMutex.WaitOne();
-
+                    /* Save Buffer to Send Buffer */
                     for (int i=0;i<LegDofSelect;i++)
                     {
                         /* Joint Parameters Set from Save Data */
@@ -745,28 +755,34 @@ namespace DebuggingToolGUI
                         /* Cartesian Trajectory Set from Save Data */
                         cTrajSet.cartesianTrajectoryTime[i] = cTraj.cartesianTrajectoryTime[i];
                         cTrajSet.cartesianTrajectoryAcc[i] = cTraj.cartesianTrajectoryAcc[i];
-                        
                     }
 
-                    /* Cartesian Parameters Set from Save Data */
-                    cParamSet = cParam;
-                    /* Cartesian Trajectory Set from Save Data */
-                    cTrajSet = cTraj;
                     /* Cartesian Target Set from Save Data */
                     cTargetSet = cTarget;
 
+                    /* End Save Buffer to Send Buffer */
+
+                    /* Tcp Connect */
                     tcpClient = new TcpClient();
                     tcpClient.Connect(ipAddr, port);
+                    
+                    /* Tcp Connect Check */
+                    if(tcpClient.Connected)
+                    {
+                        StatusCommunicationConnect = true;
+                    }
+                    /* End Connect Check */
+                    /* End Tcp Connect */
+                    
                     /* TCP/IP Communication - Send Part */
                     NetworkStream tcpClientNS = tcpClient.GetStream();
                     tcpClientNS.WriteTimeout = 100;
-                    //tcpClientNS.ReadTimeout = 100;
+                    tcpClientNS.ReadTimeout = 100;
                     
                     BitArray SendPacketType1 = new BitArray(new byte[] { MsgStateSend.packetType[0]});
                     BitArray SendPacketType2 = new BitArray(new byte[] { MsgStateSend.packetType[1]});
                     
                     UInt16 bufferSize = Convert.ToUInt16(Marshal.SizeOf(MsgStateSend));
-                    
                     byte[] VariableDataInput = new byte[0];
                     for (int i = 0;i < 8;i++)
                     {
@@ -850,8 +866,10 @@ namespace DebuggingToolGUI
                     {
                         //AddListBox(LoglistBox, "Send MsgState");
                         tcpClientNS.Write(StructToByte(MsgStateSend), 0, StructToByte(MsgStateSend).Length);
+                        /*
                         AddListBox(LoglistBox, "MsgStateSend : " + Convert.ToString(MsgStateSend.packetType[0]) + ", " + Convert.ToString(MsgStateSend.packetType[1]) +
                             ", " + Convert.ToString(MsgStateSend.commState) + ", " + Convert.ToString(MsgStateSend.controlMode) + ", " + Convert.ToString(MsgStateSend.payloadSize));
+                        */
                         tcpClientNS.Flush();
                     }
                     /* End TCP/IP Communication - Send Part */
@@ -859,16 +877,18 @@ namespace DebuggingToolGUI
 
                     /* TCP/IP Communication - Recv Part */
                     /* Msg State Read */
-                    byte[] msgStatebuffer = new byte[Marshal.SizeOf(MsgStateRecv)];
-                    int _msgStateRead = tcpClientNS.Read(msgStatebuffer, 0, msgStatebuffer.Length);
-                    if (_msgStateRead != msgStatebuffer.Length)
+                    byte[] recvBuff = new byte[totalPacketSize];
+                    int _msgStateRead = tcpClientNS.Read(recvBuff, 0, recvBuff.Length); 
+                    if (_msgStateRead != recvBuff.Length)
                     {
                         AddListBox(LoglistBox, "TCP/IP - MsgState Read Error!!!");
                     }
                     else
                     {
                         /* Convert MsgState */
-                        MsgStateRecv = ByteToStruct<MsgState>(msgStatebuffer);
+                        byte[] divideMsgState = new byte[Marshal.SizeOf(MsgStateRecv)];
+                        Array.Copy(recvBuff, 0, divideMsgState, 0, Marshal.SizeOf(MsgStateRecv));
+                        MsgStateRecv = ByteToStruct<MsgState>(divideMsgState);
 
                         BitArray RecvPacketType1 = new BitArray(new byte[] { MsgStateRecv.packetType[0] });
                         BitArray RecvPacketType2 = new BitArray(new byte[] { MsgStateRecv.packetType[1] });
@@ -938,6 +958,7 @@ namespace DebuggingToolGUI
                                 }
                             case HOMING:
                                 {
+                                    MsgStateSend.commState = HOMING;
                                     break;
                                 }
                             case HOMING_COMPLETE:
@@ -948,7 +969,10 @@ namespace DebuggingToolGUI
                                     }
                                     else
                                     {
+                                        MsgStateSend.packetType[0] = 0;
+                                        MsgStateSend.packetType[1] = 0;
                                         MsgStateSend.commState = HOMING;
+                                        MsgStateSend.payloadSize = Convert.ToUInt16(Marshal.SizeOf(MsgStateSend));
                                     }
                                     break;
                                 }
@@ -959,7 +983,7 @@ namespace DebuggingToolGUI
                                 }
                         }
                         /* End Communication State Machine */
-
+                        int PacketIndex = Marshal.SizeOf(MsgStateRecv);
                         for (int i = 0; i < 8; i++)
                         {
                             if (RecvPacketType1[i] == true)
@@ -968,114 +992,76 @@ namespace DebuggingToolGUI
                                 {
                                     case JOINT_PARAMETER_SET:
                                         {
-                                            /* Recv Joint Param Msg */
-                                            byte[] JointParamBuffer = new byte[Marshal.SizeOf(jParamGet)];
-                                            int _JointParamRead = tcpClientNS.Read(JointParamBuffer, 0, JointParamBuffer.Length);
-                                            if (_JointParamRead != JointParamBuffer.Length)
-                                            {
-                                                AddListBox(LoglistBox, "TCP/IP - Joint Parameters Get Error!!!");
-                                            }
-
                                             /* Convert Joint Parameters */
-                                            jParamGet = ByteToStruct<JointParameterSettingStruct>(JointParamBuffer);
+                                            byte[] _temp = new byte[Marshal.SizeOf(jParamGet)];
+                                            Array.Copy(recvBuff, PacketIndex, _temp, 0, Marshal.SizeOf(jParamGet));
+                                            jParamGet = ByteToStruct<JointParameterSettingStruct>(_temp);
+                                            PacketIndex = PacketIndex + Marshal.SizeOf(jParamGet);
                                             break;
                                         }
                                     case JOINT_TRAJECTORY_SET:
                                         {
-                                            /* Recv Joint Trajectory Msg */
-                                            byte[] JointTrajBuffer = new byte[Marshal.SizeOf(jTrajGet)];
-                                            int _JointTrajRead = tcpClientNS.Read(JointTrajBuffer, 0, JointTrajBuffer.Length);
-                                            if (_JointTrajRead != JointTrajBuffer.Length)
-                                            {
-                                                AddListBox(LoglistBox, "TCP/IP - Joint Trajectory Parameters Get Error!!!");
-                                            }
-
                                             /* Convert Joint Trajectory */
-                                            jTrajGet = ByteToStruct<JointTrajectorySetStruct>(JointTrajBuffer);
+                                            byte[] _temp = new byte[Marshal.SizeOf(jTrajGet)];
+                                            Array.Copy(recvBuff, PacketIndex, _temp, 0, Marshal.SizeOf(jTrajGet));
+                                            jTrajGet = ByteToStruct<JointTrajectorySetStruct>(_temp);
+                                            PacketIndex = PacketIndex + Marshal.SizeOf(jTrajGet);
                                             break;
                                         }
                                     case CARTESIAN_PARAMETER_SET:
                                         {
-                                            /* Recv Cartesian Param Msg */
-                                            byte[] CartesianParamBuffer = new byte[Marshal.SizeOf(cParamGet)];
-                                            int _CartesianParamRead = tcpClientNS.Read(CartesianParamBuffer, 0, CartesianParamBuffer.Length);
-                                            if (_CartesianParamRead != CartesianParamBuffer.Length)
-                                            {
-                                                AddListBox(LoglistBox, "TCP/IP - Cartesian Parameters Get Error!!!");
-                                            }
-
                                             /* Convert Cartesian Parameters */
-                                            cParamGet = ByteToStruct<CartesianParameterSettingStruct>(CartesianParamBuffer);
+                                            byte[] _temp = new byte[Marshal.SizeOf(cParamGet)];
+                                            Array.Copy(recvBuff, PacketIndex, _temp, 0, Marshal.SizeOf(cParamGet));
+                                            cParamGet = ByteToStruct<CartesianParameterSettingStruct>(_temp);
+                                            PacketIndex = PacketIndex + Marshal.SizeOf(cParamGet);
                                             break;
                                         }
                                     case CARTESIAN_TRAJECTORY_SET:
                                         {
-                                            /* Recv Cartesian Trajectory Msg */
-                                            byte[] CartesianTrajBuffer = new byte[Marshal.SizeOf(cTrajGet)];
-                                            int _CartesianTrajRead = tcpClientNS.Read(CartesianTrajBuffer, 0, CartesianTrajBuffer.Length);
-                                            if (_CartesianTrajRead != CartesianTrajBuffer.Length)
-                                            {
-                                                AddListBox(LoglistBox, "TCP/IP - Cartesian Trajectory Parameters Get Error!!!");
-                                            }
-
                                             /* Convert Cartesian Trajectory */
-                                            cTrajGet = ByteToStruct<CartesianTrajectorySetStruct>(CartesianTrajBuffer);
+                                            byte[] _temp = new byte[Marshal.SizeOf(cTrajGet)];
+                                            Array.Copy(recvBuff, PacketIndex, _temp, 0, Marshal.SizeOf(cTrajGet));
+                                            cTrajGet = ByteToStruct<CartesianTrajectorySetStruct>(_temp);
+                                            PacketIndex = PacketIndex + Marshal.SizeOf(cTrajGet);
                                             break;
                                         }
                                     case JOINT_TARGET_SET:
                                         {
-                                            /* Recv Joint Target Msg */
-                                            byte[] JointTargetBuffer = new byte[Marshal.SizeOf(cTargetGet)];
-                                            int _JointTargetRead = tcpClientNS.Read(JointTargetBuffer, 0, JointTargetBuffer.Length);
-                                            if (_JointTargetRead != JointTargetBuffer.Length)
-                                            {
-                                                AddListBox(LoglistBox, "TCP/IP - Joint Target Get Error!!!");
-                                            }
-
                                             /* Convert Joint Target */
-                                            jTargetGet = ByteToStruct<JointTargetStruct>(JointTargetBuffer);
+                                            byte[] _temp = new byte[Marshal.SizeOf(jTargetGet)];
+                                            Array.Copy(recvBuff, PacketIndex, _temp, 0, Marshal.SizeOf(jTargetGet));
+                                            jTargetGet = ByteToStruct<JointTargetStruct>(_temp);
+                                            PacketIndex = PacketIndex + Marshal.SizeOf(jTargetGet);
                                             break;
                                         }
                                     case CARTESIAN_TARGET_SET:
                                         {
-                                            /* Recv Cartesian Target Msg */
-                                            byte[] CartesianTargetBuffer = new byte[Marshal.SizeOf(cTargetGet)];
-                                            int _CartesianTargetRead = tcpClientNS.Read(CartesianTargetBuffer, 0, CartesianTargetBuffer.Length);
-                                            if (_CartesianTargetRead != CartesianTargetBuffer.Length)
-                                            {
-                                                AddListBox(LoglistBox, "TCP/IP - Joint Target Get Error!!!");
-                                            }
-
                                             /* Convert Cartesian Target */
-                                            jTargetGet = ByteToStruct<JointTargetStruct>(CartesianTargetBuffer);
+                                            byte[] _temp = new byte[Marshal.SizeOf(cTargetGet)];
+                                            Array.Copy(recvBuff, PacketIndex, _temp, 0, Marshal.SizeOf(cTargetGet));
+                                            cTargetGet = ByteToStruct<CartesianTargetStruct>(_temp);
+                                            PacketIndex = PacketIndex + Marshal.SizeOf(cTargetGet);
                                             break;
                                         }
                                     case SERVER_SYSTEM_DATA:
                                        {
-                                            /* Recv Control Module(CM) Data Msg (a.k.a. ServerData) */
-                                            byte[] ServerDataBuffer = new byte[Marshal.SizeOf(ServerData)];
-                                            int _ServerDataRead = tcpClientNS.Read(ServerDataBuffer, 0, ServerDataBuffer.Length);
-                                            if (_ServerDataRead != ServerDataBuffer.Length)
-                                            {
-                                                AddListBox(LoglistBox, "TCP/IP - Sever System Data Get Error!!!");
-                                            }
-
                                             /* Convert ServerData */
-                                            ServerData = ByteToStruct<ServerSystemData>(ServerDataBuffer);
+                                            byte[] _temp = new byte[Marshal.SizeOf(ServerData)];
+                                            Array.Copy(recvBuff, PacketIndex, _temp, 0, Marshal.SizeOf(ServerData));
+                                            ServerData = ByteToStruct<ServerSystemData>(_temp);
                                             break;
                                        }
                                 }
                             }
                         }
-
                     }
                     /* End TCP/IP Communication - Recv Part */
-
-                    
 
                     /* Communication State Machine */
                     if (tcpClient.Connected)
                     {
+                        // Need Check
                         tcpClientNS.Close();
                         tcpClient.Close();
                         //log.Error("TCP Client Communication Close");
@@ -1143,7 +1129,7 @@ namespace DebuggingToolGUI
 
                         /* Main Timer Start */
                         StatusMainTimerStart = true;
-                        StatusCommunicationConnect = true;
+                        
                         ConnectpictureBox.Image = StatusOnImage;
                         /* Logger */
                         log.Info("Communication Ready : TCP Communication");
@@ -1262,7 +1248,19 @@ namespace DebuggingToolGUI
             JointParameterSettingInit(_dof);
             CartesianParameterSettingInit();
             JointTargetInit(_dof);
+            ServerSystemDataInit(_dof);
             /* End Parameters and Command Initialize */
+
+            /* Total Packet Size Calculate */
+            totalPacketSize = Marshal.SizeOf(MsgStateSend)
+                + Marshal.SizeOf(ServerData)
+                + Marshal.SizeOf(jParamSet)
+                + Marshal.SizeOf(jTrajSet)
+                + Marshal.SizeOf(cParamSet)
+                + Marshal.SizeOf(jParamSet)
+                + Marshal.SizeOf(cTrajSet)
+                + Marshal.SizeOf(jTargetSet)
+                + Marshal.SizeOf(cTargetSet);
             /* End Variable Initialize */
 
             /* Servo On Behavior */
@@ -1306,6 +1304,11 @@ namespace DebuggingToolGUI
 
         private void SetJointPosPIDGainbutton_Click(object sender, EventArgs e)
         {
+            /* Send PacketType Set */
+            BitArray SendPacketType1 = new BitArray(new byte[] { MsgStateSend.packetType[0] });
+            SendPacketType1[0] = true;
+            MsgStateSend.packetType[0] = ConvertToByte(SendPacketType1);
+
             /* Joint Position PID Gain Set */
             jParam.jointPositionPgain[0] = float.Parse(jpPgainJoint1textBox.Text);
             jParam.jointPositionPgain[1] = float.Parse(jpPgainJoint2textBox.Text);
@@ -1344,6 +1347,11 @@ namespace DebuggingToolGUI
 
         private void SetJointToqPIDGainbutton_Click(object sender, EventArgs e)
         {
+            /* Send PacketType Set */
+            BitArray SendPacketType1 = new BitArray(new byte[] { MsgStateSend.packetType[0] });
+            SendPacketType1[0] = true;
+            MsgStateSend.packetType[0] = ConvertToByte(SendPacketType1);
+
             /* Joint Torque PID Gain Set */
             jParam.jointTorquePgain[0] = float.Parse(jtPgainJoint1textBox.Text);
             jParam.jointTorquePgain[1] = float.Parse(jtPgainJoint2textBox.Text);
@@ -1382,6 +1390,11 @@ namespace DebuggingToolGUI
 
         private void JointConstantParamSetbutton_Click(object sender, EventArgs e)
         {
+            /* Send PacketType Set */
+            BitArray SendPacketType1 = new BitArray(new byte[] { MsgStateSend.packetType[0] });
+            SendPacketType1[0] = true;
+            MsgStateSend.packetType[0] = ConvertToByte(SendPacketType1);
+
             /* Joint Constant Param Gain Set */
             jParam.jointConstantTorque[0] = float.Parse(jcTorqueConstJoint1textBox.Text);
             jParam.jointConstantTorque[1] = float.Parse(jcTorqueConstJoint2textBox.Text);
@@ -1420,6 +1433,11 @@ namespace DebuggingToolGUI
 
         private void GCnFricParamSetbutton_Click(object sender, EventArgs e)
         {
+            /* Send PacketType Set */
+            BitArray SendPacketType1 = new BitArray(new byte[] { MsgStateSend.packetType[0] });
+            SendPacketType1[0] = true;
+            MsgStateSend.packetType[0] = ConvertToByte(SendPacketType1);
+
             /* Gravity Compensator and Friction Compensator Parameters Set */
             jParam.jointGravityGain[0] = float.Parse(GCGainJoint1textBox.Text);
             jParam.jointGravityGain[1] = float.Parse(GCGainJoint2textBox.Text);
@@ -1458,6 +1476,11 @@ namespace DebuggingToolGUI
 
         private void JointTrajetorySetbutton_Click(object sender, EventArgs e)
         {
+            /* Send PacketType Set */
+            BitArray SendPacketType1 = new BitArray(new byte[] { MsgStateSend.packetType[0] });
+            SendPacketType1[1] = true;
+            MsgStateSend.packetType[0] = ConvertToByte(SendPacketType1);
+
             /* Joint Trajectory Parameters Set */
             jTraj.jointTrajectoryTime[0] = float.Parse(TrajTimeJoint1textBox.Text);
             jTraj.jointTrajectoryTime[1] = float.Parse(TrajTimeJoint2textBox.Text);
@@ -1487,6 +1510,11 @@ namespace DebuggingToolGUI
 
         private void CartesianPIDSetbutton_Click(object sender, EventArgs e)
         {
+            /* Send PacketType Set */
+            BitArray SendPacketType1 = new BitArray(new byte[] { MsgStateSend.packetType[0] });
+            SendPacketType1[2] = true;
+            MsgStateSend.packetType[0] = ConvertToByte(SendPacketType1);
+
             /* Cartesian Position PID Gain Set */
             cParam.cartesianPositionPgain[0] = float.Parse(cpPgainCartesianXtextBox.Text);
             cParam.cartesianPositionPgain[1] = float.Parse(cpPgainCartesianYtextBox.Text);
@@ -1519,7 +1547,11 @@ namespace DebuggingToolGUI
 
         private void CartesianTrajSetbutton_Click(object sender, EventArgs e)
         {
-            
+            /* Send PacketType Set */
+            BitArray SendPacketType1 = new BitArray(new byte[] { MsgStateSend.packetType[0] });
+            SendPacketType1[3] = true;
+            MsgStateSend.packetType[0] = ConvertToByte(SendPacketType1);
+
             /* Cartesian Trajectory Parameters Set */
             cTraj.cartesianTrajectoryTime[0] = float.Parse(TrajTimeCartesianXtextBox.Text);
             cTraj.cartesianTrajectoryTime[1] = float.Parse(TrajTimeCartesianYtextBox.Text);
@@ -2252,7 +2284,11 @@ namespace DebuggingToolGUI
 
         private void JointPositionSetbutton_Click(object sender, EventArgs e)
         {
-            
+            /* Send PacketType Set */
+            BitArray SendPacketType1 = new BitArray(new byte[] { MsgStateSend.packetType[0] });
+            SendPacketType1[4] = true;
+            MsgStateSend.packetType[0] = ConvertToByte(SendPacketType1);
+
             jTarget.jointTarget[0] = float.Parse(PositionJoint1textBox.Text);
             jTarget.jointTarget[1] = float.Parse(PositionJoint2textBox.Text);
             jTarget.jointTarget[2] = float.Parse(PositionJoint3textBox.Text);
@@ -2267,7 +2303,12 @@ namespace DebuggingToolGUI
         }
 
         private void CartesianPositionSetbutton_Click(object sender, EventArgs e)
-        {  
+        {
+            /* Send PacketType Set */
+            BitArray SendPacketType1 = new BitArray(new byte[] { MsgStateSend.packetType[0] });
+            SendPacketType1[5] = true;
+            MsgStateSend.packetType[0] = ConvertToByte(SendPacketType1);
+
             cTarget.pX = float.Parse(PositionCartesianPxtextBox.Text);
             cTarget.pY = float.Parse(PositionCartesianPytextBox.Text);
             cTarget.pZ = float.Parse(PositionCartesianPztextBox.Text);
@@ -2279,25 +2320,6 @@ namespace DebuggingToolGUI
             MsgStateSend.packetType[0] += 32;
         }
 
-        private void AbPositionJoint3textBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void AbPositionJoint6textBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void AbPositionJoint8textBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void AbVelocityJoint3textBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void NumJointcomboBox_SelectedIndexChanged_1(object sender, EventArgs e)
         {
