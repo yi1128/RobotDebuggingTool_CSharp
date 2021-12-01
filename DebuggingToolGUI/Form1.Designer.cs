@@ -324,11 +324,12 @@ namespace DebuggingToolGUI
             this.label1 = new System.Windows.Forms.Label();
             this.PortTextBox = new System.Windows.Forms.TextBox();
             this.LoginGroupBox = new System.Windows.Forms.GroupBox();
-            this.label39 = new System.Windows.Forms.Label();
-            this.CommunicationComboBox = new System.Windows.Forms.ComboBox();
-            this.StateGroupBox = new System.Windows.Forms.GroupBox();
             this.label35 = new System.Windows.Forms.Label();
             this.NumJointcomboBox = new System.Windows.Forms.ComboBox();
+            this.label39 = new System.Windows.Forms.Label();
+            this.CommunicationComboBox = new System.Windows.Forms.ComboBox();
+            this.Disconnectbutton = new System.Windows.Forms.Button();
+            this.StateGroupBox = new System.Windows.Forms.GroupBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.Joint4pictureBox = new System.Windows.Forms.PictureBox();
             this.Joint3pictureBox = new System.Windows.Forms.PictureBox();
@@ -365,7 +366,7 @@ namespace DebuggingToolGUI
             this.GCbutton = new System.Windows.Forms.Button();
             this.Homingbutton = new System.Windows.Forms.Button();
             this.Readybutton = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.Stopbutton = new System.Windows.Forms.Button();
             this.ServoOnButton = new System.Windows.Forms.Button();
             this.AbsoluteEnocdergroupBox = new System.Windows.Forms.GroupBox();
             this.CurrentJoint8textBox = new System.Windows.Forms.TextBox();
@@ -501,7 +502,7 @@ namespace DebuggingToolGUI
             this.Default.Padding = new System.Windows.Forms.Padding(3);
             this.Default.Size = new System.Drawing.Size(1300, 628);
             this.Default.TabIndex = 0;
-            this.Default.Text = "Joint PID Setting";
+            this.Default.Text = "Joint PID Set";
             this.Default.Click += new System.EventHandler(this.Default_Click);
             // 
             // groupBox7
@@ -557,7 +558,7 @@ namespace DebuggingToolGUI
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(146, 110);
             this.button3.TabIndex = 7;
-            this.button3.Text = "Set PID Gain Get";
+            this.button3.Text = "Torque PID Gain Get";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.SetJointToqPIDGainbutton_Click);
             // 
@@ -567,7 +568,7 @@ namespace DebuggingToolGUI
             this.SetJointToqPIDGainbutton.Name = "SetJointToqPIDGainbutton";
             this.SetJointToqPIDGainbutton.Size = new System.Drawing.Size(146, 110);
             this.SetJointToqPIDGainbutton.TabIndex = 7;
-            this.SetJointToqPIDGainbutton.Text = "Set PID Gain Set";
+            this.SetJointToqPIDGainbutton.Text = "Torque PID Gain Set";
             this.SetJointToqPIDGainbutton.UseVisualStyleBackColor = true;
             this.SetJointToqPIDGainbutton.Click += new System.EventHandler(this.SetJointToqPIDGainbutton_Click);
             // 
@@ -926,7 +927,7 @@ namespace DebuggingToolGUI
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(148, 110);
             this.button2.TabIndex = 8;
-            this.button2.Text = "Set PID Gain Get";
+            this.button2.Text = "Position PID Gain Get";
             this.button2.UseVisualStyleBackColor = true;
             // 
             // SetJointPosPIDGainbutton
@@ -935,7 +936,7 @@ namespace DebuggingToolGUI
             this.SetJointPosPIDGainbutton.Name = "SetJointPosPIDGainbutton";
             this.SetJointPosPIDGainbutton.Size = new System.Drawing.Size(148, 110);
             this.SetJointPosPIDGainbutton.TabIndex = 7;
-            this.SetJointPosPIDGainbutton.Text = "Set PID Gain Set";
+            this.SetJointPosPIDGainbutton.Text = "Position PID Gain Set";
             this.SetJointPosPIDGainbutton.UseVisualStyleBackColor = true;
             this.SetJointPosPIDGainbutton.Click += new System.EventHandler(this.SetJointPosPIDGainbutton_Click);
             // 
@@ -1275,7 +1276,7 @@ namespace DebuggingToolGUI
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(1300, 628);
             this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Joint Constant Setting";
+            this.tabPage2.Text = "Joint Constant Set";
             // 
             // groupBox9
             // 
@@ -1330,7 +1331,7 @@ namespace DebuggingToolGUI
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(148, 110);
             this.button5.TabIndex = 10;
-            this.button5.Text = "Set G.C. n Fric. Param Get";
+            this.button5.Text = "G.C. n Fric. Param Get";
             this.button5.UseVisualStyleBackColor = true;
             // 
             // GCnFricParamSetbutton
@@ -1339,7 +1340,7 @@ namespace DebuggingToolGUI
             this.GCnFricParamSetbutton.Name = "GCnFricParamSetbutton";
             this.GCnFricParamSetbutton.Size = new System.Drawing.Size(148, 110);
             this.GCnFricParamSetbutton.TabIndex = 7;
-            this.GCnFricParamSetbutton.Text = "Set G.C. n Fric. Param Set";
+            this.GCnFricParamSetbutton.Text = "G.C. n Fric. Param Set";
             this.GCnFricParamSetbutton.UseVisualStyleBackColor = true;
             this.GCnFricParamSetbutton.Click += new System.EventHandler(this.GCnFricParamSetbutton_Click);
             // 
@@ -1698,7 +1699,7 @@ namespace DebuggingToolGUI
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(148, 110);
             this.button4.TabIndex = 9;
-            this.button4.Text = "Set Constant Param Get";
+            this.button4.Text = "Joint Constant Param Get";
             this.button4.UseVisualStyleBackColor = true;
             // 
             // JointConstantParamSetbutton
@@ -1708,7 +1709,7 @@ namespace DebuggingToolGUI
             this.JointConstantParamSetbutton.Name = "JointConstantParamSetbutton";
             this.JointConstantParamSetbutton.Size = new System.Drawing.Size(148, 110);
             this.JointConstantParamSetbutton.TabIndex = 7;
-            this.JointConstantParamSetbutton.Text = "Set Constant Param Set";
+            this.JointConstantParamSetbutton.Text = "Joint Constant Param Set";
             this.JointConstantParamSetbutton.UseVisualStyleBackColor = false;
             this.JointConstantParamSetbutton.Click += new System.EventHandler(this.JointConstantParamSetbutton_Click);
             // 
@@ -3323,19 +3324,19 @@ namespace DebuggingToolGUI
             // 
             // tabPage4
             // 
+            this.tabPage4.BackColor = System.Drawing.SystemColors.Control;
             this.tabPage4.Location = new System.Drawing.Point(4, 30);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Size = new System.Drawing.Size(1300, 628);
             this.tabPage4.TabIndex = 4;
             this.tabPage4.Text = "Reserved";
-            this.tabPage4.UseVisualStyleBackColor = true;
             // 
             // Connectbutton
             // 
             this.Connectbutton.BackColor = System.Drawing.Color.White;
-            this.Connectbutton.Location = new System.Drawing.Point(286, 37);
+            this.Connectbutton.Location = new System.Drawing.Point(247, 37);
             this.Connectbutton.Name = "Connectbutton";
-            this.Connectbutton.Size = new System.Drawing.Size(101, 93);
+            this.Connectbutton.Size = new System.Drawing.Size(140, 78);
             this.Connectbutton.TabIndex = 0;
             this.Connectbutton.Text = "Connect";
             this.Connectbutton.UseVisualStyleBackColor = false;
@@ -3356,9 +3357,9 @@ namespace DebuggingToolGUI
             this.IpAddressTextBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.IpAddressTextBox.Location = new System.Drawing.Point(136, 72);
             this.IpAddressTextBox.Name = "IpAddressTextBox";
-            this.IpAddressTextBox.Size = new System.Drawing.Size(144, 28);
+            this.IpAddressTextBox.Size = new System.Drawing.Size(105, 28);
             this.IpAddressTextBox.TabIndex = 2;
-            this.IpAddressTextBox.Text = "192.168.0.117";
+            this.IpAddressTextBox.Text = "127.0.0.1";
             // 
             // label1
             // 
@@ -3375,7 +3376,7 @@ namespace DebuggingToolGUI
             this.PortTextBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.PortTextBox.Location = new System.Drawing.Point(136, 103);
             this.PortTextBox.Name = "PortTextBox";
-            this.PortTextBox.Size = new System.Drawing.Size(144, 28);
+            this.PortTextBox.Size = new System.Drawing.Size(105, 28);
             this.PortTextBox.TabIndex = 2;
             this.PortTextBox.Text = "7";
             this.PortTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -3383,8 +3384,11 @@ namespace DebuggingToolGUI
             // LoginGroupBox
             // 
             this.LoginGroupBox.BackColor = System.Drawing.SystemColors.Control;
+            this.LoginGroupBox.Controls.Add(this.label35);
+            this.LoginGroupBox.Controls.Add(this.NumJointcomboBox);
             this.LoginGroupBox.Controls.Add(this.label39);
             this.LoginGroupBox.Controls.Add(this.CommunicationComboBox);
+            this.LoginGroupBox.Controls.Add(this.Disconnectbutton);
             this.LoginGroupBox.Controls.Add(this.Connectbutton);
             this.LoginGroupBox.Controls.Add(this.PortTextBox);
             this.LoginGroupBox.Controls.Add(this.IpAddressLabel);
@@ -3393,10 +3397,30 @@ namespace DebuggingToolGUI
             this.LoginGroupBox.Font = new System.Drawing.Font("KoPub돋움체 Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.LoginGroupBox.Location = new System.Drawing.Point(1326, 71);
             this.LoginGroupBox.Name = "LoginGroupBox";
-            this.LoginGroupBox.Size = new System.Drawing.Size(401, 151);
+            this.LoginGroupBox.Size = new System.Drawing.Size(401, 179);
             this.LoginGroupBox.TabIndex = 3;
             this.LoginGroupBox.TabStop = false;
             this.LoginGroupBox.Text = "Login";
+            // 
+            // label35
+            // 
+            this.label35.AutoSize = true;
+            this.label35.Font = new System.Drawing.Font("KoPub돋움체 Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label35.Location = new System.Drawing.Point(15, 139);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(149, 21);
+            this.label35.TabIndex = 12;
+            this.label35.Text = "Number of Joint";
+            // 
+            // NumJointcomboBox
+            // 
+            this.NumJointcomboBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.NumJointcomboBox.FormattingEnabled = true;
+            this.NumJointcomboBox.Location = new System.Drawing.Point(176, 136);
+            this.NumJointcomboBox.Name = "NumJointcomboBox";
+            this.NumJointcomboBox.Size = new System.Drawing.Size(65, 29);
+            this.NumJointcomboBox.TabIndex = 11;
+            this.NumJointcomboBox.Text = "7";
             // 
             // label39
             // 
@@ -3414,14 +3438,23 @@ namespace DebuggingToolGUI
             this.CommunicationComboBox.FormattingEnabled = true;
             this.CommunicationComboBox.Location = new System.Drawing.Point(170, 40);
             this.CommunicationComboBox.Name = "CommunicationComboBox";
-            this.CommunicationComboBox.Size = new System.Drawing.Size(110, 29);
+            this.CommunicationComboBox.Size = new System.Drawing.Size(71, 29);
             this.CommunicationComboBox.TabIndex = 9;
             this.CommunicationComboBox.Text = "TCP";
             // 
+            // Disconnectbutton
+            // 
+            this.Disconnectbutton.BackColor = System.Drawing.Color.White;
+            this.Disconnectbutton.Location = new System.Drawing.Point(247, 120);
+            this.Disconnectbutton.Name = "Disconnectbutton";
+            this.Disconnectbutton.Size = new System.Drawing.Size(140, 53);
+            this.Disconnectbutton.TabIndex = 0;
+            this.Disconnectbutton.Text = "Disconnect";
+            this.Disconnectbutton.UseVisualStyleBackColor = false;
+            this.Disconnectbutton.Click += new System.EventHandler(this.Disconnectbutton_Click);
+            // 
             // StateGroupBox
             // 
-            this.StateGroupBox.Controls.Add(this.label35);
-            this.StateGroupBox.Controls.Add(this.NumJointcomboBox);
             this.StateGroupBox.Controls.Add(this.groupBox1);
             this.StateGroupBox.Controls.Add(this.ErrorCodetextBox);
             this.StateGroupBox.Controls.Add(this.label2);
@@ -3430,36 +3463,15 @@ namespace DebuggingToolGUI
             this.StateGroupBox.Controls.Add(this.GCbutton);
             this.StateGroupBox.Controls.Add(this.Homingbutton);
             this.StateGroupBox.Controls.Add(this.Readybutton);
-            this.StateGroupBox.Controls.Add(this.button1);
+            this.StateGroupBox.Controls.Add(this.Stopbutton);
             this.StateGroupBox.Controls.Add(this.ServoOnButton);
             this.StateGroupBox.Font = new System.Drawing.Font("KoPub돋움체 Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.StateGroupBox.Location = new System.Drawing.Point(1328, 234);
+            this.StateGroupBox.Location = new System.Drawing.Point(1328, 256);
             this.StateGroupBox.Name = "StateGroupBox";
-            this.StateGroupBox.Size = new System.Drawing.Size(399, 714);
+            this.StateGroupBox.Size = new System.Drawing.Size(399, 692);
             this.StateGroupBox.TabIndex = 4;
             this.StateGroupBox.TabStop = false;
             this.StateGroupBox.Text = "Robot State";
-            // 
-            // label35
-            // 
-            this.label35.AutoSize = true;
-            this.label35.Font = new System.Drawing.Font("KoPub돋움체 Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label35.Location = new System.Drawing.Point(13, 39);
-            this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(149, 21);
-            this.label35.TabIndex = 8;
-            this.label35.Text = "Number of Joint";
-            // 
-            // NumJointcomboBox
-            // 
-            this.NumJointcomboBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.NumJointcomboBox.FormattingEnabled = true;
-            this.NumJointcomboBox.Location = new System.Drawing.Point(168, 36);
-            this.NumJointcomboBox.Name = "NumJointcomboBox";
-            this.NumJointcomboBox.Size = new System.Drawing.Size(217, 29);
-            this.NumJointcomboBox.TabIndex = 7;
-            this.NumJointcomboBox.Text = "7";
-            this.NumJointcomboBox.SelectedIndexChanged += new System.EventHandler(this.NumJointcomboBox_SelectedIndexChanged_1);
             // 
             // groupBox1
             // 
@@ -3491,7 +3503,7 @@ namespace DebuggingToolGUI
             this.groupBox1.Controls.Add(this.label84);
             this.groupBox1.Controls.Add(this.label36);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Location = new System.Drawing.Point(10, 105);
+            this.groupBox1.Location = new System.Drawing.Point(10, 64);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(375, 284);
             this.groupBox1.TabIndex = 6;
@@ -3760,24 +3772,24 @@ namespace DebuggingToolGUI
             // ErrorCodetextBox
             // 
             this.ErrorCodetextBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.ErrorCodetextBox.Location = new System.Drawing.Point(123, 71);
+            this.ErrorCodetextBox.Location = new System.Drawing.Point(65, 30);
             this.ErrorCodetextBox.Name = "ErrorCodetextBox";
-            this.ErrorCodetextBox.Size = new System.Drawing.Size(266, 28);
+            this.ErrorCodetextBox.Size = new System.Drawing.Size(324, 28);
             this.ErrorCodetextBox.TabIndex = 5;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("KoPub돋움체 Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label2.Location = new System.Drawing.Point(17, 74);
+            this.label2.Location = new System.Drawing.Point(17, 33);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(100, 21);
+            this.label2.Size = new System.Drawing.Size(42, 21);
             this.label2.TabIndex = 4;
-            this.label2.Text = "Error Code";
+            this.label2.Text = "Info";
             // 
             // CartesianModebutton
             // 
-            this.CartesianModebutton.Location = new System.Drawing.Point(270, 588);
+            this.CartesianModebutton.Location = new System.Drawing.Point(270, 547);
             this.CartesianModebutton.Name = "CartesianModebutton";
             this.CartesianModebutton.Size = new System.Drawing.Size(119, 119);
             this.CartesianModebutton.TabIndex = 3;
@@ -3787,7 +3799,7 @@ namespace DebuggingToolGUI
             // 
             // JointModebutton
             // 
-            this.JointModebutton.Location = new System.Drawing.Point(143, 588);
+            this.JointModebutton.Location = new System.Drawing.Point(143, 547);
             this.JointModebutton.Name = "JointModebutton";
             this.JointModebutton.Size = new System.Drawing.Size(121, 119);
             this.JointModebutton.TabIndex = 3;
@@ -3797,7 +3809,7 @@ namespace DebuggingToolGUI
             // 
             // GCbutton
             // 
-            this.GCbutton.Location = new System.Drawing.Point(10, 589);
+            this.GCbutton.Location = new System.Drawing.Point(10, 548);
             this.GCbutton.Name = "GCbutton";
             this.GCbutton.Size = new System.Drawing.Size(127, 119);
             this.GCbutton.TabIndex = 3;
@@ -3807,7 +3819,7 @@ namespace DebuggingToolGUI
             // 
             // Homingbutton
             // 
-            this.Homingbutton.Location = new System.Drawing.Point(10, 459);
+            this.Homingbutton.Location = new System.Drawing.Point(10, 418);
             this.Homingbutton.Name = "Homingbutton";
             this.Homingbutton.Size = new System.Drawing.Size(254, 59);
             this.Homingbutton.TabIndex = 3;
@@ -3817,7 +3829,7 @@ namespace DebuggingToolGUI
             // 
             // Readybutton
             // 
-            this.Readybutton.Location = new System.Drawing.Point(10, 524);
+            this.Readybutton.Location = new System.Drawing.Point(10, 483);
             this.Readybutton.Name = "Readybutton";
             this.Readybutton.Size = new System.Drawing.Size(254, 59);
             this.Readybutton.TabIndex = 2;
@@ -3825,21 +3837,22 @@ namespace DebuggingToolGUI
             this.Readybutton.UseVisualStyleBackColor = true;
             this.Readybutton.Click += new System.EventHandler(this.Readybutton_Click);
             // 
-            // button1
+            // Stopbutton
             // 
-            this.button1.BackColor = System.Drawing.Color.Red;
-            this.button1.Font = new System.Drawing.Font("KoPub돋움체 Bold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(270, 394);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(115, 188);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "STOP";
-            this.button1.UseVisualStyleBackColor = false;
+            this.Stopbutton.BackColor = System.Drawing.Color.Gray;
+            this.Stopbutton.Font = new System.Drawing.Font("KoPub돋움체 Bold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.Stopbutton.ForeColor = System.Drawing.Color.White;
+            this.Stopbutton.Location = new System.Drawing.Point(270, 353);
+            this.Stopbutton.Name = "Stopbutton";
+            this.Stopbutton.Size = new System.Drawing.Size(115, 188);
+            this.Stopbutton.TabIndex = 1;
+            this.Stopbutton.Text = "STOP";
+            this.Stopbutton.UseVisualStyleBackColor = false;
+            this.Stopbutton.Click += new System.EventHandler(this.Stopbutton_Click);
             // 
             // ServoOnButton
             // 
-            this.ServoOnButton.Location = new System.Drawing.Point(10, 394);
+            this.ServoOnButton.Location = new System.Drawing.Point(10, 353);
             this.ServoOnButton.Name = "ServoOnButton";
             this.ServoOnButton.Size = new System.Drawing.Size(254, 59);
             this.ServoOnButton.TabIndex = 1;
@@ -4423,16 +4436,16 @@ namespace DebuggingToolGUI
             // 
             this.LoglistBox.FormattingEnabled = true;
             this.LoglistBox.ItemHeight = 12;
-            this.LoglistBox.Location = new System.Drawing.Point(1021, 13);
+            this.LoglistBox.Location = new System.Drawing.Point(28, 13);
             this.LoglistBox.Name = "LoglistBox";
-            this.LoglistBox.Size = new System.Drawing.Size(308, 52);
+            this.LoglistBox.Size = new System.Drawing.Size(1301, 52);
             this.LoglistBox.TabIndex = 167;
             // 
             // DebuggingToolSW
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1779, 1016);
+            this.ClientSize = new System.Drawing.Size(1742, 959);
             this.Controls.Add(this.LoglistBox);
             this.Controls.Add(this.ConnectCompletepictureBox);
             this.Controls.Add(this.ConnectComplete);
@@ -4531,8 +4544,6 @@ namespace DebuggingToolGUI
         private System.Windows.Forms.Button Homingbutton;
         private System.Windows.Forms.Button Readybutton;
         private System.Windows.Forms.Button ServoOnButton;
-        private System.Windows.Forms.Label label35;
-        private System.Windows.Forms.ComboBox NumJointcomboBox;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
@@ -4894,7 +4905,7 @@ namespace DebuggingToolGUI
         private System.Windows.Forms.PictureBox JointMovingpictureBox;
         private System.Windows.Forms.Label label139;
         private System.Windows.Forms.Label label140;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button Stopbutton;
         private System.Windows.Forms.PictureBox ConnectCompletepictureBox;
         private System.Windows.Forms.Label ConnectComplete;
         private System.Windows.Forms.PictureBox ParametersSavepictureBox;
@@ -4907,6 +4918,9 @@ namespace DebuggingToolGUI
         private System.Windows.Forms.Button cRightbutton;
         private System.Windows.Forms.Button cLeftbutton;
         private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Label label35;
+        private System.Windows.Forms.ComboBox NumJointcomboBox;
+        private System.Windows.Forms.Button Disconnectbutton;
     }
 }
 

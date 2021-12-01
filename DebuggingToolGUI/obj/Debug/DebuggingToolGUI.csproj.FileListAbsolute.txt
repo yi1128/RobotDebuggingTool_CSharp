@@ -1,7 +1,6 @@
 C:\Users\User\Dropbox\Angel Robotics 2021\Debugging GUI\DebuggingToolGUI\DebuggingToolGUI\bin\Debug\DebuggingToolGUI.exe.config
 C:\Users\User\Dropbox\Angel Robotics 2021\Debugging GUI\DebuggingToolGUI\DebuggingToolGUI\bin\Debug\DebuggingToolGUI.exe
 C:\Users\User\Dropbox\Angel Robotics 2021\Debugging GUI\DebuggingToolGUI\DebuggingToolGUI\bin\Debug\DebuggingToolGUI.pdb
-C:\Users\User\Dropbox\Angel Robotics 2021\Debugging GUI\DebuggingToolGUI\DebuggingToolGUI\obj\Debug\DebuggingToolGUI.csproj.AssemblyReference.cache
 C:\Users\User\Dropbox\Angel Robotics 2021\Debugging GUI\DebuggingToolGUI\DebuggingToolGUI\obj\Debug\DebuggingToolGUI.DebuggingToolSW.resources
 C:\Users\User\Dropbox\Angel Robotics 2021\Debugging GUI\DebuggingToolGUI\DebuggingToolGUI\obj\Debug\DebuggingToolGUI.Properties.Resources.resources
 C:\Users\User\Dropbox\Angel Robotics 2021\Debugging GUI\DebuggingToolGUI\DebuggingToolGUI\obj\Debug\DebuggingToolGUI.csproj.GenerateResource.cache
@@ -12,3 +11,4 @@ C:\Users\User\Dropbox\Angel Robotics 2021\Debugging GUI\DebuggingToolGUI\Debuggi
 C:\Users\User\Dropbox\Angel Robotics 2021\Debugging GUI\DebuggingToolGUI\DebuggingToolGUI\bin\Debug\log4net.xml
 C:\Users\User\Dropbox\Angel Robotics 2021\Debugging GUI\DebuggingToolGUI\DebuggingToolGUI\obj\Debug\DebuggingToolGUI.csproj.CopyComplete
 C:\Users\User\Dropbox\Angel Robotics 2021\Debugging GUI\DebuggingToolGUI\DebuggingToolGUI\bin\Debug\log4net.config
+C:\Users\User\Dropbox\Angel Robotics 2021\Debugging GUI\DebuggingToolGUI\DebuggingToolGUI\obj\Debug\DebuggingToolGUI.csproj.AssemblyReference.cache
