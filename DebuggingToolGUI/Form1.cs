@@ -96,6 +96,13 @@ namespace DebuggingToolGUI
         public const byte INTERNAL_LIMIT_ACTIVE = 11;
         /* End Status word */
 
+        /* Mode of Operation */
+        public const int CURRENT_MODE = 1;
+        public const int POSITION_MODE = 2;
+        public const int VELOCITY_MODE = 3;
+        public const int HOMING_MODE = 4;
+        /* End Mode of Operation */
+
         /* Initailize Image Box */
         Image StatusOnImage = Image.FromFile(Application.StartupPath + @"\\Status_On.bmp");
         Image StatusOffImage = Image.FromFile(Application.StartupPath + @"\\Status_Off.bmp");
@@ -798,8 +805,8 @@ namespace DebuggingToolGUI
 
             /* TCP/IP Communication - Send Part */
             NetworkStream tcpClientNS = tcpClient.GetStream();
-            tcpClientNS.WriteTimeout = 3000;
-            //tcpClientNS.ReadTimeout = 3000;
+            tcpClientNS.WriteTimeout = 300000;
+            tcpClientNS.ReadTimeout = 300000;
 
             /* Tcp Connect Check */
             if (tcpClient.Connected)
@@ -1268,6 +1275,7 @@ namespace DebuggingToolGUI
 
                             tcpRunThread = new Thread(() => TcpClientRun(IpAddressTextBox.Text, int.Parse(PortTextBox.Text)));
                             AddListBox(LoglistBox, "TCP Client Thread Run IP : " + IpAddressTextBox.Text + " Port : " + PortTextBox.Text);
+                            log.Info("TCP Client Thread Run IP : " + IpAddressTextBox.Text + " Port : " + PortTextBox.Text);
                             tcpRunThread.IsBackground = true;
                             StatusThreadStop = false;
                             tcpRunThread.Start();
@@ -1422,56 +1430,315 @@ namespace DebuggingToolGUI
                 if (LegDofSelect >= 1)
                 {
                     UpdateTextBox(AbsPosJoint1textBox, Convert.ToString(ServerData.moduleData[0].actualLinkPosition[0]));
-                    UpdateTextBox(IncPositionJoint1textBox, Convert.ToString(ServerData.moduleData[0].actualLinkPosition[0]));
-                    UpdateTextBox(IncVelocityJoint1textBox, Convert.ToString(ServerData.moduleData[0].actualLinkVelocity[0]));
+                    UpdateTextBox(IncPositionJoint1textBox, Convert.ToString(ServerData.moduleData[0].actualMotorPosition[0]));
+                    UpdateTextBox(IncVelocityJoint1textBox, Convert.ToString(ServerData.moduleData[0].actualMotorVelocity[0]));
                     UpdateTextBox(CurrentJoint1textBox, Convert.ToString(ServerData.moduleData[0].actualCurrent[0]));
+                    /* Information Show */
+                    UpdateTextBox(Digital1textBox, Convert.ToString(0));
+                    UpdateTextBox(Analog1textBox, Convert.ToString(0));
+
+                    switch(ServerData.moduleData[0].statusword[0])
+                    {
+                        case READY_TO_SWITCH_ON:
+                            UpdateTextBox(StatusWord1textBox, "READY TO SWITCH ON");
+                            break;
+                        case SWITCHED_ON:
+                            UpdateTextBox(StatusWord1textBox, "SWITCHED ON");
+                            break;
+                        case OPERATION_ENABLED:
+                            UpdateTextBox(StatusWord1textBox, "OPERATION ENABLED");
+                            break;
+                        case FAULT:
+                            UpdateTextBox(StatusWord1textBox, "FAULT");
+                            break;
+                        case VOLTAGE_ENABLED:
+                            UpdateTextBox(StatusWord1textBox, "VOLTAGE ENABLED");
+                            break;
+                        case QUICK_STOP:
+                            UpdateTextBox(StatusWord1textBox, "QUICK STOP");
+                            break;
+                        case SWITCH_ON_DISABLED:
+                            UpdateTextBox(StatusWord1textBox, "SWITCH ON DISABLED");
+                            break;
+                        case WARNING:
+                            UpdateTextBox(StatusWord1textBox, "WARNING");
+                            break;
+                        case REMOTE:
+                            UpdateTextBox(StatusWord1textBox, "REMOTE");
+                            break;
+                        case INTERNAL_LIMIT_ACTIVE:
+                            UpdateTextBox(StatusWord1textBox, "INTERNAL LIMIT ACTIVE");
+                            break;
+                    }
+                    
+                    switch(ServerData.moduleData[0].modeOfOperation[0])
+                    {
+                        case CURRENT_MODE:
+                            UpdateTextBox(MoO1textBox, "CURRENT");
+                            break;
+                        case POSITION_MODE:
+                            UpdateTextBox(MoO1textBox, "POSITION");
+                            break;
+                        case VELOCITY_MODE:
+                            UpdateTextBox(MoO1textBox, "VELOCITY");
+                            break;
+                        case HOMING_MODE:
+                            UpdateTextBox(MoO1textBox, "HOMING");
+                            break;
+                        default:
+                            UpdateTextBox(MoO1textBox, "NONE");
+                            break;
+                    }
+
+                    UpdateTextBox(ImuRoll1textBox, Convert.ToString(0));
+                    UpdateTextBox(ImuPitch1textBox, Convert.ToString(0));
+                    UpdateTextBox(ImuYaw1textBox, Convert.ToString(0));
+                    UpdateTextBox(ImuPx1textBox, Convert.ToString(0));
+                    UpdateTextBox(ImuPy1textBox, Convert.ToString(0));
+                    UpdateTextBox(ImuPz1textBox, Convert.ToString(0));
+                    /* End Information Show */
                 }
                     
                 if(LegDofSelect >= 2)
                 {
                     UpdateTextBox(AbsPosJoint2textBox, Convert.ToString(ServerData.moduleData[0].actualLinkPosition[1]));
-                    UpdateTextBox(IncPositionJoint2textBox, Convert.ToString(ServerData.moduleData[0].actualLinkPosition[1]));
-                    UpdateTextBox(IncVelocityJoint2textBox, Convert.ToString(ServerData.moduleData[0].actualLinkVelocity[1]));
+                    UpdateTextBox(IncPositionJoint2textBox, Convert.ToString(ServerData.moduleData[0].actualMotorPosition[1]));
+                    UpdateTextBox(IncVelocityJoint2textBox, Convert.ToString(ServerData.moduleData[0].actualMotorVelocity[1]));
                     UpdateTextBox(CurrentJoint2textBox, Convert.ToString(ServerData.moduleData[0].actualCurrent[1]));
+
+                    /* Information Show */
+                    UpdateTextBox(Digital2textBox, Convert.ToString(0));
+                    UpdateTextBox(Analog2textBox, Convert.ToString(0));
+
+                    switch (ServerData.moduleData[0].statusword[1])
+                    {
+                        case READY_TO_SWITCH_ON:
+                            UpdateTextBox(StatusWord2textBox, "READY TO SWITCH ON");
+                            break;
+                        case SWITCHED_ON:
+                            UpdateTextBox(StatusWord2textBox, "SWITCHED ON");
+                            break;
+                        case OPERATION_ENABLED:
+                            UpdateTextBox(StatusWord2textBox, "OPERATION ENABLED");
+                            break;
+                        case FAULT:
+                            UpdateTextBox(StatusWord2textBox, "FAULT");
+                            break;
+                        case VOLTAGE_ENABLED:
+                            UpdateTextBox(StatusWord2textBox, "VOLTAGE ENABLED");
+                            break;
+                        case QUICK_STOP:
+                            UpdateTextBox(StatusWord2textBox, "QUICK STOP");
+                            break;
+                        case SWITCH_ON_DISABLED:
+                            UpdateTextBox(StatusWord2textBox, "SWITCH ON DISABLED");
+                            break;
+                        case WARNING:
+                            UpdateTextBox(StatusWord2textBox, "WARNING");
+                            break;
+                        case REMOTE:
+                            UpdateTextBox(StatusWord2textBox, "REMOTE");
+                            break;
+                        case INTERNAL_LIMIT_ACTIVE:
+                            UpdateTextBox(StatusWord2textBox, "INTERNAL LIMIT ACTIVE");
+                            break;
+                    }
+
+                    switch (ServerData.moduleData[0].modeOfOperation[1])
+                    {
+                        case CURRENT_MODE:
+                            UpdateTextBox(MoO2textBox, "CURRENT");
+                            break;
+                        case POSITION_MODE:
+                            UpdateTextBox(MoO2textBox, "POSITION");
+                            break;
+                        case VELOCITY_MODE:
+                            UpdateTextBox(MoO2textBox, "VELOCITY");
+                            break;
+                        case HOMING_MODE:
+                            UpdateTextBox(MoO2textBox, "HOMING");
+                            break;
+                        default:
+                            UpdateTextBox(MoO2textBox, "NONE");
+                            break;
+                    }
+
+                    UpdateTextBox(ImuRoll2textBox, Convert.ToString(0));
+                    UpdateTextBox(ImuPitch2textBox, Convert.ToString(0));
+                    UpdateTextBox(ImuYaw2textBox, Convert.ToString(0));
+                    UpdateTextBox(ImuPx2textBox, Convert.ToString(0));
+                    UpdateTextBox(ImuPy2textBox, Convert.ToString(0));
+                    UpdateTextBox(ImuPz2textBox, Convert.ToString(0));
+                    /* End Information Show */
                 }
-                    
+
                 if (LegDofSelect >= 3) 
                 {
                     UpdateTextBox(AbsPosJoint3textBox, Convert.ToString(ServerData.moduleData[0].actualLinkPosition[2]));
-                    UpdateTextBox(IncPositionJoint3textBox, Convert.ToString(ServerData.moduleData[0].actualLinkPosition[2]));
-                    UpdateTextBox(IncVelocityJoint3textBox, Convert.ToString(ServerData.moduleData[0].actualLinkVelocity[2]));
+                    UpdateTextBox(IncPositionJoint3textBox, Convert.ToString(ServerData.moduleData[0].actualMotorPosition[2]));
+                    UpdateTextBox(IncVelocityJoint3textBox, Convert.ToString(ServerData.moduleData[0].actualMotorVelocity[2]));
                     UpdateTextBox(CurrentJoint3textBox, Convert.ToString(ServerData.moduleData[0].actualCurrent[2]));
+
+                    /* Information Show */
+                    UpdateTextBox(Digital3textBox, Convert.ToString(0));
+                    UpdateTextBox(Analog3textBox, Convert.ToString(0));
+
+                    switch (ServerData.moduleData[0].statusword[2])
+                    {
+                        case READY_TO_SWITCH_ON:
+                            UpdateTextBox(StatusWord3textBox, "READY TO SWITCH ON");
+                            break;
+                        case SWITCHED_ON:
+                            UpdateTextBox(StatusWord3textBox, "SWITCHED ON");
+                            break;
+                        case OPERATION_ENABLED:
+                            UpdateTextBox(StatusWord3textBox, "OPERATION ENABLED");
+                            break;
+                        case FAULT:
+                            UpdateTextBox(StatusWord3textBox, "FAULT");
+                            break;
+                        case VOLTAGE_ENABLED:
+                            UpdateTextBox(StatusWord3textBox, "VOLTAGE ENABLED");
+                            break;
+                        case QUICK_STOP:
+                            UpdateTextBox(StatusWord3textBox, "QUICK STOP");
+                            break;
+                        case SWITCH_ON_DISABLED:
+                            UpdateTextBox(StatusWord3textBox, "SWITCH ON DISABLED");
+                            break;
+                        case WARNING:
+                            UpdateTextBox(StatusWord3textBox, "WARNING");
+                            break;
+                        case REMOTE:
+                            UpdateTextBox(StatusWord3textBox, "REMOTE");
+                            break;
+                        case INTERNAL_LIMIT_ACTIVE:
+                            UpdateTextBox(StatusWord3textBox, "INTERNAL LIMIT ACTIVE");
+                            break;
+                    }
+
+                    switch (ServerData.moduleData[0].modeOfOperation[2])
+                    {
+                        case CURRENT_MODE:
+                            UpdateTextBox(MoO3textBox, "CURRENT");
+                            break;
+                        case POSITION_MODE:
+                            UpdateTextBox(MoO3textBox, "POSITION");
+                            break;
+                        case VELOCITY_MODE:
+                            UpdateTextBox(MoO3textBox, "VELOCITY");
+                            break;
+                        case HOMING_MODE:
+                            UpdateTextBox(MoO3textBox, "HOMING");
+                            break;
+                        default:
+                            UpdateTextBox(MoO3textBox, "NONE");
+                            break;
+                    }
+
+                    UpdateTextBox(ImuRoll3textBox, Convert.ToString(0));
+                    UpdateTextBox(ImuPitch3textBox, Convert.ToString(0));
+                    UpdateTextBox(ImuYaw3textBox, Convert.ToString(0));
+                    UpdateTextBox(ImuPx3textBox, Convert.ToString(0));
+                    UpdateTextBox(ImuPy3textBox, Convert.ToString(0));
+                    UpdateTextBox(ImuPz3textBox, Convert.ToString(0));
+                    /* End Information Show */
                 }
-                    
+
                 if (LegDofSelect >= 4)
                 {
                     UpdateTextBox(AbsPosJoint4textBox, Convert.ToString(ServerData.moduleData[0].actualLinkPosition[3]));
-                    UpdateTextBox(IncPositionJoint4textBox, Convert.ToString(ServerData.moduleData[0].actualLinkPosition[3]));
-                    UpdateTextBox(IncVelocityJoint4textBox, Convert.ToString(ServerData.moduleData[0].actualLinkVelocity[3]));
+                    UpdateTextBox(IncPositionJoint4textBox, Convert.ToString(ServerData.moduleData[0].actualMotorPosition[3]));
+                    UpdateTextBox(IncVelocityJoint4textBox, Convert.ToString(ServerData.moduleData[0].actualMotorVelocity[3]));
                     UpdateTextBox(CurrentJoint4textBox, Convert.ToString(ServerData.moduleData[0].actualCurrent[3]));
+
+                    /* Information Show */
+                    UpdateTextBox(Digital4textBox, Convert.ToString(0));
+                    UpdateTextBox(Analog4textBox, Convert.ToString(0));
+
+                    switch (ServerData.moduleData[0].statusword[3])
+                    {
+                        case READY_TO_SWITCH_ON:
+                            UpdateTextBox(StatusWord4textBox, "READY TO SWITCH ON");
+                            break;
+                        case SWITCHED_ON:
+                            UpdateTextBox(StatusWord4textBox, "SWITCHED ON");
+                            break;
+                        case OPERATION_ENABLED:
+                            UpdateTextBox(StatusWord4textBox, "OPERATION ENABLED");
+                            break;
+                        case FAULT:
+                            UpdateTextBox(StatusWord4textBox, "FAULT");
+                            break;
+                        case VOLTAGE_ENABLED:
+                            UpdateTextBox(StatusWord4textBox, "VOLTAGE ENABLED");
+                            break;
+                        case QUICK_STOP:
+                            UpdateTextBox(StatusWord4textBox, "QUICK STOP");
+                            break;
+                        case SWITCH_ON_DISABLED:
+                            UpdateTextBox(StatusWord4textBox, "SWITCH ON DISABLED");
+                            break;
+                        case WARNING:
+                            UpdateTextBox(StatusWord4textBox, "WARNING");
+                            break;
+                        case REMOTE:
+                            UpdateTextBox(StatusWord4textBox, "REMOTE");
+                            break;
+                        case INTERNAL_LIMIT_ACTIVE:
+                            UpdateTextBox(StatusWord4textBox, "INTERNAL LIMIT ACTIVE");
+                            break;
+                    }
+
+                    switch (ServerData.moduleData[0].modeOfOperation[3])
+                    {
+                        case CURRENT_MODE:
+                            UpdateTextBox(MoO4textBox, "CURRENT");
+                            break;
+                        case POSITION_MODE:
+                            UpdateTextBox(MoO4textBox, "POSITION");
+                            break;
+                        case VELOCITY_MODE:
+                            UpdateTextBox(MoO4textBox, "VELOCITY");
+                            break;
+                        case HOMING_MODE:
+                            UpdateTextBox(MoO4textBox, "HOMING");
+                            break;
+                        default:
+                            UpdateTextBox(MoO4textBox, "NONE");
+                            break;
+                    }
+
+                    UpdateTextBox(ImuRoll4textBox, Convert.ToString(0));
+                    UpdateTextBox(ImuPitch4textBox, Convert.ToString(0));
+                    UpdateTextBox(ImuYaw4textBox, Convert.ToString(0));
+                    UpdateTextBox(ImuPx4textBox, Convert.ToString(0));
+                    UpdateTextBox(ImuPy4textBox, Convert.ToString(0));
+                    UpdateTextBox(ImuPz4textBox, Convert.ToString(0));
+                    /* End Information Show */
                 }
-                    
+
                 if (LegDofSelect >= 5)
                 {
                     UpdateTextBox(AbsPosJoint5textBox, Convert.ToString(ServerData.moduleData[0].actualLinkPosition[4]));
-                    UpdateTextBox(IncPositionJoint5textBox, Convert.ToString(ServerData.moduleData[0].actualLinkPosition[4]));
-                    UpdateTextBox(IncVelocityJoint5textBox, Convert.ToString(ServerData.moduleData[0].actualLinkVelocity[4]));
+                    UpdateTextBox(IncPositionJoint5textBox, Convert.ToString(ServerData.moduleData[0].actualMotorPosition[4]));
+                    UpdateTextBox(IncVelocityJoint5textBox, Convert.ToString(ServerData.moduleData[0].actualMotorVelocity[4]));
                     UpdateTextBox(CurrentJoint5textBox, Convert.ToString(ServerData.moduleData[0].actualCurrent[4]));
                 }
                     
                 if (LegDofSelect >= 6)
                 {
                     UpdateTextBox(AbsPosJoint6textBox, Convert.ToString(ServerData.moduleData[0].actualLinkPosition[5]));
-                    UpdateTextBox(IncPositionJoint6textBox, Convert.ToString(ServerData.moduleData[0].actualLinkPosition[5]));
-                    UpdateTextBox(IncVelocityJoint6textBox, Convert.ToString(ServerData.moduleData[0].actualLinkVelocity[5]));
+                    UpdateTextBox(IncPositionJoint6textBox, Convert.ToString(ServerData.moduleData[0].actualMotorPosition[5]));
+                    UpdateTextBox(IncVelocityJoint6textBox, Convert.ToString(ServerData.moduleData[0].actualMotorVelocity[5]));
                     UpdateTextBox(CurrentJoint6textBox, Convert.ToString(ServerData.moduleData[0].actualCurrent[5]));
                 }
                     
                 if (LegDofSelect >= 7)
                 {
                     UpdateTextBox(AbsPosJoint7textBox, Convert.ToString(ServerData.moduleData[0].actualLinkPosition[6]));
-                    UpdateTextBox(IncPositionJoint7textBox, Convert.ToString(ServerData.moduleData[0].actualLinkPosition[6]));
-                    UpdateTextBox(IncVelocityJoint7textBox, Convert.ToString(ServerData.moduleData[0].actualLinkVelocity[6]));
+                    UpdateTextBox(IncPositionJoint7textBox, Convert.ToString(ServerData.moduleData[0].actualMotorPosition[6]));
+                    UpdateTextBox(IncVelocityJoint7textBox, Convert.ToString(ServerData.moduleData[0].actualMotorVelocity[6]));
                     UpdateTextBox(CurrentJoint7textBox, Convert.ToString(ServerData.moduleData[0].actualCurrent[6]));
                 }
                     
@@ -1978,7 +2245,7 @@ namespace DebuggingToolGUI
             JointPositionSetgroupBox.Enabled = true;
             JointModebutton.Enabled = true;
             GCbutton.Enabled = true;
-            GCbutton_Click(null, null);
+            //GCbutton_Click(null, null);
             /* End Activation Joint Set & Joint Mode & Gravity Compensation Button */
 
             /* Free State Send Command */
@@ -2005,7 +2272,7 @@ namespace DebuggingToolGUI
             /* GCbutton Color Change */
             if(GCbuttonCheck == false)
             {
-                MsgStateSend.controlMode = (byte)(MsgStateSend.controlMode + GRAVITY_MODE);
+                MsgStateSend.controlMode = GRAVITY_MODE;
 
                 /* Gravtiy Compensator Button Color Change */
                 GCbutton.ForeColor = System.Drawing.Color.Black;
@@ -2021,7 +2288,7 @@ namespace DebuggingToolGUI
             }
             else
             {
-                MsgStateSend.controlMode = (byte)(MsgStateSend.controlMode - GRAVITY_MODE);
+                //MsgStateSend.controlMode = NONE_MODE;
 
                 /* Gravtiy Compensator Button Color Change */
                 GCbutton.ForeColor = System.Drawing.Color.Black;
@@ -2041,7 +2308,7 @@ namespace DebuggingToolGUI
             /* Activate Joint Mode */
             if (JointModeButtonCheck == false)
             {
-                MsgStateSend.controlMode = (byte)(MsgStateSend.controlMode + JOINT_MODE);
+                MsgStateSend.controlMode = JOINT_MODE;
 
                 /* Joint Mode Button Color Change */
                 JointModebutton.ForeColor = System.Drawing.Color.Black;
@@ -2050,13 +2317,13 @@ namespace DebuggingToolGUI
 
                 /* Cartesian Mode Deactivate */
                 CartesianModeButtonCheck = true;
-                CartesianModebutton_Click(null, null);
+                //CartesianModebutton_Click(null, null);
 
                 JointModeButtonCheck = true;
             }
             else /* Deactivate Joint Mode */
             {
-                MsgStateSend.controlMode = (byte)(MsgStateSend.controlMode - JOINT_MODE);
+                //MsgStateSend.controlMode = GRAVITY_MODE;
 
                 /* Joint Mode Button Color Change */
                 JointModebutton.ForeColor = System.Drawing.Color.Black;
@@ -2071,7 +2338,7 @@ namespace DebuggingToolGUI
             /*  Activate Cartesian Mode */
             if (CartesianModeButtonCheck == false)
             {
-                MsgStateSend.controlMode = (byte)(MsgStateSend.controlMode + CARTESIAN_MODE);
+                MsgStateSend.controlMode = CARTESIAN_MODE;
 
                 /* Cartesian Mode Button Color Change */
                 CartesianModebutton.ForeColor = System.Drawing.Color.Black;
@@ -2080,13 +2347,13 @@ namespace DebuggingToolGUI
 
                 /* Joint Deactiavte */
                 JointModeButtonCheck = true;
-                JointModebutton_Click(null, null);
+                //JointModebutton_Click(null, null);
 
                 CartesianModeButtonCheck = true;
             }
             else /* Deactivate Cartesian Mode */
             {
-                MsgStateSend.controlMode = (byte)(MsgStateSend.controlMode - CARTESIAN_MODE);
+                //MsgStateSend.controlMode = GRAVITY_MODE;
 
                 /* Cartesian Mode Button Color Change */
                 CartesianModebutton.ForeColor = System.Drawing.Color.Black;
@@ -2103,7 +2370,7 @@ namespace DebuggingToolGUI
 
         private void ParametersReadbutton_Click(object sender, EventArgs e)
         {
-            string path = @"Parameters.txt";
+            string path = @"Parameters/Parameters.ini";
             FileInfo file = new FileInfo(path);
             if(file.Exists)
             {
@@ -2413,10 +2680,12 @@ namespace DebuggingToolGUI
                 strRead.Close();
                 ParametersReadpictureBox.Image = StatusOnImage;
                 log.Info("Parameters File Read Complete");
+                AddListBox(LoglistBox, "Parameters File Read Complete");
             }
             else
             {
                 UpdateTextBox(ErrorCodetextBox, "Parameters Read Error!!");
+                AddListBox(LoglistBox, "Parameters File Read Error!!");
                 ParametersReadpictureBox.Image = StatusOffImage;
 
                 log.Error("Parameters File Read Error");
@@ -2636,11 +2905,13 @@ namespace DebuggingToolGUI
                 StrWrite.Close();
                 ParametersSavepictureBox.Image = StatusOnImage;
                 log.Info("Parameters File Save Complete , File Name : " + curFileName);
+                AddListBox(LoglistBox, "Parameters File Save Complete , File Name : " + curFileName);
             }
             catch(FileNotFoundException err)
             {
                 ErrorCodetextBox.Text = "File Save Error!!";
-                log.Error("Parameters File Save Error");
+                log.Error("Parameters File Save Error!!");
+                AddListBox(LoglistBox, "Parameters File Save Error!!");
                 ParametersSavepictureBox.Image = StatusOffImage;
             }
         }
@@ -2649,15 +2920,19 @@ namespace DebuggingToolGUI
         {
             log.Info("DebuggingToolSW Loaded Complete");
             UpdateTextBox(ErrorCodetextBox,"DebuggingToolSW Loaded Complete");
+            AddListBox(LoglistBox, "DebuggingToolSW Loaded Complete");
         }
 
 
         private void LoggingStartbutton_Click(object sender, EventArgs e)
         {
+            
             FileInfo file = new FileInfo("logging_.csv");
 
             StreamWriter logging_SW = file.CreateText();
             logging_SW.Close();
+
+            log.Info("Logging Data File name is " + file.Name);
 
             /* Logging Status On */
             LoggingpictureBox.Image = StatusOnImage;
@@ -2673,8 +2948,8 @@ namespace DebuggingToolGUI
 
         private void JointPositionSetbutton_Click(object sender, EventArgs e)
         {
-            if (JointModeButtonCheck == false)
-                JointModebutton_Click(null, null);
+            //if (JointModeButtonCheck == false)
+            //    JointModebutton_Click(null, null);
 
             /* Send PacketType Set */
             BitArray SendPacketType1 = new BitArray(new byte[] { MsgStateSend.packetType[0] });
@@ -2719,8 +2994,8 @@ namespace DebuggingToolGUI
 
         private void CartesianPositionSetbutton_Click(object sender, EventArgs e)
         {
-            if(CartesianModeButtonCheck == false)
-                CartesianModebutton_Click(null, null);
+            //if(CartesianModeButtonCheck == false)
+            //    CartesianModebutton_Click(null, null);
 
             /* Send PacketType Set */
             BitArray SendPacketType1 = new BitArray(new byte[] { MsgStateSend.packetType[0] });

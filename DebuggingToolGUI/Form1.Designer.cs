@@ -318,6 +318,31 @@ namespace DebuggingToolGUI
             this.label106 = new System.Windows.Forms.Label();
             this.label107 = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.ImuPz1textBox = new System.Windows.Forms.TextBox();
+            this.ImuPy1textBox = new System.Windows.Forms.TextBox();
+            this.ImuPx1textBox = new System.Windows.Forms.TextBox();
+            this.ImuYaw1textBox = new System.Windows.Forms.TextBox();
+            this.MoO1textBox = new System.Windows.Forms.TextBox();
+            this.ImuPitch1textBox = new System.Windows.Forms.TextBox();
+            this.ImuRoll1textBox = new System.Windows.Forms.TextBox();
+            this.StatusWord1textBox = new System.Windows.Forms.TextBox();
+            this.Analog1textBox = new System.Windows.Forms.TextBox();
+            this.label143 = new System.Windows.Forms.Label();
+            this.label142 = new System.Windows.Forms.Label();
+            this.Digital1textBox = new System.Windows.Forms.TextBox();
+            this.label34 = new System.Windows.Forms.Label();
+            this.label33 = new System.Windows.Forms.Label();
+            this.label32 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label28 = new System.Windows.Forms.Label();
+            this.label29 = new System.Windows.Forms.Label();
+            this.label30 = new System.Windows.Forms.Label();
+            this.label31 = new System.Windows.Forms.Label();
+            this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.tabPage6 = new System.Windows.Forms.TabPage();
+            this.tabPage7 = new System.Windows.Forms.TabPage();
             this.Connectbutton = new System.Windows.Forms.Button();
             this.IpAddressLabel = new System.Windows.Forms.Label();
             this.IpAddressTextBox = new System.Windows.Forms.TextBox();
@@ -428,6 +453,39 @@ namespace DebuggingToolGUI
             this.ConnectCompletepictureBox = new System.Windows.Forms.PictureBox();
             this.ConnectComplete = new System.Windows.Forms.Label();
             this.LoglistBox = new System.Windows.Forms.ListBox();
+            this.label27 = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
+            this.Digital2textBox = new System.Windows.Forms.TextBox();
+            this.Digital3textBox = new System.Windows.Forms.TextBox();
+            this.Analog2textBox = new System.Windows.Forms.TextBox();
+            this.Digital4textBox = new System.Windows.Forms.TextBox();
+            this.StatusWord2textBox = new System.Windows.Forms.TextBox();
+            this.ImuRoll2textBox = new System.Windows.Forms.TextBox();
+            this.Analog3textBox = new System.Windows.Forms.TextBox();
+            this.ImuPitch2textBox = new System.Windows.Forms.TextBox();
+            this.MoO2textBox = new System.Windows.Forms.TextBox();
+            this.ImuYaw2textBox = new System.Windows.Forms.TextBox();
+            this.ImuPx2textBox = new System.Windows.Forms.TextBox();
+            this.StatusWord3textBox = new System.Windows.Forms.TextBox();
+            this.ImuPy2textBox = new System.Windows.Forms.TextBox();
+            this.ImuRoll3textBox = new System.Windows.Forms.TextBox();
+            this.ImuPz2textBox = new System.Windows.Forms.TextBox();
+            this.ImuPitch3textBox = new System.Windows.Forms.TextBox();
+            this.ImuYaw3textBox = new System.Windows.Forms.TextBox();
+            this.ImuPx3textBox = new System.Windows.Forms.TextBox();
+            this.ImuPy3textBox = new System.Windows.Forms.TextBox();
+            this.ImuPz3textBox = new System.Windows.Forms.TextBox();
+            this.Analog4textBox = new System.Windows.Forms.TextBox();
+            this.MoO3textBox = new System.Windows.Forms.TextBox();
+            this.StatusWord4textBox = new System.Windows.Forms.TextBox();
+            this.ImuRoll4textBox = new System.Windows.Forms.TextBox();
+            this.ImuPitch4textBox = new System.Windows.Forms.TextBox();
+            this.ImuYaw4textBox = new System.Windows.Forms.TextBox();
+            this.ImuPx4textBox = new System.Windows.Forms.TextBox();
+            this.ImuPy4textBox = new System.Windows.Forms.TextBox();
+            this.ImuPz4textBox = new System.Windows.Forms.TextBox();
+            this.MoO4textBox = new System.Windows.Forms.TextBox();
             this.MainTapControl.SuspendLayout();
             this.Default.SuspendLayout();
             this.groupBox7.SuspendLayout();
@@ -446,6 +504,8 @@ namespace DebuggingToolGUI
             ((System.ComponentModel.ISupportInitialize)(this.CartesianMovingpictureBox)).BeginInit();
             this.groupBox12.SuspendLayout();
             this.groupBox11.SuspendLayout();
+            this.tabPage4.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.LoginGroupBox.SuspendLayout();
             this.StateGroupBox.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -483,6 +543,9 @@ namespace DebuggingToolGUI
             this.MainTapControl.Controls.Add(this.tabPage1);
             this.MainTapControl.Controls.Add(this.tabPage3);
             this.MainTapControl.Controls.Add(this.tabPage4);
+            this.MainTapControl.Controls.Add(this.tabPage5);
+            this.MainTapControl.Controls.Add(this.tabPage6);
+            this.MainTapControl.Controls.Add(this.tabPage7);
             this.MainTapControl.Cursor = System.Windows.Forms.Cursors.Default;
             this.MainTapControl.Font = new System.Drawing.Font("KoPub돋움체 Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.MainTapControl.Location = new System.Drawing.Point(24, 286);
@@ -2252,11 +2315,11 @@ namespace DebuggingToolGUI
             // 
             this.label125.AutoSize = true;
             this.label125.Font = new System.Drawing.Font("KoPub돋움체 Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label125.Location = new System.Drawing.Point(6, 71);
+            this.label125.Location = new System.Drawing.Point(31, 71);
             this.label125.Name = "label125";
-            this.label125.Size = new System.Drawing.Size(87, 21);
+            this.label125.Size = new System.Drawing.Size(63, 21);
             this.label125.TabIndex = 5;
-            this.label125.Text = "Pos (rad)";
+            this.label125.Text = "Target";
             // 
             // groupBox10
             // 
@@ -3325,11 +3388,307 @@ namespace DebuggingToolGUI
             // tabPage4
             // 
             this.tabPage4.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage4.Controls.Add(this.groupBox2);
             this.tabPage4.Location = new System.Drawing.Point(4, 30);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Size = new System.Drawing.Size(1300, 628);
             this.tabPage4.TabIndex = 4;
-            this.tabPage4.Text = "Reserved";
+            this.tabPage4.Text = "Information";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.MoO4textBox);
+            this.groupBox2.Controls.Add(this.ImuPz4textBox);
+            this.groupBox2.Controls.Add(this.ImuPy4textBox);
+            this.groupBox2.Controls.Add(this.ImuPx4textBox);
+            this.groupBox2.Controls.Add(this.ImuYaw4textBox);
+            this.groupBox2.Controls.Add(this.ImuPitch4textBox);
+            this.groupBox2.Controls.Add(this.ImuRoll4textBox);
+            this.groupBox2.Controls.Add(this.StatusWord4textBox);
+            this.groupBox2.Controls.Add(this.MoO3textBox);
+            this.groupBox2.Controls.Add(this.Analog4textBox);
+            this.groupBox2.Controls.Add(this.ImuPz3textBox);
+            this.groupBox2.Controls.Add(this.ImuPy3textBox);
+            this.groupBox2.Controls.Add(this.ImuPx3textBox);
+            this.groupBox2.Controls.Add(this.ImuYaw3textBox);
+            this.groupBox2.Controls.Add(this.ImuPitch3textBox);
+            this.groupBox2.Controls.Add(this.ImuPz2textBox);
+            this.groupBox2.Controls.Add(this.ImuRoll3textBox);
+            this.groupBox2.Controls.Add(this.ImuPy2textBox);
+            this.groupBox2.Controls.Add(this.StatusWord3textBox);
+            this.groupBox2.Controls.Add(this.ImuPx2textBox);
+            this.groupBox2.Controls.Add(this.ImuYaw2textBox);
+            this.groupBox2.Controls.Add(this.MoO2textBox);
+            this.groupBox2.Controls.Add(this.ImuPitch2textBox);
+            this.groupBox2.Controls.Add(this.Analog3textBox);
+            this.groupBox2.Controls.Add(this.ImuRoll2textBox);
+            this.groupBox2.Controls.Add(this.ImuPz1textBox);
+            this.groupBox2.Controls.Add(this.StatusWord2textBox);
+            this.groupBox2.Controls.Add(this.ImuPy1textBox);
+            this.groupBox2.Controls.Add(this.Digital4textBox);
+            this.groupBox2.Controls.Add(this.ImuPx1textBox);
+            this.groupBox2.Controls.Add(this.ImuYaw1textBox);
+            this.groupBox2.Controls.Add(this.MoO1textBox);
+            this.groupBox2.Controls.Add(this.ImuPitch1textBox);
+            this.groupBox2.Controls.Add(this.Analog2textBox);
+            this.groupBox2.Controls.Add(this.ImuRoll1textBox);
+            this.groupBox2.Controls.Add(this.StatusWord1textBox);
+            this.groupBox2.Controls.Add(this.Digital3textBox);
+            this.groupBox2.Controls.Add(this.Analog1textBox);
+            this.groupBox2.Controls.Add(this.label143);
+            this.groupBox2.Controls.Add(this.Digital2textBox);
+            this.groupBox2.Controls.Add(this.label142);
+            this.groupBox2.Controls.Add(this.Digital1textBox);
+            this.groupBox2.Controls.Add(this.label34);
+            this.groupBox2.Controls.Add(this.label25);
+            this.groupBox2.Controls.Add(this.label33);
+            this.groupBox2.Controls.Add(this.label26);
+            this.groupBox2.Controls.Add(this.label32);
+            this.groupBox2.Controls.Add(this.label23);
+            this.groupBox2.Controls.Add(this.label24);
+            this.groupBox2.Controls.Add(this.label27);
+            this.groupBox2.Controls.Add(this.label28);
+            this.groupBox2.Controls.Add(this.label29);
+            this.groupBox2.Controls.Add(this.label30);
+            this.groupBox2.Controls.Add(this.label31);
+            this.groupBox2.Font = new System.Drawing.Font("KoPub돋움체 Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.groupBox2.Location = new System.Drawing.Point(23, 15);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(1248, 434);
+            this.groupBox2.TabIndex = 10;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Motor Driver Information";
+            // 
+            // ImuPz1textBox
+            // 
+            this.ImuPz1textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.ImuPz1textBox.Location = new System.Drawing.Point(184, 374);
+            this.ImuPz1textBox.Name = "ImuPz1textBox";
+            this.ImuPz1textBox.Size = new System.Drawing.Size(224, 28);
+            this.ImuPz1textBox.TabIndex = 6;
+            this.ImuPz1textBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // ImuPy1textBox
+            // 
+            this.ImuPy1textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.ImuPy1textBox.Location = new System.Drawing.Point(183, 340);
+            this.ImuPy1textBox.Name = "ImuPy1textBox";
+            this.ImuPy1textBox.Size = new System.Drawing.Size(224, 28);
+            this.ImuPy1textBox.TabIndex = 6;
+            this.ImuPy1textBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // ImuPx1textBox
+            // 
+            this.ImuPx1textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.ImuPx1textBox.Location = new System.Drawing.Point(183, 306);
+            this.ImuPx1textBox.Name = "ImuPx1textBox";
+            this.ImuPx1textBox.Size = new System.Drawing.Size(224, 28);
+            this.ImuPx1textBox.TabIndex = 6;
+            this.ImuPx1textBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // ImuYaw1textBox
+            // 
+            this.ImuYaw1textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.ImuYaw1textBox.Location = new System.Drawing.Point(184, 272);
+            this.ImuYaw1textBox.Name = "ImuYaw1textBox";
+            this.ImuYaw1textBox.Size = new System.Drawing.Size(224, 28);
+            this.ImuYaw1textBox.TabIndex = 6;
+            this.ImuYaw1textBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // MoO1textBox
+            // 
+            this.MoO1textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.MoO1textBox.Location = new System.Drawing.Point(183, 170);
+            this.MoO1textBox.Name = "MoO1textBox";
+            this.MoO1textBox.Size = new System.Drawing.Size(224, 28);
+            this.MoO1textBox.TabIndex = 6;
+            this.MoO1textBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // ImuPitch1textBox
+            // 
+            this.ImuPitch1textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.ImuPitch1textBox.Location = new System.Drawing.Point(183, 238);
+            this.ImuPitch1textBox.Name = "ImuPitch1textBox";
+            this.ImuPitch1textBox.Size = new System.Drawing.Size(224, 28);
+            this.ImuPitch1textBox.TabIndex = 6;
+            this.ImuPitch1textBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // ImuRoll1textBox
+            // 
+            this.ImuRoll1textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.ImuRoll1textBox.Location = new System.Drawing.Point(183, 204);
+            this.ImuRoll1textBox.Name = "ImuRoll1textBox";
+            this.ImuRoll1textBox.Size = new System.Drawing.Size(224, 28);
+            this.ImuRoll1textBox.TabIndex = 6;
+            this.ImuRoll1textBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // StatusWord1textBox
+            // 
+            this.StatusWord1textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.StatusWord1textBox.Location = new System.Drawing.Point(183, 136);
+            this.StatusWord1textBox.Name = "StatusWord1textBox";
+            this.StatusWord1textBox.Size = new System.Drawing.Size(224, 28);
+            this.StatusWord1textBox.TabIndex = 6;
+            this.StatusWord1textBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // Analog1textBox
+            // 
+            this.Analog1textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.Analog1textBox.Location = new System.Drawing.Point(183, 102);
+            this.Analog1textBox.Name = "Analog1textBox";
+            this.Analog1textBox.Size = new System.Drawing.Size(224, 28);
+            this.Analog1textBox.TabIndex = 6;
+            this.Analog1textBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label143
+            // 
+            this.label143.AutoSize = true;
+            this.label143.Font = new System.Drawing.Font("KoPub돋움체 Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label143.Location = new System.Drawing.Point(93, 377);
+            this.label143.Name = "label143";
+            this.label143.Size = new System.Drawing.Size(73, 21);
+            this.label143.TabIndex = 5;
+            this.label143.Text = "IMU Pz";
+            // 
+            // label142
+            // 
+            this.label142.AutoSize = true;
+            this.label142.Font = new System.Drawing.Font("KoPub돋움체 Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label142.Location = new System.Drawing.Point(92, 343);
+            this.label142.Name = "label142";
+            this.label142.Size = new System.Drawing.Size(74, 21);
+            this.label142.TabIndex = 5;
+            this.label142.Text = "IMU Py";
+            // 
+            // Digital1textBox
+            // 
+            this.Digital1textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.Digital1textBox.Location = new System.Drawing.Point(183, 68);
+            this.Digital1textBox.Name = "Digital1textBox";
+            this.Digital1textBox.Size = new System.Drawing.Size(224, 28);
+            this.Digital1textBox.TabIndex = 6;
+            this.Digital1textBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.Font = new System.Drawing.Font("KoPub돋움체 Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label34.Location = new System.Drawing.Point(92, 309);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(74, 21);
+            this.label34.TabIndex = 5;
+            this.label34.Text = "IMU Px";
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Font = new System.Drawing.Font("KoPub돋움체 Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label33.Location = new System.Drawing.Point(78, 275);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(88, 21);
+            this.label33.TabIndex = 5;
+            this.label33.Text = "IMU Yaw";
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Font = new System.Drawing.Font("KoPub돋움체 Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label32.Location = new System.Drawing.Point(71, 241);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(95, 21);
+            this.label32.TabIndex = 5;
+            this.label32.Text = "IMU Pitch";
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Font = new System.Drawing.Font("KoPub돋움체 Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label23.Location = new System.Drawing.Point(3, 173);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(174, 21);
+            this.label23.TabIndex = 5;
+            this.label23.Text = "Mode Of Operation";
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Font = new System.Drawing.Font("KoPub돋움체 Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label24.Location = new System.Drawing.Point(83, 207);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(83, 21);
+            this.label24.TabIndex = 5;
+            this.label24.Text = "IMU Roll";
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Font = new System.Drawing.Font("KoPub돋움체 Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label28.Location = new System.Drawing.Point(61, 139);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(111, 21);
+            this.label28.TabIndex = 5;
+            this.label28.Text = "Status word";
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Font = new System.Drawing.Font("KoPub돋움체 Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label29.Location = new System.Drawing.Point(246, 33);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(79, 21);
+            this.label29.TabIndex = 5;
+            this.label29.Text = "Left Hip";
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Font = new System.Drawing.Font("KoPub돋움체 Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label30.Location = new System.Drawing.Point(53, 105);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(119, 21);
+            this.label30.TabIndex = 5;
+            this.label30.Text = "Analog Input";
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Font = new System.Drawing.Font("KoPub돋움체 Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label31.Location = new System.Drawing.Point(59, 71);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(113, 21);
+            this.label31.TabIndex = 5;
+            this.label31.Text = "Digital Input";
+            // 
+            // tabPage5
+            // 
+            this.tabPage5.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage5.Location = new System.Drawing.Point(4, 30);
+            this.tabPage5.Name = "tabPage5";
+            this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage5.Size = new System.Drawing.Size(1300, 628);
+            this.tabPage5.TabIndex = 5;
+            this.tabPage5.Text = "Reserved";
+            // 
+            // tabPage6
+            // 
+            this.tabPage6.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage6.Location = new System.Drawing.Point(4, 30);
+            this.tabPage6.Name = "tabPage6";
+            this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage6.Size = new System.Drawing.Size(1300, 628);
+            this.tabPage6.TabIndex = 6;
+            this.tabPage6.Text = "Reserved";
+            // 
+            // tabPage7
+            // 
+            this.tabPage7.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage7.ForeColor = System.Drawing.SystemColors.Control;
+            this.tabPage7.Location = new System.Drawing.Point(4, 30);
+            this.tabPage7.Name = "tabPage7";
+            this.tabPage7.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage7.Size = new System.Drawing.Size(1300, 628);
+            this.tabPage7.TabIndex = 7;
+            this.tabPage7.Text = "Reserved";
             // 
             // Connectbutton
             // 
@@ -3348,18 +3707,18 @@ namespace DebuggingToolGUI
             this.IpAddressLabel.Font = new System.Drawing.Font("KoPub돋움체 Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.IpAddressLabel.Location = new System.Drawing.Point(15, 75);
             this.IpAddressLabel.Name = "IpAddressLabel";
-            this.IpAddressLabel.Size = new System.Drawing.Size(109, 21);
+            this.IpAddressLabel.Size = new System.Drawing.Size(26, 21);
             this.IpAddressLabel.TabIndex = 1;
-            this.IpAddressLabel.Text = "Ip Address ";
+            this.IpAddressLabel.Text = "Ip";
             // 
             // IpAddressTextBox
             // 
             this.IpAddressTextBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.IpAddressTextBox.Location = new System.Drawing.Point(136, 72);
+            this.IpAddressTextBox.Location = new System.Drawing.Point(75, 72);
             this.IpAddressTextBox.Name = "IpAddressTextBox";
-            this.IpAddressTextBox.Size = new System.Drawing.Size(105, 28);
+            this.IpAddressTextBox.Size = new System.Drawing.Size(166, 28);
             this.IpAddressTextBox.TabIndex = 2;
-            this.IpAddressTextBox.Text = "127.0.0.1";
+            this.IpAddressTextBox.Text = "192.168.0.181";
             // 
             // label1
             // 
@@ -3374,9 +3733,9 @@ namespace DebuggingToolGUI
             // PortTextBox
             // 
             this.PortTextBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.PortTextBox.Location = new System.Drawing.Point(136, 103);
+            this.PortTextBox.Location = new System.Drawing.Point(75, 103);
             this.PortTextBox.Name = "PortTextBox";
-            this.PortTextBox.Size = new System.Drawing.Size(105, 28);
+            this.PortTextBox.Size = new System.Drawing.Size(166, 28);
             this.PortTextBox.TabIndex = 2;
             this.PortTextBox.Text = "7";
             this.PortTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -4441,11 +4800,312 @@ namespace DebuggingToolGUI
             this.LoglistBox.Size = new System.Drawing.Size(1301, 52);
             this.LoglistBox.TabIndex = 167;
             // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Font = new System.Drawing.Font("KoPub돋움체 Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label27.Location = new System.Drawing.Point(478, 33);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(95, 21);
+            this.label27.TabIndex = 5;
+            this.label27.Text = "Left Knee";
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Font = new System.Drawing.Font("KoPub돋움체 Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label26.Location = new System.Drawing.Point(721, 33);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(90, 21);
+            this.label26.TabIndex = 5;
+            this.label26.Text = "Right Hip";
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Font = new System.Drawing.Font("KoPub돋움체 Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label25.Location = new System.Drawing.Point(954, 33);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(106, 21);
+            this.label25.TabIndex = 5;
+            this.label25.Text = "Right Knee";
+            // 
+            // Digital2textBox
+            // 
+            this.Digital2textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.Digital2textBox.Location = new System.Drawing.Point(427, 68);
+            this.Digital2textBox.Name = "Digital2textBox";
+            this.Digital2textBox.Size = new System.Drawing.Size(224, 28);
+            this.Digital2textBox.TabIndex = 6;
+            this.Digital2textBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // Digital3textBox
+            // 
+            this.Digital3textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.Digital3textBox.Location = new System.Drawing.Point(664, 68);
+            this.Digital3textBox.Name = "Digital3textBox";
+            this.Digital3textBox.Size = new System.Drawing.Size(224, 28);
+            this.Digital3textBox.TabIndex = 6;
+            this.Digital3textBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // Analog2textBox
+            // 
+            this.Analog2textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.Analog2textBox.Location = new System.Drawing.Point(427, 102);
+            this.Analog2textBox.Name = "Analog2textBox";
+            this.Analog2textBox.Size = new System.Drawing.Size(224, 28);
+            this.Analog2textBox.TabIndex = 6;
+            this.Analog2textBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // Digital4textBox
+            // 
+            this.Digital4textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.Digital4textBox.Location = new System.Drawing.Point(906, 68);
+            this.Digital4textBox.Name = "Digital4textBox";
+            this.Digital4textBox.Size = new System.Drawing.Size(224, 28);
+            this.Digital4textBox.TabIndex = 6;
+            this.Digital4textBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // StatusWord2textBox
+            // 
+            this.StatusWord2textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.StatusWord2textBox.Location = new System.Drawing.Point(427, 136);
+            this.StatusWord2textBox.Name = "StatusWord2textBox";
+            this.StatusWord2textBox.Size = new System.Drawing.Size(224, 28);
+            this.StatusWord2textBox.TabIndex = 6;
+            this.StatusWord2textBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // ImuRoll2textBox
+            // 
+            this.ImuRoll2textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.ImuRoll2textBox.Location = new System.Drawing.Point(427, 204);
+            this.ImuRoll2textBox.Name = "ImuRoll2textBox";
+            this.ImuRoll2textBox.Size = new System.Drawing.Size(224, 28);
+            this.ImuRoll2textBox.TabIndex = 6;
+            this.ImuRoll2textBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // Analog3textBox
+            // 
+            this.Analog3textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.Analog3textBox.Location = new System.Drawing.Point(664, 102);
+            this.Analog3textBox.Name = "Analog3textBox";
+            this.Analog3textBox.Size = new System.Drawing.Size(224, 28);
+            this.Analog3textBox.TabIndex = 6;
+            this.Analog3textBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // ImuPitch2textBox
+            // 
+            this.ImuPitch2textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.ImuPitch2textBox.Location = new System.Drawing.Point(427, 238);
+            this.ImuPitch2textBox.Name = "ImuPitch2textBox";
+            this.ImuPitch2textBox.Size = new System.Drawing.Size(224, 28);
+            this.ImuPitch2textBox.TabIndex = 6;
+            this.ImuPitch2textBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // MoO2textBox
+            // 
+            this.MoO2textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.MoO2textBox.Location = new System.Drawing.Point(427, 170);
+            this.MoO2textBox.Name = "MoO2textBox";
+            this.MoO2textBox.Size = new System.Drawing.Size(224, 28);
+            this.MoO2textBox.TabIndex = 6;
+            this.MoO2textBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // ImuYaw2textBox
+            // 
+            this.ImuYaw2textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.ImuYaw2textBox.Location = new System.Drawing.Point(428, 272);
+            this.ImuYaw2textBox.Name = "ImuYaw2textBox";
+            this.ImuYaw2textBox.Size = new System.Drawing.Size(224, 28);
+            this.ImuYaw2textBox.TabIndex = 6;
+            this.ImuYaw2textBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // ImuPx2textBox
+            // 
+            this.ImuPx2textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.ImuPx2textBox.Location = new System.Drawing.Point(427, 306);
+            this.ImuPx2textBox.Name = "ImuPx2textBox";
+            this.ImuPx2textBox.Size = new System.Drawing.Size(224, 28);
+            this.ImuPx2textBox.TabIndex = 6;
+            this.ImuPx2textBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // StatusWord3textBox
+            // 
+            this.StatusWord3textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.StatusWord3textBox.Location = new System.Drawing.Point(664, 136);
+            this.StatusWord3textBox.Name = "StatusWord3textBox";
+            this.StatusWord3textBox.Size = new System.Drawing.Size(224, 28);
+            this.StatusWord3textBox.TabIndex = 6;
+            this.StatusWord3textBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // ImuPy2textBox
+            // 
+            this.ImuPy2textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.ImuPy2textBox.Location = new System.Drawing.Point(427, 340);
+            this.ImuPy2textBox.Name = "ImuPy2textBox";
+            this.ImuPy2textBox.Size = new System.Drawing.Size(224, 28);
+            this.ImuPy2textBox.TabIndex = 6;
+            this.ImuPy2textBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // ImuRoll3textBox
+            // 
+            this.ImuRoll3textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.ImuRoll3textBox.Location = new System.Drawing.Point(664, 204);
+            this.ImuRoll3textBox.Name = "ImuRoll3textBox";
+            this.ImuRoll3textBox.Size = new System.Drawing.Size(224, 28);
+            this.ImuRoll3textBox.TabIndex = 6;
+            this.ImuRoll3textBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // ImuPz2textBox
+            // 
+            this.ImuPz2textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.ImuPz2textBox.Location = new System.Drawing.Point(428, 374);
+            this.ImuPz2textBox.Name = "ImuPz2textBox";
+            this.ImuPz2textBox.Size = new System.Drawing.Size(224, 28);
+            this.ImuPz2textBox.TabIndex = 6;
+            this.ImuPz2textBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // ImuPitch3textBox
+            // 
+            this.ImuPitch3textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.ImuPitch3textBox.Location = new System.Drawing.Point(664, 238);
+            this.ImuPitch3textBox.Name = "ImuPitch3textBox";
+            this.ImuPitch3textBox.Size = new System.Drawing.Size(224, 28);
+            this.ImuPitch3textBox.TabIndex = 6;
+            this.ImuPitch3textBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // ImuYaw3textBox
+            // 
+            this.ImuYaw3textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.ImuYaw3textBox.Location = new System.Drawing.Point(665, 272);
+            this.ImuYaw3textBox.Name = "ImuYaw3textBox";
+            this.ImuYaw3textBox.Size = new System.Drawing.Size(224, 28);
+            this.ImuYaw3textBox.TabIndex = 6;
+            this.ImuYaw3textBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // ImuPx3textBox
+            // 
+            this.ImuPx3textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.ImuPx3textBox.Location = new System.Drawing.Point(664, 306);
+            this.ImuPx3textBox.Name = "ImuPx3textBox";
+            this.ImuPx3textBox.Size = new System.Drawing.Size(224, 28);
+            this.ImuPx3textBox.TabIndex = 6;
+            this.ImuPx3textBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // ImuPy3textBox
+            // 
+            this.ImuPy3textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.ImuPy3textBox.Location = new System.Drawing.Point(664, 340);
+            this.ImuPy3textBox.Name = "ImuPy3textBox";
+            this.ImuPy3textBox.Size = new System.Drawing.Size(224, 28);
+            this.ImuPy3textBox.TabIndex = 6;
+            this.ImuPy3textBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // ImuPz3textBox
+            // 
+            this.ImuPz3textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.ImuPz3textBox.Location = new System.Drawing.Point(665, 374);
+            this.ImuPz3textBox.Name = "ImuPz3textBox";
+            this.ImuPz3textBox.Size = new System.Drawing.Size(224, 28);
+            this.ImuPz3textBox.TabIndex = 6;
+            this.ImuPz3textBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // Analog4textBox
+            // 
+            this.Analog4textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.Analog4textBox.Location = new System.Drawing.Point(906, 102);
+            this.Analog4textBox.Name = "Analog4textBox";
+            this.Analog4textBox.Size = new System.Drawing.Size(224, 28);
+            this.Analog4textBox.TabIndex = 6;
+            this.Analog4textBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // MoO3textBox
+            // 
+            this.MoO3textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.MoO3textBox.Location = new System.Drawing.Point(664, 170);
+            this.MoO3textBox.Name = "MoO3textBox";
+            this.MoO3textBox.Size = new System.Drawing.Size(224, 28);
+            this.MoO3textBox.TabIndex = 6;
+            this.MoO3textBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // StatusWord4textBox
+            // 
+            this.StatusWord4textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.StatusWord4textBox.Location = new System.Drawing.Point(906, 136);
+            this.StatusWord4textBox.Name = "StatusWord4textBox";
+            this.StatusWord4textBox.Size = new System.Drawing.Size(224, 28);
+            this.StatusWord4textBox.TabIndex = 6;
+            this.StatusWord4textBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // ImuRoll4textBox
+            // 
+            this.ImuRoll4textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.ImuRoll4textBox.Location = new System.Drawing.Point(906, 204);
+            this.ImuRoll4textBox.Name = "ImuRoll4textBox";
+            this.ImuRoll4textBox.Size = new System.Drawing.Size(224, 28);
+            this.ImuRoll4textBox.TabIndex = 6;
+            this.ImuRoll4textBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // ImuPitch4textBox
+            // 
+            this.ImuPitch4textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.ImuPitch4textBox.Location = new System.Drawing.Point(906, 238);
+            this.ImuPitch4textBox.Name = "ImuPitch4textBox";
+            this.ImuPitch4textBox.Size = new System.Drawing.Size(224, 28);
+            this.ImuPitch4textBox.TabIndex = 6;
+            this.ImuPitch4textBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // ImuYaw4textBox
+            // 
+            this.ImuYaw4textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.ImuYaw4textBox.Location = new System.Drawing.Point(907, 272);
+            this.ImuYaw4textBox.Name = "ImuYaw4textBox";
+            this.ImuYaw4textBox.Size = new System.Drawing.Size(224, 28);
+            this.ImuYaw4textBox.TabIndex = 6;
+            this.ImuYaw4textBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // ImuPx4textBox
+            // 
+            this.ImuPx4textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.ImuPx4textBox.Location = new System.Drawing.Point(906, 306);
+            this.ImuPx4textBox.Name = "ImuPx4textBox";
+            this.ImuPx4textBox.Size = new System.Drawing.Size(224, 28);
+            this.ImuPx4textBox.TabIndex = 6;
+            this.ImuPx4textBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // ImuPy4textBox
+            // 
+            this.ImuPy4textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.ImuPy4textBox.Location = new System.Drawing.Point(906, 340);
+            this.ImuPy4textBox.Name = "ImuPy4textBox";
+            this.ImuPy4textBox.Size = new System.Drawing.Size(224, 28);
+            this.ImuPy4textBox.TabIndex = 6;
+            this.ImuPy4textBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // ImuPz4textBox
+            // 
+            this.ImuPz4textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.ImuPz4textBox.Location = new System.Drawing.Point(907, 374);
+            this.ImuPz4textBox.Name = "ImuPz4textBox";
+            this.ImuPz4textBox.Size = new System.Drawing.Size(224, 28);
+            this.ImuPz4textBox.TabIndex = 6;
+            this.ImuPz4textBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // MoO4textBox
+            // 
+            this.MoO4textBox.Font = new System.Drawing.Font("KoPub돋움체 Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.MoO4textBox.Location = new System.Drawing.Point(906, 170);
+            this.MoO4textBox.Name = "MoO4textBox";
+            this.MoO4textBox.Size = new System.Drawing.Size(224, 28);
+            this.MoO4textBox.TabIndex = 6;
+            this.MoO4textBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // DebuggingToolSW
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1742, 959);
+            this.Controls.Add(this.MainTapControl);
             this.Controls.Add(this.LoglistBox);
             this.Controls.Add(this.ConnectCompletepictureBox);
             this.Controls.Add(this.ConnectComplete);
@@ -4454,7 +5114,6 @@ namespace DebuggingToolGUI
             this.Controls.Add(this.AbsoluteEnocdergroupBox);
             this.Controls.Add(this.StateGroupBox);
             this.Controls.Add(this.LoginGroupBox);
-            this.Controls.Add(this.MainTapControl);
             this.Name = "DebuggingToolSW";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Debugging Tool";
@@ -4486,6 +5145,9 @@ namespace DebuggingToolGUI
             this.groupBox12.PerformLayout();
             this.groupBox11.ResumeLayout(false);
             this.groupBox11.PerformLayout();
+            this.tabPage4.ResumeLayout(false);
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.LoginGroupBox.ResumeLayout(false);
             this.LoginGroupBox.PerformLayout();
             this.StateGroupBox.ResumeLayout(false);
@@ -4921,6 +5583,64 @@ namespace DebuggingToolGUI
         private System.Windows.Forms.Label label35;
         private System.Windows.Forms.ComboBox NumJointcomboBox;
         private System.Windows.Forms.Button Disconnectbutton;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.TextBox StatusWord1textBox;
+        private System.Windows.Forms.TextBox Analog1textBox;
+        private System.Windows.Forms.TextBox Digital1textBox;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.TabPage tabPage5;
+        private System.Windows.Forms.TabPage tabPage6;
+        private System.Windows.Forms.TabPage tabPage7;
+        private System.Windows.Forms.TextBox MoO1textBox;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.TextBox ImuPz1textBox;
+        private System.Windows.Forms.TextBox ImuPy1textBox;
+        private System.Windows.Forms.TextBox ImuPx1textBox;
+        private System.Windows.Forms.TextBox ImuYaw1textBox;
+        private System.Windows.Forms.TextBox ImuPitch1textBox;
+        private System.Windows.Forms.TextBox ImuRoll1textBox;
+        private System.Windows.Forms.Label label143;
+        private System.Windows.Forms.Label label142;
+        private System.Windows.Forms.Label label34;
+        private System.Windows.Forms.Label label33;
+        private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.TextBox MoO4textBox;
+        private System.Windows.Forms.TextBox ImuPz4textBox;
+        private System.Windows.Forms.TextBox ImuPy4textBox;
+        private System.Windows.Forms.TextBox ImuPx4textBox;
+        private System.Windows.Forms.TextBox ImuYaw4textBox;
+        private System.Windows.Forms.TextBox ImuPitch4textBox;
+        private System.Windows.Forms.TextBox ImuRoll4textBox;
+        private System.Windows.Forms.TextBox StatusWord4textBox;
+        private System.Windows.Forms.TextBox MoO3textBox;
+        private System.Windows.Forms.TextBox Analog4textBox;
+        private System.Windows.Forms.TextBox ImuPz3textBox;
+        private System.Windows.Forms.TextBox ImuPy3textBox;
+        private System.Windows.Forms.TextBox ImuPx3textBox;
+        private System.Windows.Forms.TextBox ImuYaw3textBox;
+        private System.Windows.Forms.TextBox ImuPitch3textBox;
+        private System.Windows.Forms.TextBox ImuPz2textBox;
+        private System.Windows.Forms.TextBox ImuRoll3textBox;
+        private System.Windows.Forms.TextBox ImuPy2textBox;
+        private System.Windows.Forms.TextBox StatusWord3textBox;
+        private System.Windows.Forms.TextBox ImuPx2textBox;
+        private System.Windows.Forms.TextBox ImuYaw2textBox;
+        private System.Windows.Forms.TextBox MoO2textBox;
+        private System.Windows.Forms.TextBox ImuPitch2textBox;
+        private System.Windows.Forms.TextBox Analog3textBox;
+        private System.Windows.Forms.TextBox ImuRoll2textBox;
+        private System.Windows.Forms.TextBox StatusWord2textBox;
+        private System.Windows.Forms.TextBox Digital4textBox;
+        private System.Windows.Forms.TextBox Analog2textBox;
+        private System.Windows.Forms.TextBox Digital3textBox;
+        private System.Windows.Forms.TextBox Digital2textBox;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.Label label27;
     }
 }
 

@@ -7,8 +7,9 @@ C:\Users\User\Dropbox\Angel Robotics 2021\Debugging GUI\DebuggingToolGUI\Debuggi
 C:\Users\User\Dropbox\Angel Robotics 2021\Debugging GUI\DebuggingToolGUI\DebuggingToolGUI\obj\Debug\DebuggingToolGUI.csproj.CoreCompileInputs.cache
 C:\Users\User\Dropbox\Angel Robotics 2021\Debugging GUI\DebuggingToolGUI\DebuggingToolGUI\obj\Debug\DebuggingToolGUI.exe
 C:\Users\User\Dropbox\Angel Robotics 2021\Debugging GUI\DebuggingToolGUI\DebuggingToolGUI\obj\Debug\DebuggingToolGUI.pdb
-C:\Users\User\Dropbox\Angel Robotics 2021\Debugging GUI\DebuggingToolGUI\DebuggingToolGUI\bin\Debug\log4net.dll
 C:\Users\User\Dropbox\Angel Robotics 2021\Debugging GUI\DebuggingToolGUI\DebuggingToolGUI\bin\Debug\log4net.xml
 C:\Users\User\Dropbox\Angel Robotics 2021\Debugging GUI\DebuggingToolGUI\DebuggingToolGUI\obj\Debug\DebuggingToolGUI.csproj.CopyComplete
 C:\Users\User\Dropbox\Angel Robotics 2021\Debugging GUI\DebuggingToolGUI\DebuggingToolGUI\bin\Debug\log4net.config
 C:\Users\User\Dropbox\Angel Robotics 2021\Debugging GUI\DebuggingToolGUI\DebuggingToolGUI\obj\Debug\DebuggingToolGUI.csproj.AssemblyReference.cache
+C:\Users\User\Dropbox\Angel Robotics 2021\Debugging GUI\DebuggingToolGUI\DebuggingToolGUI\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+C:\Users\User\Dropbox\Angel Robotics 2021\Debugging GUI\DebuggingToolGUI\DebuggingToolGUI\obj\Debug\DebuggingToolGUI.csproj.Fody.CopyLocal.cache
